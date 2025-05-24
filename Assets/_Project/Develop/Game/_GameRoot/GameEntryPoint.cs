@@ -20,9 +20,26 @@ namespace GameRoot
         {
             var isLoaded = false;
 
-            _configsProvider.LoadGameConfigs().Subscribe(_ =>
+            _gameStateProvider.LoadGameState().Subscribe(res =>
             {
-                isLoaded = true;
+                if (res)
+                {
+                    _configsProvider.LoadGameConfigs().Subscribe(res =>
+                    {
+                        if (res)
+                        {
+                            isLoaded = true;
+                        }
+                        else
+                        {
+                            Debug.LogError("Failed to load the game configs!");
+                        }
+                    });
+                }
+                else
+                {
+                    Debug.LogError("Failed to load the game state!");
+                }
             });
 
             yield return new WaitUntil(() => isLoaded);

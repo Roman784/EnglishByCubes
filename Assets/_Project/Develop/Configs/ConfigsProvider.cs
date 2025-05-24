@@ -9,10 +9,14 @@ namespace Configs
 
         public GameConfigs GameConfigs => _gameConfigs;
 
-        public Observable<GameConfigs> LoadGameConfigs()
+        public Observable<bool> LoadGameConfigs()
         {
-            _gameConfigs = Resources.Load<GameConfigs>("GameConfigs");
-            return Observable.Return(_gameConfigs);
+            try
+            {
+                _gameConfigs = Resources.Load<GameConfigs>("GameConfigs");
+                return Observable.Return(true);
+            }
+            catch { return Observable.Return(false); }
         }
     }
 }
