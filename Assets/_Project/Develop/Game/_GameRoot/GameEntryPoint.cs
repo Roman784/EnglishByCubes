@@ -1,7 +1,10 @@
 using Gameplay;
 using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using Utils;
+using Zenject;
+using R3;
 
 namespace GameRoot
 {
@@ -15,7 +18,15 @@ namespace GameRoot
 
         public override IEnumerator Run<T>(T _)
         {
-            yield return null;
+            var isLoaded = false;
+
+            _configsProvider.LoadGameConfigs().Subscribe(_ =>
+            {
+                isLoaded = true;
+            });
+
+            yield return new WaitUntil(() => isLoaded);
+
             LoadScene();
         }
 
