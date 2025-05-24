@@ -5,7 +5,7 @@ namespace Configs
 {
     public interface IConfigsProvider
     {
-        public GameConfigs GameSettings { get; }
+        public GameConfigs GameConfigs { get; }
         public Observable<GameConfigs> LoadGameConfigs();
     }
 }

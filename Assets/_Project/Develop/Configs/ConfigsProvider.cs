@@ -7,7 +7,7 @@ namespace Configs
     {
         private GameConfigs _gameConfigs;
 
-        public GameConfigs GameSettings => _gameConfigs;
+        public GameConfigs GameConfigs => _gameConfigs;
 
         public Observable<GameConfigs> LoadGameConfigs()
         {
