@@ -7,6 +7,11 @@ namespace Gameplay
 {
     public class GameplayEntryPoint : SceneEntryPoint
     {
+        [Inject]
+        private void Construct()
+        {
+        }
+
         public override IEnumerator Run<T>(T enterParams)
         {
             var isLoaded = false;
