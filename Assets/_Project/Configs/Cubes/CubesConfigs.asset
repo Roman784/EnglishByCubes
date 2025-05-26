@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99ed70ba88ee6934e93c9fc3e9c5f6ed, type: 3}
-  m_Name: BlocksConfigs
+  m_Name: CubesConfigs
   m_EditorClassIdentifier: 
   <Blocks>k__BackingField:
   - {fileID: 11400000, guid: 223c883833cf2894498aae33fcb681d5, type: 2}

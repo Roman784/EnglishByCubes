@@ -5,22 +5,22 @@ namespace Gameplay
 {
     public class GameplayInstaller : MonoInstaller
     {
-        [SerializeField] private BlockView _blockPrefab;
+        [SerializeField] private CubeView _cubePrefab;
 
         public override void InstallBindings()
         {
             BindFactories();
-            BindBlocks();
+            BindCubes();
         }
 
         private void BindFactories()
         {
-            Container.BindFactory<BlockView, Block, BlockFactory>().AsTransient();
+            Container.BindFactory<CubeView, Cube, CubeFactory>().AsTransient();
         }
 
-        private void BindBlocks()
+        private void BindCubes()
         {
-            Container.Bind<BlockView>().FromInstance(_blockPrefab).AsTransient();
+            Container.Bind<CubeView>().FromInstance(_cubePrefab).AsTransient();
         }
     }
 }

@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace Configs
 {
-    [CreateAssetMenu(fileName = "BlockConfigs", menuName = "Game Configs/Blocks/New Block Configs")]
-    public class BlockConfigs : ScriptableObject
+    [CreateAssetMenu(fileName = "CubeConfigs", menuName = "Game Configs/Cubes/New Cube Configs")]
+    public class CubeConfigs : ScriptableObject
     {
         [field: SerializeField] public int Number { get; private set; }
         [field: SerializeField] public string Name { get; private set; }

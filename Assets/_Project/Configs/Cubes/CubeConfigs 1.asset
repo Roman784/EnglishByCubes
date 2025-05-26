@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73b44aacfefaa724da86e12d08604000, type: 3}
-  m_Name: BlockConfigs 2
+  m_Name: CubeConfigs 1
   m_EditorClassIdentifier: 
-  <Number>k__BackingField: 2
-  <Name>k__BackingField: "\u0413\u043B\u0430\u0433\u043E\u043B\u044B \u0433\u0440\u0443\u043F\u043F\u044B
-    BE"
+  <Number>k__BackingField: 1
+  <Name>k__BackingField: "\u041B\u0438\u0447\u043D\u044B\u0435 \u043C\u0435\u0441\u0442\u043E\u0438\u043C\u0435\u043D\u0438\u044F"
   <Sides>k__BackingField:
-  - be
-  - am
-  - is
-  - are
-  - was
-  - were
+  - i
+  - you
+  - he/she
+  - it
+  - we
+  - they
   <Color>k__BackingField: {r: 0, g: 0, b: 0, a: 0}

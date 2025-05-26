@@ -107,49 +107,49 @@
       <param name="source">A reference to the value to copy.</param>
       <typeparam name="T">The type of value to copy.</typeparam>
     </member>
-    <member name="M:System.Runtime.CompilerServices.Unsafe.CopyBlock(System.Byte@,System.Byte@,System.UInt32)">
+    <member name="M:System.Runtime.CompilerServices.Unsafe.CopyCube(System.Byte@,System.Byte@,System.UInt32)">
       <summary>Copies bytes from the source address to the destination address.</summary>
       <param name="destination">The destination address to copy to.</param>
       <param name="source">The source address to copy from.</param>
       <param name="byteCount">The number of bytes to copy.</param>
     </member>
-    <member name="M:System.Runtime.CompilerServices.Unsafe.CopyBlock(System.Void*,System.Void*,System.UInt32)">
+    <member name="M:System.Runtime.CompilerServices.Unsafe.CopyCube(System.Void*,System.Void*,System.UInt32)">
       <summary>Copies bytes from the source address to the destination address.</summary>
       <param name="destination">The destination address to copy to.</param>
       <param name="source">The source address to copy from.</param>
       <param name="byteCount">The number of bytes to copy.</param>
     </member>
-    <member name="M:System.Runtime.CompilerServices.Unsafe.CopyBlockUnaligned(System.Byte@,System.Byte@,System.UInt32)">
+    <member name="M:System.Runtime.CompilerServices.Unsafe.CopyCubeUnaligned(System.Byte@,System.Byte@,System.UInt32)">
       <summary>Copies bytes from the source address to the destination address without assuming architecture dependent alignment of the addresses.</summary>
       <param name="destination">The destination address to copy to.</param>
       <param name="source">The source address to copy from.</param>
       <param name="byteCount">The number of bytes to copy.</param>
     </member>
-    <member name="M:System.Runtime.CompilerServices.Unsafe.CopyBlockUnaligned(System.Void*,System.Void*,System.UInt32)">
+    <member name="M:System.Runtime.CompilerServices.Unsafe.CopyCubeUnaligned(System.Void*,System.Void*,System.UInt32)">
       <summary>Copies bytes from the source address to the destination address without assuming architecture dependent alignment of the addresses.</summary>
       <param name="destination">The destination address to copy to.</param>
       <param name="source">The source address to copy from.</param>
       <param name="byteCount">The number of bytes to copy.</param>
     </member>
-    <member name="M:System.Runtime.CompilerServices.Unsafe.InitBlock(System.Byte@,System.Byte,System.UInt32)">
+    <member name="M:System.Runtime.CompilerServices.Unsafe.InitCube(System.Byte@,System.Byte,System.UInt32)">
       <summary>Initializes a block of memory at the given location with a given initial value.</summary>
       <param name="startAddress">The address of the start of the memory block to initialize.</param>
       <param name="value">The value to initialize the block to.</param>
       <param name="byteCount">The number of bytes to initialize.</param>
     </member>
-    <member name="M:System.Runtime.CompilerServices.Unsafe.InitBlock(System.Void*,System.Byte,System.UInt32)">
+    <member name="M:System.Runtime.CompilerServices.Unsafe.InitCube(System.Void*,System.Byte,System.UInt32)">
       <summary>Initializes a block of memory at the given location with a given initial value.</summary>
       <param name="startAddress">The address of the start of the memory block to initialize.</param>
       <param name="value">The value to initialize the block to.</param>
       <param name="byteCount">The number of bytes to initialize.</param>
     </member>
-    <member name="M:System.Runtime.CompilerServices.Unsafe.InitBlockUnaligned(System.Byte@,System.Byte,System.UInt32)">
+    <member name="M:System.Runtime.CompilerServices.Unsafe.InitCubeUnaligned(System.Byte@,System.Byte,System.UInt32)">
       <summary>Initializes a block of memory at the given location with a given initial value without assuming architecture dependent alignment of the address.</summary>
       <param name="startAddress">The address of the start of the memory block to initialize.</param>
       <param name="value">The value to initialize the block to.</param>
       <param name="byteCount">The number of bytes to initialize.</param>
     </member>
-    <member name="M:System.Runtime.CompilerServices.Unsafe.InitBlockUnaligned(System.Void*,System.Byte,System.UInt32)">
+    <member name="M:System.Runtime.CompilerServices.Unsafe.InitCubeUnaligned(System.Void*,System.Byte,System.UInt32)">
       <summary>Initializes a block of memory at the given location with a given initial value without assuming architecture dependent alignment of the address.</summary>
       <param name="startAddress">The address of the start of the memory block to initialize.</param>
       <param name="value">The value to initialize the block to.</param>
