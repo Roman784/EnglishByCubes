@@ -4,6 +4,8 @@ namespace Gameplay
     {
         private readonly CubeView _view;
 
+        private int _curretSideIndex;
+
         public Cube(CubeView view)
         {
             _view = view;
@@ -13,7 +15,9 @@ namespace Gameplay
 
         private void RotateToNextSide()
         {
+            _curretSideIndex = _curretSideIndex + 1 >= 10 ? 0 : _curretSideIndex + 1;
 
+            _view.Rotate(_curretSideIndex);
         }
     }
 }

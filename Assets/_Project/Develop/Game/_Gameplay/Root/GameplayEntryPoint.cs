@@ -7,14 +7,19 @@ namespace Gameplay
 {
     public class GameplayEntryPoint : SceneEntryPoint
     {
+        private CubeFactory _cubeFactory;
+
         [Inject]
-        private void Construct()
+        private void Construct(CubeFactory cubeFactory)
         {
+            _cubeFactory = cubeFactory;
         }
 
         public override IEnumerator Run<T>(T enterParams)
         {
             var isLoaded = false;
+
+            _cubeFactory.Create();
 
             isLoaded = true;
 
