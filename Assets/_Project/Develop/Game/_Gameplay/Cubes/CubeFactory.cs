@@ -1,3 +1,4 @@
+using Configs;
 using UnityEngine;
 using Zenject;
 
@@ -15,10 +16,18 @@ namespace Gameplay
             _prefab = prefab;
         }
 
-        public Cube Create()
+        public Cube Create(CubeConfigs configs, Vector3 position)
+        {
+            var newCube = Create(configs);
+            newCube.SetPosition(position);
+
+            return newCube;
+        }
+
+        public Cube Create(CubeConfigs configs)
         {
             var view = Object.Instantiate(_prefab);
-            var newCube = _container.Instantiate<Cube>(new object[] { view });
+            var newCube = _container.Instantiate<Cube>(new object[] { view, configs });
 
             return newCube;
         }

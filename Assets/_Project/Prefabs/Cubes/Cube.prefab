@@ -76,9 +76,10 @@ MonoBehaviour:
   - {fileID: 1115860278820382382}
   _view: {fileID: 6018454109830945127}
   _rotationDuration: 0.4
-  _viewFadeDuration: 0.2
+  _fadeDuration: 0.2
   _rotationEase: 27
-  _viewFadeEase: 6
+  _fadeEase: 0
+  _renderer: {fileID: 7250527538338329036}
 --- !u!1 &1019022140081870948
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,7 +173,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontSize: 0.2
-  m_fontSizeBase: 36
+  m_fontSizeBase: 0.35
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0
@@ -306,7 +307,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontSize: 0.15
-  m_fontSizeBase: 36
+  m_fontSizeBase: 0.35
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0
@@ -467,7 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <View>k__BackingField: {fileID: 3981333080682724114}
-  <TextView>k__BackingField: {fileID: 1673473948612375548}
+  <WordView>k__BackingField: {fileID: 1673473948612375548}
   <Rotation>k__BackingField: {x: 0, y: 180, z: 180}
 --- !u!1 &4164809050293506500
 GameObject:
@@ -556,7 +557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <View>k__BackingField: {fileID: 6333695819410362354}
-  <TextView>k__BackingField: {fileID: 6135959579247251828}
+  <WordView>k__BackingField: {fileID: 6135959579247251828}
   <Rotation>k__BackingField: {x: 90, y: 0, z: 0}
 --- !u!1 &4320585699007564597
 GameObject:
@@ -645,7 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <View>k__BackingField: {fileID: 4977739736665246257}
-  <TextView>k__BackingField: {fileID: 8931273121269864711}
+  <WordView>k__BackingField: {fileID: 8931273121269864711}
   <Rotation>k__BackingField: {x: -90, y: 0, z: 180}
 --- !u!1 &5253851442364762328
 GameObject:
@@ -740,7 +741,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontSize: 0.35
-  m_fontSizeBase: 36
+  m_fontSizeBase: 0.35
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0
@@ -874,7 +875,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontSize: 0.3
-  m_fontSizeBase: 36
+  m_fontSizeBase: 0.35
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0
@@ -1045,7 +1046,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontSize: 0.25
-  m_fontSizeBase: 36
+  m_fontSizeBase: 0.35
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0
@@ -1173,7 +1174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <View>k__BackingField: {fileID: 5476970627318773214}
-  <TextView>k__BackingField: {fileID: 3867425579960316257}
+  <WordView>k__BackingField: {fileID: 3867425579960316257}
   <Rotation>k__BackingField: {x: 0, y: 0, z: 0}
 --- !u!1 &7014526939585151090
 GameObject:
@@ -1262,7 +1263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <View>k__BackingField: {fileID: 816315809313492438}
-  <TextView>k__BackingField: {fileID: 6845219090926872862}
+  <WordView>k__BackingField: {fileID: 6845219090926872862}
   <Rotation>k__BackingField: {x: 0, y: 90, z: 90}
 --- !u!1 &7695374374543250496
 GameObject:
@@ -1357,7 +1358,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontSize: 0.35
-  m_fontSizeBase: 36
+  m_fontSizeBase: 0.35
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0
@@ -1485,7 +1486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <View>k__BackingField: {fileID: 7850823346427878985}
-  <TextView>k__BackingField: {fileID: 3209138335566544696}
+  <WordView>k__BackingField: {fileID: 3209138335566544696}
   <Rotation>k__BackingField: {x: 0, y: 270, z: 270}
 --- !u!1001 &8313251013267385672
 PrefabInstance:
@@ -1560,6 +1561,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c2273d6fc264bd45bfb684625b53410, type: 3}
+--- !u!23 &7250527538338329036 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 4c2273d6fc264bd45bfb684625b53410, type: 3}
+  m_PrefabInstance: {fileID: 8313251013267385672}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8418389600535841443 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4c2273d6fc264bd45bfb684625b53410, type: 3}

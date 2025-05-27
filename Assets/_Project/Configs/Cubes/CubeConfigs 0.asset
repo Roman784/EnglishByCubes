@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Number>k__BackingField: 0
   <Name>k__BackingField: 
-  <Sides>k__BackingField:
+  <Words>k__BackingField:
   - .
   - '?'
   - '!'
-  <Color>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+  <Material>k__BackingField: {fileID: 2100000, guid: abddf4e0f66cf7a4290028aed502d244, type: 2}

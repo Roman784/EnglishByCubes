@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ed70ba88ee6934e93c9fc3e9c5f6ed, type: 3}
   m_Name: CubesConfigs
   m_EditorClassIdentifier: 
-  <Blocks>k__BackingField:
+  <Cubes>k__BackingField:
   - {fileID: 11400000, guid: 223c883833cf2894498aae33fcb681d5, type: 2}
   - {fileID: 11400000, guid: ffd9119df8066374e89a3a73216dde94, type: 2}
-  - {fileID: 11400000, guid: 638adec7eaf7ec145b2cd97c87c47d1e, type: 2}
-  - {fileID: 11400000, guid: 634cbe998d1a31140b94de01a7256475, type: 2}

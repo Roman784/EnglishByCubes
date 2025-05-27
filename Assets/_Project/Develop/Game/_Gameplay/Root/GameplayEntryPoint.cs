@@ -19,7 +19,10 @@ namespace Gameplay
         {
             var isLoaded = false;
 
-            _cubeFactory.Create();
+            var cubesConfigs = _configsProvider.GameConfigs.CubesConfigs;
+
+            _cubeFactory.Create(cubesConfigs.Cubes[0], new Vector3(-0.75f, 0, 0));
+            _cubeFactory.Create(cubesConfigs.Cubes[1], new Vector3(0.75f, 0, 0));
 
             isLoaded = true;
 

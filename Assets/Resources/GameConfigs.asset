@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2bbc48ade6f079419ba03b179094b85, type: 3}
   m_Name: GameConfigs
   m_EditorClassIdentifier: 
+  <CubesConfigs>k__BackingField: {fileID: 11400000, guid: e740b7b58475d7c4095c2d3c5f396735, type: 2}
   <ThemeConfigs>k__BackingField: {fileID: 11400000, guid: 458e878f23d94514b9e71c56fda7e969, type: 2}

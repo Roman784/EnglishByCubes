@@ -8,7 +8,7 @@ namespace Configs
     {
         [field: SerializeField] public int Number { get; private set; }
         [field: SerializeField] public string Name { get; private set; }
-        [field: SerializeField] public List<string> Sides { get; private set; }
-        [field: SerializeField] public Color Color { get; private set; }
+        [field: SerializeField] public List<string> Words { get; private set; }
+        [field: SerializeField] public Material Material { get; private set; }
     }
 }

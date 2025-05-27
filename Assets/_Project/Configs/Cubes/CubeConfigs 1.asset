@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Number>k__BackingField: 1
   <Name>k__BackingField: "\u041B\u0438\u0447\u043D\u044B\u0435 \u043C\u0435\u0441\u0442\u043E\u0438\u043C\u0435\u043D\u0438\u044F"
-  <Sides>k__BackingField:
+  <Words>k__BackingField:
   - i
   - you
   - he/she
   - it
   - we
   - they
-  <Color>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+  <Material>k__BackingField: {fileID: 2100000, guid: 450e688f0edc8dc4e89e3d218c7ea467, type: 2}
