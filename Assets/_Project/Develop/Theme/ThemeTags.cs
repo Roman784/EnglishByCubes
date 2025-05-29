@@ -1,4 +1,4 @@
-namespace Configs
+namespace Theme
 {
     public enum ThemeTags
     {
