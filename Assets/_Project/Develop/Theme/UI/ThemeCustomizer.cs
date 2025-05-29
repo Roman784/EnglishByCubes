@@ -1,6 +1,5 @@
 using Configs;
 using UnityEngine;
-using static Configs.ThemeUIConfigs;
 
 namespace Theme
 {
