@@ -28,7 +28,9 @@ namespace Gameplay
             _cubeFactory.Create(cubesConfigs.Cubes[0], new Vector3(-0.75f, 0, 0));
             _cubeFactory.Create(cubesConfigs.Cubes[1], new Vector3(0.75f, 0, 0));
 
+            // UI.
             _uiRoot.AttachSceneUI(_ui);
+            _ui.CustomizeTheme();
 
             isLoaded = true;
 
