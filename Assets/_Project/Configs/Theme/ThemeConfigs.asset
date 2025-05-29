@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b741df608983d084fa378b35d13a10bb, type: 3}
   m_Name: ThemeConfigs
   m_EditorClassIdentifier: 
+  <UIConfigs>k__BackingField: {fileID: 11400000, guid: 9d5e4178e304cc143bef4c9ea79a6214, type: 2}

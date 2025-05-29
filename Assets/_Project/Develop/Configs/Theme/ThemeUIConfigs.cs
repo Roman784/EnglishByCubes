@@ -12,7 +12,7 @@ namespace Configs
 
         public class Theme
         {
-            [field: SerializeField] public string Tag { get; private set; }
+            [field: SerializeField] public ThemeTags Tag { get; private set; }
         }
 
         [Serializable]

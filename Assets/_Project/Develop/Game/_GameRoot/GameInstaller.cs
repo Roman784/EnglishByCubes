@@ -8,7 +8,7 @@ namespace GameRoot
 {
     public class GameInstaller : MonoInstaller
     {
-        [SerializeField] private UIRootView _uiRootView;
+        [SerializeField] private UIRoot _uiRootPrefab;
 
         public override void InstallBindings()
         {
@@ -35,11 +35,7 @@ namespace GameRoot
 
         private void BindUI()
         {
-            var view = Instantiate(_uiRootView);
-            var uiRoot = new UIRoot(_uiRootView);
-            DontDestroyOnLoad(view.gameObject);
-
-            Container.Bind<UIRoot>().FromInstance(uiRoot).AsSingle().NonLazy();
+            Container.Bind<UIRoot>().FromComponentInNewPrefab(_uiRootPrefab).AsSingle().NonLazy();
         }
     }
 }

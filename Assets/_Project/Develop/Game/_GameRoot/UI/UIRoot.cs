@@ -4,21 +4,34 @@ using UnityEngine;
 
 namespace UI
 {
-    public class UIRoot
+    public class UIRoot : MonoBehaviour
     {
-        private UIRootView _view;
-
-        public UIRoot(UIRootView view)
-        {
-            _view = view;
-        }
+        [SerializeField] private LoadingScreen _loadingScreen;
+        [SerializeField] private Transform _sceneUIContainer;
 
         public IEnumerator SetLoadingScreen(bool value)
         {
             bool isCompleted = false;
-            _view.SetLoadingScreen(value).Subscribe(_ => isCompleted = true);
+
+            (value ? _loadingScreen.Show() : _loadingScreen.Hide())
+                .Subscribe(_ => isCompleted = true);
 
             yield return new WaitUntil(() => isCompleted);
+        }
+
+        public void AttachSceneUI(SceneUI sceneUI)
+        {
+            ClearContainer(_sceneUIContainer);
+            sceneUI.transform.SetParent(_sceneUIContainer, false);
+        }
+
+        private void ClearContainer(Transform container)
+        {
+            var childCount = container.childCount;
+            for (int i = 0; i < childCount; i++)
+            {
+                Destroy(container.GetChild(i).gameObject);
+            }
         }
     }
 }

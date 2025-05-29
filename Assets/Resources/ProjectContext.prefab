@@ -74,4 +74,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59958e6c48bc2044bc94be1793e591d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _uiRootView: {fileID: 3386908238917508204, guid: 377f9ba9cc9f0414b9ec601c009f52d8, type: 3}
+  _uiRootPrefab: {fileID: 5424896216141466133, guid: 377f9ba9cc9f0414b9ec601c009f52d8, type: 3}
