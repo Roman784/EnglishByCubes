@@ -1,4 +1,5 @@
 using Configs;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Theme
@@ -14,6 +15,18 @@ namespace Theme
         public virtual void Customize(ThemeConfigs configs)
         {
             _additionalCustomizer?.Customize(configs);
+        }
+
+        public T GetTheme<T>(IEnumerable<T> themes) where T : ThemeBase
+        {
+            foreach (var theme in themes)
+            {
+                if (theme.Tag == _tag)
+                    return theme;
+            }
+
+            Debug.LogError($"Tag {tag} for theme was not found!");
+            return null;
         }
     }
 }

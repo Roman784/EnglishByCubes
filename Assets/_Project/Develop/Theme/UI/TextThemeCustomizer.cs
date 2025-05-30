@@ -16,7 +16,7 @@ namespace Theme
         {
             base.Customize(configs);
 
-            var theme = GetTheme(configs);
+            var theme = GetTheme(configs.UIConfigs.Texts);
 
             if (theme == null) return;
             if (_textView == null) return;
@@ -25,17 +25,6 @@ namespace Theme
                 _textView.color = theme.Dark;
             else
                 _textView.color = theme.Light;
-        }
-
-        private TextTheme GetTheme(ThemeConfigs configs)
-        {
-            foreach (var theme in configs.UIConfigs.Texts)
-            {
-                if (theme.Tag == _tag) return theme;
-            }
-
-            Debug.LogError($"Tag {tag} of the text theme was not found!");
-            return null;
         }
     }
 }

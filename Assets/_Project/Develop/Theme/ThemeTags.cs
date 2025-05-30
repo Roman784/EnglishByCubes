@@ -6,6 +6,7 @@ namespace Theme
         CurrentLevelButton,
         CompletedLevelButton,
         UncompletedLevelButton,
-        MainText
+        MainText,
+        Slot
     }
 }
