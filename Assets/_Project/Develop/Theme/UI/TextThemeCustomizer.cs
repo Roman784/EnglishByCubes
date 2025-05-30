@@ -14,8 +14,6 @@ namespace Theme
 
         public override void Customize(ThemeConfigs configs)
         {
-            base.Customize(configs);
-
             var theme = GetTheme(configs.UIConfigs.Texts);
 
             if (theme == null) return;

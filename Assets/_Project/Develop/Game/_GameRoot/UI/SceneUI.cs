@@ -8,8 +8,6 @@ namespace UI
 {
     public class SceneUI : MonoBehaviour
     {
-        [SerializeField] private List<ThemeCustomizer> _themeCustomizers;
-
         protected IConfigsProvider _configsProvider;
 
         [Inject]
@@ -20,11 +18,12 @@ namespace UI
 
         public void CustomizeTheme()
         {
-            var themeConfigs = _configsProvider.GameConfigs.ThemeConfigs;
+            var customizers = FindObjectsOfType<ThemeCustomizer>();
+            var configs = _configsProvider.GameConfigs.ThemeConfigs;
 
-            foreach (var customizer in _themeCustomizers)
+            foreach (var customizer in customizers)
             {
-                customizer.Customize(themeConfigs);
+                customizer.Customize(configs);
             }
         }
     }
