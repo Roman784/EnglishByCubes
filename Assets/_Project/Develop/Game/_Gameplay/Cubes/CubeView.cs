@@ -1,4 +1,5 @@
 using DG.Tweening;
+using R3;
 using System.Collections.Generic;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.VisualScripting;
@@ -42,6 +43,18 @@ namespace Gameplay
             _sides[0].SetWord(intialWord);
 
             _renderer.material = material;
+        }
+
+        public Observable<bool> Enable()
+        {
+            gameObject.SetActive(true);
+            return Observable.Return(true);
+        }
+
+        public Observable<bool> Disable(bool instantly)
+        {
+            gameObject.SetActive(false);
+            return Observable.Return(true);
         }
 
         public void SetPosition(Vector3 position)

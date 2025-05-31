@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Configs
@@ -7,6 +8,19 @@ namespace Configs
     public class CubesConfigs : ScriptableObject
     {
         [field: SerializeField] public List<CubeConfigs> Cubes { get; private set; }
+
+        public HashSet<CubeConfigs> GetCubes(params int[] numbers)
+        {
+            var cubes = new HashSet<CubeConfigs>();
+
+            foreach (var cube in Cubes)
+            {
+                if (numbers.Contains(cube.Number))
+                    cubes.Add(cube);
+            }
+
+            return cubes;
+        }
 
         private void OnValidate()
         {

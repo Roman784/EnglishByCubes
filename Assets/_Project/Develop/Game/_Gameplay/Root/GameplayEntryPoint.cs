@@ -30,11 +30,15 @@ namespace Gameplay
 
             var cubesConfigs = _configsProvider.GameConfigs.CubesConfigs;
 
-            _cubeFactory.Create(cubesConfigs.Cubes[0], new Vector3(-0.75f, 0, 0));
-            _cubeFactory.Create(cubesConfigs.Cubes[1], new Vector3(0.75f, 0, 0));
+            // _cubeFactory.Create(cubesConfigs.Cubes[0], new Vector3(-0.75f, 0, 0));
+            // _cubeFactory.Create(cubesConfigs.Cubes[1], new Vector3(0.75f, 0, 0));
 
             // Slot bar.
             var slotBar = _slotBarFactory.Create(_slotBarPosition);
+
+            // Cubes.
+            var cubesConfigsPool = cubesConfigs.GetCubes(0, 1);
+            slotBar.CreateCubes(cubesConfigsPool);
 
             // UI.
             _uiRoot.AttachSceneUI(_ui);
