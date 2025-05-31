@@ -200,8 +200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b815cb619d7146a4ea14fdd1d09dae6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cubePrefab: {fileID: 1228918783809224183, guid: 18a73ce5e870ce1499065050ffb3399d, type: 3}
   _gameplayUIPrefab: {fileID: 8546033508002278438, guid: d84104139fd2b304bb8e8a4846dd1aaf, type: 3}
+  _cubePrefab: {fileID: 1228918783809224183, guid: 18a73ce5e870ce1499065050ffb3399d, type: 3}
+  _slotBarPrefab: {fileID: 2201043303804829393, guid: 7a0341bfa9c9d764398204d1af5aed63, type: 3}
 --- !u!1 &879766716
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,7 +449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2973285517999447847, guid: 18a73ce5e870ce1499065050ffb3399d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2973285517999447847, guid: 18a73ce5e870ce1499065050ffb3399d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -649,6 +650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b544afad1d0880439e655c3e5f4114e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _slotBarPosition: {x: 0, y: 0, z: -6.5}
 --- !u!4 &1697803434
 Transform:
   m_ObjectHideFlags: 0

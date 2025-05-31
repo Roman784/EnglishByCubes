@@ -18,18 +18,18 @@ namespace Gameplay
 
         public Cube Create(CubeConfigs configs, Vector3 position)
         {
-            var newCube = Create(configs);
-            newCube.SetPosition(position);
+            var newSlotBar = Create(configs);
+            newSlotBar.SetPosition(position);
 
-            return newCube;
+            return newSlotBar;
         }
 
         public Cube Create(CubeConfigs configs)
         {
             var view = Object.Instantiate(_prefab);
-            var newCube = _container.Instantiate<Cube>(new object[] { view, configs });
+            var newSlotBar = _container.Instantiate<Cube>(new object[] { view, configs });
 
-            return newCube;
+            return newSlotBar;
         }
     }
 }
