@@ -9,14 +9,17 @@ namespace Configs
     {
         [field: SerializeField] public List<CubeConfigs> Cubes { get; private set; }
 
-        public HashSet<CubeConfigs> GetCubes(params int[] numbers)
+        public List<CubeConfigs> GetCubes(params int[] numbers)
         {
-            var cubes = new HashSet<CubeConfigs>();
+            var cubes = new List<CubeConfigs>();
 
-            foreach (var cube in Cubes)
+            foreach (var number in numbers)
             {
-                if (numbers.Contains(cube.Number))
-                    cubes.Add(cube);
+                foreach (var cube in Cubes)
+                {
+                    if (cube.Number == number)
+                        cubes.Add(cube);
+                }
             }
 
             return cubes;

@@ -4,13 +4,16 @@ namespace Gameplay
 {
     public class Slot : MonoBehaviour
     {
-        private Cube _cube;
+        [SerializeField] private Vector3 _positionOffset;
+        [SerializeField] private float _cubeScale;
 
-        public bool HasCube => _cube != null;
+        public Vector3 Position => transform.position + _positionOffset;
 
-        public void AddCube(Cube cube)
+        public void PlaceCube(Cube cube)
         {
-            _cube = cube;
+            cube.SetPosition(Position);
+            cube.SetScale(_cubeScale);
+            cube.Enable();
         }
     }
 }

@@ -35,9 +35,10 @@ namespace Gameplay
 
             // Slot bar.
             var slotBar = _slotBarFactory.Create(_slotBarPosition);
+            yield return null; // To update slots layout. Forced update does not work.
 
             // Cubes.
-            var cubesConfigsPool = cubesConfigs.GetCubes(0, 1);
+            var cubesConfigsPool = cubesConfigs.GetCubes(0, 1, 0, 1, 0, 1);
             slotBar.CreateCubes(cubesConfigsPool);
 
             // UI.

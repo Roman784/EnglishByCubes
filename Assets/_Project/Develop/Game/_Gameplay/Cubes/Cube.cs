@@ -40,6 +40,11 @@ namespace Gameplay
             _view.SetPosition(position);
         }
 
+        public void SetScale(float scale)
+        {
+            _view.SetScale(scale);
+        }
+
         private void RotateToNextSide()
         {
             _curretWordIndex = ++_curretWordIndex % _words.Count();

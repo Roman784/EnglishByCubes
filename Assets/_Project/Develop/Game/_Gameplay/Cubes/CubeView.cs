@@ -62,6 +62,11 @@ namespace Gameplay
             transform.position = position;
         }
 
+        public void SetScale(float scale)
+        {
+            transform.localScale = Vector3.one * scale;
+        }
+
         public void Rotate(string word)
         {
             _curretSideIndex = ++_curretSideIndex % _sides.Count;
