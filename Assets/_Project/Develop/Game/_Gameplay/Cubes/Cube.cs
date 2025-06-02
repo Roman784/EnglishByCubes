@@ -1,4 +1,5 @@
 using Configs;
+using DG.Tweening;
 using R3;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,9 +36,9 @@ namespace Gameplay
             return _view.Disable(instantly);
         }
 
-        public void SetPosition(Vector3 position)
+        public Observable<bool> SetPosition(Vector3 position, float duration = 0, Ease ease = Ease.Flash)
         {
-            _view.SetPosition(position);
+            return _view.SetPosition(position, duration, ease);
         }
 
         public void SetScale(float scale)

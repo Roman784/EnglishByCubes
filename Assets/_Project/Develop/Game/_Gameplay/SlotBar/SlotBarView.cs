@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -32,25 +33,25 @@ namespace Gameplay
             transform.position = position;
         }
 
-        public void EnableLeftButton()
+        public void EnableLeftButton() => EnableButton(_switchToLeftButton);
+        public void EnableRightButton() => EnableButton(_switchToRightButton);
+        public void DisableLeftButton() => DisableButton(_switchToLeftButton);
+        public void DisableRightButton() => DisableButton(_switchToRightButton);
+
+        private void EnableButton(Button button)
         {
-            _switchToLeftButton.gameObject.SetActive(true);
+            button.enabled = true;
+            button.gameObject.SetActive(true);
+            button.transform.DOScale(Vector3.one, 0.15f)
+                .SetEase(Ease.InOutBounce);
         }
 
-        public void EnableRightButton()
+        private void DisableButton(Button button)
         {
-            _switchToRightButton.gameObject.SetActive(true);
-        }
-
-        public void DisableLeftButton()
-        {
-            _switchToLeftButton.gameObject.SetActive(false);
-        }
-
-        public void DisableRightButton()
-
-        {
-            _switchToRightButton.gameObject.SetActive(false);
+            button.enabled = false;
+            button.transform.DOScale(Vector3.zero, 0.15f)
+                .SetEase(Ease.InOutBounce)
+                .OnComplete(() => button.gameObject.SetActive(false));
         }
     }
 }

@@ -12,13 +12,16 @@ namespace Gameplay
     {
         [SerializeField] private List<CubeSide> _sides;
         [SerializeField] private Transform _view;
+        [SerializeField] private Collider _collider;
 
         [Space]
 
         [SerializeField] private float _rotationDuration;
         [SerializeField] private float _fadeDuration;
+        [SerializeField] private float _rescaleDuration;
         [SerializeField] private Ease _rotationEase;
         [SerializeField] private Ease _fadeEase;
+        [SerializeField] private Ease _rescaleEase;
 
         [Space]
 
@@ -47,24 +50,54 @@ namespace Gameplay
 
         public Observable<bool> Enable()
         {
-            gameObject.SetActive(true);
-            return Observable.Return(true);
+            var onCompleted = new Subject<bool>();
+
+            _collider.enabled = true;
+            _view.gameObject.SetActive(true);
+            _view.DOScale(Vector3.one, _rescaleDuration)
+                .SetEase(_rescaleEase)
+                .OnComplete(() => onCompleted.OnNext(true));
+
+            return onCompleted;
         }
 
         public Observable<bool> Disable(bool instantly)
         {
-            gameObject.SetActive(false);
-            return Observable.Return(true);
+            _collider.enabled = false;
+
+            if (instantly)
+            {
+                _view.gameObject.SetActive(false);
+                return Observable.Return(true);
+            }
+
+            var onCompleted = new Subject<bool>();
+
+            _view.DOScale(Vector3.zero, _rescaleDuration)
+                .SetEase(_rescaleEase)
+                .OnComplete(() =>
+                {
+                    _view.gameObject.SetActive(false);
+                    onCompleted.OnNext(true);
+                });
+
+            return onCompleted;
         }
 
-        public void SetPosition(Vector3 position)
+        public Observable<bool> SetPosition(Vector3 position, float duration, Ease ease)
         {
-            transform.position = position;
+            var onCompleted = new Subject<bool>();
+
+            transform.DOMove(position, duration)
+                .SetEase(ease)
+                .OnComplete(() => onCompleted.OnNext(true));
+
+            return onCompleted;
         }
 
         public void SetScale(float scale)
         {
-            transform.localScale = Vector3.one * scale;
+            _view.localScale = Vector3.one * scale;
         }
 
         public void Rotate(string word)

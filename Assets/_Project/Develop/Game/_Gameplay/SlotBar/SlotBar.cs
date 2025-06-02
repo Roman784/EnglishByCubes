@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Utils;
 using Zenject;
+using R3;
+using DG.Tweening;
+using System.Linq;
 
 namespace Gameplay
 {
@@ -32,6 +35,7 @@ namespace Gameplay
 
             _slots = _view.GetSlots();
             _cubes = new();
+            _firstCubeIndex = 0;
 
             _view.OnSwitched.AddListener(SwitchCubes);
         }
@@ -41,24 +45,23 @@ namespace Gameplay
             _view.SetPosition(position);
         }
 
-        public void CreateCubes(IEnumerable<CubeConfigs> cubesConfigs)
+        public void CreateCubes(List<CubeConfigs> cubesConfigs)
         {
-            foreach (CubeConfigs cubeConfigs in cubesConfigs)
+            for (int i = 0; i < cubesConfigs.Count(); i++)
             {
-                CreateCube(cubeConfigs);
+                var newCube = _cubeFactory.Create(cubesConfigs[i]);
+                
+                newCube.Disable(true);
+                if (i < _slots.Count)
+                    newCube.Enable();
+
+                var slotIndex = i < _slots.Count ? i : _slots.Count - 1;
+                _slots[slotIndex].PlaceCube(newCube);
+
+                _cubes.Add(newCube);
             }
 
-            _firstCubeIndex = 0;
-            PlaceCubes();
             SetDisplayOfSwitchButtons();
-        }
-
-        private void CreateCube(CubeConfigs configs)
-        {
-            var newCube = _cubeFactory.Create(configs);
-            newCube.Disable(true);
-
-            _cubes.Add(newCube);
         }
 
         private void PlaceCubes()
@@ -75,7 +78,7 @@ namespace Gameplay
                 var slotIndex = i - _firstCubeIndex;
                 if (slotIndex >= 0 && slotIndex < _slots.Count)
                 {
-                    _slots[slotIndex].PlaceCube(_cubes[i]);
+                    _slots[slotIndex].PlaceCube(_cubes[i], 0.25f, Ease.OutQuad);
                 }
             }
         }

@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 namespace Gameplay
@@ -9,11 +10,10 @@ namespace Gameplay
 
         public Vector3 Position => transform.position + _positionOffset;
 
-        public void PlaceCube(Cube cube)
+        public void PlaceCube(Cube cube, float duration = 0, Ease ease = Ease.Flash)
         {
-            cube.SetPosition(Position);
+            cube.SetPosition(Position, duration, ease);
             cube.SetScale(_cubeScale);
-            cube.Enable();
         }
     }
 }

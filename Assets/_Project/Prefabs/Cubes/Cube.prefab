@@ -75,10 +75,13 @@ MonoBehaviour:
   - {fileID: 1463836583963713349}
   - {fileID: 1115860278820382382}
   _view: {fileID: 6018454109830945127}
+  _collider: {fileID: 7643386254152940131}
   _rotationDuration: 0.4
   _fadeDuration: 0.2
+  _rescaleDuration: 0.25
   _rotationEase: 27
-  _fadeEase: 0
+  _fadeEase: 32
+  _rescaleEase: 6
   _renderer: {fileID: 7250527538338329036}
 --- !u!1 &1019022140081870948
 GameObject:
