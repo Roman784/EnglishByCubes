@@ -45,8 +45,8 @@ namespace Gameplay
             var onCompleted = new Subject<bool>();
 
             _collider.enabled = true;
-            _view.gameObject.SetActive(true);
             _rescalingTweener?.Kill(true);
+            _view.gameObject.SetActive(true);
             _rescalingTweener = _view.DOScale(Vector3.one, duration)
                 .SetEase(ease)
                 .OnComplete(() => onCompleted.OnNext(true));
