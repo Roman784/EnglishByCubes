@@ -60,6 +60,7 @@ namespace Gameplay
 
             if (instantly)
             {
+                _view.localScale = Vector3.zero;
                 _view.gameObject.SetActive(false);
                 return Observable.Return(true);
             }
@@ -92,7 +93,7 @@ namespace Gameplay
 
         public void SetScale(float scale)
         {
-            _view.localScale = Vector3.one * scale;
+            transform.localScale = Vector3.one * scale;
         }
 
         public void Rotate(string word, 

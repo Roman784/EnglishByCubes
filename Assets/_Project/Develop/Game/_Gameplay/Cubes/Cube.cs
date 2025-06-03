@@ -4,6 +4,8 @@ using R3;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UIElements;
+using Zenject;
 
 namespace Gameplay
 {
@@ -11,16 +13,19 @@ namespace Gameplay
     {
         private readonly CubeView _view;
         private readonly CubeConfigs _configs;
+        private readonly GameFieldService _gameFieldService;
 
         private List<string> _words;
         private int _curretWordIndex;
 
         private bool _isInSlot;
 
-        public Cube(CubeView view, CubeConfigs configs)
+        public Cube(CubeView view, CubeConfigs configs, GameFieldService gameFieldService)
         {
             _view = view;
             _configs = configs;
+            _gameFieldService = gameFieldService;
+
             _words = _configs.Words;
 
             _view.Init(_words[0], _configs.Material);
@@ -29,6 +34,8 @@ namespace Gameplay
             {
                 if (!_isInSlot)
                     RotateToNextSide();
+                else
+                    CreateOnField();
             });
         }
 
@@ -38,8 +45,16 @@ namespace Gameplay
             var ease = _configs.DataConfigs.RescaleEase;
 
             _isInSlot = true;
-            _view.SetScale(slot.Scale);
+            SetScale(slot.Scale);
             return SetPosition(slot.Position, duration, ease);
+        }
+
+        public Observable<bool> PlaceOnField()
+        {
+            var duration = _configs.DataConfigs.FieldPlacementDuration;
+            var ease = _configs.DataConfigs.FieldPlacementEase;
+
+            return _view.Enable(duration, ease);
         }
 
         public Observable<bool> Enable()
@@ -62,6 +77,16 @@ namespace Gameplay
                                             float duration = 0, Ease ease = Ease.Flash)
         {
             return _view.SetPosition(position, duration, ease);
+        }
+
+        public void SetScale(float scale)
+        {
+            _view.SetScale(scale);
+        }
+
+        private void CreateOnField()
+        {
+            _gameFieldService.CreateCube(_configs);
         }
 
         private void RotateToNextSide()

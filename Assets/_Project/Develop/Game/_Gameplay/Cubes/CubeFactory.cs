@@ -1,5 +1,6 @@
 using Configs;
 using UnityEngine;
+using UnityEngine.UIElements;
 using Zenject;
 
 namespace Gameplay
@@ -8,28 +9,32 @@ namespace Gameplay
     {
         private readonly DiContainer _container;
         private readonly CubeView _prefab;
+        private readonly GameFieldService _gameFieldService;
 
         [Inject]
-        public CubeFactory(DiContainer container, CubeView prefab)
+        public CubeFactory(DiContainer container, CubeView prefab, GameFieldService gameFieldService)
         {
             _container = container;
             _prefab = prefab;
+            _gameFieldService = gameFieldService;
         }
 
         public Cube Create(CubeConfigs configs, Vector3 position)
         {
-            var newSlotBar = Create(configs);
-            newSlotBar.SetPosition(position);
+            var newCube = Create(configs);
+            newCube.SetPosition(position);
 
-            return newSlotBar;
+            return newCube;
         }
 
-        public Cube Create(CubeConfigs configs)
+        public Cube Create(CubeConfigs configs, bool disabled = false)
         {
             var view = Object.Instantiate(_prefab);
-            var newSlotBar = _container.Instantiate<Cube>(new object[] { view, configs });
+            var newCube = _container.Instantiate<Cube>(new object[] { view, configs, _gameFieldService });
 
-            return newSlotBar;
+            if (disabled) newCube.Disable(true);
+
+            return newCube;
         }
     }
 }

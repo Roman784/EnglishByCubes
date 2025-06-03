@@ -49,9 +49,8 @@ namespace Gameplay
         {
             for (int i = 0; i < cubesConfigs.Count(); i++)
             {
-                var newCube = _cubeFactory.Create(cubesConfigs[i]);
-                
-                newCube.Disable(true);
+                var newCube = _cubeFactory.Create(cubesConfigs[i], true);
+
                 if (i < _slots.Count)
                     newCube.Enable();
 

@@ -14,6 +14,7 @@ namespace Gameplay
         {
             BindFactories();
             BindPrefabs();
+            BindServices();
             BindUI();
         }
 
@@ -27,6 +28,12 @@ namespace Gameplay
         {
             Container.Bind<CubeView>().FromInstance(_cubePrefab).AsTransient();
             Container.Bind<SlotBarView>().FromInstance(_slotBarPrefab).AsTransient();
+        }
+
+        private void BindServices()
+        {
+            Container.Bind<GameFieldService>().AsSingle();
+            Container.Bind<CubesLayoutService>().AsSingle();
         }
 
         private void BindUI()

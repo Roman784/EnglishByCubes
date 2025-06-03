@@ -20,3 +20,5 @@ MonoBehaviour:
   <RescaleEase>k__BackingField: 6
   <SwitchingInSlotsDuration>k__BackingField: 0.25
   <SwitchingInSlotsEase>k__BackingField: 6
+  <FieldPlacementDuration>k__BackingField: 0.25
+  <FieldPlacementEase>k__BackingField: 27
