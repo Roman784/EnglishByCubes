@@ -20,5 +20,8 @@ namespace Configs
 
         [field: SerializeField] public float FieldPlacementDuration { get; private set; }
         [field: SerializeField] public Ease FieldPlacementEase { get; private set; }
+
+        [field: SerializeField] public float SwitchingOnFieldDuration { get; private set; }
+        [field: SerializeField] public Ease SwitchingOnFieldEase { get; private set; }
     }
 }

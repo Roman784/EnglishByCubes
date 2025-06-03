@@ -49,12 +49,17 @@ namespace Gameplay
             return SetPosition(slot.Position, duration, ease);
         }
 
-        public Observable<bool> PlaceOnField()
+        public Observable<bool> PlaceOnField(Vector3 position, float scale)
         {
-            var duration = _configs.DataConfigs.FieldPlacementDuration;
-            var ease = _configs.DataConfigs.FieldPlacementEase;
+            var placementDuration = _configs.DataConfigs.FieldPlacementDuration;
+            var switchingDuration = _configs.DataConfigs.SwitchingOnFieldDuration;
+            var placementEase = _configs.DataConfigs.FieldPlacementEase;
+            var switchingEase = _configs.DataConfigs.SwitchingOnFieldEase;
 
-            return _view.Enable(duration, ease);
+            SetScale(scale);
+            SetPosition(position, switchingDuration, switchingEase);
+
+            return _view.Enable(placementDuration, placementEase);
         }
 
         public Observable<bool> Enable()

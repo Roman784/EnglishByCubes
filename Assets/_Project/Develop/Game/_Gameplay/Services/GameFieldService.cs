@@ -23,8 +23,6 @@ namespace Gameplay
             var newCube = _cubeFactory.Create(configs, true);
             _cubes.Add(newCube);
 
-            newCube.PlaceOnField();
-
             _cubesLayoutService.LayOut(_cubes);
         }
     }
