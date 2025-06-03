@@ -13,18 +13,6 @@ namespace Gameplay
         [SerializeField] private List<CubeSide> _sides;
         [SerializeField] private Transform _view;
         [SerializeField] private Collider _collider;
-
-        [Space]
-
-        [SerializeField] private float _rotationDuration;
-        [SerializeField] private float _fadeDuration;
-        [SerializeField] private float _rescaleDuration;
-        [SerializeField] private Ease _rotationEase;
-        [SerializeField] private Ease _fadeEase;
-        [SerializeField] private Ease _rescaleEase;
-
-        [Space]
-
         [SerializeField] private Renderer _renderer;
 
         private int _curretSideIndex;
@@ -48,20 +36,20 @@ namespace Gameplay
             _renderer.material = material;
         }
 
-        public Observable<bool> Enable()
+        public Observable<bool> Enable(float duration, Ease ease)
         {
             var onCompleted = new Subject<bool>();
 
             _collider.enabled = true;
             _view.gameObject.SetActive(true);
-            _view.DOScale(Vector3.one, _rescaleDuration)
-                .SetEase(_rescaleEase)
+            _view.DOScale(Vector3.one, duration)
+                .SetEase(ease)
                 .OnComplete(() => onCompleted.OnNext(true));
 
             return onCompleted;
         }
 
-        public Observable<bool> Disable(bool instantly)
+        public Observable<bool> Disable(float duration, Ease ease, bool instantly)
         {
             _collider.enabled = false;
 
@@ -73,8 +61,8 @@ namespace Gameplay
 
             var onCompleted = new Subject<bool>();
 
-            _view.DOScale(Vector3.zero, _rescaleDuration)
-                .SetEase(_rescaleEase)
+            _view.DOScale(Vector3.zero, duration)
+                .SetEase(ease)
                 .OnComplete(() =>
                 {
                     _view.gameObject.SetActive(false);
@@ -100,7 +88,9 @@ namespace Gameplay
             _view.localScale = Vector3.one * scale;
         }
 
-        public void Rotate(string word)
+        public void Rotate(string word, 
+                           float rotationDuration, Ease rotationEase, 
+                           float fadeDuration, Ease fadeEase)
         {
             _curretSideIndex = ++_curretSideIndex % _sides.Count;
 
@@ -108,9 +98,9 @@ namespace Gameplay
             var rotation = side.Rotation;
             
             side.SetWord(word);
-            _view.DORotate(rotation, _rotationDuration, RotateMode.Fast).SetEase(_rotationEase);
-            side.View.DOFade(1, _fadeDuration).SetEase(_fadeEase);
-            _previousSide.View.DOFade(0, _fadeDuration).SetEase(_fadeEase);
+            _view.DORotate(rotation, rotationDuration, RotateMode.Fast).SetEase(rotationEase);
+            side.View.DOFade(1, fadeDuration).SetEase(fadeEase);
+            _previousSide.View.DOFade(0, fadeDuration).SetEase(fadeEase);
 
             _previousSide = side;
         }

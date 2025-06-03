@@ -10,5 +10,9 @@ namespace Configs
         [field: SerializeField] public string Name { get; private set; }
         [field: SerializeField] public List<string> Words { get; private set; }
         [field: SerializeField] public Material Material { get; private set; }
+
+        [field: Space]
+
+        [field: SerializeField] public CubeDataConfigs DataConfigs { get; private set; }
     }
 }
