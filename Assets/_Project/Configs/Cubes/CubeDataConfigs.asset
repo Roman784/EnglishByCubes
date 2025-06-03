@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: CubeDataConfigs
   m_EditorClassIdentifier: 
   <RotationDuration>k__BackingField: 0.4
-  <FadeDuration>k__BackingField: 0.2
-  <RescaleDuration>k__BackingField: 0.25
   <RotationEase>k__BackingField: 27
+  <FadeDuration>k__BackingField: 0.2
   <FadeEase>k__BackingField: 32
+  <RescaleDuration>k__BackingField: 0.25
   <RescaleEase>k__BackingField: 6
+  <SwitchingInSlotsDuration>k__BackingField: 0.25
+  <SwitchingInSlotsEase>k__BackingField: 6

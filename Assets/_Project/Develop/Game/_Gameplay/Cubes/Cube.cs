@@ -32,10 +32,14 @@ namespace Gameplay
             });
         }
 
-        public void PlaceInSlot(Slot slot)
+        public Observable<bool> PlaceInSlot(Slot slot, bool instantly = false)
         {
+            var duration = instantly ? 0f : _configs.DataConfigs.RescaleDuration;
+            var ease = _configs.DataConfigs.RescaleEase;
+
             _isInSlot = true;
             _view.SetScale(slot.Scale);
+            return SetPosition(slot.Position, duration, ease);
         }
 
         public Observable<bool> Enable()

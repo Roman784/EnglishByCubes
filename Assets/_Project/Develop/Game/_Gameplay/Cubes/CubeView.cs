@@ -1,4 +1,5 @@
 using DG.Tweening;
+using DG.Tweening.Core;
 using R3;
 using System.Collections.Generic;
 using Unity.Collections.LowLevel.Unsafe;
@@ -17,6 +18,9 @@ namespace Gameplay
 
         private int _curretSideIndex;
         private CubeSide _previousSide;
+
+        private Tweener _movingTweener;
+        private Tweener _rescalingTweener;
 
         public UnityEvent OnPressed { get; private set; } = new();
         public UnityEvent OnUnpressed { get; private set; } = new();
@@ -42,7 +46,8 @@ namespace Gameplay
 
             _collider.enabled = true;
             _view.gameObject.SetActive(true);
-            _view.DOScale(Vector3.one, duration)
+            _rescalingTweener?.Kill(true);
+            _rescalingTweener = _view.DOScale(Vector3.one, duration)
                 .SetEase(ease)
                 .OnComplete(() => onCompleted.OnNext(true));
 
@@ -61,7 +66,8 @@ namespace Gameplay
 
             var onCompleted = new Subject<bool>();
 
-            _view.DOScale(Vector3.zero, duration)
+            _rescalingTweener?.Kill(true);
+            _rescalingTweener = _view.DOScale(Vector3.zero, duration)
                 .SetEase(ease)
                 .OnComplete(() =>
                 {
@@ -76,7 +82,8 @@ namespace Gameplay
         {
             var onCompleted = new Subject<bool>();
 
-            transform.DOMove(position, duration)
+            _movingTweener?.Kill(true);
+            _movingTweener = transform.DOMove(position, duration)
                 .SetEase(ease)
                 .OnComplete(() => onCompleted.OnNext(true));
 

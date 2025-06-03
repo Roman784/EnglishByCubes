@@ -56,7 +56,7 @@ namespace Gameplay
                     newCube.Enable();
 
                 var slotIndex = i < _slots.Count ? i : _slots.Count - 1;
-                _slots[slotIndex].PlaceCube(newCube);
+                newCube.PlaceInSlot(_slots[slotIndex], true);
 
                 _cubes.Add(newCube);
             }
@@ -69,16 +69,16 @@ namespace Gameplay
             for (int i = 0; i < _cubes.Count; i++)
             {
                 var cube = _cubes[i];
-
-                if (i < _firstCubeIndex || i >= _firstCubeIndex + _slots.Count)
-                    cube.Disable();
-                else
-                    cube.Enable();
-
                 var slotIndex = i - _firstCubeIndex;
+
                 if (slotIndex >= 0 && slotIndex < _slots.Count)
                 {
-                    _slots[slotIndex].PlaceCube(_cubes[i], 0.25f, Ease.OutQuad);
+                    cube.Enable();
+                    cube.PlaceInSlot(_slots[slotIndex]);
+                }
+                else
+                {
+                    cube.Disable();
                 }
             }
         }
