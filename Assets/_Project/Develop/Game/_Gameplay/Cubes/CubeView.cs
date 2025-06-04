@@ -117,5 +117,11 @@ namespace Gameplay
 
             _previousSide = side;
         }
+
+        public Observable<bool> Destroy()
+        {
+            Destroy(gameObject);
+            return Observable.Return(true);
+        }
     }
 }

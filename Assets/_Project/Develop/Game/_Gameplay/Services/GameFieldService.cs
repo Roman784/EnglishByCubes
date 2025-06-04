@@ -1,6 +1,7 @@
 using Configs;
 using System.Collections.Generic;
 using Zenject;
+using R3;
 
 namespace Gameplay
 {
@@ -24,6 +25,18 @@ namespace Gameplay
             _cubes.Add(newCube);
 
             _cubesLayoutService.LayOut(_cubes);
+        }
+
+        public void RemoveCube(Cube cube)
+        {
+            if (_cubes.Contains(cube))
+            {
+                _cubes.Remove(cube);
+                cube.Destroy().Subscribe(_ =>
+                {
+                    _cubesLayoutService.LayOut(_cubes);
+                });
+            }
         }
     }
 }

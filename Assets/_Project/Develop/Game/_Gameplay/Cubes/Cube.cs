@@ -113,8 +113,21 @@ namespace Gameplay
                 yield return null;
 
                 var position = _camera.ScreenToWorldPoint(Input.mousePosition) - _dragOffset;
+                position.y = Position.y;
+
                 SetPosition(position);
+
+                if (Position.z < -3.5)
+                {
+                    _isPressed = false;
+                    _gameFieldService.RemoveCube(this);
+                }
             }
+        }
+
+        public Observable<bool> Destroy()
+        {
+            return _view.Destroy();
         }
 
         private void CreateOnField()
