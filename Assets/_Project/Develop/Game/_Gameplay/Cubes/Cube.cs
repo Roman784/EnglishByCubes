@@ -1,11 +1,11 @@
 using Configs;
 using DG.Tweening;
 using R3;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UIElements;
-using Zenject;
+using Utils;
 
 namespace Gameplay
 {
@@ -18,7 +18,13 @@ namespace Gameplay
         private List<string> _words;
         private int _curretWordIndex;
 
+        private Vector3 _dragOffset;
+        private Camera _camera;
+
         private bool _isInSlot;
+        private bool _isPressed;
+
+        public Vector3 Position => _view.GetPosition();
 
         public Cube(CubeView view, CubeConfigs configs, GameFieldService gameFieldService)
         {
@@ -27,6 +33,7 @@ namespace Gameplay
             _gameFieldService = gameFieldService;
 
             _words = _configs.Words;
+            _camera = Camera.main;
 
             _view.Init(_words[0], _configs.Material);
 
@@ -36,6 +43,16 @@ namespace Gameplay
                     RotateToNextSide();
                 else
                     CreateOnField();
+
+                _isPressed = false;
+            });
+
+            _view.OnPressed.AddListener(() =>
+            {
+                if (_isPressed || _isInSlot) return;
+                _isPressed = true;
+                _dragOffset = _camera.ScreenToWorldPoint(Input.mousePosition) - Position;
+                Coroutines.Start(Drag());
             });
         }
 
@@ -87,6 +104,17 @@ namespace Gameplay
         public void SetScale(float scale)
         {
             _view.SetScale(scale);
+        }
+
+        public IEnumerator Drag()
+        {
+            while (_isPressed)
+            {
+                yield return null;
+
+                var position = _camera.ScreenToWorldPoint(Input.mousePosition) - _dragOffset;
+                SetPosition(position);
+            }
         }
 
         private void CreateOnField()

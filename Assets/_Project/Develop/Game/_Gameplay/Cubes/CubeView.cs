@@ -40,6 +40,11 @@ namespace Gameplay
             _renderer.material = material;
         }
 
+        public Vector3 GetPosition()
+        {
+            return transform.position;
+        }
+
         public Observable<bool> Enable(float duration, Ease ease)
         {
             var onCompleted = new Subject<bool>();
