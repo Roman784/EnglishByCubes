@@ -118,10 +118,21 @@ namespace Gameplay
             _previousSide = side;
         }
 
-        public Observable<bool> Destroy()
+        public Observable<bool> Destroy(float duration, Ease ease)
         {
-            Destroy(gameObject);
-            return Observable.Return(true);
+            var onCompleted = new Subject<bool>();
+
+            _collider.enabled = false;
+            _rescalingTweener?.Kill(true);
+            _rescalingTweener = _view.DOScale(Vector3.zero, duration)
+                .SetEase(ease)
+                .OnComplete(() =>
+                {
+                    Destroy(gameObject);
+                    onCompleted.OnNext(true);
+                });
+
+            return onCompleted;
         }
     }
 }

@@ -23,6 +23,7 @@ namespace Gameplay
 
         private bool _isInSlot;
         private bool _isPressed;
+        private bool _isDestroyed;
 
         public Vector3 Position => _view.GetPosition();
 
@@ -39,6 +40,8 @@ namespace Gameplay
 
             _view.OnUnpressed.AddListener(() => 
             {
+                if (_isDestroyed) return;
+
                 if (!_isInSlot)
                     RotateToNextSide();
                 else
@@ -49,7 +52,7 @@ namespace Gameplay
 
             _view.OnPressed.AddListener(() =>
             {
-                if (_isPressed || _isInSlot) return;
+                if (_isPressed || _isInSlot || _isDestroyed) return;
                 _isPressed = true;
                 _dragOffset = _camera.ScreenToWorldPoint(Input.mousePosition) - Position;
                 Coroutines.Start(Drag());
@@ -127,7 +130,12 @@ namespace Gameplay
 
         public Observable<bool> Destroy()
         {
-            return _view.Destroy();
+            _isDestroyed = true;
+
+            var duration = _configs.DataConfigs.DestructionDuration;
+            var ease = _configs.DataConfigs.DestructionEase;
+
+            return _view.Destroy(duration, ease);
         }
 
         private void CreateOnField()

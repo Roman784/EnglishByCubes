@@ -23,5 +23,8 @@ namespace Configs
 
         [field: SerializeField] public float SwitchingOnFieldDuration { get; private set; }
         [field: SerializeField] public Ease SwitchingOnFieldEase { get; private set; }
+
+        [field: SerializeField] public float DestructionDuration { get; private set; }
+        [field: SerializeField] public Ease DestructionEase { get; private set; }
     }
 }

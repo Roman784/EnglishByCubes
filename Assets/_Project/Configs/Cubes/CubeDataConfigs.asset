@@ -24,3 +24,5 @@ MonoBehaviour:
   <FieldPlacementEase>k__BackingField: 27
   <SwitchingOnFieldDuration>k__BackingField: 0.3
   <SwitchingOnFieldEase>k__BackingField: 27
+  <DestructionDuration>k__BackingField: 0.25
+  <DestructionEase>k__BackingField: 26
