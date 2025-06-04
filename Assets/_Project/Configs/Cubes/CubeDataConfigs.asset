@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 206b039e398b01543bdb463d0abefcb8, type: 3}
   m_Name: CubeDataConfigs
   m_EditorClassIdentifier: 
+  <ScaleDuringDragging>k__BackingField: 1.1
   <RotationDuration>k__BackingField: 0.4
   <RotationEase>k__BackingField: 27
   <FadeDuration>k__BackingField: 0.2
@@ -22,7 +23,7 @@ MonoBehaviour:
   <SwitchingInSlotsEase>k__BackingField: 6
   <FieldPlacementDuration>k__BackingField: 0.4
   <FieldPlacementEase>k__BackingField: 27
-  <SwitchingOnFieldDuration>k__BackingField: 0.3
+  <SwitchingOnFieldDuration>k__BackingField: 0.5
   <SwitchingOnFieldEase>k__BackingField: 27
   <DestructionDuration>k__BackingField: 0.25
   <DestructionEase>k__BackingField: 26

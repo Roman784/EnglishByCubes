@@ -2,6 +2,7 @@ using Configs;
 using System.Collections.Generic;
 using Zenject;
 using R3;
+using UnityEngine;
 
 namespace Gameplay
 {
@@ -37,6 +38,33 @@ namespace Gameplay
                     _cubesLayoutService.LayOut(_cubes);
                 });
             }
+        }
+
+        public void CheckAndSwap(Cube originCube)
+        {
+            if (_cubes.Count == 1)
+            {
+                _cubesLayoutService.LayOut(_cubes);
+                return;
+            }
+
+            var originCubeIndex = _cubes.IndexOf(originCube);
+            var cubeScale = _cubesLayoutService.GetCubeScale(_cubes.Count);
+
+            for (int i = 0; i < _cubes.Count; i++)
+            {
+                var cube = _cubes[i];
+                var distance = Vector3.Distance(cube.Position, originCube.Position);
+
+                if (distance < cubeScale / 1.5f && cube != originCube)
+                {
+                    _cubes.RemoveAt(originCubeIndex);
+                    _cubes.Insert(i, originCube);
+                    break;
+                }
+            }
+
+            _cubesLayoutService.LayOut(_cubes);
         }
     }
 }

@@ -24,6 +24,7 @@ namespace Gameplay
         private bool _isInSlot;
         private bool _isPressed;
         private bool _isDestroyed;
+        private bool _isDragged;
 
         public Vector3 Position => _view.GetPosition();
 
@@ -41,13 +42,12 @@ namespace Gameplay
             _view.OnUnpressed.AddListener(() => 
             {
                 if (_isDestroyed) return;
-
-                if (!_isInSlot)
-                    RotateToNextSide();
-                else
-                    CreateOnField();
-
                 _isPressed = false;
+
+                if (_isInSlot)
+                    CreateOnField();
+                else if (!_isDragged)
+                    RotateToNextSide();
             });
 
             _view.OnPressed.AddListener(() =>
@@ -111,6 +111,11 @@ namespace Gameplay
 
         public IEnumerator Drag()
         {
+            _isDragged = true;
+
+            var scale = _configs.DataConfigs.ScaleDuringDragging;
+            SetScale(scale);
+
             while (_isPressed)
             {
                 yield return null;
@@ -126,6 +131,12 @@ namespace Gameplay
                     _gameFieldService.RemoveCube(this);
                 }
             }
+
+            _isDragged = false;
+            SetScale(1);
+
+            if (!_isDestroyed)
+                _gameFieldService.CheckAndSwap(this);
         }
 
         public Observable<bool> Destroy()
