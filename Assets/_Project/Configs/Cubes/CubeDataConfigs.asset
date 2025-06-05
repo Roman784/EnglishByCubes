@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 206b039e398b01543bdb463d0abefcb8, type: 3}
   m_Name: CubeDataConfigs
   m_EditorClassIdentifier: 
-  <ScaleDuringDragging>k__BackingField: 1.1
+  <SelectionScale>k__BackingField: 1.15
+  <SelectionDuration>k__BackingField: 0.15
+  <SelectionEase>k__BackingField: 6
   <RotationDuration>k__BackingField: 0.4
   <RotationEase>k__BackingField: 27
   <FadeDuration>k__BackingField: 0.2
@@ -25,5 +27,5 @@ MonoBehaviour:
   <FieldPlacementEase>k__BackingField: 27
   <SwitchingOnFieldDuration>k__BackingField: 0.5
   <SwitchingOnFieldEase>k__BackingField: 27
-  <DestructionDuration>k__BackingField: 0.25
+  <DestructionDuration>k__BackingField: 0.4
   <DestructionEase>k__BackingField: 26

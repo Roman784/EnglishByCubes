@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Zenject;
 using R3;
 using UnityEngine;
+using System.Linq;
 
 namespace Gameplay
 {
@@ -13,6 +14,10 @@ namespace Gameplay
 
         private List<Cube> _cubes = new();
 
+        private List<Cube> _previewCubes = new();
+        private int _previewCubeIndex;
+        private List<Cube> _movingPreviewCubes;
+
         [Inject]
         private void Construct(CubeFactory cubeFactory, CubesLayoutService cubesLayoutService)
         {
@@ -22,9 +27,12 @@ namespace Gameplay
 
         public void CreateCube(CubeConfigs configs)
         {
-            var newCube = _cubeFactory.Create(configs);
-            _cubes.Add(newCube);
+            var position = _cubesLayoutService.GetLastCubePosition(_cubes.Count + 1);
 
+            var newCube = _cubeFactory.Create(configs, position);
+            newCube.DisableOnField();
+
+            _cubes.Add(newCube);
             _cubesLayoutService.LayOut(_cubes);
         }
 
@@ -40,29 +48,53 @@ namespace Gameplay
             }
         }
 
-        public void CheckAndSwap(Cube originCube)
+        public void PrepareForPreviewCubePosition(Cube cube)
         {
-            if (_cubes.Count == 1)
-            {
-                _cubesLayoutService.LayOut(_cubes);
-                return;
-            }
+            _previewCubes = new List<Cube>(_cubes);
+            _previewCubeIndex = _previewCubes.IndexOf(cube);
+            _previewCubes[_previewCubeIndex] = null;
+            _movingPreviewCubes = new();
+        }
 
-            var originCubeIndex = _cubes.IndexOf(originCube);
-            var cubeScale = _cubesLayoutService.GetCubeScale(_cubes.Count);
+        public void PreviewCubePosition(Cube originCube)
+        {
+            if (_previewCubes.Count < 1) return;
 
-            for (int i = 0; i < _cubes.Count; i++)
+            var cubeScale = _cubesLayoutService.GetCubeScale(_previewCubes.Count);
+
+            for (int i = 0; i < _previewCubes.Count; i++)
             {
-                var cube = _cubes[i];
+                var cube = _previewCubes[i];
+                if (cube == null) continue;
+
                 var distance = Vector3.Distance(cube.Position, originCube.Position);
-
-                if (distance < cubeScale / 1.5f && cube != originCube)
+                if (distance < cubeScale / 1.25f)
                 {
-                    _cubes.RemoveAt(originCubeIndex);
-                    _cubes.Insert(i, originCube);
-                    break;
+                    if (_movingPreviewCubes.Contains(cube)) return;
+
+                    _previewCubes.RemoveAt(_previewCubeIndex);
+                    _previewCubes.Insert(i, null);
+                    _previewCubeIndex = i;
+
+                    _movingPreviewCubes.Add(cube);
+                    _cubesLayoutService.LayOut(_previewCubes).Subscribe(_ =>
+                    {
+                        _movingPreviewCubes.Remove(cube);
+                    });
+
+                    return;
                 }
             }
+        }
+
+        public void SwapCubesAccordingPreview()
+        {
+            var absentCube = _cubes.Except(_previewCubes).FirstOrDefault();
+            _previewCubes[_previewCubes.IndexOf(null)] = absentCube;
+
+            _cubes.Clear();
+            _cubes.AddRange(_previewCubes);
+            _cubes.RemoveAll(c => c == null);
 
             _cubesLayoutService.LayOut(_cubes);
         }

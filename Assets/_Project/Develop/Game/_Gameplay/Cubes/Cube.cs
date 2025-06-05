@@ -91,10 +91,13 @@ namespace Gameplay
             var placementEase = _configs.DataConfigs.FieldPlacementEase;
             var switchingEase = _configs.DataConfigs.SwitchingOnFieldEase;
 
-            _view.SetScale(Vector3.one * scale);
-            _view.Enable();
-            _view.SetViewScale(Vector3.one, placementDuration, placementEase);
+            _view.SetViewScale(Vector3.one * scale, placementDuration, placementEase);
             return Move(position, switchingDuration, switchingEase);
+        }
+
+        public void DisableOnField()
+        {
+            Shrink(true);
         }
 
         public void SetPosition(Vector3 position)
@@ -108,36 +111,6 @@ namespace Gameplay
             return _view.SetPosition(position, duration, ease);
         }
 
-        public IEnumerator Drag()
-        {
-            _isDragged = true;
-
-            var scale = _configs.DataConfigs.ScaleDuringDragging;
-            _view.SetScale(Vector3.one * scale);
-
-            while (_isPressed)
-            {
-                yield return null;
-
-                var position = _camera.ScreenToWorldPoint(Input.mousePosition) - _dragOffset;
-                position.y = Position.y;
-
-                SetPosition(position);
-
-                if (Position.z < -3.5)
-                {
-                    _isPressed = false;
-                    _gameFieldService.RemoveCube(this);
-                }
-            }
-
-            _isDragged = false;
-            _view.SetScale(Vector3.one);
-
-            if (!_isDestroyed)
-                _gameFieldService.CheckAndSwap(this);
-        }
-
         public Observable<bool> Destroy()
         {
             _isDestroyed = true;
@@ -147,6 +120,23 @@ namespace Gameplay
 
             _view.Disable();
             return _view.Destroy(duration, ease);
+        }
+
+        private Observable<bool> Select()
+        {
+            var scale = _configs.DataConfigs.SelectionScale;
+            var duration = _configs.DataConfigs.SelectionDuration;
+            var ease = _configs.DataConfigs.SelectionEase;
+
+            return _view.SetScale(Vector3.one * scale, duration, ease);
+        }
+
+        private Observable<bool> Deselect()
+        {
+            var duration = _configs.DataConfigs.SelectionDuration;
+            var ease = _configs.DataConfigs.SelectionEase;
+
+            return _view.SetScale(Vector3.one, duration, ease);
         }
 
         private Observable<bool> Enlarge()
@@ -187,6 +177,36 @@ namespace Gameplay
             var word = _words[_curretWordIndex];
 
             _view.Rotate(word, rotationDuration, rotationEase, fadeDuration, fadeEase);
+        }
+
+        private IEnumerator Drag()
+        {
+            _isDragged = true;
+            Select();
+
+            _gameFieldService.PrepareForPreviewCubePosition(this);
+
+            while (_isPressed)
+            {
+                yield return null;
+
+                var position = _camera.ScreenToWorldPoint(Input.mousePosition) - _dragOffset;
+                position.y = Position.y;
+
+                SetPosition(position);
+                _gameFieldService.PreviewCubePosition(this);
+
+                if (Position.z < -3.5)
+                {
+                    _isPressed = false;
+                    _gameFieldService.RemoveCube(this);
+                }
+            }
+
+            _isDragged = false;
+            Deselect();
+
+            _gameFieldService.SwapCubesAccordingPreview();
         }
     }
 }

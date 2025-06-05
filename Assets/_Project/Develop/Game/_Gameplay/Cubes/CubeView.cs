@@ -16,9 +16,6 @@ namespace Gameplay
         private int _curretSideIndex;
         private CubeSide _previousSide;
 
-        private Tweener _movingTweener;
-        private Tweener _rescalingTweener;
-
         public UnityEvent OnPressed { get; private set; } = new();
         public UnityEvent OnUnpressed { get; private set; } = new();
 
@@ -67,14 +64,22 @@ namespace Gameplay
             _view.localScale = scale;
         }
 
-        public Observable<bool> SetViewScale(Vector3 scale, 
-                                             float duration, Ease ease, 
-                                             bool completePreviousTween = false)
+        public Observable<bool> SetScale(Vector3 scale, float duration, Ease ease)
         {
             var onCompleted = new Subject<bool>();
 
-            _rescalingTweener?.Kill(completePreviousTween);
-            _rescalingTweener = _view.DOScale(scale, duration)
+            transform.DOScale(scale, duration)
+                .SetEase(ease)
+                .OnComplete(() => onCompleted.OnNext(true));
+
+            return onCompleted;
+        }
+
+        public Observable<bool> SetViewScale(Vector3 scale, float duration, Ease ease)
+        {
+            var onCompleted = new Subject<bool>();
+
+            _view.DOScale(scale, duration)
                 .SetEase(ease)
                 .OnComplete(() => onCompleted.OnNext(true));
 
@@ -95,8 +100,7 @@ namespace Gameplay
         {
             var onCompleted = new Subject<bool>();
 
-            _movingTweener?.Kill(true);
-            _movingTweener = transform.DOMove(position, duration)
+            transform.DOMove(position, duration)
                 .SetEase(ease)
                 .OnComplete(() => onCompleted.OnNext(true));
 
