@@ -27,12 +27,10 @@ namespace Gameplay
             return newCube;
         }
 
-        public Cube Create(CubeConfigs configs, bool disabled = false)
+        public Cube Create(CubeConfigs configs)
         {
             var view = Object.Instantiate(_prefab);
             var newCube = _container.Instantiate<Cube>(new object[] { view, configs, _gameFieldService });
-
-            if (disabled) newCube.Disable(true);
 
             return newCube;
         }

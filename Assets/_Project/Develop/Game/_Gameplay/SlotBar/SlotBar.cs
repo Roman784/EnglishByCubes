@@ -1,11 +1,7 @@
 using Configs;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Utils;
 using Zenject;
-using R3;
-using DG.Tweening;
 using System.Linq;
 
 namespace Gameplay
@@ -49,10 +45,10 @@ namespace Gameplay
         {
             for (int i = 0; i < cubesConfigs.Count(); i++)
             {
-                var newCube = _cubeFactory.Create(cubesConfigs[i], true);
+                var newCube = _cubeFactory.Create(cubesConfigs[i]);
 
-                if (i < _slots.Count)
-                    newCube.Enable();
+                //if (i < _slots.Count)
+                    //newCube.Enable();
 
                 var slotIndex = i < _slots.Count ? i : _slots.Count - 1;
                 newCube.PlaceInSlot(_slots[slotIndex], true);
@@ -72,12 +68,12 @@ namespace Gameplay
 
                 if (slotIndex >= 0 && slotIndex < _slots.Count)
                 {
-                    cube.Enable();
+                    //cube.Enable();
                     cube.PlaceInSlot(_slots[slotIndex]);
                 }
                 else
                 {
-                    cube.Disable();
+                    //cube.Disable();
                 }
             }
         }

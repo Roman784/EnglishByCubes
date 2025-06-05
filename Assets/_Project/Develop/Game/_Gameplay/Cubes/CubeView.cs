@@ -40,12 +40,46 @@ namespace Gameplay
             _renderer.material = material;
         }
 
-        public Vector3 GetPosition()
+        public void Enable()
         {
-            return transform.position;
+            _collider.enabled = true;
         }
 
-        public Observable<bool> Enable(float duration, Ease ease)
+        public void Disable()
+        {
+            _collider.enabled = false;
+        }
+
+        public void Activate()
+        {
+            _view.gameObject.SetActive(true);
+        }
+
+        public void Deactivate()
+        {
+            _view.gameObject.SetActive(false);
+        }
+
+        public void SetScale(Vector3 scale)
+        {
+            transform.localScale = scale;
+        }
+
+        public Observable<bool> SetViewScale(Vector3 scale, 
+                                             float duration, Ease ease, 
+                                             bool completePreviousTween = false)
+        {
+            var onCompleted = new Subject<bool>();
+
+            _rescalingTweener?.Kill(completePreviousTween);
+            _rescalingTweener = _view.DOScale(scale, duration)
+                .SetEase(ease)
+                .OnComplete(() => onCompleted.OnNext(true));
+
+            return onCompleted;
+        }
+
+        /*public Observable<bool> Enable(float duration, Ease ease)
         {
             var onCompleted = new Subject<bool>();
 
@@ -82,6 +116,10 @@ namespace Gameplay
                 });
 
             return onCompleted;
+        }*/
+        public Vector3 GetPosition()
+        {
+            return transform.position;
         }
 
         public Observable<bool> SetPosition(Vector3 position, float duration, Ease ease)
@@ -94,11 +132,6 @@ namespace Gameplay
                 .OnComplete(() => onCompleted.OnNext(true));
 
             return onCompleted;
-        }
-
-        public void SetScale(float scale)
-        {
-            transform.localScale = Vector3.one * scale;
         }
 
         public void Rotate(string word, 
@@ -122,15 +155,11 @@ namespace Gameplay
         {
             var onCompleted = new Subject<bool>();
 
-            _collider.enabled = false;
-            _rescalingTweener?.Kill(true);
-            _rescalingTweener = _view.DOScale(Vector3.zero, duration)
-                .SetEase(ease)
-                .OnComplete(() =>
-                {
-                    Destroy(gameObject);
-                    onCompleted.OnNext(true);
-                });
+            SetViewScale(Vector3.zero, duration, ease).Subscribe(_ =>
+            {
+                Destroy(gameObject);
+                onCompleted.OnNext(true);
+            });
 
             return onCompleted;
         }

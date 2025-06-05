@@ -61,12 +61,19 @@ namespace Gameplay
 
         public Observable<bool> PlaceInSlot(Slot slot, bool instantly = false)
         {
-            var duration = instantly ? 0f : _configs.DataConfigs.RescaleDuration;
-            var ease = _configs.DataConfigs.RescaleEase;
-
             _isInSlot = true;
             SetScale(slot.Scale);
-            return SetPosition(slot.Position, duration, ease);
+
+            if (instantly)
+            {
+                SetPosition(slot.Position);
+                return Observable.Return(true);
+            }
+
+            var duration = _configs.DataConfigs.RescaleDuration;
+            var ease = _configs.DataConfigs.RescaleEase;
+
+            return Move(slot.Position, duration, ease);
         }
 
         public Observable<bool> PlaceOnField(Vector3 position, float scale)
@@ -77,12 +84,12 @@ namespace Gameplay
             var switchingEase = _configs.DataConfigs.SwitchingOnFieldEase;
 
             SetScale(scale);
-            SetPosition(position, switchingDuration, switchingEase);
-
-            return _view.Enable(placementDuration, placementEase);
+            _view.Enable();
+            _view.SetViewScale(Vector3.one, placementDuration, placementEase);
+            return Move(position, switchingDuration, switchingEase);
         }
 
-        public Observable<bool> Enable()
+        /*public Observable<bool> Enable()
         {
             var duration = _configs.DataConfigs.RescaleDuration;
             var ease = _configs.DataConfigs.RescaleEase;
@@ -96,17 +103,22 @@ namespace Gameplay
             var ease = _configs.DataConfigs.RescaleEase;
 
             return _view.Disable(duration, ease, instantly);
-        }
+        }*/
 
-        public Observable<bool> SetPosition(Vector3 position, 
-                                            float duration = 0, Ease ease = Ease.Flash)
+        public void SetPosition(Vector3 position)
         {
-            return _view.SetPosition(position, duration, ease);
+            _view.SetPosition(position, 0, Ease.Flash);
         }
 
         public void SetScale(float scale)
         {
-            _view.SetScale(scale);
+            _view.SetScale(Vector3.one * scale);
+        }
+
+        public Observable<bool> Move(Vector3 position,
+                         float duration = 0, Ease ease = Ease.Flash)
+        {
+            return _view.SetPosition(position, duration, ease);
         }
 
         public IEnumerator Drag()
@@ -146,6 +158,7 @@ namespace Gameplay
             var duration = _configs.DataConfigs.DestructionDuration;
             var ease = _configs.DataConfigs.DestructionEase;
 
+            _view.Disable();
             return _view.Destroy(duration, ease);
         }
 

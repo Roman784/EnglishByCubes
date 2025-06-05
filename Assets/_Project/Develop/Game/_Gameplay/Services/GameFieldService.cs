@@ -22,7 +22,7 @@ namespace Gameplay
 
         public void CreateCube(CubeConfigs configs)
         {
-            var newCube = _cubeFactory.Create(configs, true);
+            var newCube = _cubeFactory.Create(configs);
             _cubes.Add(newCube);
 
             _cubesLayoutService.LayOut(_cubes);
