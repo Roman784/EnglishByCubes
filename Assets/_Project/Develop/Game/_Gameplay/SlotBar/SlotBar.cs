@@ -46,17 +46,13 @@ namespace Gameplay
             for (int i = 0; i < cubesConfigs.Count(); i++)
             {
                 var newCube = _cubeFactory.Create(cubesConfigs[i]);
-
-                //if (i < _slots.Count)
-                    //newCube.Enable();
-
-                var slotIndex = i < _slots.Count ? i : _slots.Count - 1;
-                newCube.PlaceInSlot(_slots[slotIndex], true);
-
                 _cubes.Add(newCube);
+
+                var slot = _slots[Mathf.Clamp(i, 0, _slots.Count - 1)];
+                newCube.AddToSlot(slot);
             }
 
-            SetDisplayOfSwitchButtons();
+            PlaceCubes();
         }
 
         private void PlaceCubes()
@@ -68,22 +64,21 @@ namespace Gameplay
 
                 if (slotIndex >= 0 && slotIndex < _slots.Count)
                 {
-                    //cube.Enable();
                     cube.PlaceInSlot(_slots[slotIndex]);
                 }
                 else
                 {
-                    //cube.Disable();
+                    cube.DisableInSlots();
                 }
             }
+
+            SetDisplayOfSwitchButtons();
         }
 
         private void SwitchCubes(int step)
         {
             _firstCubeIndex = Mathf.Clamp(_firstCubeIndex + step, 0, MaxFirstCubeIndex);
-
             PlaceCubes();
-            SetDisplayOfSwitchButtons();
         }
 
         private void SetDisplayOfSwitchButtons()

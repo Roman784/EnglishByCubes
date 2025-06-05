@@ -1,9 +1,6 @@
 using DG.Tweening;
-using DG.Tweening.Core;
 using R3;
 using System.Collections.Generic;
-using Unity.Collections.LowLevel.Unsafe;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -65,6 +62,11 @@ namespace Gameplay
             transform.localScale = scale;
         }
 
+        public void SetViewScale(Vector3 scale)
+        {
+            _view.localScale = scale;
+        }
+
         public Observable<bool> SetViewScale(Vector3 scale, 
                                              float duration, Ease ease, 
                                              bool completePreviousTween = false)
@@ -79,47 +81,14 @@ namespace Gameplay
             return onCompleted;
         }
 
-        /*public Observable<bool> Enable(float duration, Ease ease)
-        {
-            var onCompleted = new Subject<bool>();
-
-            _collider.enabled = true;
-            _rescalingTweener?.Kill(true);
-            _view.gameObject.SetActive(true);
-            _rescalingTweener = _view.DOScale(Vector3.one, duration)
-                .SetEase(ease)
-                .OnComplete(() => onCompleted.OnNext(true));
-
-            return onCompleted;
-        }
-
-        public Observable<bool> Disable(float duration, Ease ease, bool instantly)
-        {
-            _collider.enabled = false;
-
-            if (instantly)
-            {
-                _view.localScale = Vector3.zero;
-                _view.gameObject.SetActive(false);
-                return Observable.Return(true);
-            }
-
-            var onCompleted = new Subject<bool>();
-
-            _rescalingTweener?.Kill(true);
-            _rescalingTweener = _view.DOScale(Vector3.zero, duration)
-                .SetEase(ease)
-                .OnComplete(() =>
-                {
-                    _view.gameObject.SetActive(false);
-                    onCompleted.OnNext(true);
-                });
-
-            return onCompleted;
-        }*/
         public Vector3 GetPosition()
         {
             return transform.position;
+        }
+
+        public void SetPosition(Vector3 position)
+        {
+            transform.position = position;
         }
 
         public Observable<bool> SetPosition(Vector3 position, float duration, Ease ease)

@@ -59,21 +59,29 @@ namespace Gameplay
             });
         }
 
-        public Observable<bool> PlaceInSlot(Slot slot, bool instantly = false)
+        public void AddToSlot(Slot slot)
         {
             _isInSlot = true;
-            SetScale(slot.Scale);
+            SetPosition(slot.Position);
+            DisableInSlots(true);
+        }
 
-            if (instantly)
-            {
-                SetPosition(slot.Position);
-                return Observable.Return(true);
-            }
-
+        public Observable<bool> PlaceInSlot(Slot slot)
+        {
             var duration = _configs.DataConfigs.RescaleDuration;
             var ease = _configs.DataConfigs.RescaleEase;
 
+            _view.Enable();
+            _view.SetScale(Vector3.one * slot.Scale);
+            Enlarge();
+
             return Move(slot.Position, duration, ease);
+        }
+
+        public Observable<bool> DisableInSlots(bool instantly = false)
+        {
+            _view.Disable();
+            return Shrink(instantly);
         }
 
         public Observable<bool> PlaceOnField(Vector3 position, float scale)
@@ -83,36 +91,15 @@ namespace Gameplay
             var placementEase = _configs.DataConfigs.FieldPlacementEase;
             var switchingEase = _configs.DataConfigs.SwitchingOnFieldEase;
 
-            SetScale(scale);
+            _view.SetScale(Vector3.one * scale);
             _view.Enable();
             _view.SetViewScale(Vector3.one, placementDuration, placementEase);
             return Move(position, switchingDuration, switchingEase);
         }
 
-        /*public Observable<bool> Enable()
-        {
-            var duration = _configs.DataConfigs.RescaleDuration;
-            var ease = _configs.DataConfigs.RescaleEase;
-
-            return _view.Enable(duration, ease);
-        }
-
-        public Observable<bool> Disable(bool instantly = false)
-        {
-            var duration = _configs.DataConfigs.RescaleDuration;
-            var ease = _configs.DataConfigs.RescaleEase;
-
-            return _view.Disable(duration, ease, instantly);
-        }*/
-
         public void SetPosition(Vector3 position)
         {
-            _view.SetPosition(position, 0, Ease.Flash);
-        }
-
-        public void SetScale(float scale)
-        {
-            _view.SetScale(Vector3.one * scale);
+            _view.SetPosition(position);
         }
 
         public Observable<bool> Move(Vector3 position,
@@ -126,7 +113,7 @@ namespace Gameplay
             _isDragged = true;
 
             var scale = _configs.DataConfigs.ScaleDuringDragging;
-            SetScale(scale);
+            _view.SetScale(Vector3.one * scale);
 
             while (_isPressed)
             {
@@ -145,7 +132,7 @@ namespace Gameplay
             }
 
             _isDragged = false;
-            SetScale(1);
+            _view.SetScale(Vector3.one);
 
             if (!_isDestroyed)
                 _gameFieldService.CheckAndSwap(this);
@@ -160,6 +147,28 @@ namespace Gameplay
 
             _view.Disable();
             return _view.Destroy(duration, ease);
+        }
+
+        private Observable<bool> Enlarge()
+        {
+            var duration = _configs.DataConfigs.RescaleDuration;
+            var ease = _configs.DataConfigs.RescaleEase;
+
+            return _view.SetViewScale(Vector3.one, duration, ease);
+        }
+
+        private Observable<bool> Shrink(bool instantly = false)
+        {
+            if (instantly)
+            {
+                _view.SetViewScale(Vector3.zero);
+                return Observable.Return(true);
+            }
+
+            var duration = _configs.DataConfigs.RescaleDuration;
+            var ease = _configs.DataConfigs.RescaleEase;
+
+            return _view.SetViewScale(Vector3.zero, duration, ease);
         }
 
         private void CreateOnField()
