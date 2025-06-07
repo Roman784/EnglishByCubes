@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CubeDataConfigs
   m_EditorClassIdentifier: 
   <SelectionScale>k__BackingField: 1.15
+  <WordListOpeningCountdown>k__BackingField: 1
   <SelectionDuration>k__BackingField: 0.15
   <SelectionEase>k__BackingField: 6
   <RotationDuration>k__BackingField: 0.4
@@ -29,3 +30,7 @@ MonoBehaviour:
   <SwitchingOnFieldEase>k__BackingField: 27
   <DestructionDuration>k__BackingField: 0.4
   <DestructionEase>k__BackingField: 26
+  <OpeningWordListDuration>k__BackingField: 0.25
+  <OpeningWordListEase>k__BackingField: 6
+  <ClosingWordListDuration>k__BackingField: 0.25
+  <ClosingWordListEase>k__BackingField: 6

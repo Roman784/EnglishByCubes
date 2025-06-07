@@ -22,10 +22,13 @@ namespace Gameplay
         private Vector3 _dragOffset;
         private Camera _camera;
 
+        private Tween _wordListOpeningCountdown;
+
         private bool _isInSlot;
         private bool _isPressed;
         private bool _isDestroyed;
         private bool _isDragged;
+        private bool _isWordListOpened;
 
         public Vector3 Position => _isDestroyed ? Vector3.zero : _view.GetPosition();
 
@@ -42,7 +45,20 @@ namespace Gameplay
 
             _view.Init(_words[0], _configs.Material);
 
-            _view.OnUnpressed.AddListener(() => 
+            _view.OnPressed.AddListener(() =>
+            {
+                if (_isPressed || _isInSlot || _isDestroyed) return;
+                _isPressed = true;
+
+                _dragOffset = _camera.ScreenToWorldPoint(Input.mousePosition) - Position;
+                Coroutines.Start(Drag());
+
+                var wordListOpeningCountdownValue = _configs.DataConfigs.WordListOpeningCountdown;
+                _wordListOpeningCountdown?.Kill(false);
+                _wordListOpeningCountdown = DOVirtual.DelayedCall(wordListOpeningCountdownValue, () => OpenWordList());
+            });
+
+            _view.OnUnpressed.AddListener(() =>
             {
                 if (_isDestroyed) return;
                 _isPressed = false;
@@ -51,14 +67,10 @@ namespace Gameplay
                     CreateOnField();
                 else if (!_isDragged)
                     RotateToNextSide();
-            });
 
-            _view.OnPressed.AddListener(() =>
-            {
-                if (_isPressed || _isInSlot || _isDestroyed) return;
-                _isPressed = true;
-                _dragOffset = _camera.ScreenToWorldPoint(Input.mousePosition) - Position;
-                Coroutines.Start(Drag());
+                _wordListOpeningCountdown?.Kill(false);
+                if (_isWordListOpened)
+                    CloseWordList();
             });
         }
 
@@ -211,6 +223,26 @@ namespace Gameplay
 
             if (!_isDestroyed)
                 _gameFieldService.SetCubesAccordingPreview();
+        }
+
+        private Observable<bool> OpenWordList()
+        {
+            _isWordListOpened = true;
+
+            var duration = _configs.DataConfigs.OpeningWordListDuration;
+            var ease = _configs.DataConfigs.OpeningWordListEase;
+
+            return _view.OpenWordList(duration, ease);
+        }
+
+        private Observable<bool> CloseWordList()
+        {
+            _isWordListOpened = false;
+
+            var duration = _configs.DataConfigs.ClosingWordListDuration;
+            var ease = _configs.DataConfigs.ClosingWordListEase;
+
+            return _view.CloseWordList(duration, ease);
         }
     }
 }

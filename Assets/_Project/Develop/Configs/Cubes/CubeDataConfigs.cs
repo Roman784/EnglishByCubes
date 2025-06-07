@@ -7,6 +7,9 @@ namespace Configs
     public class CubeDataConfigs : ScriptableObject
     {
         [field: SerializeField] public float SelectionScale { get; private set; }
+        [field: SerializeField] public float WordListOpeningCountdown { get; private set; }
+
+        [field: Space]
 
         [field: SerializeField] public float SelectionDuration { get; private set; }
         [field: SerializeField] public Ease SelectionEase { get; private set; }
@@ -31,5 +34,13 @@ namespace Configs
 
         [field: SerializeField] public float DestructionDuration { get; private set; }
         [field: SerializeField] public Ease DestructionEase { get; private set; }
+
+        [field: Space]
+
+        [field: SerializeField] public float OpeningWordListDuration { get; private set; }
+        [field: SerializeField] public Ease OpeningWordListEase { get; private set; }
+
+        [field: SerializeField] public float ClosingWordListDuration { get; private set; }
+        [field: SerializeField] public Ease ClosingWordListEase { get; private set; }
     }
 }

@@ -12,12 +12,12 @@ namespace Gameplay
         [SerializeField] private Transform _view;
         [SerializeField] private Collider _collider;
         [SerializeField] private Renderer _renderer;
+        [SerializeField] private Transform _wordList;
 
         private int _curretSideIndex;
         private CubeSide _previousSide;
 
         private Tweener _movementTweener;
-        private Tweener _resizingTweener;
 
         public UnityEvent OnPressed { get; private set; } = new();
         public UnityEvent OnUnpressed { get; private set; } = new();
@@ -35,6 +35,8 @@ namespace Gameplay
             _sides[0].SetWord(intialWord);
 
             _renderer.material = material;
+
+            CloseWordList(0, 0);
         }
 
         public void Enable()
@@ -128,6 +130,20 @@ namespace Gameplay
             _previousSide = side;
         }
 
+        public Observable<bool> OpenWordList(float duration, Ease ease)
+        {
+            _wordList.gameObject.SetActive(true);
+            return SetWordListScale(Vector2.one, duration, ease);
+        }
+
+        public Observable<bool> CloseWordList(float duration, Ease ease)
+        {
+            var res = SetWordListScale(Vector2.right, duration, ease);
+            res.Subscribe(_ => _wordList.gameObject.SetActive(false));
+
+            return res;
+        }
+
         public Observable<bool> Destroy(float duration, Ease ease)
         {
             var onCompleted = new Subject<bool>();
@@ -137,6 +153,17 @@ namespace Gameplay
                 Destroy(gameObject);
                 onCompleted.OnNext(true);
             });
+
+            return onCompleted;
+        }
+
+        private Observable<bool> SetWordListScale(Vector2 scale, float duration, Ease ease)
+        {
+            var onCompleted = new Subject<bool>();
+
+            _wordList.DOScale(scale, duration)
+                .SetEase(ease)
+                .OnComplete(() => onCompleted.OnNext(true));
 
             return onCompleted;
         }
