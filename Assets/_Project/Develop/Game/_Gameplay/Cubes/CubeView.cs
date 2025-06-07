@@ -16,6 +16,9 @@ namespace Gameplay
         private int _curretSideIndex;
         private CubeSide _previousSide;
 
+        private Tweener _movementTweener;
+        private Tweener _resizingTweener;
+
         public UnityEvent OnPressed { get; private set; } = new();
         public UnityEvent OnUnpressed { get; private set; } = new();
 
@@ -100,7 +103,8 @@ namespace Gameplay
         {
             var onCompleted = new Subject<bool>();
 
-            transform.DOMove(position, duration)
+            _movementTweener?.Kill(false);
+            _movementTweener = transform.DOMove(position, duration)
                 .SetEase(ease)
                 .OnComplete(() => onCompleted.OnNext(true));
 

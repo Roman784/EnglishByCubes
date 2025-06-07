@@ -15,3 +15,4 @@ MonoBehaviour:
   <Cubes>k__BackingField:
   - {fileID: 11400000, guid: 223c883833cf2894498aae33fcb681d5, type: 2}
   - {fileID: 11400000, guid: ffd9119df8066374e89a3a73216dde94, type: 2}
+  <CubesLayoutConfigs>k__BackingField: {fileID: 11400000, guid: 159649c8992f70b46945881241428561, type: 2}

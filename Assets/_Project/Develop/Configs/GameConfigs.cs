@@ -7,6 +7,5 @@ namespace Configs
     {
         [field: SerializeField] public CubesConfigs CubesConfigs { get; private set; }
         [field: SerializeField] public ThemeConfigs ThemeConfigs { get; private set; }
-        [field: SerializeField] public CubesLayoutConfigs CubesLayoutConfigs { get; private set; }
     }
 }

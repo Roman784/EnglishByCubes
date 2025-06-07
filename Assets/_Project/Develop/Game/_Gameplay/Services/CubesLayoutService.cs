@@ -15,7 +15,7 @@ namespace Gameplay
         [Inject]
         private void Construct(IConfigsProvider configsProvider)
         {
-            _configs = configsProvider.GameConfigs.CubesLayoutConfigs;
+            _configs = configsProvider.GameConfigs.CubesConfigs.CubesLayoutConfigs;
         }
 
         public Observable<bool> LayOut(List<Cube> cubes)

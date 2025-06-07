@@ -9,6 +9,9 @@ namespace Configs
     {
         [field: SerializeField] public List<CubeConfigs> Cubes { get; private set; }
 
+        [field: Space]
+        [field: SerializeField] public CubesLayoutConfigs CubesLayoutConfigs { get; private set; }
+
         public List<CubeConfigs> GetCubes(params int[] numbers)
         {
             var cubes = new List<CubeConfigs>();

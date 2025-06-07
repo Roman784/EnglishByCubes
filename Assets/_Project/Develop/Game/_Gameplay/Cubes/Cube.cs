@@ -14,6 +14,7 @@ namespace Gameplay
         private readonly CubeView _view;
         private readonly CubeConfigs _configs;
         private readonly GameFieldService _gameFieldService;
+        private readonly CubesPositionPreviewService _cubesPositionPreviewService;
 
         private List<string> _words;
         private int _curretWordIndex;
@@ -26,13 +27,15 @@ namespace Gameplay
         private bool _isDestroyed;
         private bool _isDragged;
 
-        public Vector3 Position => _view.GetPosition();
+        public Vector3 Position => _isDestroyed ? Vector3.zero : _view.GetPosition();
 
-        public Cube(CubeView view, CubeConfigs configs, GameFieldService gameFieldService)
+        public Cube(CubeView view, CubeConfigs configs,
+                    GameFieldService gameFieldService, CubesPositionPreviewService cubesPositionPreviewService)
         {
             _view = view;
             _configs = configs;
             _gameFieldService = gameFieldService;
+            _cubesPositionPreviewService = cubesPositionPreviewService;
 
             _words = _configs.Words;
             _camera = Camera.main;
@@ -184,7 +187,7 @@ namespace Gameplay
             _isDragged = true;
             Select();
 
-            _gameFieldService.PrepareForPreviewCubePosition(this);
+            _cubesPositionPreviewService.PrepareForPreviewCubePosition(this);
 
             while (_isPressed)
             {
@@ -194,7 +197,7 @@ namespace Gameplay
                 position.y = Position.y;
 
                 SetPosition(position);
-                _gameFieldService.PreviewCubePosition(this);
+                _cubesPositionPreviewService.PreviewCubePosition(this);
 
                 if (Position.z < -3.5)
                 {
@@ -206,7 +209,8 @@ namespace Gameplay
             _isDragged = false;
             Deselect();
 
-            _gameFieldService.SwapCubesAccordingPreview();
+            if (!_isDestroyed)
+                _gameFieldService.SetCubesAccordingPreview();
         }
     }
 }
