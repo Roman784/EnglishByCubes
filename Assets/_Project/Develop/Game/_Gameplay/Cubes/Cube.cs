@@ -179,6 +179,19 @@ namespace Gameplay
             return _view.CloseWordList(duration, ease);
         }
 
+        public void RotateToNextSide()
+        {
+            var rotationDuration = _configs.DataConfigs.RotationDuration;
+            var fadeDuration = _configs.DataConfigs.FadeDuration;
+            var rotationEase = _configs.DataConfigs.RotationEase;
+            var fadeEase = _configs.DataConfigs.FadeEase;
+
+            _curretWordIndex = ++_curretWordIndex % _words.Count();
+            var word = _words[_curretWordIndex];
+
+            _view.Rotate(word, rotationDuration, rotationEase, fadeDuration, fadeEase);
+        }
+
         private Observable<bool> Enlarge()
         {
             var duration = _configs.DataConfigs.RescaleDuration;
@@ -199,19 +212,6 @@ namespace Gameplay
             var ease = _configs.DataConfigs.RescaleEase;
 
             return _view.SetViewScale(Vector3.zero, duration, ease);
-        }
-
-        private void RotateToNextSide()
-        {
-            var rotationDuration = _configs.DataConfigs.RotationDuration;
-            var fadeDuration = _configs.DataConfigs.FadeDuration;
-            var rotationEase = _configs.DataConfigs.RotationEase;
-            var fadeEase = _configs.DataConfigs.FadeEase;
-
-            _curretWordIndex = ++_curretWordIndex % _words.Count();
-            var word = _words[_curretWordIndex];
-
-            _view.Rotate(word, rotationDuration, rotationEase, fadeDuration, fadeEase);
         }
 
         private IEnumerator DragRoutine()
