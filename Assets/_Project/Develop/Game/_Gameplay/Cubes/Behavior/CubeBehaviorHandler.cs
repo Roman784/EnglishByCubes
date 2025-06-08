@@ -26,7 +26,7 @@ namespace Gameplay
             _behaviorsMap[typeof(CubeInSlotBehavior)] = new CubeInSlotBehavior(this, _cube);
             _behaviorsMap[typeof(CubeCreationOnFieldBehavior)] = new CubeCreationOnFieldBehavior(this, _cube);
             _behaviorsMap[typeof(CubeDraggingBehavior)] = new CubeDraggingBehavior(this, _cube);
-            _behaviorsMap[typeof(CubeRemovingBehavior)] = new CubeRemovingBehavior(this, _cube);
+            _behaviorsMap[typeof(CubeDestructionBehavior)] = new CubeDestructionBehavior(this, _cube);
             _behaviorsMap[typeof(CubeOnFieldBehavior)] = new CubeOnFieldBehavior(this, _cube);
             _behaviorsMap[typeof(CubeWordListBehavior)] = new CubeWordListBehavior(this, _cube);
         }
@@ -49,9 +49,9 @@ namespace Gameplay
             SetBehavior(behavior);
         }
 
-        public void SetRemovingBehavior()
+        public void SetDestructionBehavior()
         {
-            var behavior = GetBehavior<CubeRemovingBehavior>();
+            var behavior = GetBehavior<CubeDestructionBehavior>();
             SetBehavior(behavior);
         }
 

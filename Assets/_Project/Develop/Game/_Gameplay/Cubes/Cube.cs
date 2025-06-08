@@ -168,7 +168,7 @@ namespace Gameplay
 
         public Observable<bool> Destroy()
         {
-            _isDestroyed = true;
+            _behaviorHandler.SetDestructionBehavior();
 
             var duration = _configs.DataConfigs.DestructionDuration;
             var ease = _configs.DataConfigs.DestructionEase;

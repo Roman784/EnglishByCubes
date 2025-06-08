@@ -16,6 +16,7 @@ namespace Gameplay
 
         public override void Enter()
         {
+            _cube.CloseWordList();
         }
 
         public override void OnPressed()
@@ -32,6 +33,7 @@ namespace Gameplay
 
                 _cube.Deselect();
                 _cube.StopDragging();
+
                 _cube.OpenWordList();
             });
         }
