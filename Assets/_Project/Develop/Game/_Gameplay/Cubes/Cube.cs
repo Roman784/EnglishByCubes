@@ -21,20 +21,10 @@ namespace Gameplay
         private List<string> _words;
         private int _curretWordIndex;
 
-        private Vector3 _dragOffset;
         private Camera _camera;
-
         private Coroutine _dragRoutine;
 
-        private Tween _wordListOpeningCountdown;
-
-        private bool _isInSlot;
-        private bool _isPressed;
-        private bool _isDestroyed;
-        private bool _isDragged;
-        private bool _isWordListOpened;
-
-        public Vector3 Position => _isDestroyed ? Vector3.zero : _view.GetPosition();
+        public Vector3 Position => _view.GetPosition();
 
         public Cube(CubeView view, CubeConfigs configs,
                     GameFieldService gameFieldService, CubesPositionPreviewService cubesPositionPreviewService)
@@ -47,38 +37,17 @@ namespace Gameplay
             _words = _configs.Words;
             _camera = Camera.main;
 
-            _view.Init(_words[0], _configs.Material);
-
             _behaviorHandler = new(this);
+            _view.Init(_words[0], _configs.Material);
 
             _view.OnPressed.AddListener(() =>
             {
                 _behaviorHandler.CurrentBehavior?.OnPressed();
-                /*if (_isPressed || _isInSlot || _isDestroyed) return;
-                _isPressed = true;
-
-                _dragOffset = _camera.ScreenToWorldPoint(Input.mousePosition) - Position;
-                Coroutines.Start(Drag());
-
-                var wordListOpeningCountdownValue = _configs.DataConfigs.WordListOpeningCountdown;
-                _wordListOpeningCountdown?.Kill(false);
-                _wordListOpeningCountdown = DOVirtual.DelayedCall(wordListOpeningCountdownValue, () => OpenWordList());*/
             });
 
             _view.OnUnpressed.AddListener(() =>
             {
                 _behaviorHandler.CurrentBehavior?.OnUnpressed();
-                /*if (_isDestroyed) return;
-                _isPressed = false;
-
-                if (_isInSlot)
-                    CreateOnField();
-                else if (!_isDragged)
-                    RotateToNextSide();
-
-                _wordListOpeningCountdown?.Kill(false);
-                if (_isWordListOpened)
-                    CloseWordList();*/
             });
         }
 
@@ -143,16 +112,14 @@ namespace Gameplay
 
         public void StartDragging()
         {
-            if (_dragRoutine != null)
-                Coroutines.Stop(_dragRoutine);
-
-            _isDragged = true;
+            StopDragging();
             _dragRoutine = Coroutines.Start(DragRoutine());
         }
 
         public void StopDragging()
         {
-            _isDragged = false;
+            if (_dragRoutine != null)
+                Coroutines.Stop(_dragRoutine);
         }
 
         public void SetPosition(Vector3 position)
@@ -252,7 +219,7 @@ namespace Gameplay
             _cubesPositionPreviewService.PrepareForPreviewCubePosition(this);
 
             var offset = _camera.ScreenToWorldPoint(Input.mousePosition) - Position;
-            while (_isDragged)
+            while (true)
             {
                 yield return null;
 
