@@ -7,6 +7,7 @@ namespace Gameplay
     {
         private readonly Camera _camera;
 
+        private bool _isPressed;
         private Tween _wordListOpeningCountdown;
 
         public CubeOnFieldBehavior(CubeBehaviorHandler handler, Cube cube) : base(handler, cube)
@@ -16,11 +17,14 @@ namespace Gameplay
 
         public override void Enter()
         {
+            _isPressed = false;
+
             _cube.CloseWordList();
         }
 
         public override void OnPressed()
         {
+            _isPressed = true;
             var startMousePosition = GetMousePosition();
 
             _cube.Select();
@@ -29,10 +33,11 @@ namespace Gameplay
             _wordListOpeningCountdown?.Kill(false);
             _wordListOpeningCountdown = DOVirtual.DelayedCall(0.5f, () => 
             {
-                if (Vector3.Distance(startMousePosition, GetMousePosition()) > 0.25f) return;
+                if (Vector3.Distance(startMousePosition, GetMousePosition()) > 0.25f || !_isPressed) return;
 
                 _cube.Deselect();
                 _cube.StopDragging();
+                _cube.SetAccordingPreview();
 
                 _cube.OpenWordList();
             });
@@ -40,6 +45,8 @@ namespace Gameplay
 
         public override void OnUnpressed()
         {
+            _isPressed = false;
+
             _cube.Deselect();
             _cube.StopDragging();
 

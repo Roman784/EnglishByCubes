@@ -18,6 +18,7 @@ namespace Gameplay
         private CubeSide _previousSide;
 
         private Tweener _movementTweener;
+        private Tweener _wordListRescaleTweener;
 
         public UnityEvent OnPressed { get; private set; } = new();
         public UnityEvent OnUnpressed { get; private set; } = new();
@@ -36,7 +37,7 @@ namespace Gameplay
 
             _renderer.material = material;
 
-            CloseWordList(0, 0);
+            _wordList.localScale = Vector3.right;
         }
 
         public void Enable()
@@ -161,7 +162,8 @@ namespace Gameplay
         {
             var onCompleted = new Subject<bool>();
 
-            _wordList.DOScale(scale, duration)
+            _wordListRescaleTweener?.Kill(false);
+            _wordListRescaleTweener = _wordList.DOScale(scale, duration)
                 .SetEase(ease)
                 .OnComplete(() => onCompleted.OnNext(true));
 
