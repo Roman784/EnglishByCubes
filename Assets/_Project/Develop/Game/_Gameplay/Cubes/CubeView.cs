@@ -12,13 +12,12 @@ namespace Gameplay
         [SerializeField] private Transform _view;
         [SerializeField] private Collider _collider;
         [SerializeField] private Renderer _renderer;
-        [SerializeField] private Transform _wordList;
+        [SerializeField] private CubeWordList _wordList;
 
         private int _curretSideIndex;
         private CubeSide _previousSide;
 
         private Tweener _movementTweener;
-        private Tweener _wordListRescaleTweener;
 
         public UnityEvent OnPressed { get; private set; } = new();
         public UnityEvent OnUnpressed { get; private set; } = new();
@@ -26,18 +25,22 @@ namespace Gameplay
         private void OnMouseDown() => OnPressed.Invoke();
         private void OnMouseUp() => OnUnpressed.Invoke();
 
-        public void Init(string intialWord, Material material)
+        public void Init(List<string> words, Material material)
         {
+            if (_sides == null || _sides.Count == 0)
+                throw new System.NullReferenceException("The cube must have at least 1 side!");
+
             foreach (var side in _sides)
                 side.View.DOFade(0, 0);
             _sides[0].View.DOFade(1, 0);
 
+            var initialWord = words.Count > 0 ? words[0] : "";
             _previousSide = _sides[0];
-            _sides[0].SetWord(intialWord);
+            _sides[0].SetWord(initialWord);
+
+            _wordList.CreateWords(words);
 
             _renderer.material = material;
-
-            _wordList.localScale = Vector3.right;
         }
 
         public void Enable()
@@ -133,16 +136,12 @@ namespace Gameplay
 
         public Observable<bool> OpenWordList(float duration, Ease ease)
         {
-            _wordList.gameObject.SetActive(true);
-            return SetWordListScale(Vector2.one, duration, ease);
+            return _wordList.Open(duration, ease);
         }
 
         public Observable<bool> CloseWordList(float duration, Ease ease)
         {
-            var res = SetWordListScale(Vector2.right, duration, ease);
-            res.Subscribe(_ => _wordList.gameObject.SetActive(false));
-
-            return res;
+            return _wordList.Close(duration, ease);
         }
 
         public Observable<bool> Destroy(float duration, Ease ease)
@@ -154,18 +153,6 @@ namespace Gameplay
                 Destroy(gameObject);
                 onCompleted.OnNext(true);
             });
-
-            return onCompleted;
-        }
-
-        private Observable<bool> SetWordListScale(Vector2 scale, float duration, Ease ease)
-        {
-            var onCompleted = new Subject<bool>();
-
-            _wordListRescaleTweener?.Kill(false);
-            _wordListRescaleTweener = _wordList.DOScale(scale, duration)
-                .SetEase(ease)
-                .OnComplete(() => onCompleted.OnNext(true));
 
             return onCompleted;
         }

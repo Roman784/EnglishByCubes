@@ -38,7 +38,7 @@ namespace Gameplay
             _camera = Camera.main;
 
             _behaviorHandler = new(this);
-            _view.Init(_words[0], _configs.Material);
+            _view.Init(_words, _configs.Material);
 
             _view.OnPressed.AddListener(() =>
             {
