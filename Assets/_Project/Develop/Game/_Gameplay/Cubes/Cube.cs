@@ -24,6 +24,8 @@ namespace Gameplay
         private Vector3 _dragOffset;
         private Camera _camera;
 
+        private Coroutine _dragRoutine;
+
         private Tween _wordListOpeningCountdown;
 
         private bool _isInSlot;
@@ -113,6 +115,8 @@ namespace Gameplay
 
         public Observable<bool> PlaceOnField(Vector3 position, float scale)
         {
+            _behaviorHandler.SetOnFieldBehavior();
+
             var placementDuration = _configs.DataConfigs.FieldPlacementDuration;
             var switchingDuration = _configs.DataConfigs.SwitchingOnFieldDuration;
             var placementEase = _configs.DataConfigs.FieldPlacementEase;
@@ -125,6 +129,30 @@ namespace Gameplay
         public void DisableOnField()
         {
             Shrink(true);
+        }
+
+        public void RemoveFromField()
+        {
+            _gameFieldService.RemoveCube(this);
+        }
+
+        public void SetAccordingPreview()
+        {
+            _gameFieldService.SetCubesAccordingPreview();
+        }
+
+        public void StartDragging()
+        {
+            if (_dragRoutine != null)
+                Coroutines.Stop(_dragRoutine);
+
+            _isDragged = true;
+            _dragRoutine = Coroutines.Start(DragRoutine());
+        }
+
+        public void StopDragging()
+        {
+            _isDragged = false;
         }
 
         public void SetPosition(Vector3 position)
@@ -149,7 +177,7 @@ namespace Gameplay
             return _view.Destroy(duration, ease);
         }
 
-        private Observable<bool> Select()
+        public Observable<bool> Select()
         {
             var scale = _configs.DataConfigs.SelectionScale;
             var duration = _configs.DataConfigs.SelectionDuration;
@@ -158,12 +186,30 @@ namespace Gameplay
             return _view.SetScale(Vector3.one * scale, duration, ease);
         }
 
-        private Observable<bool> Deselect()
+        public Observable<bool> Deselect()
         {
             var duration = _configs.DataConfigs.SelectionDuration;
             var ease = _configs.DataConfigs.SelectionEase;
 
             return _view.SetScale(Vector3.one, duration, ease);
+        }
+
+        public Observable<bool> OpenWordList()
+        {
+            _behaviorHandler.SetWordListBehavior();
+
+            var duration = _configs.DataConfigs.OpeningWordListDuration;
+            var ease = _configs.DataConfigs.OpeningWordListEase;
+
+            return _view.OpenWordList(duration, ease);
+        }
+
+        public Observable<bool> CloseWordList()
+        {
+            var duration = _configs.DataConfigs.ClosingWordListDuration;
+            var ease = _configs.DataConfigs.ClosingWordListEase;
+
+            return _view.CloseWordList(duration, ease);
         }
 
         private Observable<bool> Enlarge()
@@ -201,55 +247,21 @@ namespace Gameplay
             _view.Rotate(word, rotationDuration, rotationEase, fadeDuration, fadeEase);
         }
 
-        private IEnumerator Drag()
+        private IEnumerator DragRoutine()
         {
-            _isDragged = true;
-            Select();
-
             _cubesPositionPreviewService.PrepareForPreviewCubePosition(this);
 
-            while (_isPressed)
+            var offset = _camera.ScreenToWorldPoint(Input.mousePosition) - Position;
+            while (_isDragged)
             {
                 yield return null;
 
-                var position = _camera.ScreenToWorldPoint(Input.mousePosition) - _dragOffset;
+                var position = _camera.ScreenToWorldPoint(Input.mousePosition) - offset;
                 position.y = Position.y;
 
                 SetPosition(position);
                 _cubesPositionPreviewService.PreviewCubePosition(this);
-
-                if (Position.z < -3.5)
-                {
-                    _isPressed = false;
-                    _gameFieldService.RemoveCube(this);
-                }
             }
-
-            _isDragged = false;
-            Deselect();
-
-            if (!_isDestroyed)
-                _gameFieldService.SetCubesAccordingPreview();
-        }
-
-        private Observable<bool> OpenWordList()
-        {
-            _isWordListOpened = true;
-
-            var duration = _configs.DataConfigs.OpeningWordListDuration;
-            var ease = _configs.DataConfigs.OpeningWordListEase;
-
-            return _view.OpenWordList(duration, ease);
-        }
-
-        private Observable<bool> CloseWordList()
-        {
-            _isWordListOpened = false;
-
-            var duration = _configs.DataConfigs.ClosingWordListDuration;
-            var ease = _configs.DataConfigs.ClosingWordListEase;
-
-            return _view.CloseWordList(duration, ease);
         }
     }
 }

@@ -3,6 +3,7 @@ using UnityEngine;
 using Zenject;
 using R3;
 using System.Linq;
+using DG.Tweening;
 
 namespace Gameplay
 { 
@@ -64,10 +65,9 @@ namespace Gameplay
                     _draggedCubeIndex = i;
 
                     _movingCubes.Add(cube);
-                    _cubesLayoutService.LayOut(_cubes).Subscribe(_ =>
-                    {
-                        _movingCubes.Remove(cube);
-                    });
+                    DOVirtual.DelayedCall(0.3f, () => _movingCubes.Remove(cube));
+
+                    _cubesLayoutService.LayOut(_cubes);
 
                     return;
                 }
