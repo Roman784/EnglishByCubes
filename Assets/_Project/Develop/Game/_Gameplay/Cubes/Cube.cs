@@ -127,23 +127,6 @@ namespace Gameplay
             _view.SetPosition(position);
         }
 
-        public Observable<bool> Move(Vector3 position,
-                         float duration = 0, Ease ease = Ease.Flash)
-        {
-            return _view.SetPosition(position, duration, ease);
-        }
-
-        public Observable<bool> Destroy()
-        {
-            _behaviorHandler.SetDestructionBehavior();
-
-            var duration = _configs.DataConfigs.DestructionDuration;
-            var ease = _configs.DataConfigs.DestructionEase;
-
-            _view.Disable();
-            return _view.Destroy(duration, ease);
-        }
-
         public Observable<bool> Select()
         {
             var scale = _configs.DataConfigs.SelectionScale;
@@ -192,6 +175,40 @@ namespace Gameplay
             _view.Rotate(word, rotationDuration, rotationEase, fadeDuration, fadeEase);
         }
 
+        private IEnumerator DragRoutine()
+        {
+            _cubesPositionPreviewService.PrepareForPreviewCubePosition(this);
+
+            var offset = _camera.ScreenToWorldPoint(Input.mousePosition) - Position;
+            while (true)
+            {
+                yield return null;
+
+                var position = _camera.ScreenToWorldPoint(Input.mousePosition) - offset;
+                position.y = Position.y;
+
+                SetPosition(position);
+                _cubesPositionPreviewService.PreviewCubePosition(this);
+            }
+        }
+
+        public Observable<bool> Destroy()
+        {
+            _behaviorHandler.SetDestructionBehavior();
+
+            var duration = _configs.DataConfigs.DestructionDuration;
+            var ease = _configs.DataConfigs.DestructionEase;
+
+            _view.Disable();
+            return _view.Destroy(duration, ease);
+        }
+
+        private Observable<bool> Move(Vector3 position,
+                         float duration = 0, Ease ease = Ease.Flash)
+        {
+            return _view.SetPosition(position, duration, ease);
+        }
+
         private Observable<bool> Enlarge()
         {
             var duration = _configs.DataConfigs.RescaleDuration;
@@ -212,23 +229,6 @@ namespace Gameplay
             var ease = _configs.DataConfigs.RescaleEase;
 
             return _view.SetViewScale(Vector3.zero, duration, ease);
-        }
-
-        private IEnumerator DragRoutine()
-        {
-            _cubesPositionPreviewService.PrepareForPreviewCubePosition(this);
-
-            var offset = _camera.ScreenToWorldPoint(Input.mousePosition) - Position;
-            while (true)
-            {
-                yield return null;
-
-                var position = _camera.ScreenToWorldPoint(Input.mousePosition) - offset;
-                position.y = Position.y;
-
-                SetPosition(position);
-                _cubesPositionPreviewService.PreviewCubePosition(this);
-            }
         }
     }
 }
