@@ -2,13 +2,12 @@ namespace Gameplay
 {
     public class CubeDraggingBehavior : CubeBehavior
     {
-        public CubeDraggingBehavior(Cube cube) : base(cube)
+        public CubeDraggingBehavior(CubeBehaviorHandler handler, Cube cube) : base(handler, cube)
         {
         }
 
         public override void Enter()
         {
-            throw new System.NotImplementedException();
         }
     }
 }

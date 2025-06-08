@@ -2,13 +2,12 @@ namespace Gameplay
 {
     public class CubeWordListBehavior : CubeBehavior
     {
-        public CubeWordListBehavior(Cube cube) : base(cube)
+        public CubeWordListBehavior(CubeBehaviorHandler handler, Cube cube) : base(handler, cube)
         {
         }
 
         public override void Enter()
         {
-            throw new System.NotImplementedException();
         }
     }
 }

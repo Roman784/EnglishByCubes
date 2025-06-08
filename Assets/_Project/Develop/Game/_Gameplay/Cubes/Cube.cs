@@ -16,6 +16,8 @@ namespace Gameplay
         private readonly GameFieldService _gameFieldService;
         private readonly CubesPositionPreviewService _cubesPositionPreviewService;
 
+        private readonly CubeBehaviorHandler _behaviorHandler;
+
         private List<string> _words;
         private int _curretWordIndex;
 
@@ -45,9 +47,12 @@ namespace Gameplay
 
             _view.Init(_words[0], _configs.Material);
 
+            _behaviorHandler = new(this);
+
             _view.OnPressed.AddListener(() =>
             {
-                if (_isPressed || _isInSlot || _isDestroyed) return;
+                _behaviorHandler.CurrentBehavior?.OnPressed();
+                /*if (_isPressed || _isInSlot || _isDestroyed) return;
                 _isPressed = true;
 
                 _dragOffset = _camera.ScreenToWorldPoint(Input.mousePosition) - Position;
@@ -55,12 +60,13 @@ namespace Gameplay
 
                 var wordListOpeningCountdownValue = _configs.DataConfigs.WordListOpeningCountdown;
                 _wordListOpeningCountdown?.Kill(false);
-                _wordListOpeningCountdown = DOVirtual.DelayedCall(wordListOpeningCountdownValue, () => OpenWordList());
+                _wordListOpeningCountdown = DOVirtual.DelayedCall(wordListOpeningCountdownValue, () => OpenWordList());*/
             });
 
             _view.OnUnpressed.AddListener(() =>
             {
-                if (_isDestroyed) return;
+                _behaviorHandler.CurrentBehavior?.OnUnpressed();
+                /*if (_isDestroyed) return;
                 _isPressed = false;
 
                 if (_isInSlot)
@@ -70,13 +76,14 @@ namespace Gameplay
 
                 _wordListOpeningCountdown?.Kill(false);
                 if (_isWordListOpened)
-                    CloseWordList();
+                    CloseWordList();*/
             });
         }
 
         public void AddToSlot(Slot slot)
         {
-            _isInSlot = true;
+            _behaviorHandler.SetInSLotBehavior();
+
             SetPosition(slot.Position);
             DisableInSlots(true);
         }
@@ -97,6 +104,11 @@ namespace Gameplay
         {
             _view.Disable();
             return Shrink(instantly);
+        }
+
+        public void CreateOnField()
+        {
+            _gameFieldService.CreateCube(_configs);
         }
 
         public Observable<bool> PlaceOnField(Vector3 position, float scale)
@@ -174,11 +186,6 @@ namespace Gameplay
             var ease = _configs.DataConfigs.RescaleEase;
 
             return _view.SetViewScale(Vector3.zero, duration, ease);
-        }
-
-        private void CreateOnField()
-        {
-            _gameFieldService.CreateCube(_configs);
         }
 
         private void RotateToNextSide()

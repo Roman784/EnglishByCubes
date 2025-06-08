@@ -10,6 +10,8 @@ namespace Gameplay
         private Dictionary<Type, CubeBehavior> _behaviorsMap;
         private CubeBehavior _currentBehavior;
 
+        public CubeBehavior CurrentBehavior => _currentBehavior;
+
         public CubeBehaviorHandler(Cube cube)
         {
             _cube = cube;
@@ -21,12 +23,12 @@ namespace Gameplay
         {
             _behaviorsMap = new();
 
-            _behaviorsMap[typeof(CubeInSlotBehavior)] = new CubeInSlotBehavior(_cube);
-            _behaviorsMap[typeof(CubeCreationOnFieldBehavior)] = new CubeCreationOnFieldBehavior(_cube);
-            _behaviorsMap[typeof(CubeDraggingBehavior)] = new CubeDraggingBehavior(_cube);
-            _behaviorsMap[typeof(CubeRemovingBehavior)] = new CubeRemovingBehavior(_cube);
-            _behaviorsMap[typeof(CubeOnFieldBehavior)] = new CubeOnFieldBehavior(_cube);
-            _behaviorsMap[typeof(CubeWordListBehavior)] = new CubeWordListBehavior(_cube);
+            _behaviorsMap[typeof(CubeInSlotBehavior)] = new CubeInSlotBehavior(this, _cube);
+            _behaviorsMap[typeof(CubeCreationOnFieldBehavior)] = new CubeCreationOnFieldBehavior(this, _cube);
+            _behaviorsMap[typeof(CubeDraggingBehavior)] = new CubeDraggingBehavior(this, _cube);
+            _behaviorsMap[typeof(CubeRemovingBehavior)] = new CubeRemovingBehavior(this, _cube);
+            _behaviorsMap[typeof(CubeOnFieldBehavior)] = new CubeOnFieldBehavior(this, _cube);
+            _behaviorsMap[typeof(CubeWordListBehavior)] = new CubeWordListBehavior(this, _cube);
         }
 
         public void SetInSLotBehavior()

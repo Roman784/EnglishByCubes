@@ -2,13 +2,12 @@ namespace Gameplay
 {
     public class CubeCreationOnFieldBehavior : CubeBehavior
     {
-        public CubeCreationOnFieldBehavior(Cube cube) : base(cube)
+        public CubeCreationOnFieldBehavior(CubeBehaviorHandler handler, Cube cube) : base(handler, cube)
         {
         }
 
         public override void Enter()
         {
-            throw new System.NotImplementedException();
         }
     }
 }
