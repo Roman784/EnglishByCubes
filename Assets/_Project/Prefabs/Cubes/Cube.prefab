@@ -250,7 +250,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0.5}
-  m_SizeDelta: {x: 1.4, y: 3.65}
+  m_SizeDelta: {x: 1.4, y: 3.75}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!223 &2615465680261570355
 Canvas:
@@ -307,7 +307,7 @@ MonoBehaviour:
   _view: {fileID: 4168105266514135197}
   _wordsContainer: {fileID: 8649695310515289240}
   _cubeWordPrefab: {fileID: -3627857146673248478, guid: 174a088360e7b5244beb87a1a88749d5, type: 3}
-  _maxViewHeight: 3.65
+  _maxViewHeight: 3.75
   _cubeWordHeight: 0.6083333
 --- !u!1 &3559286197645976232
 GameObject:
@@ -777,8 +777,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0.2, y: 0.36}
+  m_AnchoredPosition: {x: 0.004999995, y: 0}
+  m_SizeDelta: {x: 0.22999999, y: 0.275}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &7054706058543578471
 CanvasRenderer:
@@ -1762,7 +1762,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 1.825}
-  m_SizeDelta: {x: 1.4, y: 3.65}
+  m_SizeDelta: {x: 1.4, y: 3.75}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &8393923169987562034
 MonoBehaviour:
