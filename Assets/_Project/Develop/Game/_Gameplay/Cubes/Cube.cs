@@ -34,11 +34,15 @@ namespace Gameplay
             _gameFieldService = gameFieldService;
             _cubesPositionPreviewService = cubesPositionPreviewService;
 
+            var number = _configs.Number;
+            var name = _configs.Name;
+            var material = _configs.Material;
+
             _words = _configs.Words;
             _camera = Camera.main;
 
             _behaviorHandler = new(this);
-            _view.Init(_words, _configs.Material);
+            _view.Init(number, name, _words, material);
 
             _view.OnWordInWordListSelected.AddListener(word =>
             {
@@ -169,6 +173,22 @@ namespace Gameplay
             var ease = _configs.DataConfigs.ClosingWordListEase;
 
             return _view.CloseWordList(duration, ease);
+        }
+
+        public void ShowName()
+        {
+            var duration = _configs.DataConfigs.NameTransparencyChangeDuration;
+            var ease = _configs.DataConfigs.NameTransparencyChangeEase;
+
+            _view.ShowName(duration, ease);
+        }
+
+        public void HideName()
+        {
+            var duration = _configs.DataConfigs.NameTransparencyChangeDuration;
+            var ease = _configs.DataConfigs.NameTransparencyChangeEase;
+
+            _view.HideName(duration, ease);
         }
 
         public void RotateToNextSide()

@@ -13,6 +13,7 @@ namespace Gameplay
             _isPressed = false;
 
             _cube.Deselect();
+            _cube.ShowName();
         }
 
         public override void OnPointerDown()

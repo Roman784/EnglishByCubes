@@ -17,12 +17,12 @@ namespace Gameplay
 
         public override void OnPointerEnter()
         {
-            
+            _cube.ShowName();
         }
 
         public override void OnPointerExit()
         {
-            
+            _cube.HideName();
         }
     }
 }

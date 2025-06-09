@@ -21,6 +21,7 @@ namespace Gameplay
         {
             _isPressed = false;
 
+            _cube.HideName();
             _cube.CloseWordList();
         }
 
@@ -31,6 +32,7 @@ namespace Gameplay
             _startTime = Time.time;
 
             _cube.Select();
+            _cube.HideName();
             _cube.StartDragging();
 
             _wordListOpeningCountdown?.Kill(false);
@@ -70,12 +72,13 @@ namespace Gameplay
 
         public override void OnPointerEnter()
         {
-            
+            if (!_isPressed)
+                _cube.ShowName();
         }
 
         public override void OnPointerExit()
         {
-            
+            _cube.HideName();
         }
 
         private Vector3 GetMousePosition()

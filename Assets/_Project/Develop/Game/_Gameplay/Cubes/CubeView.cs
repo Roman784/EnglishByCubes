@@ -13,6 +13,7 @@ namespace Gameplay
         [SerializeField] private Collider _collider;
         [SerializeField] private Renderer _renderer;
         [SerializeField] private CubeWordList _wordList;
+        [SerializeField] private CubeName _name;
 
         private int _curretSideIndex;
         private CubeSide _previousSide;
@@ -31,7 +32,7 @@ namespace Gameplay
         private void OnMouseEnter() => OnPointerEnter.Invoke();
         private void OnMouseExit() => OnPointerExit.Invoke();
 
-        public void Init(List<string> words, Material material)
+        public void Init(int number, string name, List<string> words, Material material)
         {
             if (_sides == null || _sides.Count == 0)
                 throw new System.NullReferenceException("The cube must have at least 1 side!");
@@ -45,6 +46,7 @@ namespace Gameplay
             _sides[0].SetWord(initialWord);
 
             _wordList.CreateWords(words);
+            _name.SetName(number, name);
 
             _renderer.material = material;
         }
@@ -148,6 +150,16 @@ namespace Gameplay
         public Observable<bool> CloseWordList(float duration, Ease ease)
         {
             return _wordList.Close(duration, ease);
+        }
+
+        public void ShowName(float duration, Ease ease)
+        {
+            _name.Show(duration, ease);
+        }
+
+        public void HideName(float duration, Ease ease)
+        {
+            _name.Hide(duration, ease);
         }
 
         public Observable<bool> Destroy(float duration, Ease ease)

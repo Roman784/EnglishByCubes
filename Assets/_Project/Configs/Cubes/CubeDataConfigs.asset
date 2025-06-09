@@ -34,3 +34,5 @@ MonoBehaviour:
   <OpeningWordListEase>k__BackingField: 6
   <ClosingWordListDuration>k__BackingField: 0.25
   <ClosingWordListEase>k__BackingField: 6
+  <NameTransparencyChangeDuration>k__BackingField: 0.1
+  <NameTransparencyChangeEase>k__BackingField: 6

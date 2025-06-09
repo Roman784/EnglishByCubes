@@ -42,5 +42,10 @@ namespace Configs
 
         [field: SerializeField] public float ClosingWordListDuration { get; private set; }
         [field: SerializeField] public Ease ClosingWordListEase { get; private set; }
+
+        [field: Space]
+
+        [field: SerializeField] public float NameTransparencyChangeDuration { get; private set; }
+        [field: SerializeField] public Ease NameTransparencyChangeEase { get; private set; }
     }
 }
