@@ -72,13 +72,13 @@ namespace Gameplay
 
         public override void OnPointerEnter()
         {
-            if (!_isPressed)
-                _cube.ShowName();
+            //if (!_isPressed)
+                //_cube.ShowName();
         }
 
         public override void OnPointerExit()
         {
-            _cube.HideName();
+            //_cube.HideName();
         }
 
         private Vector3 GetMousePosition()
