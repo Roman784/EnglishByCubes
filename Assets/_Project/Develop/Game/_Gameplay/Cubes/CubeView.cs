@@ -19,13 +19,17 @@ namespace Gameplay
 
         private Tweener _movementTweener;
 
-        public UnityEvent OnPressed { get; private set; } = new();
-        public UnityEvent OnUnpressed { get; private set; } = new();
+        public UnityEvent OnPointerDown { get; private set; } = new();
+        public UnityEvent OnPointerUp { get; private set; } = new();
+        public UnityEvent OnPointerEnter { get; private set; } = new();
+        public UnityEvent OnPointerExit { get; private set; } = new();
 
         public UnityEvent<string> OnWordInWordListSelected => _wordList.OnWordSelection;
 
-        private void OnMouseDown() => OnPressed.Invoke();
-        private void OnMouseUpAsButton() => OnUnpressed.Invoke();
+        private void OnMouseDown() => OnPointerDown.Invoke();
+        private void OnMouseUpAsButton() => OnPointerUp.Invoke();
+        private void OnMouseEnter() => OnPointerEnter.Invoke();
+        private void OnMouseExit() => OnPointerExit.Invoke();
 
         public void Init(List<string> words, Material material)
         {

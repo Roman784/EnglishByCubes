@@ -308,7 +308,7 @@ MonoBehaviour:
   _wordsContainer: {fileID: 8649695310515289240}
   _cubeWordPrefab: {fileID: -3627857146673248478, guid: 174a088360e7b5244beb87a1a88749d5, type: 3}
   _maxViewHeight: 3.75
-  _cubeWordHeight: 0.6083333
+  _maxCubesCount: 6
 --- !u!1 &3559286197645976232
 GameObject:
   m_ObjectHideFlags: 0

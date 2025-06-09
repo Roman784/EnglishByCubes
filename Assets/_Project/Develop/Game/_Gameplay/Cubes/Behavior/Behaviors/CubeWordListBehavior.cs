@@ -11,14 +11,16 @@ namespace Gameplay
         public override void Enter()
         {
             _isPressed = false;
+
+            _cube.Deselect();
         }
 
-        public override void OnPressed()
+        public override void OnPointerDown()
         {
             _isPressed = true;
         }
 
-        public override void OnUnpressed()
+        public override void OnPointerUp()
         {
             if (!_isPressed) return;
 

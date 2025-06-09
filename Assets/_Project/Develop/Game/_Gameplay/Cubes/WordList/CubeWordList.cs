@@ -16,7 +16,7 @@ namespace Gameplay
         [Space]
 
         [SerializeField] private float _maxViewHeight;
-        [SerializeField] private float _cubeWordHeight;
+        [SerializeField] private int _maxCubesCount;
         
         private Tweener _wordListRescaleTweener;
 
@@ -75,7 +75,8 @@ namespace Gameplay
 
         private void ResizeView(int wordsCount)
         {
-            var viewHeight = wordsCount * _cubeWordHeight;
+            var cubeWordHeight = _maxViewHeight / _maxCubesCount;
+            var viewHeight = wordsCount * cubeWordHeight;
             viewHeight = Mathf.Clamp(viewHeight, 0, _maxViewHeight);
 
             _view.sizeDelta = new Vector2(_view.rect.width, viewHeight);

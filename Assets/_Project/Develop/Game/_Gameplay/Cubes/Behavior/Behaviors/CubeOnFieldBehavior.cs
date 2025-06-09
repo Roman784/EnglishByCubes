@@ -24,7 +24,7 @@ namespace Gameplay
             _cube.CloseWordList();
         }
 
-        public override void OnPressed()
+        public override void OnPointerDown()
         {
             _isPressed = true;
             _startMousePosition = GetMousePosition();
@@ -38,7 +38,6 @@ namespace Gameplay
             {
                 if (Vector3.Distance(_startMousePosition, GetMousePosition()) > 0.25f || !_isPressed) return;
 
-                _cube.Deselect();
                 _cube.StopDragging();
                 _cube.SetAccordingPreview();
 
@@ -46,7 +45,7 @@ namespace Gameplay
             });
         }
 
-        public override void OnUnpressed()
+        public override void OnPointerUp()
         {
             _isPressed = false;
 
@@ -67,6 +66,16 @@ namespace Gameplay
             {
                 _cube.SetAccordingPreview();
             }
+        }
+
+        public override void OnPointerEnter()
+        {
+            
+        }
+
+        public override void OnPointerExit()
+        {
+            
         }
 
         private Vector3 GetMousePosition()

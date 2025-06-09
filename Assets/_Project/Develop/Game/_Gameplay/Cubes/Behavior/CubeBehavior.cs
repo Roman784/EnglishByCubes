@@ -12,8 +12,10 @@ namespace Gameplay
         }
 
         public abstract void Enter();
-        public virtual void OnPressed() { }
-        public virtual void OnUnpressed() { }
+        public virtual void OnPointerDown() { }
+        public virtual void OnPointerUp() { }
+        public virtual void OnPointerEnter() { }
+        public virtual void OnPointerExit() { }
         public virtual void Exit() { }
     }
 }

@@ -47,15 +47,17 @@ namespace Gameplay
                 _behaviorHandler.SetOnFieldBehavior();
             });
 
-            _view.OnPressed.AddListener(() =>
-            {
-                _behaviorHandler.CurrentBehavior?.OnPressed();
-            });
+            _view.OnPointerDown.AddListener(() =>
+                _behaviorHandler.CurrentBehavior?.OnPointerDown());
 
-            _view.OnUnpressed.AddListener(() =>
-            {
-                _behaviorHandler.CurrentBehavior?.OnUnpressed();
-            });
+            _view.OnPointerUp.AddListener(() =>
+                _behaviorHandler.CurrentBehavior?.OnPointerUp());
+
+            _view.OnPointerEnter.AddListener(() =>
+                _behaviorHandler.CurrentBehavior?.OnPointerEnter());
+
+            _view.OnPointerExit.AddListener(() =>
+                _behaviorHandler.CurrentBehavior?.OnPointerExit());
         }
 
         public void AddToSlot(Slot slot)

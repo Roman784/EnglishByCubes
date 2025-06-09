@@ -10,9 +10,19 @@ namespace Gameplay
         {
         }
 
-        public override void OnUnpressed()
+        public override void OnPointerUp()
         {
             _cube.CreateOnField();
+        }
+
+        public override void OnPointerEnter()
+        {
+            
+        }
+
+        public override void OnPointerExit()
+        {
+            
         }
     }
 }
