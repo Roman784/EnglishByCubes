@@ -119,7 +119,6 @@ MonoBehaviour:
   OnSwitched:
     m_PersistentCalls:
       m_Calls: []
-  _layoutGroup: {fileID: 6328129611182231794}
 --- !u!1 &4667796572285876055
 GameObject:
   m_ObjectHideFlags: 0

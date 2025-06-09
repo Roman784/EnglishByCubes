@@ -19,6 +19,9 @@ namespace Gameplay
 
         private void Awake()
         {
+            var cameraAngles = Camera.main.transform.eulerAngles;
+            transform.rotation = Quaternion.Euler(cameraAngles.x - 90, 0f, 0f);
+
             _switchToLeftButton.onClick.AddListener(() => OnSwitched.Invoke(-1));
             _switchToRightButton.onClick.AddListener(() => OnSwitched.Invoke(1));
         }

@@ -1813,7 +1813,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041A\u0443\u0431 0. \u0418\u043C\u044F \u043A\u0443\u0431\u0430"
+  m_text: "\u041A\u0443\u0431 0. \u0418\u043C\u044F \u043A\u0443\u0431\u0430 \u0438\u043C\u044F
+    \u043A\u0443\u0431\u0430"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ccc3f4594e5f0734b8477a016cffd041, type: 2}
   m_sharedMaterial: {fileID: -7502114114868297133, guid: ccc3f4594e5f0734b8477a016cffd041, type: 2}
