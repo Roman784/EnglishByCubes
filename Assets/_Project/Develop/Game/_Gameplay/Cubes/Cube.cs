@@ -40,6 +40,13 @@ namespace Gameplay
             _behaviorHandler = new(this);
             _view.Init(_words, _configs.Material);
 
+            _view.OnWordInWordListSelected.AddListener(word =>
+            {
+                var wordIndex = GetWordIndex(word);
+                Rotate(wordIndex);
+                _behaviorHandler.SetOnFieldBehavior();
+            });
+
             _view.OnPressed.AddListener(() =>
             {
                 _behaviorHandler.CurrentBehavior?.OnPressed();
@@ -164,13 +171,23 @@ namespace Gameplay
 
         public void RotateToNextSide()
         {
+            _curretWordIndex = ++_curretWordIndex % _words.Count();
+            Rotate(_curretWordIndex);
+        }
+
+        private int GetWordIndex(string word)
+        {
+            return _words.IndexOf(word);
+        }
+
+        private void Rotate(int wordIndex)
+        {
             var rotationDuration = _configs.DataConfigs.RotationDuration;
             var fadeDuration = _configs.DataConfigs.FadeDuration;
             var rotationEase = _configs.DataConfigs.RotationEase;
             var fadeEase = _configs.DataConfigs.FadeEase;
 
-            _curretWordIndex = ++_curretWordIndex % _words.Count();
-            var word = _words[_curretWordIndex];
+            var word = _words[wordIndex];
 
             _view.Rotate(word, rotationDuration, rotationEase, fadeDuration, fadeEase);
         }

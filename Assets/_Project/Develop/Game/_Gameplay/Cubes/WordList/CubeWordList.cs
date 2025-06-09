@@ -2,6 +2,8 @@ using DG.Tweening;
 using R3;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace Gameplay
 {
@@ -17,6 +19,8 @@ namespace Gameplay
         [SerializeField] private float _cubeWordHeight;
         
         private Tweener _wordListRescaleTweener;
+
+        public UnityEvent<string> OnWordSelection { get; private set; } = new();
 
         private void Awake()
         {
@@ -34,8 +38,13 @@ namespace Gameplay
                 var newCubeWord = Instantiate(_cubeWordPrefab);
                 newCubeWord.transform.SetParent(_wordsContainer, false);
 
-                newCubeWord.SetWord(word);
+                newCubeWord.Init(this, word);
             }
+        }
+
+        public void SelectWord(string word)
+        {
+            OnWordSelection.Invoke(word);
         }
 
         public Observable<bool> Open(float duration, Ease ease)

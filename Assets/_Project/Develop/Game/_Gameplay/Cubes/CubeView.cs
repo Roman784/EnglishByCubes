@@ -22,8 +22,10 @@ namespace Gameplay
         public UnityEvent OnPressed { get; private set; } = new();
         public UnityEvent OnUnpressed { get; private set; } = new();
 
+        public UnityEvent<string> OnWordInWordListSelected => _wordList.OnWordSelection;
+
         private void OnMouseDown() => OnPressed.Invoke();
-        private void OnMouseUp() => OnUnpressed.Invoke();
+        private void OnMouseUpAsButton() => OnUnpressed.Invoke();
 
         public void Init(List<string> words, Material material)
         {
