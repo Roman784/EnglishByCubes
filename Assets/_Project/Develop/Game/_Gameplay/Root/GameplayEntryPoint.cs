@@ -30,6 +30,7 @@ namespace Gameplay
             var tasksConfigs = gameConfigs.TasksConfigs;
 
             var taskConfigs = tasksConfigs.GetTask(1);
+            var taskSentence = taskConfigs.Sentence;
             var cubeNumbersPool = taskConfigs.CubeNumbersPool.ToArray();
 
             // Slot bar.
@@ -43,6 +44,7 @@ namespace Gameplay
             // UI.
             _uiRoot.AttachSceneUI(_ui);
             _ui.CustomizeTheme();
+            _ui.SetTaskSentence(taskSentence);
 
             isLoaded = true;
 
