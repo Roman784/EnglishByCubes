@@ -6,6 +6,7 @@ namespace Configs
     public class GameConfigs : ScriptableObject
     {
         [field: SerializeField] public CubesConfigs CubesConfigs { get; private set; }
+        [field: SerializeField] public TasksConfigs TasksConfigs { get; private set; }
         [field: SerializeField] public ThemeConfigs ThemeConfigs { get; private set; }
     }
 }

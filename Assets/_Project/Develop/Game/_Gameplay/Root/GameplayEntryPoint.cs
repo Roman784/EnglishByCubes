@@ -11,34 +11,33 @@ namespace Gameplay
         [SerializeField] private Vector3 _slotBarPosition;
 
         private GameplayUI _ui;
-        private CubeFactory _cubeFactory;
         private SlotBarFactory _slotBarFactory;
 
         [Inject]
         private void Construct(GameplayUI ui,
-                               CubeFactory cubeFactory,
                                SlotBarFactory slotBarFactory)
         {
             _ui = ui;
             _slotBarFactory = slotBarFactory;
-            _cubeFactory = cubeFactory;
         }
 
         public override IEnumerator Run<T>(T enterParams)
         {
             var isLoaded = false;
 
-            var cubesConfigs = _configsProvider.GameConfigs.CubesConfigs;
+            var gameConfigs = _configsProvider.GameConfigs;
+            var cubesConfigs = gameConfigs.CubesConfigs;
+            var tasksConfigs = gameConfigs.TasksConfigs;
 
-            //_cubeFactory.Create(cubesConfigs.Cubes[0], new Vector3(-0.75f, 0, 0));
-            // _cubeFactory.Create(cubesConfigs.Cubes[1], new Vector3(0.75f, 0, 0));
+            var taskConfigs = tasksConfigs.GetTask(1);
+            var cubeNumbersPool = taskConfigs.CubeNumbersPool.ToArray();
 
             // Slot bar.
             var slotBar = _slotBarFactory.Create(_slotBarPosition);
             yield return null; // To update slots layout. Forced update does not work.
 
             // Cubes.
-            var cubesConfigsPool = cubesConfigs.GetCubes(0, 1, 0, 1, 0, 1, 0, 1, 0, 1);
+            var cubesConfigsPool = cubesConfigs.GetCubes(cubeNumbersPool);
             slotBar.CreateCubes(cubesConfigsPool);
 
             // UI.
