@@ -649,6 +649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _taskUI: {fileID: 3999994739123285422}
   _progressBar: {fileID: 2414054536042231724}
+  _canvas: {fileID: 6939263911964139509}
 --- !u!1 &2653228008742698654
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,7 +776,7 @@ Canvas:
   m_GameObject: {fileID: 2846563873980419362}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1348,38 +1349,6 @@ MonoBehaviour:
   _fillerView: {fileID: 8672178137464451648}
   _percentageView: {fileID: 1803499436711613051}
   _background: {fileID: 4664610998232763375}
-  _fillingDuration: 0.5
-  _fillingEase: 6
-  _fillingGradient:
-    serializedVersion: 2
-    key0: {r: 0.972549, g: 0.35686275, b: 0.32941177, a: 1}
-    key1: {r: 0.99607843, g: 0.5254902, b: 0.14509805, a: 1}
-    key2: {r: 0.8773585, g: 0.7392277, b: 0.1448469, a: 0}
-    key3: {r: 0.5019608, g: 0.8509804, b: 0.24705882, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 12529
-    ctime1: 26792
-    ctime2: 45875
-    ctime3: 65535
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_ColorSpace: -1
-    m_NumColorKeys: 4
-    m_NumAlphaKeys: 2
 --- !u!1 &4300308537204189415
 GameObject:
   m_ObjectHideFlags: 0

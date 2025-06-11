@@ -7,7 +7,16 @@ namespace UI
         [SerializeField] private TaskUI _taskUI;
         [SerializeField] private ProgressBar _progressBar;
 
+        [Space]
+
+        [SerializeField] private Canvas _canvas;
+
         private int _textCount = 0;
+
+        private void Start()
+        {
+            _canvas.worldCamera = Camera.main;
+        }
 
         private void Update()
         {
