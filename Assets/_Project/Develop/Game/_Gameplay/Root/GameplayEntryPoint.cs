@@ -45,6 +45,7 @@ namespace Gameplay
             _uiRoot.AttachSceneUI(_ui);
             _ui.CustomizeTheme();
             _ui.SetTaskSentence(taskSentence);
+            _ui.InitProgressBar();
 
             isLoaded = true;
 

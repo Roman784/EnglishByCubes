@@ -1,9 +1,9 @@
+using Configs;
 using DG.Tweening;
-using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Utils;
+using Zenject;
 
 namespace UI
 {
@@ -13,18 +13,14 @@ namespace UI
         [SerializeField] private TMP_Text _percentageView;
         [SerializeField] private RectTransform _background;
 
-        [Space]
-
-        [SerializeField] private float _fillingDuration;
-        [SerializeField] private Ease _fillingEase;
-        [SerializeField] private Gradient _fillingGradient;
-
         private float _currentFill;
-        private Coroutine _fillingRoutine;
         private Tweener _fillingTween;
 
-        private void Awake()
+        private ProgressBarConfigs _configs;
+
+        public void Init(ProgressBarConfigs configs)
         {
+            _configs = configs;
             SetView(0);
         }
 
@@ -42,29 +38,14 @@ namespace UI
                     SetView(_currentFill);
                 },
                 fill,
-                _fillingDuration
-            ).SetEase(_fillingEase);
-
-            /*if (_fillingRoutine != null)
-                Coroutines.Stop(_fillingRoutine);
-            _fillingRoutine = Coroutines.Start(FillRoutine(fill));*/
+                _configs.FillingDuration
+            ).SetEase(_configs.FillingEase);
         }
-
-        /*private IEnumerator FillRoutine(float fill)
-        {
-            while (_currentFill != fill)
-            {
-                _currentFill = Mathf.Lerp(_currentFill, fill, _fillingRate * Time.deltaTime);
-                SetView(_currentFill);
-
-                yield return null;
-            }
-        }*/
 
         private void SetView(float fill)
         {
             RescaleFillerView(fill);
-            _fillerView.color = _fillingGradient.Evaluate(fill);
+            _fillerView.color = _configs.FillingGradient.Evaluate(fill);
             _percentageView.text = $"{fill * 100:F0}%";
         }
 

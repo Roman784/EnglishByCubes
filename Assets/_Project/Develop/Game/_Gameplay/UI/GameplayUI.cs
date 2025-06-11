@@ -27,5 +27,11 @@ namespace UI
         {
             _taskUI.SetSentence(sentence);
         }
+
+        public void InitProgressBar()
+        {
+            var configs = ThemeConfigs.ProgressBarConfigs;
+            _progressBar.Init(configs);
+        }
     }
 }

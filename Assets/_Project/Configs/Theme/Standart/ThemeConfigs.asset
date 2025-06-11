@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: ThemeConfigs
   m_EditorClassIdentifier: 
   <UIConfigs>k__BackingField: {fileID: 11400000, guid: 9d5e4178e304cc143bef4c9ea79a6214, type: 2}
+  <ProgressBarConfigs>k__BackingField: {fileID: 11400000, guid: c8552c8318b0f414393344242e857582, type: 2}

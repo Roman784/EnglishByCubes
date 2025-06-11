@@ -10,6 +10,8 @@ namespace UI
     {
         protected IConfigsProvider _configsProvider;
 
+        protected ThemeConfigs ThemeConfigs => _configsProvider.GameConfigs.ThemeConfigs;
+
         [Inject]
         private void Construct(IConfigsProvider configsProvider)
         {
@@ -19,11 +21,9 @@ namespace UI
         public void CustomizeTheme()
         {
             var customizers = FindObjectsOfType<ThemeCustomizer>();
-            var configs = _configsProvider.GameConfigs.ThemeConfigs;
-
             foreach (var customizer in customizers)
             {
-                customizer.Customize(configs);
+                customizer.Customize(ThemeConfigs);
             }
         }
     }
