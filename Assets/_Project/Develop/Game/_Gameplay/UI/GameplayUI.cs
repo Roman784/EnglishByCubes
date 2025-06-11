@@ -1,4 +1,5 @@
 using UnityEngine;
+using Zenject;
 
 namespace UI
 {
@@ -11,25 +12,9 @@ namespace UI
 
         [SerializeField] private Canvas _canvas;
 
-        private int _textCount = 0;
-
         private void Start()
         {
             _canvas.worldCamera = Camera.main;
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                _textCount -= 1;
-                _progressBar.Fill(_textCount, 10);
-            }
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                _textCount += 1;
-                _progressBar.Fill(_textCount, 10);
-            }
         }
 
         public void SetTaskSentence(string sentence)
@@ -41,6 +26,11 @@ namespace UI
         {
             var configs = ThemeConfigs.ProgressBarConfigs;
             _progressBar.Init(configs);
+        }
+
+        public void FillProgressBar(float fill)
+        {
+            _progressBar.Fill(fill);
         }
     }
 }

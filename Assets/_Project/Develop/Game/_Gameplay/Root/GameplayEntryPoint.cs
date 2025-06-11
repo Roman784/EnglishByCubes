@@ -12,13 +12,16 @@ namespace Gameplay
 
         private GameplayUI _ui;
         private SlotBarFactory _slotBarFactory;
+        private TaskPassingService _taskPassingService;
 
         [Inject]
         private void Construct(GameplayUI ui,
-                               SlotBarFactory slotBarFactory)
+                               SlotBarFactory slotBarFactory,
+                               TaskPassingService taskPassingService)
         {
             _ui = ui;
             _slotBarFactory = slotBarFactory;
+            _taskPassingService = taskPassingService;
         }
 
         public override IEnumerator Run<T>(T enterParams)
@@ -30,7 +33,8 @@ namespace Gameplay
             var tasksConfigs = gameConfigs.TasksConfigs;
 
             var taskConfigs = tasksConfigs.GetTask(1);
-            var taskSentence = taskConfigs.Sentence;
+            var taskSentenceRu = taskConfigs.SentenceRu;
+            var taskSentenceEn = taskConfigs.SentenceEn;
             var cubeNumbersPool = taskConfigs.CubeNumbersPool.ToArray();
 
             // Slot bar.
@@ -41,11 +45,16 @@ namespace Gameplay
             var cubesConfigsPool = cubesConfigs.GetCubes(cubeNumbersPool);
             slotBar.CreateCubes(cubesConfigsPool);
 
+            // Task passing.
+            _taskPassingService.SetCorrectSentence(taskSentenceEn);
+
             // UI.
             _uiRoot.AttachSceneUI(_ui);
-            _ui.CustomizeTheme();
-            _ui.SetTaskSentence(taskSentence);
+            _ui.SetTaskSentence(taskSentenceRu);
             _ui.InitProgressBar();
+            _ui.CustomizeTheme();
+
+            _taskPassingService.OnSentenceMatchingCalculated.AddListener(_ui.FillProgressBar);
 
             isLoaded = true;
 

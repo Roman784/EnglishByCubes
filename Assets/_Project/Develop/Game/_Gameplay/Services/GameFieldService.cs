@@ -2,6 +2,7 @@ using Configs;
 using System.Collections.Generic;
 using Zenject;
 using R3;
+using UnityEngine;
 
 namespace Gameplay
 {
@@ -12,17 +13,20 @@ namespace Gameplay
         private CubeFactory _cubeFactory;
         private CubesLayoutService _cubesLayoutService;
         private CubesPositionPreviewService _cubesPositionPreviewService;
+        private TaskPassingService _taskPassingService;
 
         public IReadOnlyList<Cube> Cubes => _cubes;
 
         [Inject]
         private void Construct(CubeFactory cubeFactory,
                                CubesPositionPreviewService cubesPositionPreviewService,
-                               CubesLayoutService cubesLayoutService)
+                               CubesLayoutService cubesLayoutService,
+                               TaskPassingService taskPassingService)
         {
             _cubeFactory = cubeFactory;
             _cubesLayoutService = cubesLayoutService;
             _cubesPositionPreviewService = cubesPositionPreviewService;
+            _taskPassingService = taskPassingService;
         }
 
         public void CreateCube(CubeConfigs configs)
@@ -33,6 +37,10 @@ namespace Gameplay
             newCube.DisableOnField();
 
             _cubes.Add(newCube);
+
+            CalculateSentenceMatching();
+            newCube.OnRotated.AddListener(CalculateSentenceMatching);
+
             _cubesLayoutService.LayOut(_cubes);
         }
 
@@ -41,6 +49,8 @@ namespace Gameplay
             if (!_cubes.Contains(cube)) return;
             
             _cubes.Remove(cube);
+            CalculateSentenceMatching();
+
             cube.Destroy().Subscribe(_ =>
             {
                 _cubesLayoutService.LayOut(_cubes);
@@ -55,7 +65,24 @@ namespace Gameplay
             _cubes.AddRange(previewCubes);
             _cubes.RemoveAll(c => c == null);
 
+            CalculateSentenceMatching();
             _cubesLayoutService.LayOut(_cubes);
+        }
+
+        private void CalculateSentenceMatching()
+        {
+            _taskPassingService.CalculateSentenceMatching(MakeSentence());
+        }
+
+        private string MakeSentence()
+        {
+            var sentence = "";
+            foreach (var cube in _cubes)
+            {
+                sentence += cube.CurrentWord;
+            }
+
+            return sentence;
         }
     }
 }

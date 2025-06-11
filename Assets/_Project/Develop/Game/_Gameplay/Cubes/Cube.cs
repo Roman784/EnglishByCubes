@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using Utils;
 
 namespace Gameplay
@@ -24,10 +25,13 @@ namespace Gameplay
         private Camera _camera;
         private Coroutine _dragRoutine;
 
+        public string CurrentWord => _words[_curretWordIndex];
         public Vector3 Position => _view.GetPosition();
+        public UnityEvent OnRotated { get; private set; } = new();
 
         public Cube(CubeView view, CubeConfigs configs,
-                    GameFieldService gameFieldService, CubesPositionPreviewService cubesPositionPreviewService)
+                    GameFieldService gameFieldService,
+                    CubesPositionPreviewService cubesPositionPreviewService)
         {
             _view = view;
             _configs = configs;
@@ -47,6 +51,7 @@ namespace Gameplay
             _view.OnWordInWordListSelected.AddListener(word =>
             {
                 var wordIndex = GetWordIndex(word);
+                _curretWordIndex = wordIndex;
                 Rotate(wordIndex);
                 _behaviorHandler.SetOnFieldBehavior();
             });
@@ -210,8 +215,9 @@ namespace Gameplay
             var fadeEase = _configs.DataConfigs.FadeEase;
 
             var word = _words[wordIndex];
-
             _view.Rotate(word, rotationDuration, rotationEase, fadeDuration, fadeEase);
+
+            OnRotated.Invoke();
         }
 
         private IEnumerator DragRoutine()

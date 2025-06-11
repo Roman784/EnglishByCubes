@@ -24,9 +24,8 @@ namespace UI
             SetView(0);
         }
 
-        public void Fill(float currentValue, float maxValue)
+        public void Fill(float fill)
         {
-            var fill = currentValue / maxValue;
             fill = Mathf.Clamp01(fill);
 
             _fillingTween?.Kill(false);
