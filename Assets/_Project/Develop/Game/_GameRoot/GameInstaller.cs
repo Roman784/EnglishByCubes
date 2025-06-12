@@ -10,6 +10,10 @@ namespace GameRoot
     {
         [SerializeField] private UIRoot _uiRootPrefab;
 
+        [Space]
+
+        [SerializeField] private SettingsPopUp _settingsPopUpPrefab;
+
         public override void InstallBindings()
         {
             BindSceneLoader();
@@ -36,6 +40,15 @@ namespace GameRoot
         private void BindUI()
         {
             Container.Bind<UIRoot>().FromComponentInNewPrefab(_uiRootPrefab).AsSingle().NonLazy();
+
+            BindPopUps();
+        }
+
+        private void BindPopUps()
+        {
+            Container.Bind<PopUpsProvider>().AsTransient();
+
+            Container.BindFactory<SettingsPopUp, SettingsPopUp.Factory>().FromComponentInNewPrefab(_settingsPopUpPrefab);
         }
     }
 }

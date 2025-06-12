@@ -75,3 +75,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _uiRootPrefab: {fileID: 5424896216141466133, guid: 377f9ba9cc9f0414b9ec601c009f52d8, type: 3}
+  _settingsPopUpPrefab: {fileID: -4648423623688057398, guid: cfab9c1b6b7e8ed47a1f7bc5f94a521f, type: 3}

@@ -27,6 +27,14 @@ namespace UI
             _canvas.worldCamera = Camera.main;
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyUp(KeyCode.O))
+            {
+                _popUpsProvider.OpenSettingsPopUp();
+            }
+        }
+
         public void SetTaskSentence(string sentence)
         {
             _taskUI.SetSentence(sentence);

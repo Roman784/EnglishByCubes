@@ -7,7 +7,10 @@ namespace UI
     public class UIRoot : MonoBehaviour
     {
         [SerializeField] private LoadingScreen _loadingScreen;
+        [SerializeField] private PopUpsRoot _popUpsRoot;
         [SerializeField] private Transform _sceneUIContainer;
+
+        public PopUpsRoot PopUpsRoot => _popUpsRoot;
 
         public IEnumerator SetLoadingScreen(bool value)
         {
