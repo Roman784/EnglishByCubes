@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d68c8f4a9bef2340b4adc77e86b8fea, type: 3}
   m_Name: CubeRemoveAreaConfigs
   m_EditorClassIdentifier: 
-  <FirstHighlightLevel>k__BackingField: 0.75
+  <FirstHighlightLevel>k__BackingField: 0.8
   <SecondHighlightLevel>k__BackingField: 1
   <HighlightDuration>k__BackingField: 0.25
   <HighlightEase>k__BackingField: 6

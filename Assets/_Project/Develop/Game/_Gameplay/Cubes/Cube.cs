@@ -137,8 +137,6 @@ namespace Gameplay
         {
             StopDragging();
             _dragRoutine = Coroutines.Start(DragRoutine());
-
-            OnDragged.Invoke(true);
         }
 
         public void StopDragging()
@@ -233,7 +231,10 @@ namespace Gameplay
         {
             _cubesPositionPreviewService.PrepareForPreviewCubePosition(this);
 
-            var offset = _camera.ScreenToWorldPoint(Input.mousePosition) - Position;
+            var startPosition = _camera.ScreenToWorldPoint(Input.mousePosition);
+            var offset = startPosition - Position;
+            var onDraggedTrigged = false;
+
             while (true)
             {
                 yield return null;
@@ -243,6 +244,12 @@ namespace Gameplay
 
                 SetPosition(position);
                 _cubesPositionPreviewService.PreviewCubePosition(this);
+
+                if (!onDraggedTrigged && Vector3.Distance(startPosition, position + offset) > 0.2f)
+                {
+                    onDraggedTrigged = true;
+                    OnDragged.Invoke(true);
+                }
             }
         }
 
