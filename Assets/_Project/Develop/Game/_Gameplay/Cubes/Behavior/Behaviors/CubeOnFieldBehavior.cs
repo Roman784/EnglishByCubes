@@ -60,7 +60,7 @@ namespace Gameplay
                 _cube.RotateToNextSide();
             }
 
-            if (_cube.Position.z < -3.25f)
+            if (_cube.IsInRemoveArea)
             {
                 _cube.RemoveFromField();
             }

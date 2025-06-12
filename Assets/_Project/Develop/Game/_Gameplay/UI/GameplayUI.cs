@@ -1,3 +1,4 @@
+using Gameplay;
 using UnityEngine;
 using Zenject;
 
@@ -7,10 +8,19 @@ namespace UI
     {
         [SerializeField] private TaskUI _taskUI;
         [SerializeField] private ProgressBar _progressBar;
+        [SerializeField] private CubeRemoveArea _cubeRemoveArea;
 
         [Space]
 
         [SerializeField] private Canvas _canvas;
+
+        private GameFieldService _gameFieldService;
+
+        [Inject]
+        private void Construct(GameFieldService gameFieldService)
+        {
+            _gameFieldService = gameFieldService;
+        }
 
         private void Start()
         {
@@ -26,6 +36,12 @@ namespace UI
         {
             var configs = ThemeConfigs.ProgressBarConfigs;
             _progressBar.Init(configs);
+        }
+
+        public void InitCubeRemoveArea()
+        {
+            var configs = GameConfigs.CubesConfigs.CubeRemoveAreaConfigs;
+            _cubeRemoveArea.Init(configs, _gameFieldService);
         }
 
         public void FillProgressBar(float fill)

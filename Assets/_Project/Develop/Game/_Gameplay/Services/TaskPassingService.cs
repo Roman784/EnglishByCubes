@@ -20,8 +20,6 @@ namespace Gameplay
             string correct = _correctSentence.ToLower().Replace(" ", "").Trim();
             string player = playerSentence.ToLower().Replace(" ", "").Trim();
 
-            Debug.Log($"{correct} | {player}");
-
             int levenshteinDistance = CalculateLevenshteinDistance(correct, player);
             int maxLength = Mathf.Max(correct.Length, player.Length);
 

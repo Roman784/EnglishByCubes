@@ -39,3 +39,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 045f90ddf187fac4ba6ba290c6803051, type: 2}
   - {fileID: 11400000, guid: f5d6a847e126dd344815763c3a9cfe96, type: 2}
   <CubesLayoutConfigs>k__BackingField: {fileID: 11400000, guid: 159649c8992f70b46945881241428561, type: 2}
+  <CubeRemoveAreaConfigs>k__BackingField: {fileID: 11400000, guid: 33b0ebcc346b5644caa9b8e7be1e69ca, type: 2}

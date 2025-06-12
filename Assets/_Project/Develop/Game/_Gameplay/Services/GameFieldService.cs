@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Zenject;
 using R3;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Gameplay
 {
@@ -16,6 +17,7 @@ namespace Gameplay
         private TaskPassingService _taskPassingService;
 
         public IReadOnlyList<Cube> Cubes => _cubes;
+        public UnityEvent<Cube> OnCubeCreated { get; private set; } = new();
 
         [Inject]
         private void Construct(CubeFactory cubeFactory,
@@ -42,6 +44,8 @@ namespace Gameplay
             newCube.OnRotated.AddListener(CalculateSentenceMatching);
 
             _cubesLayoutService.LayOut(_cubes);
+
+            OnCubeCreated.Invoke(newCube);
         }
 
         public void RemoveCube(Cube cube)

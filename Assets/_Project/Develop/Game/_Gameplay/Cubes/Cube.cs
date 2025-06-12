@@ -27,7 +27,9 @@ namespace Gameplay
 
         public string CurrentWord => _words[_curretWordIndex];
         public Vector3 Position => _view.GetPosition();
+        public bool IsInRemoveArea { get; private set; }
         public UnityEvent OnRotated { get; private set; } = new();
+        public UnityEvent<bool> OnDragged { get; private set; } = new();
 
         public Cube(CubeView view, CubeConfigs configs,
                     GameFieldService gameFieldService,
@@ -47,6 +49,9 @@ namespace Gameplay
 
             _behaviorHandler = new(this);
             _view.Init(number, name, _words, material);
+
+            _view.OnInRemoveAreaEnter.AddListener(() => IsInRemoveArea = true);
+            _view.OnInRemoveAreaExit.AddListener(() => IsInRemoveArea = false);
 
             _view.OnWordInWordListSelected.AddListener(word =>
             {
@@ -132,12 +137,16 @@ namespace Gameplay
         {
             StopDragging();
             _dragRoutine = Coroutines.Start(DragRoutine());
+
+            OnDragged.Invoke(true);
         }
 
         public void StopDragging()
         {
             if (_dragRoutine != null)
                 Coroutines.Stop(_dragRoutine);
+
+            OnDragged.Invoke(false);
         }
 
         public void SetPosition(Vector3 position)

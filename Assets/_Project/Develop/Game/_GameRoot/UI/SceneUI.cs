@@ -10,7 +10,8 @@ namespace UI
     {
         protected IConfigsProvider _configsProvider;
 
-        protected ThemeConfigs ThemeConfigs => _configsProvider.GameConfigs.ThemeConfigs;
+        protected GameConfigs GameConfigs => _configsProvider.GameConfigs;
+        protected ThemeConfigs ThemeConfigs => GameConfigs.ThemeConfigs;
 
         [Inject]
         private void Construct(IConfigsProvider configsProvider)

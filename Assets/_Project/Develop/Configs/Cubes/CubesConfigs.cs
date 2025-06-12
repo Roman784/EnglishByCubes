@@ -11,6 +11,7 @@ namespace Configs
 
         [field: Space]
         [field: SerializeField] public CubesLayoutConfigs CubesLayoutConfigs { get; private set; }
+        [field: SerializeField] public CubeRemoveAreaConfigs CubeRemoveAreaConfigs { get; private set; }
 
         public List<CubeConfigs> GetCubes(params int[] numbers)
         {

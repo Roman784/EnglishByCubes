@@ -25,6 +25,9 @@ namespace Gameplay
         public UnityEvent OnPointerEnter { get; private set; } = new();
         public UnityEvent OnPointerExit { get; private set; } = new();
 
+        public UnityEvent OnInRemoveAreaEnter { get; private set; } = new();
+        public UnityEvent OnInRemoveAreaExit { get; private set; } = new();
+
         public UnityEvent<string> OnWordInWordListSelected => _wordList.OnWordSelection;
 
         private void OnMouseDown() => OnPointerDown.Invoke();
