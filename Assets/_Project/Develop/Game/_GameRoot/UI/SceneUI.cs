@@ -21,6 +21,11 @@ namespace UI
             _popUpsProvider = popUpsProvider;
         }
 
+        public void OpenSettings()
+        {
+            _popUpsProvider.OpenSettingsPopUp();
+        }
+
         public void CustomizeTheme()
         {
             var customizers = FindObjectsOfType<ThemeCustomizer>();
