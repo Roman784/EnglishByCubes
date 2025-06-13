@@ -7,6 +7,9 @@ namespace Theme
         CompletedLevelButton,
         UncompletedLevelButton,
         MainText,
-        Slot
+        Slot,
+        Background,
+        CubeRemoveField,
+        GameplayProgressBar
     }
 }

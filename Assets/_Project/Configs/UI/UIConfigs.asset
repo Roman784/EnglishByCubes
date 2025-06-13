@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: UIConfigs
   m_EditorClassIdentifier: 
   <PopUpConfigs>k__BackingField: {fileID: 11400000, guid: 079f620bc5549c24fa534bc1fad8c801, type: 2}
+  <GameplayProgressBarConfigs>k__BackingField: {fileID: 11400000, guid: c8552c8318b0f414393344242e857582, type: 2}

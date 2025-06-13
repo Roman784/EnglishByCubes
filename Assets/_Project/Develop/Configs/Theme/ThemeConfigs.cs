@@ -6,6 +6,5 @@ namespace Configs
     public class ThemeConfigs : ScriptableObject
     {
         [field: SerializeField] public ThemeUIConfigs UIConfigs { get; private set; }
-        [field: SerializeField] public ProgressBarConfigs ProgressBarConfigs { get; private set; }
     }
 }

@@ -8,6 +8,5 @@ namespace Configs
     {
         [field: SerializeField] public float FillingDuration { get; private set; }
         [field: SerializeField] public Ease FillingEase { get; private set; }
-        [field: SerializeField] public Gradient FillingGradient { get; private set; }
     }
 }

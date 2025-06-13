@@ -34,7 +34,7 @@ namespace UI
 
         public void InitProgressBar()
         {
-            var configs = ThemeConfigs.ProgressBarConfigs;
+            var configs = UIConfigs.GameplayProgressBarConfigs;
             _progressBar.Init(configs);
         }
 

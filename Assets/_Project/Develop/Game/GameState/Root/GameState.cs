@@ -5,6 +5,6 @@ namespace GameState
     [Serializable]
     public class GameState
     {
-        
+        public int CurrentThemeMode;
     }
 }

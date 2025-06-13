@@ -1,5 +1,6 @@
 using Configs;
 using GameState;
+using Theme;
 using UI;
 using UnityEngine;
 using Zenject;
@@ -17,8 +18,7 @@ namespace GameRoot
         public override void InstallBindings()
         {
             BindSceneLoader();
-            BindConfigsProvier();
-            BindGameStateProvider();
+            BindProviers();
             BindUI();
         }
 
@@ -27,14 +27,11 @@ namespace GameRoot
             Container.Bind<SceneLoader>().AsTransient();
         }
 
-        private void BindConfigsProvier()
+        private void BindProviers()
         {
             Container.Bind<IConfigsProvider>().To<ConfigsProvider>().AsSingle();
-        }
-
-        private void BindGameStateProvider()
-        {
             Container.Bind<IGameStateProvider>().To<JsonGameStateProvider>().AsSingle();
+            Container.Bind<ThemeProvider>().AsSingle();
         }
 
         private void BindUI()

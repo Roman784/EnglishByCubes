@@ -11,5 +11,6 @@ namespace Configs
         [field: SerializeField] public List<ButtonTheme> Buttons { get; private set; }
         [field: SerializeField] public List<TextTheme> Texts { get; private set; }
         [field: SerializeField] public List<ColorTheme> Colors { get; private set; }
+        [field: SerializeField] public List<GradientTheme> Gradients { get; private set; }
     }
 }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b741df608983d084fa378b35d13a10bb, type: 3}
-  m_Name: ThemeConfigs
+  m_Name: LightThemeConfigs
   m_EditorClassIdentifier: 
   <UIConfigs>k__BackingField: {fileID: 11400000, guid: 9d5e4178e304cc143bef4c9ea79a6214, type: 2}
   <ProgressBarConfigs>k__BackingField: {fileID: 11400000, guid: c8552c8318b0f414393344242e857582, type: 2}

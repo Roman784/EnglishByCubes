@@ -1,5 +1,6 @@
 ﻿using R3;
 using System.IO;
+using Theme;
 using UnityEngine;
 using Zenject;
 
@@ -62,6 +63,7 @@ namespace GameState
         {
             var gameState = new GameState
             {
+                CurrentThemeMode = (int)ThemeModes.Light,
             };
 
             return new GameStateProxy(gameState, this);

@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <CubesConfigs>k__BackingField: {fileID: 11400000, guid: e740b7b58475d7c4095c2d3c5f396735, type: 2}
   <TasksConfigs>k__BackingField: {fileID: 11400000, guid: efaaa2e4ce9e2b244ae9ad8cfa87cac7, type: 2}
-  <ThemeConfigs>k__BackingField: {fileID: 11400000, guid: 458e878f23d94514b9e71c56fda7e969, type: 2}
   <UIConfigs>k__BackingField: {fileID: 11400000, guid: f55a0774dd35adc4188306f481503b4d, type: 2}
+  <LightThemeConfigs>k__BackingField: {fileID: 11400000, guid: 458e878f23d94514b9e71c56fda7e969, type: 2}
+  <DarkThemeConfigs>k__BackingField: {fileID: 11400000, guid: c5e8dc16a3e8d32408338312c47607c2, type: 2}

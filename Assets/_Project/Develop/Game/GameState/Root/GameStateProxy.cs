@@ -1,6 +1,4 @@
-using R3;
-using UnityEngine;
-using Zenject;
+using Theme;
 
 namespace GameState
 {
@@ -15,6 +13,12 @@ namespace GameState
         {
             _gameState = gameState;
             _gameStateProvider = gameStateProvider;
+        }
+
+        public void SetCurrentThemeMode(ThemeModes mode)
+        {
+            _gameState.CurrentThemeMode = (int)mode;
+            _gameStateProvider.SaveGameState();
         }
     }
 }

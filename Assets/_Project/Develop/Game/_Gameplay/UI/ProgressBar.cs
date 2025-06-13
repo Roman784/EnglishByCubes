@@ -44,7 +44,7 @@ namespace UI
         private void SetView(float fill)
         {
             RescaleFillerView(fill);
-            _fillerView.color = _configs.FillingGradient.Evaluate(fill);
+            //_fillerView.color = _configs.FillingGradient.Evaluate(fill);
             _percentageView.text = $"{fill * 100:F0}%";
         }
 

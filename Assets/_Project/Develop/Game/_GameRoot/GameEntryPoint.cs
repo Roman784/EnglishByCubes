@@ -28,6 +28,8 @@ namespace GameRoot
                     {
                         if (res)
                         {
+                            _themeProvider.SetTheme();
+
                             isLoaded = true;
                         }
                         else
