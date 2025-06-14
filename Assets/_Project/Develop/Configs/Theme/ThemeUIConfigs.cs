@@ -21,6 +21,8 @@ namespace Configs
         [field: SerializeField] public ColorTheme BackgroundColor { get; private set; }
         [field: SerializeField] public ColorTheme SlotColor { get; private set; }
         [field: SerializeField] public ColorTheme CubeRemoveAreaColor { get; private set; }
+        [field: SerializeField] public ColorTheme CubeWordListColor { get; private set; }
+        [field: SerializeField] public ColorTheme CubeWordSelection { get; private set; }
 
         [field:Space]
 
@@ -64,6 +66,8 @@ namespace Configs
                 BackgroundColor,
                 SlotColor,
                 CubeRemoveAreaColor,
+                CubeWordListColor,
+                CubeWordSelection,
             };
             return _colors;
         }

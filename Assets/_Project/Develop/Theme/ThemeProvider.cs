@@ -2,7 +2,9 @@ using Configs;
 using GameState;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 using UnityEngine.Events;
+using Utils;
 using Zenject;
 
 namespace Theme
@@ -33,6 +35,18 @@ namespace Theme
             _themesMap[ThemeModes.Dark] = _configsProvider.GameConfigs.DarkThemeConfigs;
         }
 
+        public void CustomizeAll()
+        {
+            var customizers = Object.FindObjectsOfType<ThemeCustomizer>();
+            Customize(customizers);
+        }
+
+        public void Customize(GameObject root)
+        {
+            var customizers = ChildSearcher.GetAllChilds<ThemeCustomizer>(root);
+            Customize(customizers);
+        }
+
         public void Switch()
         {
             var allModes = _themesMap.Keys.ToList();
@@ -43,6 +57,14 @@ namespace Theme
             OnThemeChanged.Invoke(CurrentTheme);
 
             _gameStateProvider.GameStateProxy.SetCurrentThemeMode(_currentMode);
+        }
+
+        private void Customize(IEnumerable<ThemeCustomizer> customizers)
+        {
+            foreach (var customizer in customizers)
+            {
+                customizer.Customize(this);
+            }
         }
     }
 }

@@ -12,6 +12,8 @@ namespace Theme
         CubeRemoveArea,
         GameplayProgressBar,
         MainFill,
-        MainIcon
+        MainIcon,
+        CubeWordList,
+        CubeWordSelection
     }
 }

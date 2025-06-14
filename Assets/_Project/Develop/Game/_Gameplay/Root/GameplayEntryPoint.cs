@@ -56,7 +56,7 @@ namespace Gameplay
             _ui.InitCubeRemoveArea();
 
             _taskPassingService.OnSentenceMatchingCalculated.AddListener(_ui.FillProgressBar);
-            
+
             // Theme customization.
             CustomizeTheme();
 

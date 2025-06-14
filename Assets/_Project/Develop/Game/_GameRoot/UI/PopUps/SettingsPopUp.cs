@@ -5,14 +5,6 @@ namespace UI
 {
     public class SettingsPopUp : PopUp
     {
-        private ThemeProvider _themeProvider;
-
-        [Inject]
-        private void Construct(ThemeProvider themeProvider)
-        {
-            _themeProvider = themeProvider;
-        }
-
         public void ChangeMusicVolume()
         {
 
@@ -40,7 +32,7 @@ namespace UI
 
         public void OpenMainMenu()
         {
-
+            
         }
 
         public class Factory : PopUpFactory<SettingsPopUp>

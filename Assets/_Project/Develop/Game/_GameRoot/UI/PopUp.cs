@@ -27,7 +27,7 @@ namespace UI
         {
             _view.alpha = 0f;
 
-            CustomizeTheme();
+            _themeProvider.Customize(gameObject);
         }
 
         public virtual void Open()
@@ -50,15 +50,6 @@ namespace UI
         public void Destroy()
         {
             Destroy(gameObject);
-        }
-
-        protected virtual void CustomizeTheme()
-        {
-            var customizers = FindObjectsOfType<ThemeCustomizer>();
-            foreach (var customizer in customizers)
-            {
-                customizer.Customize(_themeProvider);
-            }
         }
 
         private Tweener SetViewTransparency(float value, float duration, Ease ease)

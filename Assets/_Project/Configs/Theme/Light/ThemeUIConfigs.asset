@@ -34,69 +34,15 @@ MonoBehaviour:
     <Color>k__BackingField: {r: 0.77647066, g: 0.78823537, b: 0.8078432, a: 1}
   <CubeRemoveAreaColor>k__BackingField:
     <Tag>k__BackingField: 7
-    <Color>k__BackingField: {r: 0.9607844, g: 0.29411766, b: 0.29411766, a: 0}
+    <Color>k__BackingField: {r: 0.9725491, g: 0.35686275, b: 0.32941177, a: 0}
+  <CubeWordListColor>k__BackingField:
+    <Tag>k__BackingField: 11
+    <Color>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
+  <CubeWordSelection>k__BackingField:
+    <Tag>k__BackingField: 12
+    <Color>k__BackingField: {r: 0.87843144, g: 0.882353, b: 0.8980393, a: 1}
   <GameplayProgressBarGradient>k__BackingField:
     <Tag>k__BackingField: 8
-    <Gradent>k__BackingField:
-      serializedVersion: 2
-      key0: {r: 0.972549, g: 0.35686275, b: 0.32941177, a: 1}
-      key1: {r: 0.99607843, g: 0.5254902, b: 0.14509805, a: 1}
-      key2: {r: 0.9245283, g: 0.7799135, b: 0.12646852, a: 0}
-      key3: {r: 0.5019608, g: 0.8509804, b: 0.24705882, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
-      key5: {r: 0, g: 0, b: 0, a: 0}
-      key6: {r: 0, g: 0, b: 0, a: 0}
-      key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 17348
-      ctime1: 34310
-      ctime2: 51272
-      ctime3: 65535
-      ctime4: 0
-      ctime5: 0
-      ctime6: 0
-      ctime7: 0
-      atime0: 0
-      atime1: 65535
-      atime2: 0
-      atime3: 0
-      atime4: 0
-      atime5: 0
-      atime6: 0
-      atime7: 0
-      m_Mode: 0
-      m_ColorSpace: -1
-      m_NumColorKeys: 4
-      m_NumAlphaKeys: 2
-  <Buttons>k__BackingField:
-  - <Tag>k__BackingField: 0
-    <Top>k__BackingField: {r: 0.8980392, g: 0.8980392, b: 0.8980392, a: 1}
-    <Side>k__BackingField: {r: 0.6862745, g: 0.6862745, b: 0.6862745, a: 1}
-  - <Tag>k__BackingField: 1
-    <Top>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
-    <Side>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
-  - <Tag>k__BackingField: 2
-    <Top>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
-    <Side>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
-  - <Tag>k__BackingField: 3
-    <Top>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
-    <Side>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
-  <Texts>k__BackingField:
-  - <Tag>k__BackingField: 4
-    <Dark>k__BackingField: {r: 0.039215688, g: 0.050980393, b: 0.047058824, a: 1}
-    <Light>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
-  <Colors>k__BackingField:
-  - <Tag>k__BackingField: 5
-    <Color>k__BackingField: {r: 0.7764706, g: 0.7882353, b: 0.80784315, a: 1}
-  - <Tag>k__BackingField: 7
-    <Color>k__BackingField: {r: 0.9607844, g: 0.29411766, b: 0.29411766, a: 0}
-  - <Tag>k__BackingField: 6
-    <Color>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
-  - <Tag>k__BackingField: 9
-    <Color>k__BackingField: {r: 0.8784314, g: 0.88235295, b: 0.8980392, a: 1}
-  - <Tag>k__BackingField: 0
-    <Color>k__BackingField: {r: 0.21568628, g: 0.23921569, b: 0.23529412, a: 1}
-  <Gradients>k__BackingField:
-  - <Tag>k__BackingField: 8
     <Gradent>k__BackingField:
       serializedVersion: 2
       key0: {r: 0.972549, g: 0.35686275, b: 0.32941177, a: 1}
