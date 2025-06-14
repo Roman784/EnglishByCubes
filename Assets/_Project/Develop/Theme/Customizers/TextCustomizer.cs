@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Theme
 {
-    public class TextThemeCustomizer : ThemeCustomizer
+    public class TextCustomizer : ThemeCustomizer
     {
         [SerializeField] private ThemeColorModes _colorMode;
 

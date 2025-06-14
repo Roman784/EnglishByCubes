@@ -27,12 +27,6 @@ namespace UI
             _canvas.worldCamera = Camera.main;
         }
 
-        public override void CustomizeTheme()
-        {
-            base.CustomizeTheme();
-            _progressBar.Customize(_themeProvider);
-        }
-
         public void SetTaskSentence(string sentence)
         {
             _taskUI.SetSentence(sentence);
@@ -46,7 +40,7 @@ namespace UI
 
         public void InitCubeRemoveArea()
         {
-            var configs = GameConfigs.CubesConfigs.CubeRemoveAreaConfigs;
+            var configs = UIConfigs.CubeRemoveAreaConfigs;
             _cubeRemoveArea.Init(configs, _gameFieldService);
         }
 

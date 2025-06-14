@@ -9,7 +9,8 @@ namespace Theme
         MainText,
         Slot,
         Background,
-        CubeRemoveField,
-        GameplayProgressBar
+        CubeRemoveArea,
+        GameplayProgressBar,
+        MainFillColor,
     }
 }

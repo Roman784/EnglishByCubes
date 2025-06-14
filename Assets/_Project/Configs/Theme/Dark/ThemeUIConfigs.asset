@@ -14,19 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Buttons>k__BackingField:
   - <Tag>k__BackingField: 0
-    <Icon>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
     <Top>k__BackingField: {r: 0.29411766, g: 0.28627452, b: 0.34117648, a: 1}
     <Side>k__BackingField: {r: 0.22745098, g: 0.21568628, b: 0.2901961, a: 1}
   - <Tag>k__BackingField: 1
-    <Icon>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
     <Top>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
     <Side>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
   - <Tag>k__BackingField: 2
-    <Icon>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
     <Top>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
     <Side>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
   - <Tag>k__BackingField: 3
-    <Icon>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
     <Top>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
     <Side>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
   <Texts>k__BackingField:
@@ -36,8 +32,14 @@ MonoBehaviour:
   <Colors>k__BackingField:
   - <Tag>k__BackingField: 5
     <Color>k__BackingField: {r: 0.22745098, g: 0.21568628, b: 0.2901961, a: 1}
+  - <Tag>k__BackingField: 7
+    <Color>k__BackingField: {r: 0.9607843, g: 0.29411766, b: 0.29411766, a: 0}
   - <Tag>k__BackingField: 6
     <Color>k__BackingField: {r: 0.16470589, g: 0.15686275, b: 0.20784314, a: 1}
+  - <Tag>k__BackingField: 9
+    <Color>k__BackingField: {r: 0.29411766, g: 0.28627452, b: 0.34117648, a: 1}
+  - <Tag>k__BackingField: 0
+    <Color>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
   <Gradients>k__BackingField:
   - <Tag>k__BackingField: 8
     <Gradent>k__BackingField:

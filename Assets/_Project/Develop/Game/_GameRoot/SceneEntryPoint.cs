@@ -29,5 +29,14 @@ namespace GameRoot
         }
 
         public abstract IEnumerator Run<T>(T enterParams) where T : SceneEnterParams;
+
+        protected virtual void CustomizeTheme()
+        {
+            var customizers = FindObjectsOfType<ThemeCustomizer>();
+            foreach (var customizer in customizers)
+            {
+                customizer.Customize(_themeProvider);
+            }
+        }
     }
 }

@@ -30,7 +30,7 @@ namespace Theme
                     return theme;
             }
 
-            Debug.LogError($"Tag {tag} for theme was not found!");
+            Debug.LogError($"Tag {_tag} for theme was not found!");
             return null;
         }
     }

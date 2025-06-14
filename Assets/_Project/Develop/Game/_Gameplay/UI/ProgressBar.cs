@@ -26,11 +26,6 @@ namespace UI
             SetView(0);
         }
 
-        public void Customize(ThemeProvider themeProvider)
-        {
-            _fillingGradientCustomizer.Customize(themeProvider);
-        }
-
         public void Fill(float fill)
         {
             fill = Mathf.Clamp01(fill);

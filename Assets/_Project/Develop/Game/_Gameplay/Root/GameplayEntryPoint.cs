@@ -1,5 +1,6 @@
 using GameRoot;
 using System.Collections;
+using Theme;
 using UI;
 using UnityEngine;
 using Zenject;
@@ -53,9 +54,11 @@ namespace Gameplay
             _ui.SetTaskSentence(taskSentenceRu);
             _ui.InitProgressBar();
             _ui.InitCubeRemoveArea();
-            _ui.CustomizeTheme();
 
             _taskPassingService.OnSentenceMatchingCalculated.AddListener(_ui.FillProgressBar);
+            
+            // Theme customization.
+            CustomizeTheme();
 
             isLoaded = true;
 
