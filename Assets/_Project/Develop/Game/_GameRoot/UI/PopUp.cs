@@ -1,5 +1,6 @@
 using Configs;
 using DG.Tweening;
+using Theme;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -11,18 +12,22 @@ namespace UI
         [SerializeField] private CanvasGroup _view;
 
         protected PopUpConfigs _config;
+        protected ThemeProvider _themeProvider;
 
         private Tweener _transparencyTween;
 
         [Inject]
-        private void Construct(IConfigsProvider configsProvider)
+        private void Construct(IConfigsProvider configsProvider, ThemeProvider themeProvider)
         {
             _config = configsProvider.GameConfigs.UIConfigs.PopUpConfigs;
+            _themeProvider = themeProvider;
         }
 
         private void Awake()
         {
             _view.alpha = 0f;
+
+            CustomizeTheme();
         }
 
         public virtual void Open()
@@ -45,6 +50,15 @@ namespace UI
         public void Destroy()
         {
             Destroy(gameObject);
+        }
+
+        protected virtual void CustomizeTheme()
+        {
+            var customizers = FindObjectsOfType<ThemeCustomizer>();
+            foreach (var customizer in customizers)
+            {
+                customizer.Customize(_themeProvider);
+            }
         }
 
         private Tweener SetViewTransparency(float value, float duration, Ease ease)

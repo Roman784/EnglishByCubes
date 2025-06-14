@@ -9,8 +9,13 @@ namespace Theme
     {
         [SerializeField] protected ThemeTags _tag;
 
+        private bool _isCustomized;
+
         public void Customize(ThemeProvider themeProvider)
         {
+            if (_isCustomized) return;
+            _isCustomized = true;
+
             Customize(themeProvider.CurrentTheme);
             themeProvider.OnThemeChanged.AddListener(ChangeTheme);
         }
