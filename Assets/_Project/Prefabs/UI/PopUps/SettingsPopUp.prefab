@@ -535,7 +535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: 4
   _colorMode: 0
-  _textView: {fileID: 4992373383793774148}
+  _view: {fileID: 4992373383793774148}
 --- !u!1 &1974282499502977231
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,7 +642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: 4
   _colorMode: 0
-  _textView: {fileID: 5947236704813054908}
+  _view: {fileID: 5947236704813054908}
 --- !u!1 &1999069438709723587
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,7 +749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: 4
   _colorMode: 0
-  _textView: {fileID: 5931456406582409904}
+  _view: {fileID: 5931456406582409904}
 --- !u!1 &2072306019273202098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,7 +1325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: 4
   _colorMode: 0
-  _textView: {fileID: 731266662532777328}
+  _view: {fileID: 731266662532777328}
 --- !u!1 &3067864970288834144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1958,7 +1958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: 4
   _colorMode: 0
-  _textView: {fileID: 8311778871650826138}
+  _view: {fileID: 8311778871650826138}
 --- !u!1 &4597437232421647927
 GameObject:
   m_ObjectHideFlags: 0
@@ -3562,7 +3562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: 4
   _colorMode: 0
-  _textView: {fileID: 4286327574511537459}
+  _view: {fileID: 4286327574511537459}
 --- !u!1 &8427564802860832855
 GameObject:
   m_ObjectHideFlags: 0
@@ -3712,7 +3712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: 4
   _colorMode: 0
-  _textView: {fileID: 8388459674218164056}
+  _view: {fileID: 8388459674218164056}
 --- !u!1 &8598534393284506402
 GameObject:
   m_ObjectHideFlags: 0

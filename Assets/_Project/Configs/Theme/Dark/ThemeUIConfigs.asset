@@ -34,7 +34,7 @@ MonoBehaviour:
     <Color>k__BackingField: {r: 0.227451, g: 0.21568629, b: 0.2901961, a: 1}
   <CubeRemoveAreaColor>k__BackingField:
     <Tag>k__BackingField: 7
-    <Color>k__BackingField: {r: 0.9607844, g: 0.29411766, b: 0.29411766, a: 0}
+    <Color>k__BackingField: {r: 0.9811321, g: 0.31470272, b: 0.28230685, a: 0}
   <GameplayProgressBarGradient>k__BackingField:
     <Tag>k__BackingField: 8
     <Gradent>k__BackingField:

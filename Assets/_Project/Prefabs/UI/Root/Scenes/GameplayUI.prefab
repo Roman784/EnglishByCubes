@@ -729,7 +729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: 4
   _colorMode: 0
-  _textView: {fileID: 5886845037152671438}
+  _view: {fileID: 5886845037152671438}
 --- !u!1 &2625429864593646351
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,7 +1124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: 4
   _colorMode: 0
-  _textView: {fileID: 7790137856929683723}
+  _view: {fileID: 7790137856929683723}
 --- !u!1 &4155346621300445681
 GameObject:
   m_ObjectHideFlags: 0
@@ -2313,7 +2313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: 4
   _colorMode: 0
-  _textView: {fileID: 7953409319722589013}
+  _view: {fileID: 7953409319722589013}
 --- !u!1 &8462685519613954750
 GameObject:
   m_ObjectHideFlags: 0

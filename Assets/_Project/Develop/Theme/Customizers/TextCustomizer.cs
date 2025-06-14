@@ -1,4 +1,5 @@
 using Configs;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -10,19 +11,31 @@ namespace Theme
 
         [Space]
 
-        [SerializeField] private TMP_Text _textView;
+        [SerializeField] private TMP_Text _view;
 
         protected override void Customize(ThemeConfigs configs)
         {
             var theme = GetTheme(configs.UIConfigs.GetTexts());
-
             if (theme == null) return;
-            if (_textView == null) return;
             
             if (_colorMode == ThemeColorModes.Dark) 
-                _textView.color = theme.Dark;
+                _view.color = theme.Dark;
             else
-                _textView.color = theme.Light;
+                _view.color = theme.Light;
+        }
+
+        protected override void ChangeTheme(ThemeConfigs configs)
+        {
+            var theme = GetTheme(configs.UIConfigs.GetTexts());
+            if (theme == null) return;
+
+            Color color;
+            if (_colorMode == ThemeColorModes.Dark)
+                color = theme.Dark;
+            else
+                color = theme.Light;
+
+            _view.DOColor(color, 0.25f);
         }
     }
 }
