@@ -12,36 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d5c7ff9b4c7c2144b8d018cf1ab433c, type: 3}
   m_Name: ThemeUIConfigs
   m_EditorClassIdentifier: 
-  <Buttons>k__BackingField:
-  - <Tag>k__BackingField: 0
+  <MainButton>k__BackingField:
+    <Tag>k__BackingField: 0
     <Top>k__BackingField: {r: 0.29411766, g: 0.28627452, b: 0.34117648, a: 1}
-    <Side>k__BackingField: {r: 0.22745098, g: 0.21568628, b: 0.2901961, a: 1}
-  - <Tag>k__BackingField: 1
-    <Top>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
-    <Side>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
-  - <Tag>k__BackingField: 2
-    <Top>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
-    <Side>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
-  - <Tag>k__BackingField: 3
-    <Top>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
-    <Side>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
-  <Texts>k__BackingField:
-  - <Tag>k__BackingField: 4
+    <Side>k__BackingField: {r: 0.227451, g: 0.21568629, b: 0.2901961, a: 1}
+  <MainText>k__BackingField:
+    <Tag>k__BackingField: 4
     <Dark>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
     <Light>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
-  <Colors>k__BackingField:
-  - <Tag>k__BackingField: 5
-    <Color>k__BackingField: {r: 0.22745098, g: 0.21568628, b: 0.2901961, a: 1}
-  - <Tag>k__BackingField: 7
-    <Color>k__BackingField: {r: 0.9607843, g: 0.29411766, b: 0.29411766, a: 0}
-  - <Tag>k__BackingField: 6
-    <Color>k__BackingField: {r: 0.16470589, g: 0.15686275, b: 0.20784314, a: 1}
-  - <Tag>k__BackingField: 9
+  <MainFillColor>k__BackingField:
+    <Tag>k__BackingField: 9
     <Color>k__BackingField: {r: 0.29411766, g: 0.28627452, b: 0.34117648, a: 1}
-  - <Tag>k__BackingField: 0
+  <MainIconColor>k__BackingField:
+    <Tag>k__BackingField: 10
     <Color>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
-  <Gradients>k__BackingField:
-  - <Tag>k__BackingField: 8
+  <BackgroundColor>k__BackingField:
+    <Tag>k__BackingField: 6
+    <Color>k__BackingField: {r: 0.16470589, g: 0.15686275, b: 0.20784315, a: 1}
+  <SlotColor>k__BackingField:
+    <Tag>k__BackingField: 5
+    <Color>k__BackingField: {r: 0.227451, g: 0.21568629, b: 0.2901961, a: 1}
+  <CubeRemoveAreaColor>k__BackingField:
+    <Tag>k__BackingField: 7
+    <Color>k__BackingField: {r: 0.9607844, g: 0.29411766, b: 0.29411766, a: 0}
+  <GameplayProgressBarGradient>k__BackingField:
+    <Tag>k__BackingField: 8
     <Gradent>k__BackingField:
       serializedVersion: 2
       key0: {r: 0.972549, g: 0.35686275, b: 0.32941177, a: 1}

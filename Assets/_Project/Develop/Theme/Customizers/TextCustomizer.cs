@@ -14,7 +14,7 @@ namespace Theme
 
         protected override void Customize(ThemeConfigs configs)
         {
-            var theme = GetTheme(configs.UIConfigs.Texts);
+            var theme = GetTheme(configs.UIConfigs.GetTexts());
 
             if (theme == null) return;
             if (_textView == null) return;

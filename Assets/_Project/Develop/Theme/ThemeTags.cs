@@ -11,6 +11,7 @@ namespace Theme
         Background,
         CubeRemoveArea,
         GameplayProgressBar,
-        MainFillColor,
+        MainFill,
+        MainIcon
     }
 }

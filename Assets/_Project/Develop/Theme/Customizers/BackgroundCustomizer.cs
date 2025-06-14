@@ -11,7 +11,7 @@ namespace Theme
 
         protected override void Customize(ThemeConfigs configs)
         {
-            var theme = GetTheme(configs.UIConfigs.Colors);
+            var theme = GetTheme(configs.UIConfigs.GetColors());
             if (theme == null) return;
 
             _view.backgroundColor = theme.Color;

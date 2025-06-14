@@ -16,7 +16,7 @@ namespace Theme
         {
             if (_configs == null) return Color.red;
 
-            var theme = GetTheme(_configs.UIConfigs.Gradients);
+            var theme = GetTheme(_configs.UIConfigs.GetGradients());
             if (theme == null) return Color.red;
 
             return theme.Gradent.Evaluate(value);

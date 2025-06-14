@@ -13,7 +13,7 @@ namespace Theme
 
         protected override void Customize(ThemeConfigs configs)
         {
-            var theme = GetTheme(configs.UIConfigs.Buttons);
+            var theme = GetTheme(configs.UIConfigs.GetButtons());
             if (theme == null) return;
 
             _topView.color = theme.Top;

@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c25066c07627c442af76c889126ca91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tag: 0
+  _tag: 10
   _view: {fileID: 3782099802768601648}
 --- !u!1 &1599583737047350194
 GameObject:
@@ -1612,7 +1612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c25066c07627c442af76c889126ca91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tag: 0
+  _tag: 10
   _view: {fileID: 6501488722403634796}
 --- !u!1 &4611314630331238276
 GameObject:
@@ -2028,7 +2028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c25066c07627c442af76c889126ca91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tag: 0
+  _tag: 10
   _view: {fileID: 5093954827634972106}
 --- !u!1 &6885721648902607331
 GameObject:
