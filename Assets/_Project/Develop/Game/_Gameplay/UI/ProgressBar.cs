@@ -1,5 +1,6 @@
 using Configs;
 using DG.Tweening;
+using Theme;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,7 @@ namespace UI
         [SerializeField] private Image _fillerView;
         [SerializeField] private TMP_Text _percentageView;
         [SerializeField] private RectTransform _background;
+        [SerializeField] private GradientCustomizer _fillingGradientCustomizer;
 
         private float _currentFill;
         private Tweener _fillingTween;
@@ -22,6 +24,11 @@ namespace UI
         {
             _configs = configs;
             SetView(0);
+        }
+
+        public void Customize(ThemeProvider themeProvider)
+        {
+            _fillingGradientCustomizer.Customize(themeProvider);
         }
 
         public void Fill(float fill)
@@ -44,7 +51,7 @@ namespace UI
         private void SetView(float fill)
         {
             RescaleFillerView(fill);
-            //_fillerView.color = _configs.FillingGradient.Evaluate(fill);
+            _fillerView.color = _fillingGradientCustomizer.GetColor(fill);
             _percentageView.text = $"{fill * 100:F0}%";
         }
 

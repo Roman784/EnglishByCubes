@@ -12,7 +12,7 @@ namespace Theme
         [SerializeField] private Image _topView;
         [SerializeField] private Shadow _sideView;
 
-        public override void Customize(ThemeConfigs configs)
+        protected override void Customize(ThemeConfigs configs)
         {
             var theme = GetTheme(configs.UIConfigs.Buttons);
             if (theme == null) return;

@@ -12,7 +12,7 @@ namespace Theme
 
         [SerializeField] private TMP_Text _textView;
 
-        public override void Customize(ThemeConfigs configs)
+        protected override void Customize(ThemeConfigs configs)
         {
             var theme = GetTheme(configs.UIConfigs.Texts);
 

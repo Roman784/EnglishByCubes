@@ -29,12 +29,12 @@ namespace UI
             _popUpsProvider.OpenSettingsPopUp();
         }
 
-        public void CustomizeTheme()
+        public virtual void CustomizeTheme()
         {
             var customizers = FindObjectsOfType<ThemeCustomizer>();
             foreach (var customizer in customizers)
             {
-                customizer.Customize(_themeProvider.CurrentTheme);
+                customizer.Customize(_themeProvider);
             }
         }
     }

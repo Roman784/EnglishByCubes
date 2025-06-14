@@ -9,7 +9,7 @@ namespace Theme
     {
         [SerializeField] private Image _view;
 
-        public override void Customize(ThemeConfigs configs)
+        protected override void Customize(ThemeConfigs configs)
         {
             var theme = GetTheme(configs.UIConfigs.Colors);
             if (theme == null) return;

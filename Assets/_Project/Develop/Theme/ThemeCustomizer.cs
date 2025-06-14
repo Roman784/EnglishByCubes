@@ -1,6 +1,7 @@
 using Configs;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Theme
 {
@@ -8,9 +9,20 @@ namespace Theme
     {
         [SerializeField] protected ThemeTags _tag;
 
-        public abstract void Customize(ThemeConfigs configs);
+        public void Customize(ThemeProvider themeProvider)
+        {
+            Customize(themeProvider.CurrentTheme);
+            themeProvider.OnThemeChanged.AddListener(ChangeTheme);
+        }
 
-        public T GetTheme<T>(IEnumerable<T> themes) where T : ThemeBase
+        protected abstract void Customize(ThemeConfigs configs);
+
+        protected virtual void ChangeTheme(ThemeConfigs configs)
+        {
+            Customize(configs);
+        }
+
+        protected T GetTheme<T>(IEnumerable<T> themes) where T : ThemeBase
         {
             foreach (var theme in themes)
             {
