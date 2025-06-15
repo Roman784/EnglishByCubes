@@ -8,14 +8,19 @@ namespace Configs
     [CreateAssetMenu(fileName = "ThemeUIConfigs", menuName = "Game Configs/Theme/New Theme UI Configs")]
     public class ThemeUIConfigs : ScriptableObject
     {
+        [field: Header("Buttons")]
         [field: SerializeField] public ButtonTheme MainButton { get; private set; }
+        [field: SerializeField] public ButtonTheme OnButton { get; private set; }
+        [field: SerializeField] public ButtonTheme OffButton { get; private set; }
         
         [field: Space]
 
+        [field: Header("Texts")]
         [field: SerializeField] public TextTheme MainText { get; private set; }
 
         [field: Space]
 
+        [field: Header("Colors")]
         [field: SerializeField] public ColorTheme MainFillColor { get; private set; }
         [field: SerializeField] public ColorTheme MainIconColor { get; private set; }
         [field: SerializeField] public ColorTheme BackgroundColor { get; private set; }
@@ -26,6 +31,7 @@ namespace Configs
 
         [field:Space]
 
+        [field: Header("Gradients")]
         [field: SerializeField] public GradientTheme GameplayProgressBarGradient { get; private set; }
 
         private List<ButtonTheme> _buttons;
@@ -40,6 +46,8 @@ namespace Configs
             _buttons = new List<ButtonTheme>()
             {
                 MainButton,
+                OnButton,
+                OffButton,
             };
             return _buttons;
         }

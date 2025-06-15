@@ -16,6 +16,14 @@ MonoBehaviour:
     <Tag>k__BackingField: 0
     <Top>k__BackingField: {r: 0.8980393, g: 0.8980393, b: 0.8980393, a: 1}
     <Side>k__BackingField: {r: 0.6862745, g: 0.6862745, b: 0.6862745, a: 1}
+  <OnButton>k__BackingField:
+    <Tag>k__BackingField: 13
+    <Top>k__BackingField: {r: 0.8980393, g: 0.8980393, b: 0.8980393, a: 1}
+    <Side>k__BackingField: {r: 0.6862745, g: 0.6862745, b: 0.6862745, a: 1}
+  <OffButton>k__BackingField:
+    <Tag>k__BackingField: 14
+    <Top>k__BackingField: {r: 0.9725491, g: 0.35686275, b: 0.32941177, a: 1}
+    <Side>k__BackingField: {r: 0.8039216, g: 0.2627451, b: 0.23921569, a: 1}
   <MainText>k__BackingField:
     <Tag>k__BackingField: 4
     <Dark>k__BackingField: {r: 0.039215688, g: 0.050980397, b: 0.04705883, a: 1}

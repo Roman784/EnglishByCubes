@@ -23,7 +23,7 @@ namespace UI
             _themeProvider = themeProvider;
         }
 
-        private void Awake()
+        protected void Awake()
         {
             _view.alpha = 0f;
 

@@ -14,6 +14,8 @@ namespace Theme
         MainFill,
         MainIcon,
         CubeWordList,
-        CubeWordSelection
+        CubeWordSelection,
+        OnButton,
+        OffButton
     }
 }
