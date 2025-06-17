@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using Utils;
 using Zenject;
 using R3;
+using LevelMenu;
 
 namespace GameRoot
 {
@@ -51,13 +52,19 @@ namespace GameRoot
 
         private void LoadScene()
         {
-            var sceneName = SceneManager.GetActiveScene().name;
-
 #if UNITY_EDITOR
+            var sceneName = GameAutostarter.StartScene;
+
             if (sceneName == Scenes.GAMEPLAY)
             {
                 var defaultGameplayEnterParams = new GameplayEnterParams(Scenes.BOOT);
                 _sceneLoader.LoadAndRunGameplay(defaultGameplayEnterParams);
+                return;
+            }
+            else if (sceneName == Scenes.LEVEL_MENU)
+            {
+                var defaultLevelMenuEnterParams = new LevelMenuEnterParams(Scenes.BOOT);
+                _sceneLoader.LoadAndRunLevelMenu(defaultLevelMenuEnterParams);
                 return;
             }
 #endif

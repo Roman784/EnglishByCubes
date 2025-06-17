@@ -1,4 +1,5 @@
 ﻿using Gameplay;
+using LevelMenu;
 using System.Collections;
 using UI;
 using UnityEngine;
@@ -24,6 +25,13 @@ namespace GameRoot
             StopLoading();
             Coroutines.Start(LoadAndRunScene<GameplayEntryPoint, GameplayEnterParams>
                 (Scenes.GAMEPLAY, enterParams));
+        }
+
+        public void LoadAndRunLevelMenu(LevelMenuEnterParams enterParams)
+        {
+            StopLoading();
+            Coroutines.Start(LoadAndRunScene<LevelMenuEntryPoint, LevelMenuEnterParams>
+                (Scenes.LEVEL_MENU, enterParams));
         }
 
         private IEnumerator LoadAndRunScene<TEntryPoint, TEnterParams>(string sceneName, TEnterParams enterParams)
