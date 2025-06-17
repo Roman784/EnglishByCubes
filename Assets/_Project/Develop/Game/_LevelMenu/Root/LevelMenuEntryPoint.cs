@@ -20,6 +20,9 @@ namespace LevelMenu
         {
             var isLoaded = false;
 
+            //UI.
+            _ui.CreateButtons();
+
             isLoaded = true;
 
             yield return new WaitUntil(() => isLoaded);
