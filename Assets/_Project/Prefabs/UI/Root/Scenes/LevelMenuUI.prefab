@@ -437,7 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4eac6ac58a4b4b48bbfda2824d07b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelButtonPrefab: {fileID: 3775141050330817517, guid: 5be677ac9fb2ac345b80147e0744af7f, type: 3}
+  _levelButtonPrefab: {fileID: 1228754020904106271, guid: 5be677ac9fb2ac345b80147e0744af7f, type: 3}
   _levelButtonsLayout: {fileID: 537286550349456342}
 --- !u!114 &537286550349456342
 MonoBehaviour:
@@ -865,7 +865,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: -4920813926784816990}
         m_TargetAssemblyTypeName: UI.SceneUI, Assembly-CSharp
         m_MethodName: OpenSettings
         m_Mode: 1
@@ -1620,7 +1620,7 @@ MonoBehaviour:
   m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
-  m_Elasticity: 0.025
+  m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
   m_ScrollSensitivity: 65

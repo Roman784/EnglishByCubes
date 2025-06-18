@@ -12,6 +12,9 @@ namespace Configs
         [field: SerializeField] public ButtonTheme MainButton { get; private set; }
         [field: SerializeField] public ButtonTheme OnButton { get; private set; }
         [field: SerializeField] public ButtonTheme OffButton { get; private set; }
+        [field: SerializeField] public ButtonTheme CompletedLevelButton { get; private set; }
+        [field: SerializeField] public ButtonTheme UncompletedLevelButton { get; private set; }
+        [field: SerializeField] public ButtonTheme CurrentLevelButtonButton { get; private set; }
         
         [field: Space]
 
@@ -28,6 +31,9 @@ namespace Configs
         [field: SerializeField] public ColorTheme CubeRemoveAreaColor { get; private set; }
         [field: SerializeField] public ColorTheme CubeWordListColor { get; private set; }
         [field: SerializeField] public ColorTheme CubeWordSelection { get; private set; }
+        [field: SerializeField] public ColorTheme CompletedLevelButtonIcon { get; private set; }
+        [field: SerializeField] public ColorTheme UncompletedLevelButtonIcon { get; private set; }
+        [field: SerializeField] public ColorTheme CurrentLevelButtonIcon { get; private set; }
 
         [field:Space]
 
@@ -48,6 +54,9 @@ namespace Configs
                 MainButton,
                 OnButton,
                 OffButton,
+                CompletedLevelButton,
+                UncompletedLevelButton,
+                CurrentLevelButtonButton,
             };
             return _buttons;
         }
@@ -76,6 +85,9 @@ namespace Configs
                 CubeRemoveAreaColor,
                 CubeWordListColor,
                 CubeWordSelection,
+                CompletedLevelButtonIcon,
+                UncompletedLevelButtonIcon,
+                CurrentLevelButtonIcon,
             };
             return _colors;
         }

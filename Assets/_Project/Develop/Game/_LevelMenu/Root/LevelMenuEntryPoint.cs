@@ -21,7 +21,11 @@ namespace LevelMenu
             var isLoaded = false;
 
             //UI.
+            _uiRoot.AttachSceneUI(_ui);
             _ui.CreateButtons();
+
+            // Theme customization.
+            CustomizeTheme();
 
             isLoaded = true;
 
