@@ -1,4 +1,5 @@
-﻿using R3;
+﻿using Configs;
+using R3;
 using System.IO;
 using Theme;
 using UnityEngine;
@@ -12,7 +13,15 @@ namespace GameState
 
         private string _savePath;
 
+        private IConfigsProvider _configsProvider;
+
         public GameStateProxy GameStateProxy { get; private set; }
+
+        [Inject]
+        private void Construct(IConfigsProvider configsProvider)
+        {
+            _configsProvider = configsProvider;
+        }
 
         public JsonGameStateProvider()
         {
@@ -61,9 +70,12 @@ namespace GameState
 
         private GameStateProxy CreateInitalGameState()
         {
+            var defaultState = _configsProvider.GameConfigs.DefaultGameStateConfigs;
+
             var gameState = new GameState
             {
-                CurrentThemeMode = (int)ThemeModes.Light,
+                LastCompletedLevelNumber = defaultState.LastCompletedLevelNumber,
+                CurrentThemeMode = (int)defaultState.CurrentThemeMode,
             };
 
             return new GameStateProxy(gameState, this);

@@ -15,6 +15,12 @@ namespace GameState
             _gameStateProvider = gameStateProvider;
         }
 
+        public void SetLastCompletedLevelNumber(int number)
+        {
+            _gameState.LastCompletedLevelNumber = number;
+            _gameStateProvider.SaveGameState();
+        }
+
         public void SetCurrentThemeMode(ThemeModes mode)
         {
             _gameState.CurrentThemeMode = (int)mode;

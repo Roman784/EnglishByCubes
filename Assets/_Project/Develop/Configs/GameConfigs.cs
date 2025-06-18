@@ -5,6 +5,10 @@ namespace Configs
     [CreateAssetMenu(fileName = "GameConfigs", menuName = "Game Configs/New Game Configs")]
     public class GameConfigs : ScriptableObject
     {
+        [field: SerializeField] public DefaultGameStateConfigs DefaultGameStateConfigs { get; private set; }
+
+        [field: Space]
+
         [field: SerializeField] public CubesConfigs CubesConfigs { get; private set; }
         [field: SerializeField] public TasksConfigs TasksConfigs { get; private set; }
         [field: SerializeField] public UIConfigs UIConfigs { get; private set; }

@@ -1,9 +1,7 @@
 using Gameplay;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using Utils;
-using Zenject;
 using R3;
 using LevelMenu;
 
@@ -21,11 +19,11 @@ namespace GameRoot
         {
             var isLoaded = false;
 
-            _gameStateProvider.LoadGameState().Subscribe(res =>
+            _configsProvider.LoadGameConfigs().Subscribe(res =>
             {
                 if (res)
                 {
-                    _configsProvider.LoadGameConfigs().Subscribe(res =>
+                    _gameStateProvider.LoadGameState().Subscribe(res =>
                     {
                         if (res)
                         {

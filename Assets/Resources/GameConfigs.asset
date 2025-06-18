@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2bbc48ade6f079419ba03b179094b85, type: 3}
   m_Name: GameConfigs
   m_EditorClassIdentifier: 
+  <DefaultGameStateConfigs>k__BackingField: {fileID: 11400000, guid: ffe61fd7b527cd54ebc3847d2f7fbe74, type: 2}
   <CubesConfigs>k__BackingField: {fileID: 11400000, guid: e740b7b58475d7c4095c2d3c5f396735, type: 2}
   <TasksConfigs>k__BackingField: {fileID: 11400000, guid: efaaa2e4ce9e2b244ae9ad8cfa87cac7, type: 2}
   <UIConfigs>k__BackingField: {fileID: 11400000, guid: f55a0774dd35adc4188306f481503b4d, type: 2}
