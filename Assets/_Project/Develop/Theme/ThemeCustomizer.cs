@@ -10,13 +10,24 @@ namespace Theme
         [SerializeField] protected ThemeTags _tag;
 
         private bool _isCustomized;
+        private ThemeConfigs _currentThemeConfigs;
+
+        public void SetTag(ThemeTags newTag)
+        {
+            _tag = newTag;
+
+            if (_isCustomized)
+                ChangeTheme(_currentThemeConfigs);
+        }
 
         public void Customize(ThemeProvider themeProvider)
         {
             if (_isCustomized) return;
+            
             _isCustomized = true;
+            _currentThemeConfigs = themeProvider.CurrentTheme;
 
-            Customize(themeProvider.CurrentTheme);
+            Customize(_currentThemeConfigs);
             themeProvider.OnThemeChanged.AddListener(ChangeTheme);
         }
 
