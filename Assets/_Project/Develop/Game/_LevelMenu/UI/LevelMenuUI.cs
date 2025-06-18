@@ -28,5 +28,11 @@ namespace UI
 
             _levelButtonsLayout.ResizeContainer(levels.Count);
         }
+
+        public void ScrollToCurrentButton(bool instantly = false)
+        {
+            var lastCompletedLevelNumber = GameState.LastCompletedLevelNumber;
+            _levelButtonsLayout.ScrollTo(lastCompletedLevelNumber, instantly);
+        }
     }
 }
