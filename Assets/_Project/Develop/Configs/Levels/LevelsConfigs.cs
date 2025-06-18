@@ -30,6 +30,7 @@ namespace Configs
             }
 
             EditorUtility.SetDirty(this);
+            AssetDatabase.Refresh();
             AssetDatabase.SaveAssets();
         }
 

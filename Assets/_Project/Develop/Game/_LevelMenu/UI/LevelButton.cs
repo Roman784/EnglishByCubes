@@ -7,18 +7,10 @@ namespace UI
 {
     public class LevelButton : MonoBehaviour
     {
-        /*[SerializeField] private GameObject _completedButton;
-        [SerializeField] private Image _completedIconView;
-
-        [SerializeField] private GameObject _uncompletedButton;
-        [SerializeField] private Image _uncompletedIconView;
-
-        [SerializeField] private GameObject _currentButton;
-        [SerializeField] private Image _currentIconView;*/
-
         [SerializeField] private ButtonCustomizer _buttonCustomizer;
         [SerializeField] private ColorCustomizer _iconCustomizer;
         [SerializeField] private Image _iconView;
+        [SerializeField] private GameObject _line;
 
         [Space]
 
@@ -47,6 +39,8 @@ namespace UI
 
             _buttonCustomizer.SetTag(_themeTagsMap[progress]);
             _iconCustomizer.SetTag(_themeTagsMap[progress]);
+
+            _line.SetActive(mode == LevelMode.Theory);
         }
     }
 }
