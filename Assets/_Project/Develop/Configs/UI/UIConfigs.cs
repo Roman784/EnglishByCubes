@@ -10,5 +10,6 @@ namespace Configs
         [field: SerializeField] public PopUpConfigs PopUpConfigs { get; private set; }
         [field: SerializeField] public ProgressBarConfigs GameplayProgressBarConfigs { get; private set; }
         [field: SerializeField] public CubeRemoveAreaConfigs CubeRemoveAreaConfigs { get; private set; }
+        [field: SerializeField] public LevelButtonsConfigs LevelButtonsConfigs { get; private set; }
     }
 }

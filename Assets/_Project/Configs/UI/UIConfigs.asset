@@ -16,3 +16,4 @@ MonoBehaviour:
   <PopUpConfigs>k__BackingField: {fileID: 11400000, guid: 079f620bc5549c24fa534bc1fad8c801, type: 2}
   <GameplayProgressBarConfigs>k__BackingField: {fileID: 11400000, guid: c8552c8318b0f414393344242e857582, type: 2}
   <CubeRemoveAreaConfigs>k__BackingField: {fileID: 11400000, guid: 33b0ebcc346b5644caa9b8e7be1e69ca, type: 2}
+  <LevelButtonsConfigs>k__BackingField: {fileID: 11400000, guid: a6acd7725b38ff54db44d8a0c5d79c4c, type: 2}

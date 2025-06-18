@@ -22,6 +22,7 @@ namespace LevelMenu
 
             //UI.
             _uiRoot.AttachSceneUI(_ui);
+            _ui.Init();
             _ui.CreateButtons();
             _ui.ScrollToCurrentButton(true);
 

@@ -6,22 +6,32 @@ namespace UI
 {
     public class LevelButtonsLayout : MonoBehaviour
     {
-        [Header("Buttons Container")]
         [SerializeField] private RectTransform _container;
-        [SerializeField] private float _containerAdditionalHeight;
 
-        [Header("Buttons")]
-        [SerializeField] private Vector2 _startPosition;
-        [SerializeField] private float _spacing;
-        [SerializeField] private float _frequence;
-        [SerializeField] private float _amplitude;
+        private float _containerAdditionalHeight;
+
+        private Vector2 _startPosition;
+        private float _spacing;
+        private float _frequence;
+        private float _amplitude;
 
         [Space]
 
-        [SerializeField] private float _scrollingDuration;
-        [SerializeField] private Ease _scrollingEase;
+        private float _scrollingDuration;
+        private Ease _scrollingEase;
 
         private Tweener _scrollingTween;
+
+        public void Init(LevelButtonsConfigs configs)
+        {
+            _containerAdditionalHeight = configs.ContainerAdditionalHeight;
+            _startPosition = configs.StartPosition;
+            _spacing = configs.Spacing;
+            _frequence = configs.Frequence;
+            _amplitude = configs.Amplitude;
+            _scrollingDuration = configs.ScrollingDuration;
+            _scrollingEase = configs.ScrollingEase;
+        }
 
         public void LayOut(RectTransform button, int index)
         {

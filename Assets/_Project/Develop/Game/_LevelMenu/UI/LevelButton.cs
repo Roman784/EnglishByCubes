@@ -15,23 +15,18 @@ namespace UI
         [SerializeField] private Image _iconView;
         [SerializeField] private GameObject _line;
 
-        [Space]
-
-        [SerializeField] private Sprite _theoryIcon;
-        [SerializeField] private Sprite _TemplateIcon;
-        [SerializeField] private Sprite _practiceIcon;
-
         private int _number;
         private bool _isLocked;
         private Action<int> _openLevel;
 
-        public void Init(LevelConfigs configs, LevelButtonProgress progress, Action<int> openLevel)
+        public void Init(LevelConfigs levelConfigs, LevelButtonsConfigs buttonsConfigs, 
+                         LevelButtonProgress progress, Action<int> openLevel)
         {
             Dictionary<LevelMode, Sprite> _iconsMap = new()
             {
-                { LevelMode.Theory, _theoryIcon },
-                { LevelMode.Template, _TemplateIcon },
-                { LevelMode.Practice, _practiceIcon },
+                { LevelMode.Theory, buttonsConfigs.TheoryIcon },
+                { LevelMode.Template, buttonsConfigs.TemplateIcon },
+                { LevelMode.Practice, buttonsConfigs.PracticeIcon },
             };
 
             Dictionary<LevelButtonProgress, ThemeTags> _themeTagsMap = new()
@@ -41,17 +36,17 @@ namespace UI
                 { LevelButtonProgress.Current, ThemeTags.CurrentLevelButton },
             };
 
-            _number = configs.Number;
+            _number = levelConfigs.Number;
             _isLocked = progress == LevelButtonProgress.Uncompleted;
             _openLevel = openLevel;
 
-            _iconView.sprite = _iconsMap[configs.Mode];
+            _iconView.sprite = _iconsMap[levelConfigs.Mode];
             _iconView.SetNativeSize();
 
             _buttonCustomizer.SetTag(_themeTagsMap[progress]);
             _iconCustomizer.SetTag(_themeTagsMap[progress]);
 
-            _line.SetActive(configs.Mode == LevelMode.Theory);
+            _line.SetActive(levelConfigs.Mode == LevelMode.Theory);
         }
 
         public void OpenLevel()

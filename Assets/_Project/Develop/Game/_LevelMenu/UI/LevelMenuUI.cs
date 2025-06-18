@@ -9,8 +9,14 @@ namespace UI
         [SerializeField] private LevelButton _levelButtonPrefab;
         [SerializeField] private LevelButtonsLayout _levelButtonsLayout;
 
+        public void Init()
+        {
+            _levelButtonsLayout.Init(UIConfigs.LevelButtonsConfigs);
+        }
+
         public void CreateButtons()
         {
+            var buttonsConfigs = UIConfigs.LevelButtonsConfigs;
             var levels = GameConfigs.LevelsConfigs.Levels;
             var lastCompletedLevelNumber = GameState.LastCompletedLevelNumber;
 
@@ -19,7 +25,7 @@ namespace UI
                 var progress = GetLevelProgress(level.Number, lastCompletedLevelNumber);
 
                 var newButton = Instantiate(_levelButtonPrefab);
-                newButton.Init(level, progress, OpenLevel);
+                newButton.Init(level, buttonsConfigs, progress, OpenLevel);
 
                 _levelButtonsLayout.LayOut(newButton.GetComponent<RectTransform>(), level.Number - 1);
             }

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7985a2c5ef591d64599d7aca83659a97, type: 3}
+  m_Name: LevelButtonsConfigs
+  m_EditorClassIdentifier: 
+  <ContainerAdditionalHeight>k__BackingField: 774
+  <StartPosition>k__BackingField: {x: 0, y: 614}
+  <Spacing>k__BackingField: 384
+  <Frequence>k__BackingField: 2
+  <Amplitude>k__BackingField: 248
+  <ScrollingDuration>k__BackingField: 0.5
+  <ScrollingEase>k__BackingField: 6
+  <TheoryIcon>k__BackingField: {fileID: -508713343, guid: cf0d701ae272d154886dd93fbd749f2f, type: 3}
+  <TemplateIcon>k__BackingField: {fileID: -855296329, guid: cf0d701ae272d154886dd93fbd749f2f, type: 3}
+  <PracticeIcon>k__BackingField: {fileID: -1726365483, guid: cf0d701ae272d154886dd93fbd749f2f, type: 3}
