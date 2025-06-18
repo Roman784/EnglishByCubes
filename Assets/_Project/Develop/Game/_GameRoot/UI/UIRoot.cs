@@ -24,8 +24,12 @@ namespace UI
 
         public void AttachSceneUI(SceneUI sceneUI)
         {
-            ClearContainer(_sceneUIContainer);
             sceneUI.transform.SetParent(_sceneUIContainer, false);
+        }
+
+        public void ClearAllContainers()
+        {
+            ClearContainer(_sceneUIContainer);
         }
 
         private void ClearContainer(Transform container)

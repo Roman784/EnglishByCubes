@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Configs
 {
-    [CreateAssetMenu(fileName = "CubeRemoveAreaConfigs", menuName = "Game Configs/New Cube Remove Area Configs")]
+    [CreateAssetMenu(fileName = "CubeRemoveAreaConfigs", menuName = "Game Configs/UI/New Cube Remove Area Configs")]
     public class CubeRemoveAreaConfigs : ScriptableObject
     {
         [field: SerializeField] public float FirstHighlightLevel { get; private set; }

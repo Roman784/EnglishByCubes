@@ -40,6 +40,8 @@ namespace GameRoot
         {
             yield return _uiRoot.SetLoadingScreen(true);
 
+            _uiRoot.ClearAllContainers();
+
             yield return LoadScene(sceneName);
 
             var sceneEntryPoint = Object.FindObjectOfType<TEntryPoint>();

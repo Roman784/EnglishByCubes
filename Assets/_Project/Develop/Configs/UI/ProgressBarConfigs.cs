@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Configs
 {
-    [CreateAssetMenu(fileName = "ProgressBarConfigs", menuName = "Game Configs/Theme/New Progress Bar Configs")]
+    [CreateAssetMenu(fileName = "ProgressBarConfigs", menuName = "Game Configs/UI/New Progress Bar Configs")]
     public class ProgressBarConfigs : ScriptableObject
     {
         [field: SerializeField] public float FillingDuration { get; private set; }
