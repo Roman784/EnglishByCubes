@@ -1,4 +1,5 @@
 using Configs;
+using GameRoot;
 using GameState;
 using UnityEngine;
 using Zenject;
@@ -9,6 +10,7 @@ namespace UI
     {
         protected IConfigsProvider _configsProvider;
         protected IGameStateProvider _gameStateProvider;
+        protected SceneLoader _sceneLoader;
         protected PopUpsProvider _popUpsProvider;
 
         protected GameConfigs GameConfigs => _configsProvider.GameConfigs;
@@ -17,10 +19,11 @@ namespace UI
 
         [Inject]
         private void Construct(IConfigsProvider configsProvider, IGameStateProvider gameStateProvider,
-                               PopUpsProvider popUpsProvider)
+                               SceneLoader sceneLoader, PopUpsProvider popUpsProvider)
         {
             _configsProvider = configsProvider;
             _gameStateProvider = gameStateProvider;
+            _sceneLoader = sceneLoader;
             _popUpsProvider = popUpsProvider;
         }
 

@@ -1,3 +1,6 @@
+using Configs;
+using DG.Tweening;
+using System;
 using System.Collections.Generic;
 using Theme;
 using UnityEngine;
@@ -18,7 +21,11 @@ namespace UI
         [SerializeField] private Sprite _TemplateIcon;
         [SerializeField] private Sprite _practiceIcon;
 
-        public void Init(LevelMode mode, LevelButtonProgress progress)
+        private int _number;
+        private bool _isLocked;
+        private Action<int> _openLevel;
+
+        public void Init(LevelConfigs configs, LevelButtonProgress progress, Action<int> openLevel)
         {
             Dictionary<LevelMode, Sprite> _iconsMap = new()
             {
@@ -34,13 +41,23 @@ namespace UI
                 { LevelButtonProgress.Current, ThemeTags.CurrentLevelButton },
             };
 
-            _iconView.sprite = _iconsMap[mode];
+            _number = configs.Number;
+            _isLocked = progress == LevelButtonProgress.Uncompleted;
+            _openLevel = openLevel;
+
+            _iconView.sprite = _iconsMap[configs.Mode];
             _iconView.SetNativeSize();
 
             _buttonCustomizer.SetTag(_themeTagsMap[progress]);
             _iconCustomizer.SetTag(_themeTagsMap[progress]);
 
-            _line.SetActive(mode == LevelMode.Theory);
+            _line.SetActive(configs.Mode == LevelMode.Theory);
+        }
+
+        public void OpenLevel()
+        {
+            if (_isLocked) return;
+            _openLevel?.Invoke(_number);
         }
     }
 }

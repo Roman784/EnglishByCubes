@@ -55,7 +55,7 @@ namespace GameRoot
 
             if (sceneName == Scenes.GAMEPLAY)
             {
-                var defaultGameplayEnterParams = new GameplayEnterParams(Scenes.BOOT);
+                var defaultGameplayEnterParams = new GameplayEnterParams(Scenes.BOOT, 3);
                 _sceneLoader.LoadAndRunGameplay(defaultGameplayEnterParams);
                 return;
             }
@@ -66,8 +66,8 @@ namespace GameRoot
                 return;
             }
 #endif
-            var enterParams = new GameplayEnterParams(Scenes.BOOT);
-            _sceneLoader.LoadAndRunGameplay(enterParams);
+            var enterParams = new LevelMenuEnterParams(Scenes.BOOT);
+            _sceneLoader.LoadAndRunLevelMenu(enterParams);
 
         }
     }

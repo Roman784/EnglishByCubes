@@ -1,4 +1,6 @@
 using Gameplay;
+using GameRoot;
+using LevelMenu;
 using UnityEngine;
 using Zenject;
 
@@ -47,6 +49,12 @@ namespace UI
         public void FillProgressBar(float fill)
         {
             _progressBar.Fill(fill);
+        }
+
+        public void OpenLevelMenu()
+        {
+            var enterParams = new LevelMenuEnterParams(Scenes.GAMEPLAY);
+            _sceneLoader.LoadAndRunLevelMenu(enterParams);
         }
     }
 }

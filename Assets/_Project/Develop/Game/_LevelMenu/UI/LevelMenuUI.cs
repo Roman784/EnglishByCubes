@@ -1,3 +1,5 @@
+using Gameplay;
+using GameRoot;
 using UnityEngine;
 
 namespace UI
@@ -14,14 +16,10 @@ namespace UI
 
             foreach (var level in levels)
             {
-                var progress = LevelButtonProgress.Uncompleted; 
-                if (level.Number <= lastCompletedLevelNumber)
-                    progress = LevelButtonProgress.Completed;
-                else if (level.Number == lastCompletedLevelNumber + 1)
-                    progress = LevelButtonProgress.Current;
+                var progress = GetLevelProgress(level.Number, lastCompletedLevelNumber);
 
                 var newButton = Instantiate(_levelButtonPrefab);
-                newButton.Init(level.Mode, progress);
+                newButton.Init(level, progress, OpenLevel);
 
                 _levelButtonsLayout.LayOut(newButton.GetComponent<RectTransform>(), level.Number - 1);
             }
@@ -33,6 +31,35 @@ namespace UI
         {
             var lastCompletedLevelNumber = GameState.LastCompletedLevelNumber;
             _levelButtonsLayout.ScrollTo(lastCompletedLevelNumber, instantly);
+        }
+
+        private void OpenLevel(int number)
+        {
+            var levels = GameConfigs.LevelsConfigs;
+            var level = levels.GetLevel(number);
+
+            if (level.Mode == LevelMode.Theory)
+                OpenPracticeLevel(3);
+            else if (level.Mode == LevelMode.Template)
+                OpenPracticeLevel(3);
+            else if (level.Mode == LevelMode.Practice)
+                OpenPracticeLevel(number);
+        }
+
+        private void OpenPracticeLevel(int number)
+        {
+            var enterParams = new GameplayEnterParams(Scenes.LEVEL_MENU, number);
+            _sceneLoader.LoadAndRunGameplay(enterParams);
+        }
+
+        private LevelButtonProgress GetLevelProgress(int currentNumber, int lastCompletedNumber)
+        {
+            if (currentNumber <= lastCompletedNumber)
+                return LevelButtonProgress.Completed;
+            else if (currentNumber == lastCompletedNumber + 1)
+                return LevelButtonProgress.Current;
+
+            return LevelButtonProgress.Uncompleted;
         }
     }
 }

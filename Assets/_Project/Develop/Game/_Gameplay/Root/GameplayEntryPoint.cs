@@ -28,13 +28,18 @@ namespace Gameplay
 
         public override IEnumerator Run<T>(T enterParams)
         {
+            yield return Run(enterParams.As<GameplayEnterParams>());
+        }
+
+        private IEnumerator Run(GameplayEnterParams enterParams)
+        {
             var isLoaded = false;
 
             var gameConfigs = _configsProvider.GameConfigs;
             var cubesConfigs = gameConfigs.CubesConfigs;
             var levelsConfigs = gameConfigs.LevelsConfigs;
 
-            var taskConfigs = levelsConfigs.GetLevel(1).As<PracticeLevelConfigs>();
+            var taskConfigs = levelsConfigs.GetLevel(enterParams.LevelNumber).As<PracticeLevelConfigs>();
             var taskSentenceRu = taskConfigs.SentenceRu;
             var taskSentenceEn = taskConfigs.SentenceEn;
             var cubeNumbersPool = taskConfigs.CubeNumbersPool.ToArray();
