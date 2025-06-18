@@ -9,25 +9,24 @@ namespace UI
 
         public void CreateButtons()
         {
+            var levels = GameConfigs.LevelsConfigs.Levels;
             var lastCompletedLevelNumber = GameState.LastCompletedLevelNumber;
 
-            for (int i = 0; i < 20; i++)
+            foreach (var level in levels)
             {
-                var number = i + 1;
-
                 var progress = LevelButtonProgress.Uncompleted; 
-                if (number <= lastCompletedLevelNumber)
+                if (level.Number <= lastCompletedLevelNumber)
                     progress = LevelButtonProgress.Completed;
-                else if (number == lastCompletedLevelNumber + 1)
+                else if (level.Number == lastCompletedLevelNumber + 1)
                     progress = LevelButtonProgress.Current;
 
                 var newButton = Instantiate(_levelButtonPrefab);
-                newButton.Init((LevelButtonMode)Random.Range(0, 3), progress);
+                newButton.Init(level.Mode, progress);
 
-                _levelButtonsLayout.LayOut(newButton.GetComponent<RectTransform>(), i);
+                _levelButtonsLayout.LayOut(newButton.GetComponent<RectTransform>(), level.Number - 1);
             }
 
-            _levelButtonsLayout.ResizeContainer(20);
+            _levelButtonsLayout.ResizeContainer(levels.Count);
         }
     }
 }

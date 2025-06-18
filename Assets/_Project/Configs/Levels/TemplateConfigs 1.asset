@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00a1c9c93b865af44a1c7e128b3c4e0f, type: 3}
-  m_Name: TasksConfigs
+  m_Script: {fileID: 11500000, guid: 97b9f966d62e68848ac71231b7a3c218, type: 3}
+  m_Name: TemplateConfigs 1
   m_EditorClassIdentifier: 
-  <Tasks>k__BackingField:
-  - {fileID: 11400000, guid: 6f27cbf5f21f7a343933da32252437d7, type: 2}
+  <Number>k__BackingField: 0

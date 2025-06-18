@@ -1,20 +1,17 @@
 using System.Collections.Generic;
+using UI;
 using UnityEngine;
 
 namespace Configs
 {
-    [CreateAssetMenu(fileName = "TaskConfigs", menuName = "Game Configs/Task/New Task Configs")]
-    public class TaskConfigs : ScriptableObject
+    [CreateAssetMenu(fileName = "PracticeConfigs", menuName = "Game Configs/Level/New Practice Configs")]
+    public class PracticeLevelConfigs : LevelConfigs
     {
-        [field: SerializeField] public int Number { get; private set; }
+        public override LevelMode Mode => LevelMode.Practice;
+
         [field: SerializeField] public string SentenceRu { get; private set; }
         [field: SerializeField] public string SentenceEn { get; private set; }
         [field: SerializeField] public List<string> WordsOrder { get; private set; }
         [field: SerializeField] public List<int> CubeNumbersPool { get; private set; }
-
-        public void SetNumber(int number)
-        {
-            Number = number;
-        }
     }
 }

@@ -26,13 +26,13 @@ namespace UI
         [SerializeField] private Sprite _TemplateIcon;
         [SerializeField] private Sprite _practiceIcon;
 
-        public void Init(LevelButtonMode mode, LevelButtonProgress progress)
+        public void Init(LevelMode mode, LevelButtonProgress progress)
         {
-            Dictionary<LevelButtonMode, Sprite> _iconsMap = new()
+            Dictionary<LevelMode, Sprite> _iconsMap = new()
             {
-                { LevelButtonMode.Theory, _theoryIcon },
-                { LevelButtonMode.Template, _TemplateIcon },
-                { LevelButtonMode.Practice, _practiceIcon },
+                { LevelMode.Theory, _theoryIcon },
+                { LevelMode.Template, _TemplateIcon },
+                { LevelMode.Practice, _practiceIcon },
             };
 
             Dictionary<LevelButtonProgress, ThemeTags> _themeTagsMap = new()

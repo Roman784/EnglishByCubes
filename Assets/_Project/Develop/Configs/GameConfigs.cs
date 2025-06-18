@@ -10,7 +10,7 @@ namespace Configs
         [field: Space]
 
         [field: SerializeField] public CubesConfigs CubesConfigs { get; private set; }
-        [field: SerializeField] public TasksConfigs TasksConfigs { get; private set; }
+        [field: SerializeField] public LevelsConfigs LevelsConfigs { get; private set; }
         [field: SerializeField] public UIConfigs UIConfigs { get; private set; }
 
         [field: Space]

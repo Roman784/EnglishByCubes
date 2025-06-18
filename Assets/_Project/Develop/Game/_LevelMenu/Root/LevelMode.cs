@@ -1,6 +1,6 @@
 namespace UI
 {
-    public enum LevelButtonMode
+    public enum LevelMode
     {
         Theory,
         Template,

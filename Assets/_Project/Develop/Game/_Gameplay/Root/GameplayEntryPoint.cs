@@ -1,3 +1,4 @@
+using Configs;
 using GameRoot;
 using System.Collections;
 using Theme;
@@ -31,9 +32,9 @@ namespace Gameplay
 
             var gameConfigs = _configsProvider.GameConfigs;
             var cubesConfigs = gameConfigs.CubesConfigs;
-            var tasksConfigs = gameConfigs.TasksConfigs;
+            var levelsConfigs = gameConfigs.LevelsConfigs;
 
-            var taskConfigs = tasksConfigs.GetTask(1);
+            var taskConfigs = levelsConfigs.GetLevel(1).As<PracticeLevelConfigs>();
             var taskSentenceRu = taskConfigs.SentenceRu;
             var taskSentenceEn = taskConfigs.SentenceEn;
             var cubeNumbersPool = taskConfigs.CubeNumbersPool.ToArray();
