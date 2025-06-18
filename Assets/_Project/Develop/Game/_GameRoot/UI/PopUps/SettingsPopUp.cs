@@ -8,30 +8,25 @@ namespace UI
     {
         [Space]
 
-        [SerializeField] private GameObject _changeMusicVolumeOnButton;
-        [SerializeField] private GameObject _changeMusicVolumeOffButton;
-
-        [Space]
-
-        [SerializeField] private GameObject _changeSoundVolumeOnButton;
-        [SerializeField] private GameObject _changeSoundVolumeOffButton;
+        [SerializeField] private ButtonCustomizer _changeMusicVolumeButton;
+        [SerializeField] private ButtonCustomizer _changeSoundVolumeButton;
 
         private new void Awake()
         {
             base.Awake();
 
-            SetActiveMusicVolumeView(true);
-            SetActiveSoundVolumeView(true);
+            _changeMusicVolumeButton.SetTag(ThemeTags.OnButton);
+            _changeSoundVolumeButton.SetTag(ThemeTags.OnButton);
         }
 
         public void ChangeMusicVolume()
         {
-            SetActiveMusicVolumeView(!_changeMusicVolumeOnButton.activeSelf);
+            SwitchButtonTag(_changeMusicVolumeButton);
         }
 
         public void ChangeSoundVolume()
         {
-            SetActiveSoundVolumeView(!_changeSoundVolumeOnButton.activeSelf);
+            SwitchButtonTag(_changeSoundVolumeButton);
         }
 
         public void ChangeMusic()
@@ -54,16 +49,12 @@ namespace UI
             
         }
 
-        private void SetActiveMusicVolumeView(bool isOn)
+        private void SwitchButtonTag(ButtonCustomizer button)
         {
-            _changeMusicVolumeOnButton.SetActive(isOn);
-            _changeMusicVolumeOffButton.SetActive(!isOn);
-        }
-
-        private void SetActiveSoundVolumeView(bool isOn)
-        {
-            _changeSoundVolumeOnButton.SetActive(isOn);
-            _changeSoundVolumeOffButton.SetActive(!isOn);
+            if (button.Tag == ThemeTags.OnButton)
+                button.SetTag(ThemeTags.OffButton);
+            else
+                button.SetTag(ThemeTags.OnButton);
         }
 
         public class Factory : PopUpFactory<SettingsPopUp>
