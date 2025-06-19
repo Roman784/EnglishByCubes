@@ -1,7 +1,4 @@
-using Gameplay;
-using GameRoot;
 using LevelMenu;
-using Theory;
 using UnityEngine;
 
 namespace UI
@@ -48,12 +45,7 @@ namespace UI
 
         public void OpenPreviousScene()
         {
-            if (_enterParams.ExitSceneName == Scenes.GAMEPLAY)
-            {
-                var gameplayEnterParams = new GameplayEnterParams(Scenes.LEVEL_MENU, 
-                                                                  _enterParams.CurrentLevelNumber);
-                _sceneLoader.LoadAndRunGameplay(gameplayEnterParams);
-            }
+            _sceneProvider.OpenPreviousScene(_enterParams);
         }
 
         private void OpenLevel(int number)
@@ -61,24 +53,17 @@ namespace UI
             var levels = GameConfigs.LevelsConfigs;
             var level = levels.GetLevel(number);
 
-            if (level.Mode == LevelMode.Theory)
-                OpenTheoryLevel(number);
-            else if (level.Mode == LevelMode.Template)
-                OpenPracticeLevel(3);
-            else if (level.Mode == LevelMode.Practice)
-                OpenPracticeLevel(number);
-        }
-
-        private void OpenPracticeLevel(int number)
-        {
-            var enterParams = new GameplayEnterParams(Scenes.LEVEL_MENU, number);
-            _sceneLoader.LoadAndRunGameplay(enterParams);
-        }
-
-        private void OpenTheoryLevel(int number)
-        {
-            var enterParams = new TheoryEnterParams(Scenes.LEVEL_MENU, number);
-            _sceneLoader.LoadAndRunTheory(enterParams);
+            switch (level.Mode)
+            {
+                case LevelMode.Theory:
+                    _sceneProvider.OpenTheory(_enterParams, number);
+                    break;
+                case LevelMode.Template:
+                    break;
+                case LevelMode.Practice:
+                    _sceneProvider.OpenPractice(_enterParams, number);
+                    break;
+            }
         }
 
         private LevelButtonProgress GetLevelProgress(int currentNumber, int lastCompletedNumber)

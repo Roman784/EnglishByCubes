@@ -1,3 +1,4 @@
+using Configs;
 using GameRoot;
 using System.Collections;
 using UI;
@@ -25,8 +26,17 @@ namespace Theory
         {
             var isLoaded = false;
 
+            var gameConfigs = _configsProvider.GameConfigs;
+            var levelsConfigs = gameConfigs.LevelsConfigs;
+
+            var levelConfigs = levelsConfigs
+                .GetLevel(enterParams.Number)
+                .As<TheoryLevelConfigs>();
+
             //UI.
             _uiRoot.AttachSceneUI(_ui);
+            _ui.Init(enterParams);
+            _ui.SetLevelTitle(levelConfigs);
 
             // Theme customization.
             CustomizeTheme();

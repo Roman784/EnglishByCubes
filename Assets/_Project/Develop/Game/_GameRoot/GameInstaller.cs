@@ -17,18 +17,13 @@ namespace GameRoot
 
         public override void InstallBindings()
         {
-            BindSceneLoader();
             BindProviers();
             BindUI();
         }
 
-        private void BindSceneLoader()
-        {
-            Container.Bind<SceneLoader>().AsTransient();
-        }
-
         private void BindProviers()
         {
+            Container.Bind<SceneProvider>().AsSingle();
             Container.Bind<IConfigsProvider>().To<ConfigsProvider>().AsSingle();
             Container.Bind<IGameStateProvider>().To<JsonGameStateProvider>().AsSingle();
             Container.Bind<ThemeProvider>().AsSingle();

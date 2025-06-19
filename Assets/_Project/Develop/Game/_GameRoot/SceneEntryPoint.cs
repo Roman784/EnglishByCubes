@@ -11,18 +11,18 @@ namespace GameRoot
     public abstract class SceneEntryPoint : MonoBehaviour
     {
         protected UIRoot _uiRoot;
-        protected SceneLoader _sceneLoader;
+        protected SceneProvider _sceneProvider;
         protected IConfigsProvider _configsProvider;
         protected IGameStateProvider _gameStateProvider;
         protected ThemeProvider _themeProvider;
 
         [Inject]
-        private void Construct(UIRoot uiRoot, SceneLoader sceneLoader,
+        private void Construct(UIRoot uiRoot, SceneProvider sceneProvider,
                                IConfigsProvider configsProvider, IGameStateProvider gameStateProvider,
                                ThemeProvider themeProvider)
         {
             _uiRoot = uiRoot;
-            _sceneLoader = sceneLoader;
+            _sceneProvider = sceneProvider;
             _configsProvider = configsProvider;
             _gameStateProvider = gameStateProvider;
             _themeProvider = themeProvider;

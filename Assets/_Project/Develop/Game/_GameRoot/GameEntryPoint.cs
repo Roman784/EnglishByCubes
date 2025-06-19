@@ -12,7 +12,7 @@ namespace GameRoot
     {
         private void Start()
         {
-            var enterParams = new SceneEnterParams("", "");
+            var enterParams = new SceneEnterParams(Scenes.BOOT);
             Coroutines.Start(Run(enterParams));
         }
 
@@ -53,31 +53,26 @@ namespace GameRoot
         {
 #if UNITY_EDITOR
             var sceneName = GameAutostarter.StartScene;
-            var defaultGameplayLevelNumber = 3;
-            var defaultTheoryLevelNumber = 1;
+            var defaultBootParams = new SceneEnterParams(Scenes.BOOT);
 
             if (sceneName == Scenes.GAMEPLAY)
             {
-                var defaultGameplayEnterParams = new GameplayEnterParams(Scenes.BOOT, defaultGameplayLevelNumber);
-                _sceneLoader.LoadAndRunGameplay(defaultGameplayEnterParams);
+                _sceneProvider.OpenPractice(defaultBootParams, 3);
                 return;
             }
             else if (sceneName == Scenes.LEVEL_MENU)
             {
-                var defaultLevelMenuEnterParams = new LevelMenuEnterParams(Scenes.BOOT, defaultGameplayLevelNumber);
-                _sceneLoader.LoadAndRunLevelMenu(defaultLevelMenuEnterParams);
+                _sceneProvider.OpenLevelMenu(defaultBootParams);
                 return;
             }
             else if (sceneName == Scenes.THEORY)
             {
-                var defaultTheoryEnterParams = new TheoryEnterParams(Scenes.BOOT, defaultTheoryLevelNumber);
-                _sceneLoader.LoadAndRunTheory(defaultTheoryEnterParams);
+                _sceneProvider.OpenTheory(defaultBootParams, 1);
                 return;
             }
 #endif
-            var enterParams = new LevelMenuEnterParams(Scenes.BOOT, 0);
-            _sceneLoader.LoadAndRunLevelMenu(enterParams);
-
+            var enterParams = new LevelMenuEnterParams(); // <- From boot
+            _sceneProvider.OpenLevelMenu(enterParams);
         }
     }
 }

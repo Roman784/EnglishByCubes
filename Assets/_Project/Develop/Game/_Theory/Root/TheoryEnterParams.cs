@@ -4,11 +4,11 @@ namespace Theory
 {
     public class TheoryEnterParams : SceneEnterParams
     {
-        public readonly int LevelNumber;
+        public readonly int Number;
 
-        public TheoryEnterParams(string exitSceneName, int levelNumber) : base(Scenes.THEORY, exitSceneName)
+        public TheoryEnterParams(int number) : base(Scenes.THEORY)
         {
-            LevelNumber = levelNumber;
+            Number = number;
         }
     }
 }

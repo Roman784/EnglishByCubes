@@ -12,11 +12,10 @@ namespace GameRoot
 {
     public class SceneLoader
     {
-        private Coroutine _loading;
         private UIRoot _uiRoot;
+        private Coroutine _loading;
 
-        [Inject]
-        private void Construct(UIRoot uiRoot)
+        public SceneLoader(UIRoot uiRoot)
         {
             _uiRoot = uiRoot;
         }

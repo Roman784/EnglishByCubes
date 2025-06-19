@@ -39,7 +39,7 @@ namespace Gameplay
             var levelsConfigs = gameConfigs.LevelsConfigs;
 
             var taskConfigs = levelsConfigs
-                .GetLevel(enterParams.LevelNumber)
+                .GetLevel(enterParams.Number)
                 .As<PracticeLevelConfigs>();
             var taskSentenceRu = taskConfigs.SentenceRu;
             var taskSentenceEn = taskConfigs.SentenceEn;

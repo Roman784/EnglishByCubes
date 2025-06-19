@@ -35,6 +35,21 @@ namespace Configs
             return null;
         }
 
+        public int GetTheoryNumberForCurrentLevel(int number)
+        {
+            var theoryNumber = -1;
+            foreach (var level in Levels)
+            {
+                if (level.Mode == LevelMode.Theory)
+                    theoryNumber = level.GlobalNumber;
+
+                if (level.GlobalNumber == number)
+                    break;
+            }
+
+            return theoryNumber;
+        }
+
         [ContextMenu("Set Level Numbers")]
         private void SetLevelNumbers()
         {

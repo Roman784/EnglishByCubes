@@ -2,13 +2,11 @@ namespace GameRoot
 {
     public class SceneEnterParams
     {
-        public string SceneName { get; }
-        public string ExitSceneName { get; }
+        public readonly string SceneName;
 
-        public SceneEnterParams(string sceneName, string exitSceneName)
+        public SceneEnterParams(string sceneName)
         {
             SceneName = sceneName;
-            ExitSceneName = exitSceneName;
         }
 
         public T As<T>() where T : SceneEnterParams

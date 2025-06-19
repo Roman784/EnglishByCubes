@@ -10,7 +10,7 @@ namespace UI
     {
         protected IConfigsProvider _configsProvider;
         protected IGameStateProvider _gameStateProvider;
-        protected SceneLoader _sceneLoader;
+        protected SceneProvider _sceneProvider;
         protected PopUpsProvider _popUpsProvider;
 
         protected GameConfigs GameConfigs => _configsProvider.GameConfigs;
@@ -19,11 +19,11 @@ namespace UI
 
         [Inject]
         private void Construct(IConfigsProvider configsProvider, IGameStateProvider gameStateProvider,
-                               SceneLoader sceneLoader, PopUpsProvider popUpsProvider)
+                               SceneProvider sceneProvider, PopUpsProvider popUpsProvider)
         {
             _configsProvider = configsProvider;
             _gameStateProvider = gameStateProvider;
-            _sceneLoader = sceneLoader;
+            _sceneProvider = sceneProvider;
             _popUpsProvider = popUpsProvider;
         }
 

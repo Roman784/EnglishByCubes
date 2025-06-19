@@ -1,7 +1,5 @@
 using Configs;
 using Gameplay;
-using GameRoot;
-using LevelMenu;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -61,9 +59,13 @@ namespace UI
 
         public void OpenLevelMenu()
         {
-            var enterParams = new LevelMenuEnterParams(Scenes.GAMEPLAY, 
-                                                       _enterParams.LevelNumber);
-            _sceneLoader.LoadAndRunLevelMenu(enterParams);
+            _sceneProvider.OpenLevelMenu(_enterParams);
+        }
+
+        public void OpenTheory()
+        {
+            var theoryNumber = GameConfigs.LevelsConfigs.GetTheoryNumberForCurrentLevel(_enterParams.Number);
+            _sceneProvider.OpenTheory(_enterParams, theoryNumber);
         }
 
         public void SetLevelTitle(LevelConfigs configs)

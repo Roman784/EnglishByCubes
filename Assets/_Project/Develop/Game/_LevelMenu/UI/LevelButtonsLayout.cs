@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace UI
 {
-    public class LevelButtonsLayout : MonoBehaviour
+    public class LevelButtonsLayout
     {
         private RectTransform _container;
         private float _containerAdditionalHeight;
