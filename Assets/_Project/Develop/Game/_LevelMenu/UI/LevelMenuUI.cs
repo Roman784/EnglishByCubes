@@ -1,5 +1,6 @@
 using Gameplay;
 using GameRoot;
+using LevelMenu;
 using UnityEngine;
 
 namespace UI
@@ -9,8 +10,12 @@ namespace UI
         [SerializeField] private LevelButton _levelButtonPrefab;
         [SerializeField] private LevelButtonsLayout _levelButtonsLayout;
 
-        public void Init()
+        private LevelMenuEnterParams _enterParams;
+
+        public void Init(LevelMenuEnterParams enterParams)
         {
+            _enterParams = enterParams;
+
             _levelButtonsLayout.Init(UIConfigs.LevelButtonsConfigs);
         }
 
@@ -37,6 +42,16 @@ namespace UI
         {
             var lastCompletedLevelNumber = GameState.LastCompletedLevelNumber;
             _levelButtonsLayout.ScrollTo(lastCompletedLevelNumber, instantly);
+        }
+
+        public void OpenPreviousScene()
+        {
+            if (_enterParams.ExitSceneName == Scenes.GAMEPLAY)
+            {
+                var gameplayEnterParams = new GameplayEnterParams(Scenes.LEVEL_MENU, 
+                                                                  _enterParams.CurrentLevelNumber);
+                _sceneLoader.LoadAndRunGameplay(gameplayEnterParams);
+            }
         }
 
         private void OpenLevel(int number)

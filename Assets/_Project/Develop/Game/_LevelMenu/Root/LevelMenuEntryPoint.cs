@@ -18,11 +18,16 @@ namespace LevelMenu
 
         public override IEnumerator Run<T>(T enterParams)
         {
+            yield return Run(enterParams.As<LevelMenuEnterParams>());
+        }
+
+        private IEnumerator Run(LevelMenuEnterParams enterParams)
+        {
             var isLoaded = false;
 
             //UI.
             _uiRoot.AttachSceneUI(_ui);
-            _ui.Init();
+            _ui.Init(enterParams);
             _ui.CreateButtons();
             _ui.ScrollToCurrentButton(true);
 

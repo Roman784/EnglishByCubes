@@ -22,6 +22,7 @@ namespace UI
 
         [SerializeField] private Canvas _canvas;
 
+        private GameplayEnterParams _enterParams;
         private GameFieldService _gameFieldService;
 
         [Inject]
@@ -30,8 +31,9 @@ namespace UI
             _gameFieldService = gameFieldService;
         }
 
-        private void Start()
+        public void Init(GameplayEnterParams enterParams)
         {
+            _enterParams = enterParams;
             _canvas.worldCamera = Camera.main;
         }
 
@@ -59,7 +61,8 @@ namespace UI
 
         public void OpenLevelMenu()
         {
-            var enterParams = new LevelMenuEnterParams(Scenes.GAMEPLAY);
+            var enterParams = new LevelMenuEnterParams(Scenes.GAMEPLAY, 
+                                                       _enterParams.LevelNumber);
             _sceneLoader.LoadAndRunLevelMenu(enterParams);
         }
 

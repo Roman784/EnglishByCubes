@@ -1,7 +1,6 @@
 using Configs;
 using GameRoot;
 using System.Collections;
-using Theme;
 using UI;
 using UnityEngine;
 using Zenject;
@@ -59,6 +58,7 @@ namespace Gameplay
 
             // UI.
             _uiRoot.AttachSceneUI(_ui);
+            _ui.Init(enterParams);
             _ui.SetTaskSentence(taskSentenceRu);
             _ui.InitProgressBar();
             _ui.InitCubeRemoveArea();

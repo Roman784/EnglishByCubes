@@ -52,21 +52,22 @@ namespace GameRoot
         {
 #if UNITY_EDITOR
             var sceneName = GameAutostarter.StartScene;
+            var defaultGameplayLevelNumber = 3;
 
             if (sceneName == Scenes.GAMEPLAY)
             {
-                var defaultGameplayEnterParams = new GameplayEnterParams(Scenes.BOOT, 3);
+                var defaultGameplayEnterParams = new GameplayEnterParams(Scenes.BOOT, defaultGameplayLevelNumber);
                 _sceneLoader.LoadAndRunGameplay(defaultGameplayEnterParams);
                 return;
             }
             else if (sceneName == Scenes.LEVEL_MENU)
             {
-                var defaultLevelMenuEnterParams = new LevelMenuEnterParams(Scenes.BOOT);
+                var defaultLevelMenuEnterParams = new LevelMenuEnterParams(Scenes.BOOT, defaultGameplayLevelNumber);
                 _sceneLoader.LoadAndRunLevelMenu(defaultLevelMenuEnterParams);
                 return;
             }
 #endif
-            var enterParams = new LevelMenuEnterParams(Scenes.BOOT);
+            var enterParams = new LevelMenuEnterParams(Scenes.BOOT, 0);
             _sceneLoader.LoadAndRunLevelMenu(enterParams);
 
         }
