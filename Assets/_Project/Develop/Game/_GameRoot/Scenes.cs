@@ -5,5 +5,6 @@ namespace GameRoot
         public const string BOOT = "Boot";
         public const string GAMEPLAY = "Gameplay";
         public const string LEVEL_MENU = "LevelMenu";
+        public const string THEORY = "Theory";
     }
 }

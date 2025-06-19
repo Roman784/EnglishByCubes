@@ -4,6 +4,7 @@ using UnityEngine;
 using Utils;
 using R3;
 using LevelMenu;
+using Theory;
 
 namespace GameRoot
 {
@@ -53,6 +54,7 @@ namespace GameRoot
 #if UNITY_EDITOR
             var sceneName = GameAutostarter.StartScene;
             var defaultGameplayLevelNumber = 3;
+            var defaultTheoryLevelNumber = 1;
 
             if (sceneName == Scenes.GAMEPLAY)
             {
@@ -64,6 +66,12 @@ namespace GameRoot
             {
                 var defaultLevelMenuEnterParams = new LevelMenuEnterParams(Scenes.BOOT, defaultGameplayLevelNumber);
                 _sceneLoader.LoadAndRunLevelMenu(defaultLevelMenuEnterParams);
+                return;
+            }
+            else if (sceneName == Scenes.THEORY)
+            {
+                var defaultTheoryEnterParams = new TheoryEnterParams(Scenes.BOOT, defaultTheoryLevelNumber);
+                _sceneLoader.LoadAndRunTheory(defaultTheoryEnterParams);
                 return;
             }
 #endif

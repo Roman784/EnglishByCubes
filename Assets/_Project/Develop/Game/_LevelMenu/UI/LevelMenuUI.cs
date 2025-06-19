@@ -1,6 +1,7 @@
 using Gameplay;
 using GameRoot;
 using LevelMenu;
+using Theory;
 using UnityEngine;
 
 namespace UI
@@ -60,7 +61,7 @@ namespace UI
             var level = levels.GetLevel(number);
 
             if (level.Mode == LevelMode.Theory)
-                OpenPracticeLevel(3);
+                OpenTheoryLevel(number);
             else if (level.Mode == LevelMode.Template)
                 OpenPracticeLevel(3);
             else if (level.Mode == LevelMode.Practice)
@@ -71,6 +72,12 @@ namespace UI
         {
             var enterParams = new GameplayEnterParams(Scenes.LEVEL_MENU, number);
             _sceneLoader.LoadAndRunGameplay(enterParams);
+        }
+
+        private void OpenTheoryLevel(int number)
+        {
+            var enterParams = new TheoryEnterParams(Scenes.LEVEL_MENU, number);
+            _sceneLoader.LoadAndRunTheory(enterParams);
         }
 
         private LevelButtonProgress GetLevelProgress(int currentNumber, int lastCompletedNumber)
