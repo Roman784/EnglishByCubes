@@ -6,8 +6,7 @@ namespace UI
 {
     public class LevelButtonsLayout : MonoBehaviour
     {
-        [SerializeField] private RectTransform _container;
-
+        private RectTransform _container;
         private float _containerAdditionalHeight;
 
         private Vector2 _startPosition;
@@ -22,8 +21,9 @@ namespace UI
 
         private Tweener _scrollingTween;
 
-        public void Init(LevelButtonsConfigs configs)
+        public LevelButtonsLayout(LevelButtonsConfigs configs, RectTransform container)
         {
+            _container = container;
             _containerAdditionalHeight = configs.ContainerAdditionalHeight;
             _startPosition = configs.StartPosition;
             _spacing = configs.Spacing;

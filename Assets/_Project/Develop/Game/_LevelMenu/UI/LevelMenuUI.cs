@@ -9,15 +9,16 @@ namespace UI
     public class LevelMenuUI : SceneUI
     {
         [SerializeField] private LevelButton _levelButtonPrefab;
-        [SerializeField] private LevelButtonsLayout _levelButtonsLayout;
+        [SerializeField] private RectTransform _levelButtonsContainer;
 
         private LevelMenuEnterParams _enterParams;
+        private LevelButtonsLayout _levelButtonsLayout;
 
         public void Init(LevelMenuEnterParams enterParams)
         {
             _enterParams = enterParams;
 
-            _levelButtonsLayout.Init(UIConfigs.LevelButtonsConfigs);
+            _levelButtonsLayout = new(UIConfigs.LevelButtonsConfigs, _levelButtonsContainer);
         }
 
         public void CreateButtons()

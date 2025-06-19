@@ -457,7 +457,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8310097941468086232}
   - component: {fileID: -4920813926784816990}
-  - component: {fileID: 537286550349456342}
   m_Layer: 0
   m_Name: LevelMenuUI
   m_TagString: Untagged
@@ -494,20 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelButtonPrefab: {fileID: 1228754020904106271, guid: 5be677ac9fb2ac345b80147e0744af7f, type: 3}
-  _levelButtonsLayout: {fileID: 537286550349456342}
---- !u!114 &537286550349456342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2625429864593646351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c050541b9da6a0a4fb993d04d963e047, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _container: {fileID: 3378563998461605350}
+  _levelButtonsContainer: {fileID: 3378563998461605350}
 --- !u!1 &2755705721553653282
 GameObject:
   m_ObjectHideFlags: 0
