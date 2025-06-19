@@ -1,8 +1,8 @@
 using Configs;
-using DG.Tweening;
 using System;
 using System.Collections.Generic;
 using Theme;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +13,7 @@ namespace UI
         [SerializeField] private ButtonCustomizer _buttonCustomizer;
         [SerializeField] private ColorCustomizer _iconCustomizer;
         [SerializeField] private Image _iconView;
+        [SerializeField] private TMP_Text _titleView;
         [SerializeField] private GameObject _line;
 
         private int _number;
@@ -42,6 +43,8 @@ namespace UI
 
             _iconView.sprite = _iconsMap[levelConfigs.Mode];
             _iconView.SetNativeSize();
+
+            _titleView.text = $"{levelConfigs.LocalNumber}. {levelConfigs.Title}";
 
             _buttonCustomizer.SetTag(_themeTagsMap[progress]);
             _iconCustomizer.SetTag(_themeTagsMap[progress]);

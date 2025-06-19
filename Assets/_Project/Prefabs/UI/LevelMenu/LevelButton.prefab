@@ -442,10 +442,8 @@ MonoBehaviour:
   _buttonCustomizer: {fileID: 1319991698662939588}
   _iconCustomizer: {fileID: 2391439608581289558}
   _iconView: {fileID: 2341362338720185669}
+  _titleView: {fileID: 6146165909503958857}
   _line: {fileID: 8329148585703545321}
-  _theoryIcon: {fileID: 66491096, guid: cf0d701ae272d154886dd93fbd749f2f, type: 3}
-  _TemplateIcon: {fileID: -855296329, guid: cf0d701ae272d154886dd93fbd749f2f, type: 3}
-  _practiceIcon: {fileID: -1726365483, guid: cf0d701ae272d154886dd93fbd749f2f, type: 3}
 --- !u!114 &2621726912085968735
 MonoBehaviour:
   m_ObjectHideFlags: 0
