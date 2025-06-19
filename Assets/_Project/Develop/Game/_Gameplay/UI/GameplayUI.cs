@@ -1,6 +1,8 @@
+using Configs;
 using Gameplay;
 using GameRoot;
 using LevelMenu;
+using TMPro;
 using UnityEngine;
 using Zenject;
 
@@ -11,6 +13,10 @@ namespace UI
         [SerializeField] private TaskUI _taskUI;
         [SerializeField] private ProgressBar _progressBar;
         [SerializeField] private CubeRemoveArea _cubeRemoveArea;
+
+        [Space]
+
+        [SerializeField] private TMP_Text _levelTitleView;
 
         [Space]
 
@@ -55,6 +61,11 @@ namespace UI
         {
             var enterParams = new LevelMenuEnterParams(Scenes.GAMEPLAY);
             _sceneLoader.LoadAndRunLevelMenu(enterParams);
+        }
+
+        public void SetLevelTitle(LevelConfigs configs)
+        {
+            _levelTitleView.text = $"{configs.Title} {configs.LocalNumber}";
         }
     }
 }

@@ -62,6 +62,7 @@ namespace Gameplay
             _ui.SetTaskSentence(taskSentenceRu);
             _ui.InitProgressBar();
             _ui.InitCubeRemoveArea();
+            _ui.SetLevelTitle(taskConfigs);
 
             _taskPassingService.OnSentenceMatchingCalculated.AddListener(_ui.FillProgressBar);
 
