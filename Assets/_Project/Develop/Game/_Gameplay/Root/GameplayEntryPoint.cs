@@ -39,7 +39,9 @@ namespace Gameplay
             var cubesConfigs = gameConfigs.CubesConfigs;
             var levelsConfigs = gameConfigs.LevelsConfigs;
 
-            var taskConfigs = levelsConfigs.GetLevel(enterParams.LevelNumber).As<PracticeLevelConfigs>();
+            var taskConfigs = levelsConfigs
+                .GetLevel(enterParams.LevelNumber)
+                .As<PracticeLevelConfigs>();
             var taskSentenceRu = taskConfigs.SentenceRu;
             var taskSentenceEn = taskConfigs.SentenceEn;
             var cubeNumbersPool = taskConfigs.CubeNumbersPool.ToArray();

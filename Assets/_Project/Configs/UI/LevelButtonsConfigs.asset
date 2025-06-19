@@ -15,7 +15,7 @@ MonoBehaviour:
   <ContainerAdditionalHeight>k__BackingField: 774
   <StartPosition>k__BackingField: {x: 0, y: 614}
   <Spacing>k__BackingField: 384
-  <Frequence>k__BackingField: 2
+  <Frequence>k__BackingField: 4
   <Amplitude>k__BackingField: 248
   <ScrollingDuration>k__BackingField: 0.5
   <ScrollingEase>k__BackingField: 6

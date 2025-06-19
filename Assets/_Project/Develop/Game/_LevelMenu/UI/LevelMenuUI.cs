@@ -22,12 +22,12 @@ namespace UI
 
             foreach (var level in levels)
             {
-                var progress = GetLevelProgress(level.Number, lastCompletedLevelNumber);
+                var progress = GetLevelProgress(level.GlobalNumber, lastCompletedLevelNumber);
 
                 var newButton = Instantiate(_levelButtonPrefab);
                 newButton.Init(level, buttonsConfigs, progress, OpenLevel);
 
-                _levelButtonsLayout.LayOut(newButton.GetComponent<RectTransform>(), level.Number - 1);
+                _levelButtonsLayout.LayOut(newButton.GetComponent<RectTransform>(), level.GlobalNumber - 1);
             }
 
             _levelButtonsLayout.ResizeContainer(levels.Count);

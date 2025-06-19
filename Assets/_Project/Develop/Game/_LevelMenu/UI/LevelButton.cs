@@ -36,7 +36,7 @@ namespace UI
                 { LevelButtonProgress.Current, ThemeTags.CurrentLevelButton },
             };
 
-            _number = levelConfigs.Number;
+            _number = levelConfigs.GlobalNumber;
             _isLocked = progress == LevelButtonProgress.Uncompleted;
             _openLevel = openLevel;
 

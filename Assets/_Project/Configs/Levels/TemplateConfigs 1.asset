@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b9f966d62e68848ac71231b7a3c218, type: 3}
   m_Name: TemplateConfigs 1
   m_EditorClassIdentifier: 
-  <Number>k__BackingField: 6
+  <GlobalNumber>k__BackingField: 6
+  <LocalNumber>k__BackingField: 2

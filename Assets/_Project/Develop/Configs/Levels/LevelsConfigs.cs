@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using UI;
 using UnityEditor;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 namespace Configs
 {
@@ -9,11 +11,23 @@ namespace Configs
     {
         [field: SerializeField] public List<LevelConfigs> Levels { get; private set; }
 
+        public LevelConfigs GetLevel(int number, LevelMode mode)
+        {
+            foreach (var level in Levels)
+            {
+                if (level.LocalNumber == number && level.Mode == mode)
+                    return level;
+            }
+
+            Debug.LogError($"Level number {number} was not found!");
+            return null;
+        }
+
         public LevelConfigs GetLevel(int number)
         {
             foreach (var level in Levels)
             {
-                if (level.Number == number)
+                if (level.GlobalNumber == number)
                     return level;
             }
 
@@ -24,14 +38,36 @@ namespace Configs
         [ContextMenu("Set Level Numbers")]
         private void SetLevelNumbers()
         {
-            for (int i = 0; i < Levels.Count; i++)
+            var globalI = 0;
+            foreach (var item in GetLevelsMap())
             {
-                Levels[i].SetNumber(i + 1);
+                var levels = item.Value;
+                for (int i = 0; i < levels.Count; i++)
+                {
+                    levels[i].SetLocalNumber(i + 1);
+                    Levels[globalI].SetGlobalNumber(globalI + 1);
+
+                    globalI++;
+                }
             }
 
             EditorUtility.SetDirty(this);
             AssetDatabase.Refresh();
             AssetDatabase.SaveAssets();
+        }
+
+        private Dictionary<LevelMode, List<LevelConfigs>> GetLevelsMap()
+        {
+            var map = new Dictionary<LevelMode, List<LevelConfigs>>();
+            foreach (var level in Levels)
+            {
+                if (!map.ContainsKey(level.Mode))
+                    map[level.Mode] = new();
+
+                map[level.Mode].Add(level);
+            }
+
+            return map;
         }
 
         private void OnValidate()
@@ -41,12 +77,26 @@ namespace Configs
 
         private void ValidateLevelNumbers()
         {
+            foreach (var item in GetLevelsMap())
+            {
+                var levels = item.Value;
+                for (int i = 0; i < levels.Count; i++)
+                {
+                    var number = levels[i].LocalNumber;
+                    for (int j = i + 1; j < levels.Count; j++)
+                    {
+                        if (number == levels[j].LocalNumber)
+                            Debug.LogError($"Level numbers {number} are repeated at the {item.Key} mode!");
+                    }
+                }
+            }
+
             for (int i = 0; i < Levels.Count; i++)
             {
-                var number = Levels[i].Number;
+                var number = Levels[i].GlobalNumber;
                 for (int j = i + 1; j < Levels.Count; j++)
                 {
-                    if (number == Levels[j].Number)
+                    if (number == Levels[j].GlobalNumber)
                         Debug.LogError($"Level numbers {number} are repeated!");
                 }
             }

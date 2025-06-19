@@ -1,16 +1,25 @@
 using UI;
+using UnityEditor;
 using UnityEngine;
 
 namespace Configs
 {
     public abstract class LevelConfigs : ScriptableObject
     {
-        [field: SerializeField] public int Number { get; private set; }
+        [field: SerializeField] public int GlobalNumber { get; private set; }
+        [field: SerializeField] public int LocalNumber { get; private set; }
         public abstract LevelMode Mode { get; }
 
-        public void SetNumber(int number)
+        public void SetGlobalNumber(int number)
         {
-            Number = number;
+            GlobalNumber = number;
+            EditorUtility.SetDirty(this);
+        }
+
+        public void SetLocalNumber(int number)
+        {
+            LocalNumber = number;
+            EditorUtility.SetDirty(this);
         }
 
         public T As<T>() where T : LevelConfigs
