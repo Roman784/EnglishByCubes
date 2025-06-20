@@ -8,21 +8,21 @@ namespace Theory
     {
         [field: SerializeField] public TheoryContentTag Tag { get; private set; }
 
-        public object Content
+        public GameObject Content
         {
             get
             {
                 switch (Tag)
                 {
-                    case TheoryContentTag.Text: return _text;
-                    case TheoryContentTag.Table: return _table;
-                    case TheoryContentTag.CubeUnfolding: return _cubeUnfolding;
+                    case TheoryContentTag.Text: return _text.gameObject;
+                    case TheoryContentTag.Table: return _table.gameObject;
+                    case TheoryContentTag.CubeUnfolding: return _cubeUnfolding.gameObject;
                     default: return null;
                 }
             }
         }
 
-        [SerializeField, TextArea(3, 10)] private string _text;
+        [SerializeField] private TheoryText _text;
         [SerializeField] private TheoryTable _table;
         [SerializeField] private TheoryCubeUnfolding _cubeUnfolding;
     }

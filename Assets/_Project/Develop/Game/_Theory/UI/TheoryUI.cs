@@ -38,6 +38,8 @@ namespace UI
 
                 _pages.Add(newPage);
             }
+
+            _pages[0].Show();
         }
 
         public void CreateProgressBar(int count)
