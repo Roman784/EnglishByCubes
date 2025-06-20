@@ -29,7 +29,7 @@ namespace Theory
 
         public Observable<bool> Hide(bool instantly = false)
         {
-            //gameObject.SetActive(false);
+            gameObject.SetActive(false);
             return Observable.Return(true);
         }
     }
