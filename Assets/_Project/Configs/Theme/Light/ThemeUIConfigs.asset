@@ -70,6 +70,9 @@ MonoBehaviour:
   <CurrentLevelButtonIcon>k__BackingField:
     <Tag>k__BackingField: 1
     <Color>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
+  <HighlightInTheoryProgress>k__BackingField:
+    <Tag>k__BackingField: 15
+    <Color>k__BackingField: {r: 0.5019608, g: 0.85098046, b: 0.24705884, a: 1}
   <GameplayProgressBarGradient>k__BackingField:
     <Tag>k__BackingField: 8
     <Gradent>k__BackingField:

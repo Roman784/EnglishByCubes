@@ -8,6 +8,7 @@ namespace UI
     public class TheoryUI : SceneUI
     {
         [SerializeField] private TMP_Text _levelTitleView;
+        [SerializeField] private DotsProgressBar _progressBar;
 
         private TheoryEnterParams _enterParams;
 
@@ -19,6 +20,11 @@ namespace UI
         public void SetLevelTitle(LevelConfigs configs)
         {
             _levelTitleView.text = $"{configs.Title} {configs.LocalNumber}";
+        }
+
+        public void CreateProgressBar()
+        {
+            _progressBar.CreateDots(10);
         }
 
         public void OpenPreviousScene()

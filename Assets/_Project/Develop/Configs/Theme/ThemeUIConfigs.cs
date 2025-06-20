@@ -34,6 +34,7 @@ namespace Configs
         [field: SerializeField] public ColorTheme CompletedLevelButtonIcon { get; private set; }
         [field: SerializeField] public ColorTheme UncompletedLevelButtonIcon { get; private set; }
         [field: SerializeField] public ColorTheme CurrentLevelButtonIcon { get; private set; }
+        [field: SerializeField] public ColorTheme HighlightInTheoryProgress { get; private set; }
 
         [field:Space]
 
@@ -88,6 +89,7 @@ namespace Configs
                 CompletedLevelButtonIcon,
                 UncompletedLevelButtonIcon,
                 CurrentLevelButtonIcon,
+                HighlightInTheoryProgress,
             };
             return _colors;
         }

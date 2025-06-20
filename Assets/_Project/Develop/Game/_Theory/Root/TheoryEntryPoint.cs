@@ -37,6 +37,7 @@ namespace Theory
             _uiRoot.AttachSceneUI(_ui);
             _ui.Init(enterParams);
             _ui.SetLevelTitle(levelConfigs);
+            _ui.CreateProgressBar();
 
             // Theme customization.
             CustomizeTheme();
