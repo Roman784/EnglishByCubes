@@ -12,4 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79fe8f29382798f4ba3e2babdebca45c, type: 3}
   m_Name: TheoryPageConfigs 1
   m_EditorClassIdentifier: 
-  <Tag>k__BackingField: 0
+  <Contents>k__BackingField:
+  - <Tag>k__BackingField: 0
+    _text: 
+    _table: {fileID: 0}
+    _cubeUnfolding: {fileID: 0}
+  - <Tag>k__BackingField: 1
+    _text: 
+    _table: {fileID: 0}
+    _cubeUnfolding: {fileID: 0}
+  - <Tag>k__BackingField: 2
+    _text: 
+    _table: {fileID: 0}
+    _cubeUnfolding: {fileID: 0}

@@ -17,3 +17,5 @@ MonoBehaviour:
   <Title>k__BackingField: "\u0422\u0435\u043E\u0440\u0438\u044F"
   <PagesConfigs>k__BackingField:
   - {fileID: 11400000, guid: 0c29534c8577f5644af2bcf1f210fcc4, type: 2}
+  - {fileID: 11400000, guid: ea3aaf795ceb45a4fbe392e0332a9309, type: 2}
+  - {fileID: 11400000, guid: 395f2b0a96b129446beeb8b7366bc4df, type: 2}
