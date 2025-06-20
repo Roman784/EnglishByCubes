@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61ccf8de9109e104a90e5f5350573982, type: 3}
-  m_Name: TheoryConfigs 0
+  m_Name: TheoryConfigs 2
   m_EditorClassIdentifier: 
-  <GlobalNumber>k__BackingField: 1
-  <LocalNumber>k__BackingField: 1
+  <GlobalNumber>k__BackingField: 5
+  <LocalNumber>k__BackingField: 2
   <Title>k__BackingField: "\u0422\u0435\u043E\u0440\u0438\u044F"
