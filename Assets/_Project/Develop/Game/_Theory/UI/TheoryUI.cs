@@ -46,7 +46,7 @@ namespace UI
 
             _nextPageButton.SetParent(_pageContainer, false);
             _pages[0].Show();
-            //DOVirtual.DelayedCall(0.1f, () => _pageScroll.enabled = _pageContainer.anchoredPosition.y > Screen.height);
+            _progressBar.HighlightDot(0);
         }
 
         public void CreateProgressBar(int count)
@@ -72,7 +72,8 @@ namespace UI
             _pages[nextPageIndex].Show();
 
             _pageContainer.anchoredPosition = new Vector2(_pageContainer.anchoredPosition.x, 0);
-            //DOVirtual.DelayedCall(0.1f, () => _pageScroll.enabled = _pageContainer.anchoredPosition.y > Screen.height);
+
+            _progressBar.HighlightDot(nextPageIndex);
 
             _currentPageIndex = nextPageIndex;
         }

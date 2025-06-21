@@ -37,7 +37,7 @@ namespace Theme
 
         public void CustomizeAll()
         {
-            var customizers = Object.FindObjectsOfType<ThemeCustomizer>();
+            var customizers = Object.FindObjectsOfType<ThemeCustomizer>(true);
             Customize(customizers);
         }
 
