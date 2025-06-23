@@ -15,6 +15,8 @@ namespace UI
         {
             base.Awake();
 
+            _view.alpha = 0f;
+
             _changeMusicVolumeButton.SetTag(ThemeTags.OnButton);
             _changeSoundVolumeButton.SetTag(ThemeTags.OnButton);
         }

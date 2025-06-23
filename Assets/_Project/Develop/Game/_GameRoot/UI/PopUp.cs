@@ -9,41 +9,41 @@ namespace UI
 {
     public abstract class PopUp : MonoBehaviour
     {
-        [SerializeField] private CanvasGroup _view;
+        [SerializeField] protected CanvasGroup _view;
+
+        [Space]
+
+        [SerializeField] protected float _openDuration;
+        [SerializeField] protected Ease _openEase;
+        [SerializeField] protected float _closeDuration;
+        [SerializeField] protected Ease _closeEase;
 
         protected PopUpConfigs _config;
         protected ThemeProvider _themeProvider;
 
         private Tweener _transparencyTween;
+        private Tweener _scaleTween;
 
         [Inject]
         private void Construct(IConfigsProvider configsProvider, ThemeProvider themeProvider)
         {
-            _config = configsProvider.GameConfigs.UIConfigs.PopUpConfigs;
+            //_config = configsProvider.GameConfigs.UIConfigs.PopUpConfigs;
             _themeProvider = themeProvider;
         }
 
         protected void Awake()
         {
-            _view.alpha = 0f;
-
             _themeProvider.Customize(gameObject);
         }
 
         public virtual void Open()
         {
-            var duration = _config.OpenDuration;
-            var ease = _config.OpenEase;
-
-            SetViewTransparency(1, duration, ease);
+            SetTransparency(_view, 1, _openDuration, _openEase);
         }
 
         public virtual void Close()
         {
-            var duration = _config.CloseDuration;
-            var ease = _config.CloseEase;
-
-            SetViewTransparency(0, duration, ease)
+            SetTransparency(_view, 0, _closeDuration, _closeEase)
                 .OnComplete(() => Destroy());
         }
 
@@ -52,12 +52,28 @@ namespace UI
             Destroy(gameObject);
         }
 
-        private Tweener SetViewTransparency(float value, float duration, Ease ease)
+        protected Tweener SetTransparency(Image view, float value, float duration, Ease ease)
         {
             _transparencyTween?.Kill(true);
-            _transparencyTween = _view.DOFade(value, duration).SetEase(ease);
+            _transparencyTween = view.DOFade(value, duration).SetEase(ease);
 
             return _transparencyTween;
+        }
+
+        protected Tweener SetTransparency(CanvasGroup view, float value, float duration, Ease ease)
+        {
+            _transparencyTween?.Kill(true);
+            _transparencyTween = view.DOFade(value, duration).SetEase(ease);
+
+            return _transparencyTween;
+        }
+
+        protected Tweener SetScale(Transform target, float value, float duration, Ease ease)
+        {
+            _scaleTween?.Kill(true);
+            _scaleTween = target.DOScale(value, duration).SetEase(ease);
+
+            return _scaleTween;
         }
     }
 }

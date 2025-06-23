@@ -446,10 +446,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _view: {fileID: 2701339466822018147}
-  _showingDuration: 0.1
-  _showingEase: 32
-  _hidingDuration: 0.175
-  _hidingEase: 6
 --- !u!114 &2726525167441182466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -523,7 +519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

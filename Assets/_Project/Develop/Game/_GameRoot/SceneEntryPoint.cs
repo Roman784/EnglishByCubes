@@ -15,17 +15,19 @@ namespace GameRoot
         protected IConfigsProvider _configsProvider;
         protected IGameStateProvider _gameStateProvider;
         protected ThemeProvider _themeProvider;
+        protected PopUpsProvider _rootPopUpsProvider;
 
         [Inject]
         private void Construct(UIRoot uiRoot, SceneProvider sceneProvider,
                                IConfigsProvider configsProvider, IGameStateProvider gameStateProvider,
-                               ThemeProvider themeProvider)
+                               ThemeProvider themeProvider, PopUpsProvider rootPopUpsProvider)
         {
             _uiRoot = uiRoot;
             _sceneProvider = sceneProvider;
             _configsProvider = configsProvider;
             _gameStateProvider = gameStateProvider;
             _themeProvider = themeProvider;
+            _rootPopUpsProvider = rootPopUpsProvider;
         }
 
         public abstract IEnumerator Run<T>(T enterParams) where T : SceneEnterParams;

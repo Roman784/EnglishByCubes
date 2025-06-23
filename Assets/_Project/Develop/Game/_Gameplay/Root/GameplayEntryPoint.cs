@@ -1,4 +1,5 @@
 using Configs;
+using DG.Tweening;
 using GameRoot;
 using System.Collections;
 using UI;
@@ -14,6 +15,8 @@ namespace Gameplay
         private GameplayUI _ui;
         private SlotBarFactory _slotBarFactory;
         private TaskPassingService _taskPassingService;
+
+        private bool _isLevelCompleted;
 
         [Inject]
         private void Construct(GameplayUI ui,
@@ -65,6 +68,15 @@ namespace Gameplay
             _ui.SetLevelTitle(taskConfigs);
 
             _taskPassingService.OnSentenceMatchingCalculated.AddListener(_ui.FillProgressBar);
+
+            // Game completion.
+            _taskPassingService.OnSentenceMatchingCalculated.AddListener((progress) =>
+            {
+                if (progress < 1 || _isLevelCompleted) return;
+                
+                _isLevelCompleted = true;
+                DOVirtual.DelayedCall(1, _rootPopUpsProvider.OpenLevelCompletionPopUp);
+            });
 
             // Theme customization.
             CustomizeTheme();

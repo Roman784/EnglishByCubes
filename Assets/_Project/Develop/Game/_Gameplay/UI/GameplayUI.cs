@@ -29,6 +29,12 @@ namespace UI
             _gameFieldService = gameFieldService;
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyUp(KeyCode.O))
+                _popUpsProvider.OpenLevelCompletionPopUp();
+        }
+
         public void Init(GameplayEnterParams enterParams)
         {
             _enterParams = enterParams;
