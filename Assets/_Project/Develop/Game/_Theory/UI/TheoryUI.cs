@@ -90,6 +90,7 @@ namespace UI
 
         private void CompleteTheory()
         {
+            _gameStateProvider.GameStateProxy.CompleteLevel(_enterParams.Number);
             OpenLevelMenu();
         }
     }

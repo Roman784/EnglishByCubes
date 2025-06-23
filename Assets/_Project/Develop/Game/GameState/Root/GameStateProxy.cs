@@ -15,15 +15,24 @@ namespace GameState
             _gameStateProvider = gameStateProvider;
         }
 
+        public void CompleteLevel(int number)
+        {
+            if (State.LastCompletedLevelNumber < number)
+            {
+                State.LastCompletedLevelNumber = number;
+                _gameStateProvider.SaveGameState();
+            }
+        }
+
         public void SetLastCompletedLevelNumber(int number)
         {
-            _gameState.LastCompletedLevelNumber = number;
+            State.LastCompletedLevelNumber = number;
             _gameStateProvider.SaveGameState();
         }
 
         public void SetCurrentThemeMode(ThemeModes mode)
         {
-            _gameState.CurrentThemeMode = (int)mode;
+            State.CurrentThemeMode = (int)mode;
             _gameStateProvider.SaveGameState();
         }
     }
