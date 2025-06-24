@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fdbef0aebb96c438962bd84e75fa25, type: 3}
+  m_Name: CollectionItemConfigs_Castle
+  m_EditorClassIdentifier: 
+  <Id>k__BackingField: 2
+  <Sprite>k__BackingField: {fileID: -1262105768, guid: 79d696a33daedbc4cbc6b860a250ef85, type: 3}
+  <FilledSprite>k__BackingField: {fileID: 603742959, guid: 79d696a33daedbc4cbc6b860a250ef85, type: 3}
+  <Shadow>k__BackingField: {fileID: 2032553512, guid: 79d696a33daedbc4cbc6b860a250ef85, type: 3}
+  <FillRate>k__BackingField: 0.34

@@ -1,4 +1,5 @@
 using Theme;
+using UnityEngine;
 
 namespace GameState
 {
@@ -33,6 +34,25 @@ namespace GameState
         public void SetCurrentThemeMode(ThemeModes mode)
         {
             State.CurrentThemeMode = (int)mode;
+            _gameStateProvider.SaveGameState();
+        }
+
+        public void AddCollectionItem(int id)
+        {
+            if (State.CollectedCollectionItems.Contains(id))
+            {
+                Debug.LogError($"An item in the collection with id {id} already exists!");
+                return;
+            }
+
+            State.CollectedCollectionItems.Add(id);
+            _gameStateProvider.SaveGameState();
+        }
+
+        public void SetCurrentCollectionItemFill(float fill)
+        {
+            fill = Mathf.Clamp01(fill);
+            State.CurrentCollectionItemFill = fill;
             _gameStateProvider.SaveGameState();
         }
     }

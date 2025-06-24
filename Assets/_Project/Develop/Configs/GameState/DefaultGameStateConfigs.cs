@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Theme;
 using UnityEngine;
 
@@ -8,5 +9,7 @@ namespace Configs
     {
         [field: SerializeField] public int LastCompletedLevelNumber { get; private set; }
         [field: SerializeField] public ThemeModes CurrentThemeMode { get; private set; }
+        [field: SerializeField] public List<int> CollectedCollectionItems { get; private set; }
+        [field: SerializeField] public float CurrentCollectionItemFill { get; private set; }
     }
 }

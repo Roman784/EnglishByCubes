@@ -16,11 +16,13 @@ namespace UI
 
         [Space]
 
+        [SerializeField] private Image _itemTarget;
         [SerializeField] private Image _itemView;
         [SerializeField] private Image _itemBg;
         [SerializeField] private float _itemFillingDuration;
         [SerializeField] private Ease _itemFillingEase;
         [SerializeField] private GameObject _newItemUnlockView;
+        [SerializeField] private GameObject _allItemsUnlockedView;
 
         [Space]
 
@@ -37,12 +39,8 @@ namespace UI
 
         [SerializeField] private Button _nextButton;
 
-        [Space]
-
-        [SerializeField] private Sprite _itemSprite;
-        [SerializeField] private Sprite _filledItemSprite;
-
-        private float _currentFill = 0.3f;
+        private CollectionItemConfigs _itemConfigs;
+        private float _currentFill;
 
         private new void Awake()
         {
@@ -50,14 +48,6 @@ namespace UI
 
             SetTransparency(_fade, 0f, 0, 0);
             SetScale(_view.transform, 0f, 0, 0);
-
-            _itemView.fillAmount = _currentFill;
-            _lightView.gameObject.SetActive(false);
-            _newItemUnlockView.SetActive(false);
-
-            _nextButton.enabled = false;
-
-            SetInitialItemView();
         }
 
         private void Update()
@@ -68,14 +58,36 @@ namespace UI
 
         public override void Open()
         {
+            _currentFill = _gameState.State.CurrentCollectionItemFill;
+            _itemConfigs = _gameConfigs.CollectionConfigs.GetUncollectedItem(
+                _gameState.State.CollectedCollectionItems);
+
+            if (_itemConfigs == null)
+            {
+                _allItemsUnlockedView.SetActive(true);
+                _itemBg.gameObject.SetActive(false);
+                _itemView.gameObject.SetActive(false);
+            }
+            else
+            {
+                _itemBg.sprite = _itemConfigs.FilledSprite;
+                _itemView.sprite = _itemConfigs.FilledSprite;
+                _itemBg.SetNativeSize();
+                _itemView.SetNativeSize();
+                _itemView.fillAmount = _currentFill;
+                _allItemsUnlockedView.SetActive(false);
+                _nextButton.enabled = false;
+
+                DOVirtual.DelayedCall(_openDuration, () => FillItem(_itemConfigs.FillRate));
+                DOVirtual.DelayedCall(_openDuration * 2f, () => _nextButton.enabled = true);
+            }
+
+            _lightView.gameObject.SetActive(false);
+            _newItemUnlockView.SetActive(false);
+            _itemTarget.raycastTarget = false;
+
             SetTransparency(_fade, _fadeValue, _openDuration, _fadeTransparencyEase);
             SetScale(_view.transform, 1f, _openDuration, _openEase);
-
-            DOVirtual.DelayedCall(_openDuration * 1.5f, () =>
-            {
-                _nextButton.enabled = true;
-                FillItem();
-            });
         }
 
         public override void Close()
@@ -85,10 +97,20 @@ namespace UI
                 .OnComplete(() => Destroy());
         }
 
-        private void FillItem()
+        private void FillItem(float fillRate)
         {
-            var fill = 1f;
+            var fill = _currentFill + fillRate;
             fill = Mathf.Clamp01(fill);
+
+            if (fill == 1)
+            {
+                _gameState.AddCollectionItem(_itemConfigs.Id);
+                _gameState.SetCurrentCollectionItemFill(0);
+            }
+            else
+            {
+                _gameState.SetCurrentCollectionItemFill(fill);
+            }
 
             DOTween.To(
                 () => _currentFill,
@@ -105,7 +127,7 @@ namespace UI
             {
                 if (_currentFill == 1)
                 {
-                    _itemView.sprite = _itemSprite;
+                    _itemView.sprite = _itemConfigs.Sprite;
                     _lightView.gameObject.SetActive(true);
                     _newItemUnlockView.SetActive(true);
 
@@ -118,14 +140,10 @@ namespace UI
                     hopSequence.Append(
                         _itemView.transform.DOScale(originScale, _itemHopDuration)
                         .SetEase(_itemHopEase));
+                    hopSequence.Append(
+                        DOVirtual.DelayedCall(0.25f, () => _itemTarget.raycastTarget = true));
                 }
             });
-        }
-
-        private void SetInitialItemView()
-        {
-            _itemBg.sprite = _filledItemSprite;
-            _itemView.sprite = _filledItemSprite;
         }
 
         public class Factory : PopUpFactory<LevelCompletionPopUp>

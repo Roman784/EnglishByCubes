@@ -1,5 +1,6 @@
 ﻿using Configs;
 using R3;
+using System.Collections.Generic;
 using System.IO;
 using Theme;
 using UnityEngine;
@@ -76,6 +77,8 @@ namespace GameState
             {
                 LastCompletedLevelNumber = defaultState.LastCompletedLevelNumber,
                 CurrentThemeMode = (int)defaultState.CurrentThemeMode,
+                CollectedCollectionItems = new (defaultState.CollectedCollectionItems),
+                CurrentCollectionItemFill = defaultState.CurrentCollectionItemFill,
             };
 
             return new GameStateProxy(gameState, this);

@@ -1,5 +1,6 @@
 using Configs;
 using DG.Tweening;
+using GameState;
 using Theme;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,16 +19,18 @@ namespace UI
         [SerializeField] protected float _closeDuration;
         [SerializeField] protected Ease _closeEase;
 
-        protected PopUpConfigs _config;
+        protected GameConfigs _gameConfigs;
+        protected GameStateProxy _gameState;
         protected ThemeProvider _themeProvider;
 
         private Tweener _transparencyTween;
         private Tweener _scaleTween;
 
         [Inject]
-        private void Construct(IConfigsProvider configsProvider, ThemeProvider themeProvider)
+        private void Construct(IConfigsProvider configsProvider, IGameStateProvider gameStateProvider, ThemeProvider themeProvider)
         {
-            //_config = configsProvider.GameConfigs.UIConfigs.PopUpConfigs;
+            _gameConfigs = configsProvider.GameConfigs;
+            _gameState = gameStateProvider.GameStateProxy;
             _themeProvider = themeProvider;
         }
 

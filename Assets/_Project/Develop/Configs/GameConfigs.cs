@@ -11,6 +11,7 @@ namespace Configs
 
         [field: SerializeField] public CubesConfigs CubesConfigs { get; private set; }
         [field: SerializeField] public LevelsConfigs LevelsConfigs { get; private set; }
+        [field: SerializeField] public CollectionConfigs CollectionConfigs { get; private set; }
         [field: SerializeField] public UIConfigs UIConfigs { get; private set; }
 
         [field: Space]

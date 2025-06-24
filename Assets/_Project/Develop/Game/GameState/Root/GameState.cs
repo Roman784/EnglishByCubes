@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace GameState
 {
@@ -7,5 +8,7 @@ namespace GameState
     {
         public int LastCompletedLevelNumber;
         public int CurrentThemeMode;
+        public List<int> CollectedCollectionItems;
+        public float CurrentCollectionItemFill;
     }
 }
