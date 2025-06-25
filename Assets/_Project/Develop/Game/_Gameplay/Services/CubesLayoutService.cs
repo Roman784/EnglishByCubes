@@ -8,14 +8,15 @@ namespace Gameplay
 {
     public class CubesLayoutService
     {
-        private CubesLayoutConfigs _configs;
+        private IConfigsProvider _configsProvider;
 
-        private float CubeSpacing => _configs.Spacing;
+        private CubesLayoutConfigs Configs => _configsProvider.GameConfigs.CubesConfigs.CubesLayoutConfigs;
+        private float CubeSpacing => Configs.Spacing;
 
         [Inject]
         private void Construct(IConfigsProvider configsProvider)
         {
-            _configs = configsProvider.GameConfigs.CubesConfigs.CubesLayoutConfigs;
+            _configsProvider = configsProvider;
         }
 
         public Observable<bool> LayOut(List<Cube> cubes)
