@@ -22,6 +22,7 @@ namespace UI
 
         protected GameConfigs _gameConfigs;
         protected GameStateProxy _gameState;
+        protected PopUpsRoot _root;
         protected ThemeProvider _themeProvider;
 
         private Tweener _transparencyTween;
@@ -29,10 +30,11 @@ namespace UI
 
         [Inject]
         private void Construct(IConfigsProvider configsProvider, IGameStateProvider gameStateProvider,
-                               ThemeProvider themeProvider)
+                               UIRoot uiRoot, ThemeProvider themeProvider)
         {
             _gameConfigs = configsProvider.GameConfigs;
             _gameState = gameStateProvider.GameStateProxy;
+            _root = uiRoot.PopUpsRoot;
             _themeProvider = themeProvider;
         }
 
@@ -54,6 +56,7 @@ namespace UI
 
         public void Destroy()
         {
+            _root.RemovePopUp(this);
             Destroy(gameObject);
         }
 
