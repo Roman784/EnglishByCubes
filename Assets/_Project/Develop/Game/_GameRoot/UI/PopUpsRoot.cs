@@ -11,6 +11,7 @@ namespace UI
 
         public void AttachPopUp(PopUp popUp)
         {
+            _popUps.Push(popUp);
             popUp.transform.SetParent(_popUpsContainer, false);
         }
 
@@ -21,7 +22,7 @@ namespace UI
                 popUp?.Destroy();
             }
 
-            _popUps = new();
+            _popUps.Clear();
         }
     }
 }

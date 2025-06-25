@@ -3,6 +3,7 @@ using DG.Tweening;
 using Theme;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace UI
 {
@@ -41,6 +42,14 @@ namespace UI
 
         private CollectionItemConfigs _itemConfigs;
         private float _currentFill;
+
+        private GameplayUI _gameplayUI;
+
+        [Inject]
+        private void Construct(GameplayUI gameplayUI)
+        {
+            _gameplayUI = gameplayUI;
+        }
 
         private new void Awake()
         {
@@ -95,6 +104,11 @@ namespace UI
             SetTransparency(_fade, 0f, _closeDuration, _fadeTransparencyEase);
             SetScale(_view.transform, 0f, _openDuration, _openEase)
                 .OnComplete(() => Destroy());
+        }
+
+        public void OpenCollection()
+        {
+            _gameplayUI.OpenCollection();
         }
 
         private void FillItem(float fillRate)

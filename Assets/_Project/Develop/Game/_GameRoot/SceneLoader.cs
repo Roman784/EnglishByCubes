@@ -1,4 +1,5 @@
-﻿using Gameplay;
+﻿using Collection;
+using Gameplay;
 using LevelMenu;
 using System.Collections;
 using Theory;
@@ -39,6 +40,13 @@ namespace GameRoot
             StopLoading();
             Coroutines.Start(LoadAndRunScene<TheoryEntryPoint, TheoryEnterParams>
                 (Scenes.THEORY, enterParams));
+        }
+
+        public void LoadAndRunCollection(CollectionEnterParams enterParams)
+        {
+            StopLoading();
+            Coroutines.Start(LoadAndRunScene<CollectionEntryPoint, CollectionEnterParams>
+                (Scenes.COLLECTION, enterParams));
         }
 
         private IEnumerator LoadAndRunScene<TEntryPoint, TEnterParams>(string sceneName, TEnterParams enterParams)

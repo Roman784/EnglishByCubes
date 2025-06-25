@@ -1,5 +1,6 @@
 using Configs;
 using DG.Tweening;
+using GameRoot;
 using GameState;
 using Theme;
 using UnityEngine;
@@ -27,7 +28,8 @@ namespace UI
         private Tweener _scaleTween;
 
         [Inject]
-        private void Construct(IConfigsProvider configsProvider, IGameStateProvider gameStateProvider, ThemeProvider themeProvider)
+        private void Construct(IConfigsProvider configsProvider, IGameStateProvider gameStateProvider,
+                               ThemeProvider themeProvider)
         {
             _gameConfigs = configsProvider.GameConfigs;
             _gameState = gameStateProvider.GameStateProxy;

@@ -21,18 +21,20 @@ namespace UI
         [SerializeField] private Canvas _canvas;
 
         private GameplayEnterParams _enterParams;
+        private GameplayPopUpProvider _gameplayPopUpProvider;
         private GameFieldService _gameFieldService;
 
         [Inject]
-        private void Construct(GameFieldService gameFieldService)
+        private void Construct(GameplayPopUpProvider gameplayPopUpProvider, GameFieldService gameFieldService)
         {
+            _gameplayPopUpProvider = gameplayPopUpProvider;
             _gameFieldService = gameFieldService;
         }
 
         private void Update()
         {
             if (Input.GetKeyUp(KeyCode.O))
-                _popUpsProvider.OpenLevelCompletionPopUp();
+                _gameplayPopUpProvider.OpenLevelCompletionPopUp();
         }
 
         public void Init(GameplayEnterParams enterParams)
@@ -77,6 +79,11 @@ namespace UI
         public void SetLevelTitle(LevelConfigs configs)
         {
             _levelTitleView.text = $"{configs.Title} {configs.LocalNumber}";
+        }
+
+        public void OpenCollection()
+        {
+            _sceneProvider.OpenCollection(_enterParams);
         }
     }
 }

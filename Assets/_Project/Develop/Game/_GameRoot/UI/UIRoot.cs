@@ -30,6 +30,7 @@ namespace UI
         public void ClearAllContainers()
         {
             ClearContainer(_sceneUIContainer);
+            _popUpsRoot.DestroyAllPopUps();
         }
 
         private void ClearContainer(Transform container)

@@ -419,6 +419,7 @@ MonoBehaviour:
   _gameplayUIPrefab: {fileID: 8546033508002278438, guid: d84104139fd2b304bb8e8a4846dd1aaf, type: 3}
   _cubePrefab: {fileID: 1228918783809224183, guid: 18a73ce5e870ce1499065050ffb3399d, type: 3}
   _slotBarPrefab: {fileID: 2201043303804829393, guid: 7a0341bfa9c9d764398204d1af5aed63, type: 3}
+  _levelCompletionPopUpPrefab: {fileID: -6053351946452278270, guid: 37374c7540ea5944daf276d420b085ba, type: 3}
 --- !u!1 &879766716
 GameObject:
   m_ObjectHideFlags: 0

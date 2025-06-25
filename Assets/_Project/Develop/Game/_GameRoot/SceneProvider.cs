@@ -1,3 +1,4 @@
+using Collection;
 using Gameplay;
 using LevelMenu;
 using Theory;
@@ -46,6 +47,14 @@ namespace GameRoot
 
             var enterParams = new GameplayEnterParams(practiceNumber);
             _sceneLoader.LoadAndRunGameplay(enterParams);
+        }
+
+        public void OpenCollection(SceneEnterParams currentSceneParams)
+        {
+            _previousSceneParams = currentSceneParams;
+
+            var enterParams = new CollectionEnterParams();
+            _sceneLoader.LoadAndRunCollection(enterParams);
         }
 
         public void OpenPreviousScene(SceneEnterParams currentSceneParams)
