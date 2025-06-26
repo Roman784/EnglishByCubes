@@ -43,6 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: CollectionItem
+    uniqueID: 3063668739
+    locked: 0
   - name: CubeRemoveArea
     uniqueID: 1624725631
     locked: 0

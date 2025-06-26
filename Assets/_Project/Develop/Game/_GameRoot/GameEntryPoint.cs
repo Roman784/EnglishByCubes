@@ -70,6 +70,11 @@ namespace GameRoot
                 _sceneProvider.OpenTheory(defaultBootParams, 1);
                 return;
             }
+            else if (sceneName == Scenes.COLLECTION)
+            {
+                _sceneProvider.OpenCollection(defaultBootParams);
+                return;
+            }
 #endif
             var enterParams = new LevelMenuEnterParams(); // <- From boot
             _sceneProvider.OpenLevelMenu(enterParams);
