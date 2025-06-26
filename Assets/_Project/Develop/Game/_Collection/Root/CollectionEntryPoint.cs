@@ -8,6 +8,8 @@ namespace Collection
 {
     public class CollectionEntryPoint : SceneEntryPoint
     {
+        [SerializeField] private MapGenerator _mapGenerator;
+
         private CollectionUI _ui;
 
         [Inject]
@@ -25,7 +27,12 @@ namespace Collection
         {
             var isLoaded = false;
 
-            //UI.
+            var collectedItemIds = _gameStateProvider.GameStateProxy.State.CollectedCollectionItems;
+
+            // Map generation.
+            _mapGenerator.Generate(collectedItemIds);
+
+            // UI.
             _uiRoot.AttachSceneUI(_ui);
             _ui.Init(enterParams);
 
