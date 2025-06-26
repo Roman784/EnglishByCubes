@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,10 +139,10 @@ TextureImporter:
       name: CollectionSprites_0
       rect:
         serializedVersion: 2
-        x: 26
-        y: 18
-        width: 185
-        height: 208
+        x: 51
+        y: 35
+        width: 371
+        height: 418
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: CollectionSprites_1
       rect:
         serializedVersion: 2
-        x: 463
-        y: 31
-        width: 228
-        height: 121
+        x: 925
+        y: 56
+        width: 459
+        height: 247
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +181,10 @@ TextureImporter:
       name: CollectionSprites_2
       rect:
         serializedVersion: 2
-        x: 242
-        y: 18
-        width: 185
-        height: 208
+        x: 482
+        y: 35
+        width: 374
+        height: 418
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,10 +202,10 @@ TextureImporter:
       name: CollectionSprites_3
       rect:
         serializedVersion: 2
-        x: 36
-        y: 276
-        width: 72
-        height: 251
+        x: 70
+        y: 552
+        width: 148
+        height: 502
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +223,10 @@ TextureImporter:
       name: CollectionSprites_4
       rect:
         serializedVersion: 2
-        x: 143
-        y: 276
-        width: 72
-        height: 251
+        x: 284
+        y: 552
+        width: 148
+        height: 502
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,10 +244,10 @@ TextureImporter:
       name: CollectionSprites_5
       rect:
         serializedVersion: 2
-        x: 240
-        y: 277
-        width: 171
-        height: 44
+        x: 480
+        y: 553
+        width: 342
+        height: 91
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,10 +265,10 @@ TextureImporter:
       name: CollectionSprites_6
       rect:
         serializedVersion: 2
-        x: 288
-        y: 376
-        width: 271
-        height: 215
+        x: 575
+        y: 751
+        width: 545
+        height: 431
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,10 +286,10 @@ TextureImporter:
       name: CollectionSprites_7
       rect:
         serializedVersion: 2
-        x: 595
-        y: 365
-        width: 271
-        height: 215
+        x: 1189
+        y: 729
+        width: 545
+        height: 431
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,10 +307,10 @@ TextureImporter:
       name: CollectionSprites_8
       rect:
         serializedVersion: 2
-        x: 902
-        y: 370
-        width: 168
-        height: 135
+        x: 1803
+        y: 739
+        width: 338
+        height: 271
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,10 +328,10 @@ TextureImporter:
       name: CollectionSprites_9
       rect:
         serializedVersion: 2
-        x: 461
-        y: 221
-        width: 34
-        height: 79
+        x: 920
+        y: 441
+        width: 71
+        height: 160
       alignment: 9
       pivot: {x: 0.50979525, y: 0.025747372}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,10 +349,10 @@ TextureImporter:
       name: CollectionSprites_10
       rect:
         serializedVersion: 2
-        x: 505
-        y: 213
-        width: 83
-        height: 20
+        x: 1008
+        y: 426
+        width: 169
+        height: 40
       alignment: 9
       pivot: {x: 0.028540554, y: 0.5166504}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,10 +370,10 @@ TextureImporter:
       name: CollectionSprites_11
       rect:
         serializedVersion: 2
-        x: 503
-        y: 251
-        width: 34
-        height: 38
+        x: 1006
+        y: 501
+        width: 69
+        height: 78
       alignment: 9
       pivot: {x: 0.5146933, y: 0.06180171}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,10 +391,10 @@ TextureImporter:
       name: CollectionSprites_12
       rect:
         serializedVersion: 2
-        x: 540
-        y: 246
-        width: 38
-        height: 18
+        x: 1079
+        y: 492
+        width: 76
+        height: 36
       alignment: 9
       pivot: {x: 0.088093005, y: 0.51850384}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -413,9 +413,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1250
-        width: 1816
-        height: 1187
+        y: 2500
+        width: 3633
+        height: 2374
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -446,6 +446,7 @@ TextureImporter:
       CollectionSprites_11: 232181240
       CollectionSprites_12: 1188866607
       CollectionSprites_13: -408488444
+      CollectionSprites_14: -77341074
       CollectionSprites_2: -1495346541
       CollectionSprites_3: 155586061
       CollectionSprites_4: -4440457
