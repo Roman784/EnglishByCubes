@@ -44,9 +44,16 @@ namespace Gameplay
             var cubesConfigs = gameConfigs.CubesConfigs;
             var levelsConfigs = gameConfigs.LevelsConfigs;
 
+            if (!levelsConfigs.IsLevelExist(enterParams.Number))
+            {
+                _sceneProvider.OpenLevelMenu(enterParams);
+                yield break;
+            }
+
             var taskConfigs = levelsConfigs
                 .GetLevel(enterParams.Number)
                 .As<PracticeLevelConfigs>();
+
             var taskSentenceRu = taskConfigs.SentenceRu;
             var taskSentenceEn = taskConfigs.SentenceEn;
             var cubeNumbersPool = taskConfigs.CubeNumbersPool.ToArray();
@@ -76,8 +83,10 @@ namespace Gameplay
             _taskPassingService.OnSentenceMatchingCalculated.AddListener((progress) =>
             {
                 if (progress < 1 || _isLevelCompleted) return;
-                
                 _isLevelCompleted = true;
+
+                _gameStateProvider.GameStateProxy.CompleteLevel(enterParams.Number);
+
                 DOVirtual.DelayedCall(1, _gameplayPopUpProvider.OpenLevelCompletionPopUp);
             });
 

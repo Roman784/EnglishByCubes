@@ -83,7 +83,20 @@ namespace UI
 
         public void OpenCollection()
         {
-            _sceneProvider.OpenCollection(_enterParams);
+            var nextGameplayEnterParams = new GameplayEnterParams(_enterParams.Number + 1);
+            _sceneProvider.OpenCollection(nextGameplayEnterParams);
+        }
+
+        public void OpenNextLevel()
+        {
+            var nextLevelNumber = _enterParams.Number + 1;
+            var levelsConfigs = GameConfigs.LevelsConfigs;
+            var levelConfigs = levelsConfigs.GetLevel(nextLevelNumber);
+
+            if (levelConfigs != null && levelConfigs.Mode == LevelMode.Practice)
+                _sceneProvider.OpenPractice(_enterParams, nextLevelNumber);
+            else
+                _sceneProvider.OpenLevelMenu(_enterParams);
         }
     }
 }

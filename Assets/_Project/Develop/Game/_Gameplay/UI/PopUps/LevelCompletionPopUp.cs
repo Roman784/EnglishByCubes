@@ -43,14 +43,6 @@ namespace UI
         private CollectionItemConfigs _itemConfigs;
         private float _currentFill;
 
-        private GameplayUI _gameplayUI;
-
-        [Inject]
-        private void Construct(GameplayUI gameplayUI)
-        {
-            _gameplayUI = gameplayUI;
-        }
-
         private new void Awake()
         {
             base.Awake();
@@ -108,7 +100,14 @@ namespace UI
 
         public void OpenCollection()
         {
-            _gameplayUI.OpenCollection();
+            var ui = FindObjectOfType<GameplayUI>();
+            ui.OpenCollection();
+        }
+
+        public void OpenNextLevel()
+        {
+            var ui = FindObjectOfType<GameplayUI>();
+            ui.OpenNextLevel();
         }
 
         private void FillItem(float fillRate)

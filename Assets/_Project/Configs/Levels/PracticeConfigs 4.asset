@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9515a61c4ec61c4c8e9ba1cf027efbb, type: 3}
   m_Name: PracticeConfigs 4
   m_EditorClassIdentifier: 
-  <GlobalNumber>k__BackingField: 11
+  <GlobalNumber>k__BackingField: 8
   <LocalNumber>k__BackingField: 5
   <Title>k__BackingField: "\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430"
   <SentenceRu>k__BackingField: "\u041E\u043D \u0440\u0443\u0441\u0441\u043A\u0438\u0439?"

@@ -14,13 +14,11 @@ namespace Configs
         public void SetGlobalNumber(int number)
         {
             GlobalNumber = number;
-            //EditorUtility.SetDirty(this);
         }
 
         public void SetLocalNumber(int number)
         {
             LocalNumber = number;
-            //EditorUtility.SetDirty(this);
         }
 
         public T As<T>() where T : LevelConfigs

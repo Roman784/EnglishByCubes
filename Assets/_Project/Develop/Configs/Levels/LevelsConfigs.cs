@@ -10,16 +10,9 @@ namespace Configs
     {
         [field: SerializeField] public List<LevelConfigs> Levels { get; private set; }
 
-        public LevelConfigs GetLevel(int number, LevelMode mode)
+        public bool IsLevelExist(int number)
         {
-            foreach (var level in Levels)
-            {
-                if (level.LocalNumber == number && level.Mode == mode)
-                    return level;
-            }
-
-            Debug.LogError($"Level number {number} was not found!");
-            return null;
+            return GetLevel(number) != null;
         }
 
         public LevelConfigs GetLevel(int number)
@@ -30,7 +23,6 @@ namespace Configs
                     return level;
             }
 
-            Debug.LogError($"Level number {number} was not found!");
             return null;
         }
 
@@ -61,13 +53,13 @@ namespace Configs
                     levels[i].SetLocalNumber(i + 1);
                     Levels[globalI].SetGlobalNumber(globalI + 1);
 
+#if UNITY_EDITOR
+                    EditorUtility.SetDirty(Levels[globalI]);
+#endif
+
                     globalI++;
                 }
             }
-
-            //EditorUtility.SetDirty(this);
-            //AssetDatabase.Refresh();
-            //AssetDatabase.SaveAssets();
         }
 
         private Dictionary<LevelMode, List<LevelConfigs>> GetLevelsMap()

@@ -34,6 +34,11 @@ namespace Collection
             _shadow.color = color;
         }
 
+        private void OnDestroy()
+        {
+            DOTween.Kill(_view);
+        }
+
         public void Appear(bool unlocked)
         {
             _isUnlocked = unlocked;
