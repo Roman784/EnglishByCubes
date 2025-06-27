@@ -29,7 +29,7 @@ namespace ProceduralAnimations
         {
 #if (UNITY_IOS || UNITY_ANDROID || UNITY_WEBGL) && !UNITY_EDITOR
             if (UnityEngine.Device.Application.isMobilePlatform && 
-                Input.touchCount == 0 && _target.sizeDelta != _initialScale)
+                Input.touchCount == 0 && _target.localScale != _initialScale)
             {
                 ZoomOut();
             }

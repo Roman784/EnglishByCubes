@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using UI;
 using UnityEditor;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 namespace Configs
 {
@@ -66,9 +65,9 @@ namespace Configs
                 }
             }
 
-            EditorUtility.SetDirty(this);
-            AssetDatabase.Refresh();
-            AssetDatabase.SaveAssets();
+            //EditorUtility.SetDirty(this);
+            //AssetDatabase.Refresh();
+            //AssetDatabase.SaveAssets();
         }
 
         private Dictionary<LevelMode, List<LevelConfigs>> GetLevelsMap()

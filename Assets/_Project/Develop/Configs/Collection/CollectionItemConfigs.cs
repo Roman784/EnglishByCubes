@@ -19,7 +19,7 @@ namespace Configs
         public void SetId(int id)
         {
             Id = id;
-            EditorUtility.SetDirty(this);
+            //EditorUtility.SetDirty(this);
         }
     }
 }

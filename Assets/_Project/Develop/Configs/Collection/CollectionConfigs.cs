@@ -40,9 +40,9 @@ namespace Configs
                 Items[i].SetId(i);
             }
 
-            EditorUtility.SetDirty(this);
-            AssetDatabase.Refresh();
-            AssetDatabase.SaveAssets();
+            //EditorUtility.SetDirty(this);
+            //AssetDatabase.Refresh();
+            //AssetDatabase.SaveAssets();
         }
 
         private void OnValidate()
