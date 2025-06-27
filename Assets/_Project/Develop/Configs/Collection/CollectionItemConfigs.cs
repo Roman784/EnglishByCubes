@@ -14,7 +14,7 @@ namespace Configs
         [field: Header("Content in collection")]
         [field: SerializeField] public Sprite Picture { get; private set; }
         [field: SerializeField] public string Title { get; private set; }
-        [field: SerializeField] public string MainText { get; private set; }
+        [field: SerializeField, TextArea(3, 10)] public string MainText { get; private set; }
 
         public void SetId(int id)
         {
