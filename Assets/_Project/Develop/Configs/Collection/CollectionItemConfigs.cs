@@ -9,8 +9,12 @@ namespace Configs
         [field: SerializeField] public int Id { get; private set; }
         [field: SerializeField] public Sprite Sprite { get; private set; }
         [field: SerializeField] public Sprite FilledSprite { get; private set; }
-        [field: SerializeField] public Sprite Shadow { get; private set; }
         [field: SerializeField] public float FillRate { get; private set; }
+
+        [field: Header("Content in collection")]
+        [field: SerializeField] public Sprite Picture { get; private set; }
+        [field: SerializeField] public string Title { get; private set; }
+        [field: SerializeField] public string MainText { get; private set; }
 
         public void SetId(int id)
         {

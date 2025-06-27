@@ -20,6 +20,18 @@ namespace Configs
             return null;
         }
 
+        public CollectionItemConfigs GetItem(int id)
+        {
+            foreach (var item in Items)
+            {
+                if (item.Id == id)
+                    return item;
+            }
+
+            Debug.LogError($"Item with id {id} not found!");
+            return null;
+        }
+
         [ContextMenu("Set ids")]
         private void SetIds()
         {
