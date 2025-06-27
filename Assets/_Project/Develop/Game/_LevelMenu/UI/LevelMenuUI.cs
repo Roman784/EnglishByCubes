@@ -48,6 +48,11 @@ namespace UI
             _sceneProvider.OpenPreviousScene(_enterParams);
         }
 
+        public void OpenCollection()
+        {
+            _sceneProvider.OpenCollection(_enterParams);
+        }
+
         private void OpenLevel(int number)
         {
             var levels = GameConfigs.LevelsConfigs;

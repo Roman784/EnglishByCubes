@@ -2759,7 +2759,7 @@ MonoBehaviour:
   - {fileID: 1809856175}
   - {fileID: 642996581}
   - {fileID: 161084024}
-  _initialDelay: 0.5
+  _initialDelay: 0.2
   _treesAppearDelay: 0.05
   _itemsAppearDelay: 0.15
 --- !u!1 &1756636485
