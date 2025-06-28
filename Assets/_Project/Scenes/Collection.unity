@@ -2241,10 +2241,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 905511635}
-  _dragStep: 0.007
+  _dragStep: 0.009
   _positionBounds: {x: -16, y: 16, z: 16, w: -16}
   _zoomSpeed: 8
-  _pinchZoomSpeed: 0.0001
+  _pinchZoomSpeed: 0.0002
   _zoomBoundsForVert: {x: 6, y: 20}
   _zoomBoundsForHor: {x: 3, y: 9}
   _defaultCameraSize: {x: 14, y: 7}

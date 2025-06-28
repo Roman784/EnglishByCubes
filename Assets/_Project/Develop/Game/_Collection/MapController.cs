@@ -23,6 +23,8 @@ namespace Collection
         private bool _isDragging;
         private float _initialDistance;
         private float _initialOrthoSize;
+        private float _pinchSign;
+        private float _previousPinchDistance;
 
         private Camera _mainCamera;
 
@@ -78,14 +80,25 @@ namespace Collection
                 Touch touch0 = Input.GetTouch(0);
                 Touch touch1 = Input.GetTouch(1);
 
+                float currentDistance = Vector2.Distance(touch0.position, touch1.position);
+
                 if (touch0.phase == TouchPhase.Began || touch1.phase == TouchPhase.Began)
                 {
-                    _initialDistance = Vector2.Distance(touch0.position, touch1.position);
+                    _initialDistance = currentDistance;
                     _initialOrthoSize = _mainCamera.orthographicSize;
+                    _previousPinchDistance = currentDistance;
                 }
                 else if (touch0.phase == TouchPhase.Moved || touch1.phase == TouchPhase.Moved)
                 {
-                    float currentDistance = Vector2.Distance(touch0.position, touch1.position);
+                    float deltaDistance = currentDistance - _previousPinchDistance;
+
+                    if (Mathf.Sign(deltaDistance) != Mathf.Sign(currentDistance - _initialDistance))
+                    {
+                        _initialDistance = _previousPinchDistance;
+                        _initialOrthoSize = _mainCamera.orthographicSize;
+                    }
+                    _previousPinchDistance = currentDistance;
+
                     float pinchAmount = (_initialDistance - currentDistance) * _pinchZoomSpeed * _initialOrthoSize;
 
                     Zoom(pinchAmount);
