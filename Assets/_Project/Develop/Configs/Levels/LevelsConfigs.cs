@@ -10,9 +10,10 @@ namespace Configs
     {
         [field: SerializeField] public List<LevelConfigs> Levels { get; private set; }
 
-        public bool IsLevelExist(int number)
+        public bool IsLevelExist(int number, LevelMode levelMode)
         {
-            return GetLevel(number) != null;
+            var level = GetLevel(number);
+            return level != null && level.Mode == levelMode;
         }
 
         public LevelConfigs GetLevel(int number)

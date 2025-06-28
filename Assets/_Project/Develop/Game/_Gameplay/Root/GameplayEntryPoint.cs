@@ -44,12 +44,6 @@ namespace Gameplay
             var cubesConfigs = gameConfigs.CubesConfigs;
             var levelsConfigs = gameConfigs.LevelsConfigs;
 
-            if (!levelsConfigs.IsLevelExist(enterParams.Number))
-            {
-                _sceneProvider.OpenLevelMenu(enterParams);
-                yield break;
-            }
-
             var taskConfigs = levelsConfigs
                 .GetLevel(enterParams.Number)
                 .As<PracticeLevelConfigs>();

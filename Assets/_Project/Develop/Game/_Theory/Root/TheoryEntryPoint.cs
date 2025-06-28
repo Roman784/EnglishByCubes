@@ -29,12 +29,6 @@ namespace Theory
             var gameConfigs = _configsProvider.GameConfigs;
             var levelsConfigs = gameConfigs.LevelsConfigs;
 
-            if (!levelsConfigs.IsLevelExist(enterParams.Number))
-            {
-                _sceneProvider.OpenLevelMenu(enterParams);
-                yield break;
-            }
-
             var levelConfigs = levelsConfigs
                 .GetLevel(enterParams.Number)
                 .As<TheoryLevelConfigs>();
