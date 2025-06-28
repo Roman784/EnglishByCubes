@@ -1,6 +1,7 @@
 using Configs;
 using DG.Tweening;
 using Theme;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -24,6 +25,7 @@ namespace UI
         [SerializeField] private Ease _itemFillingEase;
         [SerializeField] private GameObject _newItemUnlockView;
         [SerializeField] private GameObject _allItemsUnlockedView;
+        [SerializeField] private TMP_Text _percentageView;
 
         [Space]
 
@@ -68,6 +70,7 @@ namespace UI
                 _allItemsUnlockedView.SetActive(true);
                 _itemBg.gameObject.SetActive(false);
                 _itemView.gameObject.SetActive(false);
+                _percentageView.gameObject.SetActive(false);
             }
             else
             {
@@ -77,6 +80,8 @@ namespace UI
                 _itemView.SetNativeSize();
                 _itemView.fillAmount = _currentFill;
                 _allItemsUnlockedView.SetActive(false);
+                _percentageView.gameObject.SetActive(true);
+                _percentageView.text = $"{_currentFill * 100:F0}%";
                 _nextButton.enabled = false;
 
                 DOVirtual.DelayedCall(_openDuration, () => FillItem(_itemConfigs.FillRate));
@@ -131,6 +136,7 @@ namespace UI
                 {
                     _currentFill = x;
                     _itemView.fillAmount = _currentFill;
+                    _percentageView.text = $"{_currentFill * 100:F0}%";
                 },
                 fill,
                 _itemFillingDuration
@@ -143,6 +149,7 @@ namespace UI
                     _itemView.sprite = _itemConfigs.Sprite;
                     _lightView.gameObject.SetActive(true);
                     _newItemUnlockView.SetActive(true);
+                    _percentageView.gameObject.SetActive(false);
 
                     var hopSequence = DOTween.Sequence();
                     var originScale = _itemView.transform.localScale;
