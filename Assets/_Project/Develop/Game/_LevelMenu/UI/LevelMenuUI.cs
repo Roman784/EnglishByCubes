@@ -1,4 +1,5 @@
 using LevelMenu;
+using TMPro;
 using UnityEngine;
 
 namespace UI
@@ -8,14 +9,20 @@ namespace UI
         [SerializeField] private LevelButton _levelButtonPrefab;
         [SerializeField] private RectTransform _levelButtonsContainer;
 
+        [Space]
+
+        [SerializeField] private TMP_Text _sectionTitleView;
+        [SerializeField] private TMP_Text _levelTitleView;
+
         private LevelMenuEnterParams _enterParams;
         private LevelButtonsLayout _levelButtonsLayout;
 
         public void Init(LevelMenuEnterParams enterParams)
         {
             _enterParams = enterParams;
-
             _levelButtonsLayout = new(UIConfigs.LevelButtonsConfigs, _levelButtonsContainer);
+
+            InitScrollButtonView();
         }
 
         public void CreateButtons()
@@ -46,6 +53,22 @@ namespace UI
         public void OpenPreviousScene()
         {
             _sceneProvider.OpenPreviousScene(_enterParams);
+        }
+
+        private void InitScrollButtonView()
+        {
+            var currentLevelNumber = GameState.LastCompletedLevelNumber + 1;
+            var levelConfigs = GameConfigs.LevelsConfigs.GetLevel(currentLevelNumber);
+
+            if (levelConfigs == null)
+            {
+                _sectionTitleView.text = "";
+                _levelTitleView.text = "Всё пройдено!";
+                return;
+            }
+
+            _sectionTitleView.text = levelConfigs.SectionTitle;
+            _levelTitleView.text = levelConfigs.Title;
         }
 
         public void OpenCollection()
