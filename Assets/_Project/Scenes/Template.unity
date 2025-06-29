@@ -201,6 +201,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _templateUIPrefab: {fileID: 2084913778721852009, guid: 5cb2bd65a7505a44bbd89057491a5ba4, type: 3}
+  _cubePrefab: {fileID: 1228918783809224183, guid: 18a73ce5e870ce1499065050ffb3399d, type: 3}
+  _slotBarPrefab: {fileID: 2201043303804829393, guid: 7a0341bfa9c9d764398204d1af5aed63, type: 3}
 --- !u!1 &879766716
 GameObject:
   m_ObjectHideFlags: 0

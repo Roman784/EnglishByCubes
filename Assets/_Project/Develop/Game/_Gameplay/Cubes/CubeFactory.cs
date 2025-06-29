@@ -1,7 +1,7 @@
 using Configs;
+using GameRoot;
 using Theme;
 using UnityEngine;
-using UnityEngine.UIElements;
 using Zenject;
 
 namespace Gameplay
@@ -10,13 +10,13 @@ namespace Gameplay
     {
         private readonly DiContainer _container;
         private readonly CubeView _prefab;
-        private readonly GameFieldService _gameFieldService;
+        private readonly IGameFieldService _gameFieldService;
         private readonly CubesPositionPreviewService _cubesPositionPreviewService;
         private readonly ThemeProvider _themeProvider;
 
         [Inject]
         public CubeFactory(DiContainer container, CubeView prefab,
-                           GameFieldService gameFieldService, CubesPositionPreviewService cubesPositionPreviewService,
+                           IGameFieldService gameFieldService, CubesPositionPreviewService cubesPositionPreviewService,
                            ThemeProvider themeProvider)
         {
             _container = container;

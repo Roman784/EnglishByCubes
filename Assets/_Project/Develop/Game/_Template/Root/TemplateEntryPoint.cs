@@ -13,11 +13,14 @@ namespace Template
         [SerializeField] private Vector3 _slotBarPosition;
 
         private TemplateUI _ui;
+        private SlotBarFactory _slotBarFactory;
 
         [Inject]
-        private void Construct(TemplateUI ui)
+        private void Construct(TemplateUI ui,
+                               SlotBarFactory slotBarFactory)
         {
             _ui = ui;
+            _slotBarFactory = slotBarFactory;
         }
 
         public override IEnumerator Run<T>(T enterParams)
@@ -33,18 +36,24 @@ namespace Template
             var cubesConfigs = gameConfigs.CubesConfigs;
             var levelsConfigs = gameConfigs.LevelsConfigs;
 
-            var taskConfigs = levelsConfigs
+            var levelConfigs = levelsConfigs
                 .GetLevel(enterParams.Number)
                 .As<TemplateLevelConfigs>();
 
-            /*// Slot bar.
+            var cubeNumbersPool = levelConfigs.CubeNumbersPool.ToArray();
+
+            // Slot bar.
             var slotBar = _slotBarFactory.Create(_slotBarPosition);
-            yield return null; // To update slots layout. Forced update does not work.*/
+            yield return null; // To update slots layout. Forced update does not work.
+
+            // Cubes.
+            var cubesConfigsPool = cubesConfigs.GetCubes(cubeNumbersPool);
+            slotBar.CreateCubes(cubesConfigsPool);
 
             // UI.
             _uiRoot.AttachSceneUI(_ui);
             _ui.Init(enterParams);
-            _ui.SetLevelTitle(taskConfigs);
+            _ui.SetLevelTitle(levelConfigs);
 
             // Theme customization.
             CustomizeTheme();

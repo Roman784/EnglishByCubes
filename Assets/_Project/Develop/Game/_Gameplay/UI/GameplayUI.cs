@@ -1,5 +1,6 @@
 using Configs;
 using Gameplay;
+using GameRoot;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -22,10 +23,10 @@ namespace UI
 
         private GameplayEnterParams _enterParams;
         private GameplayPopUpProvider _gameplayPopUpProvider;
-        private GameFieldService _gameFieldService;
+        private IGameFieldService _gameFieldService;
 
         [Inject]
-        private void Construct(GameplayPopUpProvider gameplayPopUpProvider, GameFieldService gameFieldService)
+        private void Construct(GameplayPopUpProvider gameplayPopUpProvider, IGameFieldService gameFieldService)
         {
             _gameplayPopUpProvider = gameplayPopUpProvider;
             _gameFieldService = gameFieldService;

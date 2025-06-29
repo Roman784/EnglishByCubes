@@ -4,6 +4,7 @@ using Zenject;
 using R3;
 using System.Linq;
 using DG.Tweening;
+using GameRoot;
 
 namespace Gameplay
 { 
@@ -14,7 +15,7 @@ namespace Gameplay
         private int _draggedCubeIndex;
         private List<Cube> _movingCubes;
 
-        private GameFieldService _gameFieldService;
+        private IGameFieldService _gameFieldService;
         private CubesLayoutService _cubesLayoutService;
 
         public List<Cube> Cubes
@@ -29,7 +30,7 @@ namespace Gameplay
         }
 
         [Inject]
-        private void Construct(GameFieldService gameFieldService, CubesLayoutService cubesLayoutService)
+        private void Construct(IGameFieldService gameFieldService, CubesLayoutService cubesLayoutService)
         {
             _gameFieldService = gameFieldService;
             _cubesLayoutService = cubesLayoutService;

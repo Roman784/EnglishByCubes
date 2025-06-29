@@ -4,10 +4,11 @@ using Zenject;
 using R3;
 using UnityEngine;
 using UnityEngine.Events;
+using GameRoot;
 
 namespace Gameplay
 {
-    public class GameFieldService
+    public class GameplayFieldService : IGameFieldService
     {
         private List<Cube> _cubes = new();
 

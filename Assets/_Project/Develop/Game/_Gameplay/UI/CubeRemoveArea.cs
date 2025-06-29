@@ -1,5 +1,6 @@
 using Configs;
 using DG.Tweening;
+using GameRoot;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,7 +20,7 @@ namespace Gameplay
 
         private Tweener _highlightTween;
 
-        public void Init(CubeRemoveAreaConfigs configs, GameFieldService gameFieldService)
+        public void Init(CubeRemoveAreaConfigs configs, IGameFieldService gameFieldService)
         {
             _firstHighlightLevel = configs.FirstHighlightLevel;
             _secondHighlightLevel = configs.SecondHighlightLevel;

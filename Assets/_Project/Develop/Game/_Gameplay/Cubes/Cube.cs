@@ -1,5 +1,6 @@
 using Configs;
 using DG.Tweening;
+using GameRoot;
 using R3;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace Gameplay
     {
         private readonly CubeView _view;
         private readonly CubeConfigs _configs;
-        private readonly GameFieldService _gameFieldService;
+        private readonly IGameFieldService _gameFieldService;
         private readonly CubesPositionPreviewService _cubesPositionPreviewService;
 
         private readonly CubeBehaviorHandler _behaviorHandler;
@@ -32,7 +33,7 @@ namespace Gameplay
         public UnityEvent<bool> OnDragged { get; private set; } = new();
 
         public Cube(CubeView view, CubeConfigs configs,
-                    GameFieldService gameFieldService,
+                    IGameFieldService gameFieldService,
                     CubesPositionPreviewService cubesPositionPreviewService)
         {
             _view = view;

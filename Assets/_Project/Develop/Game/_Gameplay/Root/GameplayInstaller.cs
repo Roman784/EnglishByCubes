@@ -1,3 +1,4 @@
+using GameRoot;
 using UI;
 using UnityEngine;
 using Zenject;
@@ -36,7 +37,7 @@ namespace Gameplay
 
         private void BindServices()
         {
-            Container.Bind<GameFieldService>().AsSingle();
+            Container.Bind<IGameFieldService>().To<GameplayFieldService>().AsSingle();
             Container.Bind<CubesLayoutService>().AsSingle();
             Container.Bind<CubesPositionPreviewService>().AsSingle();
             Container.Bind<TaskPassingService>().AsSingle();
