@@ -7,5 +7,6 @@ namespace GameRoot
         public const string LEVEL_MENU = "LevelMenu";
         public const string THEORY = "Theory";
         public const string COLLECTION = "Collection";
+        public const string TEMPLATE = "Template";
     }
 }

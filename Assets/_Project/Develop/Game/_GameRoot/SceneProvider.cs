@@ -46,7 +46,7 @@ namespace GameRoot
             _sceneLoader.LoadAndRunTheory(enterParams);
         }
 
-        public void OpenTemplates(SceneEnterParams currentSceneParams)
+        public void OpenTemplate(SceneEnterParams currentSceneParams)
         {
             _previousSceneParams = currentSceneParams;
         }
