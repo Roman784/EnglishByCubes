@@ -75,6 +75,11 @@ namespace GameRoot
                 _sceneProvider.OpenCollection(defaultBootParams);
                 return;
             }
+            else if (sceneName == Scenes.TEMPLATE)
+            {
+                _sceneProvider.OpenTemplate(defaultBootParams, 2);
+                return;
+            }
 #endif
             var enterParams = new LevelMenuEnterParams(); // <- From boot
             _sceneProvider.OpenLevelMenu(enterParams);

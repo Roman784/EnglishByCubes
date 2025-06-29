@@ -87,6 +87,7 @@ namespace UI
                     _sceneProvider.OpenTheory(_enterParams, number);
                     break;
                 case LevelMode.Template:
+                    _sceneProvider.OpenTemplate(_enterParams, number);
                     break;
                 case LevelMode.Practice:
                     _sceneProvider.OpenPractice(_enterParams, number);

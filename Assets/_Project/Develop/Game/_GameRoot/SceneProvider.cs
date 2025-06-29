@@ -2,6 +2,7 @@ using Collection;
 using Configs;
 using Gameplay;
 using LevelMenu;
+using Template;
 using Theory;
 using UI;
 using UnityEngine;
@@ -46,9 +47,18 @@ namespace GameRoot
             _sceneLoader.LoadAndRunTheory(enterParams);
         }
 
-        public void OpenTemplate(SceneEnterParams currentSceneParams)
+        public void OpenTemplate(SceneEnterParams currentSceneParams, int templateNumber)
         {
+            if (!LevelsConfigs.IsLevelExist(templateNumber, LevelMode.Template))
+            {
+                OpenLevelMenu(currentSceneParams);
+                return;
+            }
+
             _previousSceneParams = currentSceneParams;
+
+            var enterParams = new TemplateEnterParams(templateNumber);
+            _sceneLoader.LoadAndRunTemplate(enterParams);
         }
 
         public void OpenPractice(SceneEnterParams currentSceneParams, int practiceNumber)
@@ -88,6 +98,9 @@ namespace GameRoot
                     break;
                 case Scenes.COLLECTION:
                     OpenCollection(_previousSceneParams);
+                    break;
+                case Scenes.TEMPLATE:
+                    OpenTemplate(_previousSceneParams, _previousSceneParams.As<TemplateEnterParams>().Number);
                     break;
             }
 

@@ -2,6 +2,7 @@
 using Gameplay;
 using LevelMenu;
 using System.Collections;
+using Template;
 using Theory;
 using UI;
 using UnityEngine;
@@ -47,6 +48,13 @@ namespace GameRoot
             StopLoading();
             Coroutines.Start(LoadAndRunScene<CollectionEntryPoint, CollectionEnterParams>
                 (Scenes.COLLECTION, enterParams));
+        }
+
+        public void LoadAndRunTemplate(TemplateEnterParams enterParams)
+        {
+            StopLoading();
+            Coroutines.Start(LoadAndRunScene<TemplateEntryPoint, TemplateEnterParams>
+                (Scenes.TEMPLATE, enterParams));
         }
 
         private IEnumerator LoadAndRunScene<TEntryPoint, TEnterParams>(string sceneName, TEnterParams enterParams)
