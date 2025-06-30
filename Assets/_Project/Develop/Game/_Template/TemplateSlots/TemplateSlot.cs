@@ -8,6 +8,10 @@ namespace Template
 {
     public class TemplateSlot : MonoBehaviour
     {
+        [SerializeField] private Transform _cubePositionPoint;
+
+        [Space]
+
         [SerializeField] private Image _partView;
         [SerializeField] private TMP_Text _designationView;
         [SerializeField] private TMP_Text _signatureView;
@@ -18,7 +22,7 @@ namespace Template
         [SerializeField] private Sprite _centerPart;
         [SerializeField] private Sprite _rightPart;
 
-        public Vector3 Position {  get; private set; }
+        public Vector3 Position => _cubePositionPoint.position;
 
         public void Init(TemplateSlotData data, bool isFirstPart = false, bool isLastPart = false)
         {

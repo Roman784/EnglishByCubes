@@ -50,9 +50,12 @@ namespace Template
             return positions;
         }
 
-        public float GetCubeScale(int cubesCount)
+        public float GetCubeScale(int _)
         {
-            return 1;
+            var scale = 1.3f - (_slots.Count - 3) * 0.15f;
+            scale = Mathf.Clamp(scale, 0, 1.3f);
+
+            return scale;
         }
     }
 }

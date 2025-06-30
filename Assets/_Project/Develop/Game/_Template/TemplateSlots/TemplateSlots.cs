@@ -13,6 +13,8 @@ namespace Template
 
         private List<TemplateSlot> _slots = new();
 
+        public int Count => _slots.Count;
+
         public TemplateSlots(TemplateSlotsView view, TemplateSlot slotPrefab,
                              TemplateCubesLayoutService cubesLayoutService)
         {

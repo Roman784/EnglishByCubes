@@ -4,6 +4,7 @@ using GameRoot;
 using System.Collections.Generic;
 using UnityEngine.Events;
 using Zenject;
+using R3;
 
 namespace Template
 {
@@ -58,12 +59,25 @@ namespace Template
 
         public void RemoveCube(Cube cube)
         {
-            throw new System.NotImplementedException();
+            if (!_cubes.Contains(cube)) return;
+
+            _cubes.Remove(cube);
+
+            cube.Destroy().Subscribe(_ =>
+            {
+                _cubesLayoutService.LayOut(_cubes);
+            });
         }
 
         public void SetCubesAccordingPreview()
         {
-            throw new System.NotImplementedException();
+            var previewCubes = _cubesPositionPreviewService.Cubes;
+
+            _cubes.Clear();
+            _cubes.AddRange(previewCubes);
+            _cubes.RemoveAll(c => c == null);
+
+            _cubesLayoutService.LayOut(_cubes);
         }
     }
 }

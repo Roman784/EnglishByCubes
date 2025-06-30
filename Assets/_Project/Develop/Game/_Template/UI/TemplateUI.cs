@@ -9,11 +9,16 @@ namespace UI
     {
         [SerializeField] private TMP_Text _levelTitleView;
 
+        [Space]
+
+        [SerializeField] private Canvas _canvas;
+
         private TemplateEnterParams _enterParams;
 
         public void Init(TemplateEnterParams enterParams)
         {
             _enterParams = enterParams;
+            _canvas.worldCamera = Camera.main;
         }
 
         public void SetLevelTitle(LevelConfigs configs)

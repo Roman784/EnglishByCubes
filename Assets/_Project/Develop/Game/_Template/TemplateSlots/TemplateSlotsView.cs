@@ -11,6 +11,12 @@ namespace Template
 
         [SerializeField] private float _maxCellSize;
 
+        private void Awake()
+        {
+            var cameraAngles = Camera.main.transform.eulerAngles;
+            transform.rotation = Quaternion.Euler(cameraAngles.x - 90, 0f, 0f);
+        }
+
         public void SetPosition(Vector3 position)
         {
             transform.position = position;
