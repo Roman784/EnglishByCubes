@@ -1,4 +1,5 @@
 using Configs;
+using System.Collections.Generic;
 using Template;
 using TMPro;
 using UnityEngine;
@@ -8,6 +9,7 @@ namespace UI
     public class TemplateUI : SceneUI
     {
         [SerializeField] private TMP_Text _levelTitleView;
+        [SerializeField] private List<TMP_Text> _sentenceViews;
 
         [Space]
 
