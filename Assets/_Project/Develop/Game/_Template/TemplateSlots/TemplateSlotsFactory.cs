@@ -1,4 +1,5 @@
 using Gameplay;
+using GameRoot;
 using UnityEngine;
 using Zenject;
 
@@ -8,12 +9,17 @@ namespace Template
     {
         private readonly DiContainer _container;
         private readonly TemplateSlotsView _prefab;
+        private readonly TemplateSlot _slotPrefab;
+        private readonly TemplateCubesLayoutService _cubesLayoutService;
 
         [Inject]
-        public TemplateSlotsFactory(DiContainer container, TemplateSlotsView prefab)
+        public TemplateSlotsFactory(DiContainer container, TemplateSlotsView prefab, TemplateSlot slotPrefab,
+                                    ICubesLayoutService cubesLayoutService)
         {
             _container = container;
             _prefab = prefab;
+            _slotPrefab = slotPrefab;
+            _cubesLayoutService = (TemplateCubesLayoutService)cubesLayoutService;
         }
 
         public TemplateSlots Create(Vector3 position)
@@ -27,7 +33,7 @@ namespace Template
         public TemplateSlots Create()
         {
             var view = Object.Instantiate(_prefab);
-            var newSlots = _container.Instantiate<TemplateSlots>(new object[] { view });
+            var newSlots = _container.Instantiate<TemplateSlots>(new object[] { view, _slotPrefab, _cubesLayoutService });
 
             return newSlots;
         }

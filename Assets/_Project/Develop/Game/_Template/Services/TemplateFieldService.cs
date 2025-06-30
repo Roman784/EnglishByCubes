@@ -32,6 +32,11 @@ namespace Template
             _taskPassingService = taskPassingService;
         }
 
+        public void SetMaxCubeCount(int value)
+        {
+            _maxCubeCount = value;
+        }
+
         public void CreateCube(CubeConfigs configs)
         {
             if (_cubes.Count >= _maxCubeCount) return;

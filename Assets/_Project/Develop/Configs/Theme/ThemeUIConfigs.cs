@@ -20,6 +20,7 @@ namespace Configs
 
         [field: Header("Texts")]
         [field: SerializeField] public TextTheme MainText { get; private set; }
+        [field: SerializeField] public TextTheme TemplateSlotText { get; private set; }
 
         [field: Space]
 
@@ -69,6 +70,7 @@ namespace Configs
             _texts = new List<TextTheme>()
             {
                 MainText,
+                TemplateSlotText,
             };
             return _texts;
         }

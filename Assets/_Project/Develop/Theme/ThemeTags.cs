@@ -17,6 +17,7 @@ namespace Theme
         CubeWordSelection,
         OnButton,
         OffButton,
-        HighlightInTheoryProgress
+        HighlightInTheoryProgress,
+        TemplateSlotText
     }
 }

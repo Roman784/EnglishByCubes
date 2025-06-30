@@ -816,7 +816,7 @@ TextureImporter:
         width: 84
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -824,6 +824,69 @@ TextureImporter:
       bones: []
       spriteID: 6454a4c25fae4934f8133ffed05e8d66
       internalID: -1419069571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites_33
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 1625
+        width: 288
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49d1158b0165d040b34c17d123d83d0
+      internalID: 1182086233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites_34
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1628
+        width: 288
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53f8b0cb67a99074482d59ccad1b9e80
+      internalID: -1217246135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites_35
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 1625
+        width: 288
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eea5e77f50106741aeb517f374013fc
+      internalID: -1866940955
       vertices: []
       indices: 
       edges: []
@@ -866,6 +929,9 @@ TextureImporter:
       Sprites_30: 633707432
       Sprites_31: 833625342
       Sprites_32: -1419069571
+      Sprites_33: 1182086233
+      Sprites_34: -1217246135
+      Sprites_35: -1866940955
       Sprites_4: -2075690139
       Sprites_5: -881015084
       Sprites_6: 1584936845

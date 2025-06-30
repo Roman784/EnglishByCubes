@@ -7,24 +7,52 @@ namespace Template
 {
     public class TemplateCubesLayoutService : ICubesLayoutService
     {
-        public List<Vector3> GetCubePositions(int cubesCount)
-        {
-            throw new System.NotImplementedException();
-        }
+        private TemplateSlots _slots;
 
-        public float GetCubeScale(int cubesCount)
+        public void SetSlots(TemplateSlots slots)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public Vector3 GetLastCubePosition(int cubesCount)
-        {
-            throw new System.NotImplementedException();
+            _slots = slots;
         }
 
         public void LayOut(List<Cube> cubes)
         {
-            throw new System.NotImplementedException();
+            var positions = GetCubePositions(cubes.Count);
+            var scale = GetCubeScale(cubes.Count);
+
+            for (int i = 0; i < cubes.Count; i++)
+            {
+                var cube = cubes[i];
+                if (cube == null) continue;
+
+                var position = positions[i];
+                cube.PlaceOnField(position, scale);
+            }
+        }
+
+        public Vector3 GetLastCubePosition(int cubesCount)
+        {
+            return GetCubePositions(cubesCount)[cubesCount - 1];
+        }
+
+        public List<Vector3> GetCubePositions(int cubesCount)
+        {
+            var slotPositions = _slots.GetSlotPositions();
+            var positions = new List<Vector3>();
+
+            for (int i = 0; i < cubesCount; i++)
+            {
+                if (i < slotPositions.Count)
+                    positions.Add(slotPositions[i]);
+                else
+                    Debug.LogError("Error getting positions more than template slots!");
+            }
+
+            return positions;
+        }
+
+        public float GetCubeScale(int cubesCount)
+        {
+            return 1;
         }
     }
 }

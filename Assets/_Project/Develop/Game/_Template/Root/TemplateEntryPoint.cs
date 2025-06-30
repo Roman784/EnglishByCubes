@@ -16,15 +16,18 @@ namespace Template
         private TemplateUI _ui;
         private SlotBarFactory _slotBarFactory;
         private TemplateSlotsFactory _templateSlotsFactory;
+        private TemplateFieldService _gameFieldService;
 
         [Inject]
         private void Construct(TemplateUI ui,
                                SlotBarFactory slotBarFactory,
-                               TemplateSlotsFactory templateSlotsFactory)
+                               TemplateSlotsFactory templateSlotsFactory,
+                               IGameFieldService gameFieldService)
         {
             _ui = ui;
             _slotBarFactory = slotBarFactory;
             _templateSlotsFactory = templateSlotsFactory;
+            _gameFieldService = (TemplateFieldService)gameFieldService;
         }
 
         public override IEnumerator Run<T>(T enterParams)
@@ -52,11 +55,15 @@ namespace Template
 
             // Template slots.
             var templateSlots = _templateSlotsFactory.Create(_templateSlotsPosition);
-            yield return null;
+            templateSlots.CreateSlots(levelConfigs.Slots);
+            yield return null; // To update slots layout. Forced update does not work.
 
             // Cubes.
             var cubesConfigsPool = cubesConfigs.GetCubes(cubeNumbersPool);
             slotBar.CreateCubes(cubesConfigsPool);
+
+            // Services.
+            _gameFieldService.SetMaxCubeCount(levelConfigs.Slots.Count);
 
             // UI.
             _uiRoot.AttachSceneUI(_ui);
