@@ -13,7 +13,7 @@ namespace Gameplay
         private List<Cube> _cubes = new();
 
         private CubeFactory _cubeFactory;
-        private CubesLayoutService _cubesLayoutService;
+        private ICubesLayoutService _cubesLayoutService;
         private CubesPositionPreviewService _cubesPositionPreviewService;
         private TaskPassingService _taskPassingService;
 
@@ -23,7 +23,7 @@ namespace Gameplay
         [Inject]
         private void Construct(CubeFactory cubeFactory,
                                CubesPositionPreviewService cubesPositionPreviewService,
-                               CubesLayoutService cubesLayoutService,
+                               ICubesLayoutService cubesLayoutService,
                                TaskPassingService taskPassingService)
         {
             _cubeFactory = cubeFactory;

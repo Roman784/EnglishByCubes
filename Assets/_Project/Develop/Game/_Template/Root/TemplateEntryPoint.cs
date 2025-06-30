@@ -11,16 +11,20 @@ namespace Template
     public class TemplateEntryPoint : SceneEntryPoint
     {
         [SerializeField] private Vector3 _slotBarPosition;
+        [SerializeField] private Vector3 _templateSlotsPosition;
 
         private TemplateUI _ui;
         private SlotBarFactory _slotBarFactory;
+        private TemplateSlotsFactory _templateSlotsFactory;
 
         [Inject]
         private void Construct(TemplateUI ui,
-                               SlotBarFactory slotBarFactory)
+                               SlotBarFactory slotBarFactory,
+                               TemplateSlotsFactory templateSlotsFactory)
         {
             _ui = ui;
             _slotBarFactory = slotBarFactory;
+            _templateSlotsFactory = templateSlotsFactory;
         }
 
         public override IEnumerator Run<T>(T enterParams)
@@ -45,6 +49,10 @@ namespace Template
             // Slot bar.
             var slotBar = _slotBarFactory.Create(_slotBarPosition);
             yield return null; // To update slots layout. Forced update does not work.
+
+            // Template slots.
+            var templateSlots = _templateSlotsFactory.Create(_templateSlotsPosition);
+            yield return null;
 
             // Cubes.
             var cubesConfigsPool = cubesConfigs.GetCubes(cubeNumbersPool);

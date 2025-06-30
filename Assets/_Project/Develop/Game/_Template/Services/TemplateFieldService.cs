@@ -3,18 +3,52 @@ using Gameplay;
 using GameRoot;
 using System.Collections.Generic;
 using UnityEngine.Events;
+using Zenject;
 
 namespace Template
 {
     public class TemplateFieldService : IGameFieldService
     {
-        public IReadOnlyList<Cube> Cubes => throw new System.NotImplementedException();
+        private List<Cube> _cubes = new();
+        private int _maxCubeCount = 3;
 
-        public UnityEvent<Cube> OnCubeCreated => throw new System.NotImplementedException();
+        private CubeFactory _cubeFactory;
+        private ICubesLayoutService _cubesLayoutService;
+        private CubesPositionPreviewService _cubesPositionPreviewService;
+        private TaskPassingService _taskPassingService;
+
+        public IReadOnlyList<Cube> Cubes => _cubes;
+        public UnityEvent<Cube> OnCubeCreated { get; private set; } = new();
+
+        [Inject]
+        private void Construct(CubeFactory cubeFactory,
+                               CubesPositionPreviewService cubesPositionPreviewService,
+                               ICubesLayoutService cubesLayoutService,
+                               TaskPassingService taskPassingService)
+        {
+            _cubeFactory = cubeFactory;
+            _cubesLayoutService = cubesLayoutService;
+            _cubesPositionPreviewService = cubesPositionPreviewService;
+            _taskPassingService = taskPassingService;
+        }
 
         public void CreateCube(CubeConfigs configs)
         {
-            throw new System.NotImplementedException();
+            if (_cubes.Count >= _maxCubeCount) return;
+
+            var position = _cubesLayoutService.GetLastCubePosition(_cubes.Count + 1);
+
+            var newCube = _cubeFactory.Create(configs, position);
+            newCube.DisableOnField();
+
+            _cubes.Add(newCube);
+/*
+            CalculateSentenceMatching();
+            newCube.OnRotated.AddListener(CalculateSentenceMatching);*/
+
+            _cubesLayoutService.LayOut(_cubes);
+
+            OnCubeCreated.Invoke(newCube);
         }
 
         public void RemoveCube(Cube cube)

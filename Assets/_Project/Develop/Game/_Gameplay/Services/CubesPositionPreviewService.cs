@@ -16,7 +16,7 @@ namespace Gameplay
         private List<Cube> _movingCubes;
 
         private IGameFieldService _gameFieldService;
-        private CubesLayoutService _cubesLayoutService;
+        private ICubesLayoutService _cubesLayoutService;
 
         public List<Cube> Cubes
         {
@@ -30,7 +30,7 @@ namespace Gameplay
         }
 
         [Inject]
-        private void Construct(IGameFieldService gameFieldService, CubesLayoutService cubesLayoutService)
+        private void Construct(IGameFieldService gameFieldService, ICubesLayoutService cubesLayoutService)
         {
             _gameFieldService = gameFieldService;
             _cubesLayoutService = cubesLayoutService;

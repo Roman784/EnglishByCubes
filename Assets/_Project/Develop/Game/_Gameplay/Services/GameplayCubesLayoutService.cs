@@ -1,4 +1,5 @@
 using Configs;
+using GameRoot;
 using R3;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,7 @@ using Zenject;
 
 namespace Gameplay
 {
-    public class CubesLayoutService
+    public class GameplayCubesLayoutService : ICubesLayoutService
     {
         private IConfigsProvider _configsProvider;
 
@@ -19,10 +20,8 @@ namespace Gameplay
             _configsProvider = configsProvider;
         }
 
-        public Observable<bool> LayOut(List<Cube> cubes)
+        public void LayOut(List<Cube> cubes)
         {
-            Observable<bool> onCompleted = null;
-
             var positions = GetCubePositions(cubes.Count);
             var scale = GetCubeScale(cubes.Count);
 
@@ -32,10 +31,8 @@ namespace Gameplay
                 if (cube == null) continue;
 
                 var position = positions[i];
-                onCompleted = cube.PlaceOnField(position, scale);
+                cube.PlaceOnField(position, scale);
             }
-
-            return onCompleted ?? Observable.Return(true);
         }
 
         public Vector3 GetLastCubePosition(int cubesCount)
