@@ -1,6 +1,7 @@
 using Configs;
 using Gameplay;
 using GameRoot;
+using System;
 using System.Collections;
 using UI;
 using UnityEngine;
@@ -18,6 +19,8 @@ namespace Template
         private TemplateSlotsFactory _templateSlotsFactory;
         private TemplateFieldService _gameFieldService;
         private TemplateLevelPassingService _levelPassingService;
+
+        private bool _isLevelCompleted;
 
         [Inject]
         private void Construct(TemplateUI ui,
@@ -76,7 +79,10 @@ namespace Template
 
             _levelPassingService.OnNewSentenceFounded.AddListener((_, sentencesLeft) =>
             {
-                Debug.Log(sentencesLeft);
+                if (sentencesLeft > 0 || _isLevelCompleted) return;
+                _isLevelCompleted = true;
+
+                _gameStateProvider.GameStateProxy.CompleteLevel(enterParams.Number);
             });
 
             // Theme customization.
