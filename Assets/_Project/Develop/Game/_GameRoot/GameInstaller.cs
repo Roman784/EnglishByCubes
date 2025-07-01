@@ -15,6 +15,7 @@ namespace GameRoot
 
         [SerializeField] private SettingsPopUp _settingsPopUpPrefab;
         [SerializeField] private LevelCompletionPopUp _levelCompletionPopUpPrefab;
+        [SerializeField] private LevelInfoPopUp _levelInfoPopUpPrefab;
 
         public override void InstallBindings()
         {
@@ -43,6 +44,7 @@ namespace GameRoot
 
             Container.BindFactory<SettingsPopUp, SettingsPopUp.Factory>().FromComponentInNewPrefab(_settingsPopUpPrefab);
             Container.BindFactory<LevelCompletionPopUp, LevelCompletionPopUp.Factory>().FromComponentInNewPrefab(_levelCompletionPopUpPrefab);
+            Container.BindFactory<LevelInfoPopUp, LevelInfoPopUp.Factory>().FromComponentInNewPrefab(_levelInfoPopUpPrefab);
         }
     }
 }

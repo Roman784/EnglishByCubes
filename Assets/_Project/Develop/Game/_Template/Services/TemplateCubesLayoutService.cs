@@ -52,8 +52,8 @@ namespace Template
 
         public float GetCubeScale(int _)
         {
-            var scale = 1.3f - (_slots.Count - 3) * 0.15f;
-            scale = Mathf.Clamp(scale, 0, 1.3f);
+            var scale = 1.15f - (_slots.Count - 3) * 0.15f;
+            scale = Mathf.Clamp(scale, 0, 1.15f);
 
             return scale;
         }

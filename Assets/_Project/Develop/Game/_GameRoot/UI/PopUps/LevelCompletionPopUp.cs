@@ -101,7 +101,7 @@ namespace UI
         public override void Close()
         {
             SetTransparency(_fade, 0f, _closeDuration, _fadeTransparencyEase);
-            SetScale(_view.transform, 0f, _openDuration, _openEase)
+            SetScale(_view.transform, 0f, _closeDuration, _closeEase)
                 .OnComplete(() => Destroy());
         }
 

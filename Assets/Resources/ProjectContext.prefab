@@ -77,3 +77,4 @@ MonoBehaviour:
   _uiRootPrefab: {fileID: 5424896216141466133, guid: 377f9ba9cc9f0414b9ec601c009f52d8, type: 3}
   _settingsPopUpPrefab: {fileID: -4648423623688057398, guid: cfab9c1b6b7e8ed47a1f7bc5f94a521f, type: 3}
   _levelCompletionPopUpPrefab: {fileID: -6053351946452278270, guid: 37374c7540ea5944daf276d420b085ba, type: 3}
+  _levelInfoPopUpPrefab: {fileID: 5433627199699706506, guid: 8b36f66167cbf63459a30bc715318df4, type: 3}

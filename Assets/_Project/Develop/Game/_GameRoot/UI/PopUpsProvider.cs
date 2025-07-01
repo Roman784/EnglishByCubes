@@ -1,3 +1,5 @@
+using Unity.VisualScripting;
+using UnityEngine;
 using Zenject;
 
 namespace UI
@@ -6,12 +8,16 @@ namespace UI
     {
         private SettingsPopUp.Factory _settingsPopUpFactory;
         private LevelCompletionPopUp.Factory _levelCompletionPopUp;
+        private LevelInfoPopUp.Factory _levelInfoPopUp;
 
         [Inject]
-        private void Construct(SettingsPopUp.Factory settingsPopUpFactory, LevelCompletionPopUp.Factory levelCompletionPopUp)
+        private void Construct(SettingsPopUp.Factory settingsPopUpFactory,
+                               LevelCompletionPopUp.Factory levelCompletionPopUp,
+                               LevelInfoPopUp.Factory levelInfoPopUp)
         {
             _settingsPopUpFactory = settingsPopUpFactory;
             _levelCompletionPopUp = levelCompletionPopUp;
+            _levelInfoPopUp = levelInfoPopUp;
         }
 
         public void OpenSettingsPopUp()
@@ -22,6 +28,11 @@ namespace UI
         public void OpenLevelCompletionPopUp()
         {
             _levelCompletionPopUp.Create().Open();
+        }
+
+        public void OpenLevelInfo(GameObject contentPrefab)
+        {
+            _levelInfoPopUp.Create(contentPrefab).Open();
         }
     }
 }

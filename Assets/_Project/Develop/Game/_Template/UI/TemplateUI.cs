@@ -18,6 +18,10 @@ namespace UI
 
         [Space]
 
+        [SerializeField] private GameObject _infoContentPrefab;
+
+        [Space]
+
         [SerializeField] private Canvas _canvas;
 
         private TemplateEnterParams _enterParams;
@@ -90,6 +94,11 @@ namespace UI
             {
                 _sceneProvider.OpenLevelMenu(_enterParams);
             }
+        }
+
+        public void OpenLevelInfo()
+        {
+            _popUpsProvider.OpenLevelInfo(_infoContentPrefab);
         }
     }
 }

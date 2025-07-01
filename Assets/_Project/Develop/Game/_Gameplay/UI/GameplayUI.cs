@@ -19,6 +19,10 @@ namespace UI
 
         [Space]
 
+        [SerializeField] private GameObject _infoContentPrefab;
+
+        [Space]
+
         [SerializeField] private Canvas _canvas;
 
         private GameplayEnterParams _enterParams;
@@ -96,6 +100,11 @@ namespace UI
                 _sceneProvider.OpenPractice(_enterParams, nextLevelNumber);
             else
                 _sceneProvider.OpenLevelMenu(_enterParams);
+        }
+
+        public void OpenLevelInfo()
+        {
+            _popUpsProvider.OpenLevelInfo(_infoContentPrefab);
         }
     }
 }
