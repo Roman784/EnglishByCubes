@@ -11,7 +11,7 @@ namespace UI
     public class TemplateUI : SceneUI
     {
         [SerializeField] private TMP_Text _levelTitleView;
-        [SerializeField] private List<TMP_Text> _sentenceViews;
+        [SerializeField] private TemplateSentences _sentences;
 
         [Space]
 
@@ -20,14 +20,15 @@ namespace UI
         private TemplateEnterParams _enterParams;
         private TemplateLevelPassingService _levelPassingService;
 
-        private int _currentSentenceIndex;
-
         [Inject]
         private void Construct(ILevelPassingService levelPassingService)
         {
             _levelPassingService = (TemplateLevelPassingService)levelPassingService;
 
-            _levelPassingService.OnNewSentenceFounded.AddListener(ShowNewSentence);
+            _levelPassingService.OnNewSentenceFounded.AddListener((sentence, _) =>
+            {
+                _sentences.ShowNewSentence(sentence);
+            });
         }
 
         public void Init(TemplateEnterParams enterParams)
@@ -50,20 +51,6 @@ namespace UI
         {
             var theoryNumber = GameConfigs.LevelsConfigs.GetTheoryNumberForCurrentLevel(_enterParams.Number);
             _sceneProvider.OpenTheory(_enterParams, theoryNumber);
-        }
-
-        private void ShowNewSentence(TemplateSentence sentence, int _)
-        {
-            if (_currentSentenceIndex >= _sentenceViews.Count) return;
-
-            var view = _sentenceViews[_currentSentenceIndex];
-            var text = $"{sentence.SentenceEn}\n{sentence.SentenceRu}";
-
-            view.transform.localScale = Vector3.one;
-            view.alignment = TextAlignmentOptions.Left;
-            view.text = text;
-
-            _currentSentenceIndex += 1;
         }
     }
 }

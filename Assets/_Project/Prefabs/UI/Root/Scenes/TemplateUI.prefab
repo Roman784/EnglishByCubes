@@ -1190,11 +1190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelTitleView: {fileID: 5886845037152671438}
-  _sentenceViews:
-  - {fileID: 8680132855792373159}
-  - {fileID: 8133642682543984265}
-  - {fileID: 1925564111041021796}
-  - {fileID: 3708446072624114648}
+  _sentences: {fileID: 3662412537909603752}
   _canvas: {fileID: 6939263911964139509}
 --- !u!1 &2846563873980419362
 GameObject:
@@ -2973,6 +2969,7 @@ GameObject:
   - component: {fileID: 313689887354226010}
   - component: {fileID: 3824198587845237565}
   - component: {fileID: 215264139812475234}
+  - component: {fileID: 3662412537909603752}
   m_Layer: 0
   m_Name: Sentences
   m_TagString: Untagged
@@ -3031,7 +3028,27 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 523.8, y: 149.76}
+  m_CellSize: {x: 537.3, y: 149.76}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 2
+--- !u!114 &3662412537909603752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8770981571334146958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b7fbb773de1eb94388fc2dcc70807d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sentenceViews:
+  - {fileID: 8680132855792373159}
+  - {fileID: 8133642682543984265}
+  - {fileID: 1925564111041021796}
+  - {fileID: 3708446072624114648}
+  _hopScale: 0
+  _hopDuration: 0.3
+  _hopEase: 6
