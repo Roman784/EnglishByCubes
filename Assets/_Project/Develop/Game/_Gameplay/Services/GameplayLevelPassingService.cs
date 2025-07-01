@@ -1,10 +1,11 @@
+using GameRoot;
 using UnityEngine;
 using UnityEngine.Events;
 using Zenject;
 
 namespace Gameplay
 {
-    public class TaskPassingService
+    public class GameplayLevelPassingService : ILevelPassingService
     {
         private string _correctSentence;
 

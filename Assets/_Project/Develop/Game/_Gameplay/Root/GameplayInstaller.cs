@@ -39,8 +39,8 @@ namespace Gameplay
         {
             Container.Bind<IGameFieldService>().To<GameplayFieldService>().AsSingle();
             Container.Bind<ICubesLayoutService>().To<GameplayCubesLayoutService>().AsSingle();
+            Container.Bind<ILevelPassingService>().To<GameplayLevelPassingService>().AsSingle();
             Container.Bind<CubesPositionPreviewService>().AsSingle();
-            Container.Bind<TaskPassingService>().AsSingle();
         }
 
         private void BindUI()

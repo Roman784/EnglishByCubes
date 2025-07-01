@@ -14,7 +14,7 @@ namespace Gameplay
 
         private GameplayUI _ui;
         private SlotBarFactory _slotBarFactory;
-        private TaskPassingService _taskPassingService;
+        private GameplayLevelPassingService _levelPassingService;
         private GameplayPopUpProvider _gameplayPopUpProvider;
 
         private bool _isLevelCompleted;
@@ -22,12 +22,12 @@ namespace Gameplay
         [Inject]
         private void Construct(GameplayUI ui,
                                SlotBarFactory slotBarFactory,
-                               TaskPassingService taskPassingService,
+                               ILevelPassingService levelPassingService,
                                GameplayPopUpProvider gameplayPopUpProvider)
         {
             _ui = ui;
             _slotBarFactory = slotBarFactory;
-            _taskPassingService = taskPassingService;
+            _levelPassingService = (GameplayLevelPassingService)levelPassingService;
             _gameplayPopUpProvider = gameplayPopUpProvider;
         }
 
@@ -61,7 +61,7 @@ namespace Gameplay
             slotBar.CreateCubes(cubesConfigsPool);
 
             // Task passing.
-            _taskPassingService.SetCorrectSentence(taskSentenceEn);
+            _levelPassingService.SetCorrectSentence(taskSentenceEn);
 
             // UI.
             _uiRoot.AttachSceneUI(_ui);
@@ -71,10 +71,10 @@ namespace Gameplay
             _ui.InitCubeRemoveArea();
             _ui.SetLevelTitle(taskConfigs);
 
-            _taskPassingService.OnSentenceMatchingCalculated.AddListener(_ui.FillProgressBar);
+            _levelPassingService.OnSentenceMatchingCalculated.AddListener(_ui.FillProgressBar);
 
             // Game completion.
-            _taskPassingService.OnSentenceMatchingCalculated.AddListener((progress) =>
+            _levelPassingService.OnSentenceMatchingCalculated.AddListener((progress) =>
             {
                 if (progress < 1 || _isLevelCompleted) return;
                 _isLevelCompleted = true;

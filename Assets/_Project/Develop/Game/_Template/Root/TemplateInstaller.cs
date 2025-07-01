@@ -41,8 +41,8 @@ namespace Template
         {
             Container.Bind<IGameFieldService>().To<TemplateFieldService>().AsSingle();
             Container.Bind<ICubesLayoutService>().To<TemplateCubesLayoutService>().AsSingle();
+            Container.Bind<ILevelPassingService>().To<TemplateLevelPassingService>().AsSingle();
             Container.Bind<CubesPositionPreviewService>().AsSingle();
-            Container.Bind<TaskPassingService>().AsSingle();
         }
 
         private void BindUI()

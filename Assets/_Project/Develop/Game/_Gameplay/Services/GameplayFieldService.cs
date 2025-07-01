@@ -15,7 +15,7 @@ namespace Gameplay
         private CubeFactory _cubeFactory;
         private ICubesLayoutService _cubesLayoutService;
         private CubesPositionPreviewService _cubesPositionPreviewService;
-        private TaskPassingService _taskPassingService;
+        private ILevelPassingService _levelPassingService;
 
         public IReadOnlyList<Cube> Cubes => _cubes;
         public UnityEvent<Cube> OnCubeCreated { get; private set; } = new();
@@ -24,12 +24,12 @@ namespace Gameplay
         private void Construct(CubeFactory cubeFactory,
                                CubesPositionPreviewService cubesPositionPreviewService,
                                ICubesLayoutService cubesLayoutService,
-                               TaskPassingService taskPassingService)
+                               ILevelPassingService levelPassingService)
         {
             _cubeFactory = cubeFactory;
             _cubesLayoutService = cubesLayoutService;
             _cubesPositionPreviewService = cubesPositionPreviewService;
-            _taskPassingService = taskPassingService;
+            _levelPassingService = levelPassingService;
         }
 
         public void CreateCube(CubeConfigs configs)
@@ -76,7 +76,7 @@ namespace Gameplay
 
         private void CalculateSentenceMatching()
         {
-            _taskPassingService.CalculateSentenceMatching(MakeSentence());
+            _levelPassingService.CalculateSentenceMatching(MakeSentence());
         }
 
         private string MakeSentence()

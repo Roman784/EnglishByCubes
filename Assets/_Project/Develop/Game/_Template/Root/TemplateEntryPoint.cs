@@ -17,17 +17,20 @@ namespace Template
         private SlotBarFactory _slotBarFactory;
         private TemplateSlotsFactory _templateSlotsFactory;
         private TemplateFieldService _gameFieldService;
+        private TemplateLevelPassingService _levelPassingService;
 
         [Inject]
         private void Construct(TemplateUI ui,
                                SlotBarFactory slotBarFactory,
                                TemplateSlotsFactory templateSlotsFactory,
-                               IGameFieldService gameFieldService)
+                               IGameFieldService gameFieldService,
+                               ILevelPassingService levelPassingService)
         {
             _ui = ui;
             _slotBarFactory = slotBarFactory;
             _templateSlotsFactory = templateSlotsFactory;
             _gameFieldService = (TemplateFieldService)gameFieldService;
+            _levelPassingService = (TemplateLevelPassingService)levelPassingService;
         }
 
         public override IEnumerator Run<T>(T enterParams)
@@ -64,11 +67,17 @@ namespace Template
 
             // Services.
             _gameFieldService.SetMaxCubeCount(levelConfigs.Slots.Count);
+            _levelPassingService.SetTargetSentences(levelConfigs.Sentences);
 
             // UI.
             _uiRoot.AttachSceneUI(_ui);
             _ui.Init(enterParams);
             _ui.SetLevelTitle(levelConfigs);
+
+            _levelPassingService.OnNewSentenceFounded.AddListener((_, sentencesLeft) =>
+            {
+                Debug.Log(sentencesLeft);
+            });
 
             // Theme customization.
             CustomizeTheme();
