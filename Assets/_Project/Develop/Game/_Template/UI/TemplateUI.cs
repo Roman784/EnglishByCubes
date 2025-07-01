@@ -1,10 +1,12 @@
 using Configs;
+using Gameplay;
 using GameRoot;
 using System.Collections.Generic;
 using Template;
 using TMPro;
 using UnityEngine;
 using Zenject;
+using static Zenject.CheatSheet;
 
 namespace UI
 {
@@ -12,6 +14,7 @@ namespace UI
     {
         [SerializeField] private TMP_Text _levelTitleView;
         [SerializeField] private TemplateSentences _sentences;
+        [SerializeField] private CubeRemoveArea _cubeRemoveArea;
 
         [Space]
 
@@ -19,22 +22,27 @@ namespace UI
 
         private TemplateEnterParams _enterParams;
         private TemplateLevelPassingService _levelPassingService;
+        private IGameFieldService _gameFieldService;
 
         [Inject]
-        private void Construct(ILevelPassingService levelPassingService)
+        private void Construct(ILevelPassingService levelPassingService, IGameFieldService gameFieldService)
         {
             _levelPassingService = (TemplateLevelPassingService)levelPassingService;
-
-            _levelPassingService.OnNewSentenceFounded.AddListener((sentence, _) =>
-            {
-                _sentences.ShowNewSentence(sentence);
-            });
+            _gameFieldService = gameFieldService;
         }
 
         public void Init(TemplateEnterParams enterParams)
         {
             _enterParams = enterParams;
             _canvas.worldCamera = Camera.main;
+
+            var configs = UIConfigs.CubeRemoveAreaConfigs;
+            _cubeRemoveArea.Init(configs, _gameFieldService);
+
+            _levelPassingService.OnNewSentenceFounded.AddListener((sentence, sentencesLeft) =>
+            {
+                _sentences.ShowNewSentence(sentence);
+            });
         }
 
         public void SetLevelTitle(LevelConfigs configs)
