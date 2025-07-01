@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Pause;
 using R3;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,7 @@ using UnityEngine.Events;
 
 namespace Gameplay
 {
-    public class CubeView : MonoBehaviour
+    public class CubeView : MonoBehaviour, IPaused
     {
         [SerializeField] private List<CubeSide> _sides;
         [SerializeField] private Transform _view;
@@ -20,6 +21,8 @@ namespace Gameplay
 
         private Tweener _movementTweener;
 
+        private bool _isPaused = false;
+
         public UnityEvent OnPointerDown { get; private set; } = new();
         public UnityEvent OnPointerUp { get; private set; } = new();
         public UnityEvent OnPointerEnter { get; private set; } = new();
@@ -29,11 +32,15 @@ namespace Gameplay
         public UnityEvent OnInRemoveAreaExit { get; private set; } = new();
 
         public UnityEvent<string> OnWordInWordListSelected => _wordList.OnWordSelection;
+        public UnityEvent OnDestroy = new();
 
-        private void OnMouseDown() => OnPointerDown.Invoke();
-        private void OnMouseUpAsButton() => OnPointerUp.Invoke();
-        private void OnMouseEnter() => OnPointerEnter.Invoke();
-        private void OnMouseExit() => OnPointerExit.Invoke();
+        private void OnMouseDown() { if (!_isPaused) OnPointerDown.Invoke(); }
+        private void OnMouseUpAsButton() { if (!_isPaused) OnPointerUp.Invoke(); }
+        private void OnMouseEnter() { if (!_isPaused) OnPointerEnter.Invoke(); }
+        private void OnMouseExit() { if (!_isPaused) OnPointerExit.Invoke(); }
+
+        public void Pause() => _isPaused = true;
+        public void Unpause() => _isPaused = false;
 
         public void Init(int number, string name, List<string> words, Material material)
         {
@@ -172,6 +179,7 @@ namespace Gameplay
             SetViewScale(Vector3.zero, duration, ease).Subscribe(_ =>
             {
                 Destroy(gameObject);
+                OnDestroy.Invoke();
                 onCompleted.OnNext(true);
             });
 

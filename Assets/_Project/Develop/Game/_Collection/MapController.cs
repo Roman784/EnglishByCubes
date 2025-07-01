@@ -1,9 +1,11 @@
+using Pause;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Zenject;
 
 namespace Collection
 {
-    public class MapController : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
+    public class MapController : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPaused
     {
         [SerializeField] private Transform _camera;
         [SerializeField] private float _dragStep;
@@ -23,10 +25,19 @@ namespace Collection
         private bool _isDragging;
         private float _initialDistance;
         private float _initialOrthoSize;
-        private float _pinchSign;
         private float _previousPinchDistance;
 
         private Camera _mainCamera;
+
+        private PauseProvider _pauseProvider;
+        private bool _isPaused;
+
+        [Inject]
+        private void Construct(PauseProvider pauseProvider)
+        {
+            _pauseProvider = pauseProvider;
+            _pauseProvider.Add(this);
+        }
 
         private void Awake()
         {
@@ -35,13 +46,18 @@ namespace Collection
                 _defaultCameraSize.x : _defaultCameraSize.y;
         }
 
+        public void Pause() => _isPaused = true;
+        public void Unpause() => _isPaused = false;
+
         public void OnBeginDrag(PointerEventData eventData)
         {
+            if (_isPaused) return;
             _isDragging = true;
         }
 
         public void OnEndDrag(PointerEventData eventData)
         {
+            if (_isPaused) return;
             _isDragging = false;
         }
 
@@ -58,6 +74,8 @@ namespace Collection
 
         private void Update()
         {
+            if (_isPaused) return;
+
             HandleMouseWheelZoom();
             HandlePinchZoom();
         }
@@ -131,6 +149,11 @@ namespace Collection
                 position.y = 0f;
 
             return position;
+        }
+
+        private void OnDestroy()
+        {
+            _pauseProvider.Remove(this);
         }
 
         private void OnDrawGizmos()

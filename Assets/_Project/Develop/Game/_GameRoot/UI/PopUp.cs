@@ -2,6 +2,7 @@ using Configs;
 using DG.Tweening;
 using GameRoot;
 using GameState;
+using Pause;
 using Theme;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,18 +25,20 @@ namespace UI
         protected GameStateProxy _gameState;
         protected PopUpsRoot _root;
         protected ThemeProvider _themeProvider;
+        protected PauseProvider _pauseProvider;
 
         private Tweener _transparencyTween;
         private Tweener _scaleTween;
 
         [Inject]
         private void Construct(IConfigsProvider configsProvider, IGameStateProvider gameStateProvider,
-                               UIRoot uiRoot, ThemeProvider themeProvider)
+                               UIRoot uiRoot, ThemeProvider themeProvider, PauseProvider pauseProvider)
         {
             _gameConfigs = configsProvider.GameConfigs;
             _gameState = gameStateProvider.GameStateProxy;
             _root = uiRoot.PopUpsRoot;
             _themeProvider = themeProvider;
+            _pauseProvider = pauseProvider;
         }
 
         protected void Awake()

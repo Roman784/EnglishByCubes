@@ -21,6 +21,20 @@ namespace UI
             _changeSoundVolumeButton.SetTag(ThemeTags.OnButton);
         }
 
+        public override void Open()
+        {
+            _pauseProvider.StopGame();
+
+            base.Open();
+        }
+
+        public override void Close()
+        {
+            _pauseProvider.ContinueGame();
+
+            base.Close();
+        }
+
         public void ChangeMusicVolume()
         {
             SwitchButtonTag(_changeMusicVolumeButton);

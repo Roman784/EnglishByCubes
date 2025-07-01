@@ -32,12 +32,16 @@ namespace UI
 
         public override void Open()
         {
+            _pauseProvider.StopGame();
+
             SetScale(_view.transform, 1f, _openDuration, _openEase);
             SetTransparency(_fade, _fadeValue, _openDuration, _fadeTransparencyEase);
         }
 
         public override void Close()
         {
+            _pauseProvider.ContinueGame();
+
             SetTransparency(_fade, 0f, _closeDuration, _fadeTransparencyEase);
             SetScale(_view.transform, 0f, _closeDuration, _closeEase)
                 .OnComplete(() => Destroy());

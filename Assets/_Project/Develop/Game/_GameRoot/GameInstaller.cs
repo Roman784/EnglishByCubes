@@ -1,5 +1,6 @@
 using Configs;
 using GameState;
+using Pause;
 using Theme;
 using UI;
 using UnityEngine;
@@ -29,6 +30,7 @@ namespace GameRoot
             Container.Bind<IConfigsProvider>().To<ConfigsProvider>().AsSingle();
             Container.Bind<IGameStateProvider>().To<JsonGameStateProvider>().AsSingle();
             Container.Bind<ThemeProvider>().AsSingle();
+            Container.Bind<PauseProvider>().AsSingle();
         }
 
         private void BindUI()

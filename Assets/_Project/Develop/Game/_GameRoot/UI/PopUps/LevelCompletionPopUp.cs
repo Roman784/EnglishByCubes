@@ -63,6 +63,8 @@ namespace UI
 
         public override void Open()
         {
+            _pauseProvider.StopGame();
+
             _currentFill = _gameState.State.CurrentCollectionItemFill;
             _itemConfigs = _gameConfigs.CollectionConfigs.GetUncollectedItem(
                 _gameState.State.CollectedCollectionItems);
@@ -100,6 +102,8 @@ namespace UI
 
         public override void Close()
         {
+            _pauseProvider.ContinueGame();
+
             SetTransparency(_fade, 0f, _closeDuration, _fadeTransparencyEase);
             SetScale(_view.transform, 0f, _closeDuration, _closeEase)
                 .OnComplete(() => Destroy());

@@ -1,8 +1,11 @@
 using Configs;
 using DG.Tweening;
+using Pause;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
+using Zenject;
 
 namespace UI
 {
@@ -29,6 +32,14 @@ namespace UI
         private Tweener _transparencyTween;
         private Tweener _scaleTween;
 
+        private PauseProvider _pauseProvider;
+
+        [Inject]
+        private void Construct(PauseProvider pauseProvider)
+        {
+            _pauseProvider = pauseProvider;
+        }
+
         private void Awake()
         {
             SetViewScale(0f, 0f, 0);
@@ -40,6 +51,8 @@ namespace UI
 
         public void Open(CollectionItemConfigs configs)
         {
+            _pauseProvider.StopGame();
+
             SetView(configs);
 
             _view.gameObject.SetActive(true);
@@ -50,6 +63,8 @@ namespace UI
 
         public void Close()
         {
+            _pauseProvider.ContinueGame();
+
             SetViewScale(0f, _closeDuration, _closeEase)
                 .OnComplete(() => _view.gameObject.SetActive(false));
             SetFadeTransparency(0f, _closeDuration, _closeEase)

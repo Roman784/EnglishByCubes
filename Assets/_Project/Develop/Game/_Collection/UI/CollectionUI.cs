@@ -1,5 +1,7 @@
 using Collection;
+using Pause;
 using UnityEngine;
+using Zenject;
 
 namespace UI
 {

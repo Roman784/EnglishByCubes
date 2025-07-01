@@ -1,5 +1,6 @@
 using Configs;
 using GameRoot;
+using Pause;
 using Theme;
 using UnityEngine;
 using Zenject;
@@ -13,17 +14,19 @@ namespace Gameplay
         private readonly IGameFieldService _gameFieldService;
         private readonly CubesPositionPreviewService _cubesPositionPreviewService;
         private readonly ThemeProvider _themeProvider;
+        private readonly PauseProvider _pauseProvider;
 
         [Inject]
         public CubeFactory(DiContainer container, CubeView prefab,
                            IGameFieldService gameFieldService, CubesPositionPreviewService cubesPositionPreviewService,
-                           ThemeProvider themeProvider)
+                           ThemeProvider themeProvider, PauseProvider pauseProvider)
         {
             _container = container;
             _prefab = prefab;
             _gameFieldService = gameFieldService;
             _cubesPositionPreviewService = cubesPositionPreviewService;
             _themeProvider = themeProvider;
+            _pauseProvider = pauseProvider;
         }
 
         public Cube Create(CubeConfigs configs, Vector3 position)
@@ -40,6 +43,9 @@ namespace Gameplay
             var newCube = _container.Instantiate<Cube>(new object[] { view, configs, _gameFieldService, _cubesPositionPreviewService });
 
             _themeProvider.Customize(view.gameObject);
+
+            _pauseProvider.Add(view);
+            view.OnDestroy.AddListener(() => _pauseProvider.Remove(view));
 
             return newCube;
         }
