@@ -31,5 +31,10 @@ namespace UI
         {
             _popUpsProvider.OpenSettingsPopUp();
         }
+
+        public void OpenLevelCompletionPopUp()
+        {
+            _popUpsProvider.OpenLevelCompletionPopUp();
+        }
     }
 }

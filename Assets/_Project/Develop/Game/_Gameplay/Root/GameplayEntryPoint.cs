@@ -15,20 +15,17 @@ namespace Gameplay
         private GameplayUI _ui;
         private SlotBarFactory _slotBarFactory;
         private GameplayLevelPassingService _levelPassingService;
-        private GameplayPopUpProvider _gameplayPopUpProvider;
 
         private bool _isLevelCompleted;
 
         [Inject]
         private void Construct(GameplayUI ui,
                                SlotBarFactory slotBarFactory,
-                               ILevelPassingService levelPassingService,
-                               GameplayPopUpProvider gameplayPopUpProvider)
+                               ILevelPassingService levelPassingService)
         {
             _ui = ui;
             _slotBarFactory = slotBarFactory;
             _levelPassingService = (GameplayLevelPassingService)levelPassingService;
-            _gameplayPopUpProvider = gameplayPopUpProvider;
         }
 
         public override IEnumerator Run<T>(T enterParams)
@@ -81,7 +78,7 @@ namespace Gameplay
 
                 _gameStateProvider.GameStateProxy.CompleteLevel(enterParams.Number);
 
-                DOVirtual.DelayedCall(1, _gameplayPopUpProvider.OpenLevelCompletionPopUp);
+                DOVirtual.DelayedCall(1, _rootPopUpsProvider.OpenLevelCompletionPopUp);
             });
 
             // Theme customization.

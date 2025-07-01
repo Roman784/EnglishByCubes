@@ -11,10 +11,6 @@ namespace Gameplay
         [SerializeField] private CubeView _cubePrefab;
         [SerializeField] private SlotBarView _slotBarPrefab;
 
-        [Space]
-
-        [SerializeField] private LevelCompletionPopUp _levelCompletionPopUpPrefab;
-
         public override void InstallBindings()
         {
             BindFactories();
@@ -53,8 +49,6 @@ namespace Gameplay
         private void BindPopUps()
         {
             Container.Bind<GameplayPopUpProvider>().AsTransient();
-
-            Container.BindFactory<LevelCompletionPopUp, LevelCompletionPopUp.Factory>().FromComponentInNewPrefab(_levelCompletionPopUpPrefab);
         }
     }
 }

@@ -1,4 +1,5 @@
 using Configs;
+using DG.Tweening;
 using Gameplay;
 using GameRoot;
 using System;
@@ -83,6 +84,8 @@ namespace Template
                 _isLevelCompleted = true;
 
                 _gameStateProvider.GameStateProxy.CompleteLevel(enterParams.Number);
+
+                DOVirtual.DelayedCall(1, _rootPopUpsProvider.OpenLevelCompletionPopUp);
             });
 
             // Theme customization.

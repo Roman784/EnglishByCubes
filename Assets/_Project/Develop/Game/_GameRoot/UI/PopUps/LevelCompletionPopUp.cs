@@ -1,8 +1,10 @@
 using Configs;
 using DG.Tweening;
+using GameRoot;
 using Theme;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Zenject;
 
@@ -105,14 +107,30 @@ namespace UI
 
         public void OpenCollection()
         {
-            var ui = FindObjectOfType<GameplayUI>();
-            ui.OpenCollection();
+            if (SceneManager.GetActiveScene().name == Scenes.GAMEPLAY)
+            {
+                var ui = FindObjectOfType<GameplayUI>();
+                ui.OpenCollection();
+            }
+            else if (SceneManager.GetActiveScene().name == Scenes.TEMPLATE)
+            {
+                var ui = FindObjectOfType<TemplateUI>();
+                ui.OpenCollection();
+            }
         }
 
         public void OpenNextLevel()
         {
-            var ui = FindObjectOfType<GameplayUI>();
-            ui.OpenNextLevel();
+            if (SceneManager.GetActiveScene().name == Scenes.GAMEPLAY)
+            {
+                var ui = FindObjectOfType<GameplayUI>();
+                ui.OpenNextLevel();
+            }
+            else if (SceneManager.GetActiveScene().name == Scenes.TEMPLATE)
+            {
+                var ui = FindObjectOfType<TemplateUI>();
+                ui.OpenNextLevel();
+            }
         }
 
         private void FillItem(float fillRate)

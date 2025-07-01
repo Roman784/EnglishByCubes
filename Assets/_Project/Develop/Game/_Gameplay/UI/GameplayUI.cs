@@ -22,20 +22,18 @@ namespace UI
         [SerializeField] private Canvas _canvas;
 
         private GameplayEnterParams _enterParams;
-        private GameplayPopUpProvider _gameplayPopUpProvider;
         private IGameFieldService _gameFieldService;
 
         [Inject]
-        private void Construct(GameplayPopUpProvider gameplayPopUpProvider, IGameFieldService gameFieldService)
+        private void Construct( IGameFieldService gameFieldService)
         {
-            _gameplayPopUpProvider = gameplayPopUpProvider;
             _gameFieldService = gameFieldService;
         }
 
         private void Update()
         {
             if (Input.GetKeyUp(KeyCode.O))
-                _gameplayPopUpProvider.OpenLevelCompletionPopUp();
+                _popUpsProvider.OpenLevelCompletionPopUp(); // <-
         }
 
         public void Init(GameplayEnterParams enterParams)
