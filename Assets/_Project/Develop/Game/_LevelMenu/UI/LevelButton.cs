@@ -1,3 +1,4 @@
+using Audio;
 using Configs;
 using System;
 using System.Collections.Generic;
@@ -16,12 +17,15 @@ namespace UI
         [SerializeField] private TMP_Text _titleView;
         [SerializeField] private GameObject _line;
 
+        [SerializeField] private ButtonAudioPlayer _buttonAudioPlayer;
+
         private int _number;
         private bool _isLocked;
         private Action<int> _openLevel;
 
-        public void Init(LevelConfigs levelConfigs, LevelButtonsConfigs buttonsConfigs, 
-                         LevelButtonProgress progress, Action<int> openLevel)
+        public void Init(LevelConfigs levelConfigs, LevelButtonsConfigs buttonsConfigs, LevelButtonProgress progress, 
+                         AudioProvider audioProvider, AudioClip clickSound,
+                         Action<int> openLevel)
         {
             Dictionary<LevelMode, Sprite> _iconsMap = new()
             {
@@ -50,6 +54,8 @@ namespace UI
             _iconCustomizer.SetTag(_themeTagsMap[progress]);
 
             _line.SetActive(levelConfigs.Mode == LevelMode.Theory);
+
+            _buttonAudioPlayer.Init(audioProvider, clickSound);
         }
 
         public void OpenLevel()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 using System.Linq;
+using Audio;
 
 namespace Gameplay
 {
@@ -19,20 +20,19 @@ namespace Gameplay
 
         private int MaxFirstCubeIndex => Mathf.Abs(_cubes.Count - _slots.Count) % _cubes.Count;
 
-        [Inject]
-        private void Construct(CubeFactory cubeFactory)
-        {
-            _cubeFactory = cubeFactory;
-        }
-
-        public SlotBar(SlotBarView view)
+        public SlotBar(SlotBarView view, CubeFactory cubeFactory, 
+                       AudioProvider audioProvider, IConfigsProvider configsProvider)
         {
             _view = view;
+            _cubeFactory = cubeFactory;
+
+            var switchSound = configsProvider.GameConfigs.AudioConfigs.UIConfigs.ButtonClickSound;
 
             _slots = _view.GetSlots();
             _cubes = new();
             _firstCubeIndex = 0;
 
+            _view.Init(audioProvider, switchSound);
             _view.OnSwitched.AddListener(SwitchCubes);
         }
 

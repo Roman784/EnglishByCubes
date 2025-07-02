@@ -36,7 +36,7 @@ namespace UI
                 var progress = GetLevelProgress(level.GlobalNumber, lastCompletedLevelNumber);
 
                 var newButton = Instantiate(_levelButtonPrefab);
-                newButton.Init(level, buttonsConfigs, progress, OpenLevel);
+                newButton.Init(level, buttonsConfigs, progress, _audioProvider, AudioConfigs.ButtonClickSound, OpenLevel);
 
                 _levelButtonsLayout.LayOut(newButton.GetComponent<RectTransform>(), level.GlobalNumber - 1);
             }

@@ -11,9 +11,13 @@ namespace Audio
         [Inject]
         private void Construct(AudioProvider audioProvider, IConfigsProvider configsProvider)
         {
+            Init(audioProvider, configsProvider.GameConfigs.AudioConfigs.UIConfigs.ButtonClickSound);
+        }
+
+        public void Init(AudioProvider audioProvider, AudioClip clip)
+        {
             GetComponent<Button>().onClick.AddListener(() =>
             {
-                var clip = configsProvider.GameConfigs.AudioConfigs.UIConfigs.ButtonClickSound;
                 audioProvider.PlaySound(clip);
             });
         }

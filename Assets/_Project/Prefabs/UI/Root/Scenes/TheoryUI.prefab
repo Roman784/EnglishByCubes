@@ -1322,6 +1322,7 @@ GameObject:
   - component: {fileID: 5766991469083746894}
   - component: {fileID: 5902608752310748463}
   - component: {fileID: 1928329212156915639}
+  - component: {fileID: 4604712594730903150}
   m_Layer: 0
   m_Name: Back
   m_TagString: Untagged
@@ -1458,6 +1459,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: 10
   _view: {fileID: 4574321088756287530}
+--- !u!114 &4604712594730903150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5909466937457653870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47eacac0fb5cd30419eeb373cf3a0a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5996820008840829737
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,6 +1638,7 @@ GameObject:
   - component: {fileID: 4252208579253942037}
   - component: {fileID: 474684182932799082}
   - component: {fileID: 8400110237636872793}
+  - component: {fileID: 6251077672631944742}
   m_Layer: 0
   m_Name: PrevPage
   m_TagString: Untagged
@@ -1747,6 +1761,18 @@ MonoBehaviour:
   _tag: 0
   _topView: {fileID: 7765468757809027882}
   _sideView: {fileID: 3917987300083963996}
+--- !u!114 &6251077672631944742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6583972422237393810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47eacac0fb5cd30419eeb373cf3a0a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7546116619297390672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,6 +1787,7 @@ GameObject:
   - component: {fileID: 1393020541642261286}
   - component: {fileID: 4475537891628574376}
   - component: {fileID: 4195768425627834549}
+  - component: {fileID: 5946447600653499183}
   m_Layer: 0
   m_Name: Syllabus
   m_TagString: Untagged
@@ -1898,6 +1925,18 @@ MonoBehaviour:
   _tag: 4
   _colorMode: 0
   _view: {fileID: 1025706815770021700}
+--- !u!114 &5946447600653499183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7546116619297390672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47eacac0fb5cd30419eeb373cf3a0a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7611346584743057507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1913,6 +1952,7 @@ GameObject:
   - component: {fileID: 5249303047241409135}
   - component: {fileID: 5394451946089099065}
   - component: {fileID: 1650465511001999409}
+  - component: {fileID: 7947238801184159984}
   m_Layer: 0
   m_Name: NextPage
   m_TagString: Untagged
@@ -2070,6 +2110,18 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &7947238801184159984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7611346584743057507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47eacac0fb5cd30419eeb373cf3a0a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8153521109948695409
 GameObject:
   m_ObjectHideFlags: 0
@@ -2084,6 +2136,7 @@ GameObject:
   - component: {fileID: 4108508665230289370}
   - component: {fileID: 6339920538334075723}
   - component: {fileID: 4382679593058712871}
+  - component: {fileID: 2339314912336523254}
   m_Layer: 0
   m_Name: Settings
   m_TagString: Untagged
@@ -2220,6 +2273,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: 10
   _view: {fileID: 3775782357895387527}
+--- !u!114 &2339314912336523254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8153521109948695409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47eacac0fb5cd30419eeb373cf3a0a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8460293172719628531
 GameObject:
   m_ObjectHideFlags: 0

@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 8459322380831332079}
   - component: {fileID: 3130007972253056965}
   - component: {fileID: 3832909292659484361}
+  - component: {fileID: 418029428800244127}
   m_Layer: 0
   m_Name: Back
   m_TagString: Untagged
@@ -242,6 +243,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: 10
   _view: {fileID: 7673688183086872936}
+--- !u!114 &418029428800244127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319849060591984398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47eacac0fb5cd30419eeb373cf3a0a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &710521117749088233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,6 +1202,7 @@ GameObject:
   - component: {fileID: 1300923055286789561}
   - component: {fileID: 6227028559226843019}
   - component: {fileID: 537679456661711449}
+  - component: {fileID: 2363467995633405373}
   m_Layer: 0
   m_Name: StandartButtonWithText
   m_TagString: Untagged
@@ -1326,6 +1340,18 @@ MonoBehaviour:
   _tag: 4
   _colorMode: 0
   _view: {fileID: 731266662532777328}
+--- !u!114 &2363467995633405373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2503390993888070702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47eacac0fb5cd30419eeb373cf3a0a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3067864970288834144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1716,6 +1742,7 @@ GameObject:
   - component: {fileID: 7364037606755797582}
   - component: {fileID: 5784873457615848034}
   - component: {fileID: 8013138689483739269}
+  - component: {fileID: 7307218757670946589}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -1852,6 +1879,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: 10
   _view: {fileID: 576960917067531048}
+--- !u!114 &7307218757670946589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4070924196265907546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47eacac0fb5cd30419eeb373cf3a0a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4230997591199251689
 GameObject:
   m_ObjectHideFlags: 0
@@ -2278,6 +2317,7 @@ GameObject:
   - component: {fileID: 1731124104617019705}
   - component: {fileID: 3347193627831632149}
   - component: {fileID: 662301844390877951}
+  - component: {fileID: 451204777717570275}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -2414,6 +2454,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: 10
   _view: {fileID: 8517898962248941663}
+--- !u!114 &451204777717570275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5065057409217893933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47eacac0fb5cd30419eeb373cf3a0a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5249102241321987683
 GameObject:
   m_ObjectHideFlags: 0
@@ -2520,6 +2572,7 @@ GameObject:
   - component: {fileID: 1089463445385641421}
   - component: {fileID: 4137440086603118049}
   - component: {fileID: 6942046601122516915}
+  - component: {fileID: 5166122124148631915}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -2656,6 +2709,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: 10
   _view: {fileID: 7002282619256698027}
+--- !u!114 &5166122124148631915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5859763554391892697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47eacac0fb5cd30419eeb373cf3a0a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5875543302866723797
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,6 +2735,7 @@ GameObject:
   - component: {fileID: 1136768932468702401}
   - component: {fileID: 4157723778370270445}
   - component: {fileID: 5516858303669972816}
+  - component: {fileID: 8845427778060749488}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -2806,6 +2872,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: 10
   _view: {fileID: 7058559640185550247}
+--- !u!114 &8845427778060749488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5875543302866723797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47eacac0fb5cd30419eeb373cf3a0a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6099949721713009943
 GameObject:
   m_ObjectHideFlags: 0
@@ -3320,6 +3398,7 @@ GameObject:
   - component: {fileID: 3321149429421764839}
   - component: {fileID: 1757170360746752203}
   - component: {fileID: 2773299059548789439}
+  - component: {fileID: 8845399335672528702}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -3456,6 +3535,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tag: 10
   _view: {fileID: 4621959877138905473}
+--- !u!114 &8845399335672528702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8096228704433745907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47eacac0fb5cd30419eeb373cf3a0a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8255875493049796160
 GameObject:
   m_ObjectHideFlags: 0
@@ -4055,6 +4146,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _view: {fileID: 7748679831194127493}
+  _openDuration: 0
+  _openEase: 0
+  _closeDuration: 0
+  _closeEase: 0
   _changeMusicVolumeButton: {fileID: 5784873457615848034}
   _changeSoundVolumeButton: {fileID: 4137440086603118049}
 --- !u!224 &4552693446732330398 stripped
