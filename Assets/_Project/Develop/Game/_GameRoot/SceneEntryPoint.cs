@@ -1,3 +1,4 @@
+using Audio;
 using Configs;
 using GameState;
 using System.Collections;
@@ -16,11 +17,13 @@ namespace GameRoot
         protected IGameStateProvider _gameStateProvider;
         protected ThemeProvider _themeProvider;
         protected PopUpsProvider _rootPopUpsProvider;
+        protected AudioProvider _audioProvider;
 
         [Inject]
         private void Construct(UIRoot uiRoot, SceneProvider sceneProvider,
                                IConfigsProvider configsProvider, IGameStateProvider gameStateProvider,
-                               ThemeProvider themeProvider, PopUpsProvider rootPopUpsProvider)
+                               ThemeProvider themeProvider, PopUpsProvider rootPopUpsProvider,
+                               AudioProvider audioProvider)
         {
             _uiRoot = uiRoot;
             _sceneProvider = sceneProvider;
@@ -28,6 +31,7 @@ namespace GameRoot
             _gameStateProvider = gameStateProvider;
             _themeProvider = themeProvider;
             _rootPopUpsProvider = rootPopUpsProvider;
+            _audioProvider = audioProvider;
         }
 
         public abstract IEnumerator Run<T>(T enterParams) where T : SceneEnterParams;

@@ -55,5 +55,19 @@ namespace GameState
             State.CurrentCollectionItemFill = fill;
             _gameStateProvider.SaveGameState();
         }
+
+        public void SetMusicVolume(float volume)
+        {
+            volume = Mathf.Clamp01(volume);
+            State.MusicVolume = volume;
+            _gameStateProvider.SaveGameState();
+        }
+
+        public void SetSoundVolume(float volume)
+        {
+            volume = Mathf.Clamp01(volume);
+            State.SoundVolume = volume;
+            _gameStateProvider.SaveGameState();
+        }
     }
 }

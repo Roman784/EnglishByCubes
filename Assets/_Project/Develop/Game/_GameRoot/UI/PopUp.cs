@@ -1,3 +1,4 @@
+using Audio;
 using Configs;
 using DG.Tweening;
 using GameRoot;
@@ -26,19 +27,22 @@ namespace UI
         protected PopUpsRoot _root;
         protected ThemeProvider _themeProvider;
         protected PauseProvider _pauseProvider;
+        protected AudioProvider _audioProvider;
 
         private Tweener _transparencyTween;
         private Tweener _scaleTween;
 
         [Inject]
         private void Construct(IConfigsProvider configsProvider, IGameStateProvider gameStateProvider,
-                               UIRoot uiRoot, ThemeProvider themeProvider, PauseProvider pauseProvider)
+                               UIRoot uiRoot, ThemeProvider themeProvider, PauseProvider pauseProvider,
+                               AudioProvider audioProvider)
         {
             _gameConfigs = configsProvider.GameConfigs;
             _gameState = gameStateProvider.GameStateProxy;
             _root = uiRoot.PopUpsRoot;
             _themeProvider = themeProvider;
             _pauseProvider = pauseProvider;
+            _audioProvider = audioProvider;
         }
 
         protected void Awake()

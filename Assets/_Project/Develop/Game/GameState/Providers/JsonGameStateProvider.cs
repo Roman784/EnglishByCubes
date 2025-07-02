@@ -77,8 +77,10 @@ namespace GameState
             {
                 LastCompletedLevelNumber = defaultState.LastCompletedLevelNumber,
                 CurrentThemeMode = (int)defaultState.CurrentThemeMode,
-                CollectedCollectionItems = new (defaultState.CollectedCollectionItems),
+                CollectedCollectionItems = new(defaultState.CollectedCollectionItems),
                 CurrentCollectionItemFill = defaultState.CurrentCollectionItemFill,
+                MusicVolume = defaultState.MusicVolume,
+                SoundVolume = defaultState.SoundVolume,
             };
 
             return new GameStateProxy(gameState, this);

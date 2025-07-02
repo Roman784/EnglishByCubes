@@ -14,3 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <LastCompletedLevelNumber>k__BackingField: 0
   <CurrentThemeMode>k__BackingField: 0
+  <CollectedCollectionItems>k__BackingField: 
+  <CurrentCollectionItemFill>k__BackingField: 0
+  <MusicVolume>k__BackingField: 1
+  <SoundVolume>k__BackingField: 1

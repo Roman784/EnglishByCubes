@@ -11,5 +11,7 @@ namespace Configs
         [field: SerializeField] public ThemeModes CurrentThemeMode { get; private set; }
         [field: SerializeField] public List<int> CollectedCollectionItems { get; private set; }
         [field: SerializeField] public float CurrentCollectionItemFill { get; private set; }
+        [field: SerializeField] public float MusicVolume { get; private set; }
+        [field: SerializeField] public float SoundVolume { get; private set; }
     }
 }

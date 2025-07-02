@@ -10,5 +10,7 @@ namespace GameState
         public int CurrentThemeMode;
         public List<int> CollectedCollectionItems;
         public float CurrentCollectionItemFill;
+        public float SoundVolume;
+        public float MusicVolume;
     }
 }

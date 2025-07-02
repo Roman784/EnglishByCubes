@@ -1,3 +1,4 @@
+using Audio;
 using Theme;
 using UnityEngine;
 using Zenject;
@@ -11,19 +12,25 @@ namespace UI
         [SerializeField] private ButtonCustomizer _changeMusicVolumeButton;
         [SerializeField] private ButtonCustomizer _changeSoundVolumeButton;
 
+        private float _soundVolume;
+        private float _musicVolume;
+
         private new void Awake()
         {
             base.Awake();
 
             _view.alpha = 0f;
-
-            _changeMusicVolumeButton.SetTag(ThemeTags.OnButton);
-            _changeSoundVolumeButton.SetTag(ThemeTags.OnButton);
         }
 
         public override void Open()
         {
             _pauseProvider.StopGame();
+
+            _musicVolume = _audioProvider.MusicVolume.Value;
+            _soundVolume = _audioProvider.SoundVolume.Value;
+
+            SetAudioButtonTag(_changeMusicVolumeButton, _musicVolume);
+            SetAudioButtonTag(_changeSoundVolumeButton, _soundVolume);
 
             base.Open();
         }
@@ -37,12 +44,18 @@ namespace UI
 
         public void ChangeMusicVolume()
         {
-            SwitchButtonTag(_changeMusicVolumeButton);
+            _musicVolume = _musicVolume > 0f ? 0f : 1f;
+            _audioProvider.MusicVolume.Value = _musicVolume;
+
+            SetAudioButtonTag(_changeMusicVolumeButton, _musicVolume);
         }
 
         public void ChangeSoundVolume()
         {
-            SwitchButtonTag(_changeSoundVolumeButton);
+            _soundVolume = _soundVolume > 0f ? 0f : 1f;
+            _audioProvider.SoundVolume.Value = _soundVolume;
+
+            SetAudioButtonTag(_changeSoundVolumeButton, _soundVolume);
         }
 
         public void ChangeMusic()
@@ -65,9 +78,9 @@ namespace UI
             
         }
 
-        private void SwitchButtonTag(ButtonCustomizer button)
+        private void SetAudioButtonTag(ButtonCustomizer button, float volume)
         {
-            if (button.Tag == ThemeTags.OnButton)
+            if (volume < 1)
                 button.SetTag(ThemeTags.OffButton);
             else
                 button.SetTag(ThemeTags.OnButton);
