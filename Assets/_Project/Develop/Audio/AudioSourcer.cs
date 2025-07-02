@@ -25,5 +25,17 @@ namespace Audio
             _audioSource.loop = false;
             _audioSource.PlayOneShot(clip);
         }
+
+        public void PlayLoop(AudioClip clip)
+        {
+            _audioSource.loop = true;
+            _audioSource.clip = clip;
+            _audioSource.Play();
+        }
+
+        public void SetClip(AudioClip clip)
+        {
+            _audioSource.clip = clip;
+        }
     }
 }

@@ -29,6 +29,7 @@ namespace GameRoot
                         if (res)
                         {
                             _audioProvider.Init();
+                            _audioProvider.PlayMusic();
                             _themeProvider.SetTheme();
 
                             isLoaded = true;

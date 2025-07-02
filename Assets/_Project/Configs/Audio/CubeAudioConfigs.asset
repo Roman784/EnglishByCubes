@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f4d341d201cd6498e39c186290ca1b, type: 3}
+  m_Name: CubeAudioConfigs
+  m_EditorClassIdentifier: 
+  <RotationSounds>k__BackingField:
+  - {fileID: 8300000, guid: d5e42e271c463fc409d7e4b985d9c618, type: 3}
+  - {fileID: 8300000, guid: 4aca48b6d9001f34cb5559a7965953ab, type: 3}
+  - {fileID: 8300000, guid: 40ad35da78ef72a42bb2844874a85229, type: 3}
+  - {fileID: 8300000, guid: 4861f91241ccd084ba41c52a8df4e467, type: 3}

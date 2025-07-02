@@ -60,7 +60,7 @@ namespace UI
 
         public void ChangeMusic()
         {
-
+            _audioProvider.SwitchMusic();
         }
 
         public void OpenAppInfo()

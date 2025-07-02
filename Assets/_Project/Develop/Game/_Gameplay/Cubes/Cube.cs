@@ -1,3 +1,4 @@
+using Audio;
 using Configs;
 using DG.Tweening;
 using GameRoot;
@@ -17,6 +18,8 @@ namespace Gameplay
         private readonly CubeConfigs _configs;
         private readonly IGameFieldService _gameFieldService;
         private readonly CubesPositionPreviewService _cubesPositionPreviewService;
+        private readonly AudioProvider _audioProvider;
+        private readonly IConfigsProvider _configsProvider;
 
         private readonly CubeBehaviorHandler _behaviorHandler;
 
@@ -32,14 +35,19 @@ namespace Gameplay
         public UnityEvent OnRotated { get; private set; } = new();
         public UnityEvent<bool> OnDragged { get; private set; } = new();
 
+        private CubeAudioConfigs AudioConfigs => _configsProvider.GameConfigs.AudioConfigs.CubeConfigs;
+
         public Cube(CubeView view, CubeConfigs configs,
                     IGameFieldService gameFieldService,
-                    CubesPositionPreviewService cubesPositionPreviewService)
+                    CubesPositionPreviewService cubesPositionPreviewService,
+                    AudioProvider audioProvider, IConfigsProvider configsProvider)
         {
             _view = view;
             _configs = configs;
             _gameFieldService = gameFieldService;
             _cubesPositionPreviewService = cubesPositionPreviewService;
+            _audioProvider = audioProvider;
+            _configsProvider = configsProvider;
 
             var number = _configs.Number;
             var name = _configs.Name;
@@ -108,6 +116,8 @@ namespace Gameplay
 
         public Observable<bool> PlaceOnField(Vector3 position, float scale)
         {
+            PlayRotationSound();
+
             _behaviorHandler.SetOnFieldBehavior();
 
             var placementDuration = _configs.DataConfigs.FieldPlacementDuration;
@@ -225,6 +235,8 @@ namespace Gameplay
             var word = _words[wordIndex];
             _view.Rotate(word, rotationDuration, rotationEase, fadeDuration, fadeEase);
 
+            PlayRotationSound();
+
             OnRotated.Invoke();
         }
 
@@ -291,6 +303,12 @@ namespace Gameplay
             var ease = _configs.DataConfigs.RescaleEase;
 
             return _view.SetViewScale(Vector3.zero, duration, ease);
+        }
+
+        private void PlayRotationSound()
+        {
+            var clip = AudioConfigs.RotationSounds[Random.Range(0, AudioConfigs.RotationSounds.Count)];
+            _audioProvider.PlaySound(clip);
         }
     }
 }

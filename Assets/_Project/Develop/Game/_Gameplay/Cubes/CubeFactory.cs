@@ -1,3 +1,4 @@
+using Audio;
 using Configs;
 using GameRoot;
 using Pause;
@@ -15,11 +16,14 @@ namespace Gameplay
         private readonly CubesPositionPreviewService _cubesPositionPreviewService;
         private readonly ThemeProvider _themeProvider;
         private readonly PauseProvider _pauseProvider;
+        private readonly AudioProvider _audioProvider;
+        private readonly IConfigsProvider _configsProvider;
 
         [Inject]
         public CubeFactory(DiContainer container, CubeView prefab,
                            IGameFieldService gameFieldService, CubesPositionPreviewService cubesPositionPreviewService,
-                           ThemeProvider themeProvider, PauseProvider pauseProvider)
+                           ThemeProvider themeProvider, PauseProvider pauseProvider,
+                           AudioProvider audioProvider, IConfigsProvider configsProvider)
         {
             _container = container;
             _prefab = prefab;
@@ -27,6 +31,8 @@ namespace Gameplay
             _cubesPositionPreviewService = cubesPositionPreviewService;
             _themeProvider = themeProvider;
             _pauseProvider = pauseProvider;
+            _audioProvider = audioProvider;
+            _configsProvider = configsProvider;
         }
 
         public Cube Create(CubeConfigs configs, Vector3 position)
@@ -40,7 +46,7 @@ namespace Gameplay
         public Cube Create(CubeConfigs configs)
         {
             var view = Object.Instantiate(_prefab);
-            var newCube = _container.Instantiate<Cube>(new object[] { view, configs, _gameFieldService, _cubesPositionPreviewService });
+            var newCube = _container.Instantiate<Cube>(new object[] { view, configs, _gameFieldService, _cubesPositionPreviewService, _audioProvider, _configsProvider });
 
             _themeProvider.Customize(view.gameObject);
 
