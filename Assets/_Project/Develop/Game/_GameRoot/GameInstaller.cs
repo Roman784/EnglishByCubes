@@ -1,3 +1,4 @@
+using Audio;
 using Configs;
 using GameState;
 using Pause;
@@ -18,10 +19,20 @@ namespace GameRoot
         [SerializeField] private LevelCompletionPopUp _levelCompletionPopUpPrefab;
         [SerializeField] private LevelInfoPopUp _levelInfoPopUpPrefab;
 
+        [Space]
+
+        [SerializeField] private AudioSourcer _audioSourcerPrefab;
+
         public override void InstallBindings()
         {
+            BindPrefabs();
             BindProviers();
             BindUI();
+        }
+
+        private void BindPrefabs()
+        {
+            Container.Bind<AudioSourcer>().FromInstance(_audioSourcerPrefab).AsTransient();
         }
 
         private void BindProviers()
@@ -31,6 +42,7 @@ namespace GameRoot
             Container.Bind<IGameStateProvider>().To<JsonGameStateProvider>().AsSingle();
             Container.Bind<ThemeProvider>().AsSingle();
             Container.Bind<PauseProvider>().AsSingle();
+            Container.Bind<AudioProvider>().AsSingle();
         }
 
         private void BindUI()

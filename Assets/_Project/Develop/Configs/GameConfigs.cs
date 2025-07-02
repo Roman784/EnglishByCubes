@@ -16,6 +16,10 @@ namespace Configs
 
         [field: Space]
 
+        [field:SerializeField] public AudioConfigs AudioConfigs { get; private set; }
+
+        [field: Space]
+
         [field: SerializeField] public ThemeConfigs LightThemeConfigs { get; private set; }
         [field: SerializeField] public ThemeConfigs DarkThemeConfigs { get; private set; }
     }

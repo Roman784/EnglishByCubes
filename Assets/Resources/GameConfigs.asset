@@ -17,5 +17,6 @@ MonoBehaviour:
   <LevelsConfigs>k__BackingField: {fileID: 11400000, guid: efaaa2e4ce9e2b244ae9ad8cfa87cac7, type: 2}
   <CollectionConfigs>k__BackingField: {fileID: 11400000, guid: db871835ab8d8cd46972d7a2d5334101, type: 2}
   <UIConfigs>k__BackingField: {fileID: 11400000, guid: f55a0774dd35adc4188306f481503b4d, type: 2}
+  <AudioConfigs>k__BackingField: {fileID: 11400000, guid: c3dcd85f73ac61a44b4b88dec625cee2, type: 2}
   <LightThemeConfigs>k__BackingField: {fileID: 11400000, guid: 458e878f23d94514b9e71c56fda7e969, type: 2}
   <DarkThemeConfigs>k__BackingField: {fileID: 11400000, guid: c5e8dc16a3e8d32408338312c47607c2, type: 2}
