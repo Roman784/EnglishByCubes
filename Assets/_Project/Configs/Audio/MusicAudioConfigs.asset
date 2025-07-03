@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: MusicAudioConfigs
   m_EditorClassIdentifier: 
   <Clips>k__BackingField:
+  - {fileID: 8300000, guid: 1523d5dc411a2d345b007e54a0444559, type: 3}
   - {fileID: 8300000, guid: 7fca7a0b07574be4fa75388be3aa7de7, type: 3}
   - {fileID: 8300000, guid: 67e6e4172f923404eb18d77b5e4e79e4, type: 3}
   - {fileID: 8300000, guid: 7863e1f67234d0b468ee57e1a20743e0, type: 3}
   - {fileID: 8300000, guid: f89eb15a65ef0a7488b60e8401512999, type: 3}
   - {fileID: 8300000, guid: 563ca0c67a0cd9a44a11642bf998a94b, type: 3}
-  - {fileID: 8300000, guid: 1523d5dc411a2d345b007e54a0444559, type: 3}
