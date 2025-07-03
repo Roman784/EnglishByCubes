@@ -7,5 +7,7 @@ namespace Configs
     public class CubeAudioConfigs : ScriptableObject
     {
         [field: SerializeField] public List<AudioClip> RotationSounds { get; private set; }
+        [field: SerializeField] public AudioClip MoveSound { get; private set;}
+        [field: SerializeField] public AudioClip DestructionSound { get; private set;}
     }
 }

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ac9d0f5c4871b469567d08a00ae720, type: 3}
   m_Name: UIAudioConfigs
   m_EditorClassIdentifier: 
-  <ButtonClickSound>k__BackingField: {fileID: 8300000, guid: ff7823e37af120d40bf2a060513e5d71, type: 3}
+  <ButtonClickSound>k__BackingField: {fileID: 8300000, guid: fb9a03275ac763b48be11989d89f54a0, type: 3}

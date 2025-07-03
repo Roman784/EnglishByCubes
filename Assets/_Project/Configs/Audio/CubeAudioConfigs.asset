@@ -16,4 +16,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d5e42e271c463fc409d7e4b985d9c618, type: 3}
   - {fileID: 8300000, guid: 4aca48b6d9001f34cb5559a7965953ab, type: 3}
   - {fileID: 8300000, guid: 40ad35da78ef72a42bb2844874a85229, type: 3}
-  - {fileID: 8300000, guid: 4861f91241ccd084ba41c52a8df4e467, type: 3}
+  <MoveSound>k__BackingField: {fileID: 8300000, guid: c7db66e54cbe3db44ab86a72351a1f78, type: 3}
+  <DestructionSound>k__BackingField: {fileID: 8300000, guid: 586a5b7c4f1d84a43bde4667fe31e945, type: 3}

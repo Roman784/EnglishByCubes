@@ -29,7 +29,6 @@ namespace GameRoot
                         if (res)
                         {
                             _audioProvider.Init();
-                            _audioProvider.PlayMusic();
                             _themeProvider.SetTheme();
 
                             isLoaded = true;
@@ -47,6 +46,8 @@ namespace GameRoot
             });
 
             yield return new WaitUntil(() => isLoaded);
+
+            _audioProvider.PlayMusic();
 
             LoadScene();
         }

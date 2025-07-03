@@ -111,13 +111,13 @@ namespace Gameplay
 
         public void CreateOnField()
         {
+            PlayRotationSound();
+
             _gameFieldService.CreateCube(_configs);
         }
 
         public Observable<bool> PlaceOnField(Vector3 position, float scale)
         {
-            PlayRotationSound();
-
             _behaviorHandler.SetOnFieldBehavior();
 
             var placementDuration = _configs.DataConfigs.FieldPlacementDuration;
@@ -268,6 +268,8 @@ namespace Gameplay
 
         public Observable<bool> Destroy()
         {
+            PlayDestructionSound();
+
             _behaviorHandler.SetDestructionBehavior();
 
             var duration = _configs.DataConfigs.DestructionDuration;
@@ -308,6 +310,18 @@ namespace Gameplay
         private void PlayRotationSound()
         {
             var clip = AudioConfigs.RotationSounds[Random.Range(0, AudioConfigs.RotationSounds.Count)];
+            _audioProvider.PlaySound(clip);
+        }
+
+        private void PlayMoveSound()
+        {
+            var clip = AudioConfigs.MoveSound;
+            _audioProvider.PlaySound(clip);
+        }
+
+        private void PlayDestructionSound()
+        {
+            var clip = AudioConfigs.DestructionSound;
             _audioProvider.PlaySound(clip);
         }
     }

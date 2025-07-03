@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b89a92fb165e38458163384357df343, type: 3}
   m_Name: AudioConfigs
   m_EditorClassIdentifier: 
+  <MusicConfigs>k__BackingField: {fileID: 11400000, guid: 6514602f6b64bce48aede1f55f6c22b5, type: 2}
   <UIConfigs>k__BackingField: {fileID: 11400000, guid: 800daadd4fdcfbb489fd3d6abf6d97e4, type: 2}
   <CubeConfigs>k__BackingField: {fileID: 11400000, guid: 6794ed9e09c6ba34d8892cda097ba411, type: 2}
