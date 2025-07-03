@@ -15,3 +15,4 @@ MonoBehaviour:
   <MusicConfigs>k__BackingField: {fileID: 11400000, guid: 6514602f6b64bce48aede1f55f6c22b5, type: 2}
   <UIConfigs>k__BackingField: {fileID: 11400000, guid: 800daadd4fdcfbb489fd3d6abf6d97e4, type: 2}
   <CubeConfigs>k__BackingField: {fileID: 11400000, guid: 6794ed9e09c6ba34d8892cda097ba411, type: 2}
+  <CollectionConfigs>k__BackingField: {fileID: 11400000, guid: 1126562bff820044b9b5a630247ea1bf, type: 2}

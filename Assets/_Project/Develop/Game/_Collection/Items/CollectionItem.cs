@@ -1,6 +1,9 @@
+using Audio;
+using Configs;
 using DG.Tweening;
 using UI;
 using UnityEngine;
+using Zenject;
 
 namespace Collection
 {
@@ -22,7 +25,17 @@ namespace Collection
 
         private bool _isUnlocked;
 
+        private AudioProvider _audioProvider; 
+        private IConfigsProvider _configsProvider;
+
         public int Id => _id;
+
+        [Inject]
+        private void Construct(AudioProvider audioProvider, IConfigsProvider configsProvider)
+        {
+            _audioProvider = audioProvider;
+            _configsProvider = configsProvider;
+        }
 
         private void Awake()
         {
@@ -54,6 +67,8 @@ namespace Collection
                 {
                     _shadow.DOFade(1, _fadeDuration).SetEase(_fadeEase);
                 });
+
+            DOVirtual.DelayedCall(_viewAppearDuration / 3.5f, PlayFallSound);
         }
 
         public void OpenContent()
@@ -62,6 +77,12 @@ namespace Collection
 
             var ui = FindObjectOfType<CollectionUI>();
             ui?.OpenItemContent(Id);
+        }
+
+        private void PlayFallSound()
+        {
+            var clip = _configsProvider.GameConfigs.AudioConfigs.CollectionConfigs.ItemFallSound;
+            _audioProvider.PlaySound(clip);
         }
     }
 }

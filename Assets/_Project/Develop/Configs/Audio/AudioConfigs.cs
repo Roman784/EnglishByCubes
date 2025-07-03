@@ -8,5 +8,6 @@ namespace Configs
         [field: SerializeField] public MusicAudioConfigs MusicConfigs { get; private set; }
         [field: SerializeField] public UIAudioConfigs UIConfigs { get; private set; }
         [field: SerializeField] public CubeAudioConfigs CubeConfigs { get; private set; }
+        [field: SerializeField] public CollectionAudioConfigs CollectionConfigs { get; private set; }
     }
 }
