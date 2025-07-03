@@ -29,6 +29,7 @@ namespace UI
         protected PauseProvider _pauseProvider;
         protected AudioProvider _audioProvider;
         protected SceneProvider _sceneProvider;
+        protected PopUpsProvider _popUpsProvider;
 
         private Tweener _transparencyTween;
         private Tweener _scaleTween;
@@ -38,7 +39,7 @@ namespace UI
         [Inject]
         private void Construct(IConfigsProvider configsProvider, IGameStateProvider gameStateProvider,
                                UIRoot uiRoot, ThemeProvider themeProvider, PauseProvider pauseProvider,
-                               AudioProvider audioProvider, SceneProvider sceneProvider)
+                               AudioProvider audioProvider, SceneProvider sceneProvider, PopUpsProvider popUpsProvider)
         {
             _gameConfigs = configsProvider.GameConfigs;
             _gameState = gameStateProvider.GameStateProxy;
@@ -47,6 +48,7 @@ namespace UI
             _pauseProvider = pauseProvider;
             _audioProvider = audioProvider;
             _sceneProvider = sceneProvider;
+            _popUpsProvider = popUpsProvider;
         }
 
         protected void Awake()

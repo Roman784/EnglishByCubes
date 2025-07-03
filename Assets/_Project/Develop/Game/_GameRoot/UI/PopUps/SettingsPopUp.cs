@@ -65,7 +65,7 @@ namespace UI
 
         public void OpenAppInfo()
         {
-
+            _popUpsProvider.OpenAppInfo();
         }
 
         public void ChangeTheme()

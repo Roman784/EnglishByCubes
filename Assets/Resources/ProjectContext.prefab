@@ -78,4 +78,5 @@ MonoBehaviour:
   _settingsPopUpPrefab: {fileID: -4648423623688057398, guid: cfab9c1b6b7e8ed47a1f7bc5f94a521f, type: 3}
   _levelCompletionPopUpPrefab: {fileID: -6053351946452278270, guid: 37374c7540ea5944daf276d420b085ba, type: 3}
   _levelInfoPopUpPrefab: {fileID: 5433627199699706506, guid: 8b36f66167cbf63459a30bc715318df4, type: 3}
+  _appInfoPopUpPrefab: {fileID: 4988043960083191817, guid: 68bf424a48ed93e4ba1199f409f01575, type: 3}
   _audioSourcerPrefab: {fileID: 5817932153205178891, guid: 8ef075b4f811fa74481c3cebe83c5efa, type: 3}
