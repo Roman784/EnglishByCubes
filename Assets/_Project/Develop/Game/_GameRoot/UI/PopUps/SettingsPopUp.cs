@@ -75,7 +75,7 @@ namespace UI
 
         public void OpenMainMenu()
         {
-            
+            _sceneProvider.OpenLevelMenu(null);
         }
 
         private void SetAudioButtonTag(ButtonCustomizer button, float volume)

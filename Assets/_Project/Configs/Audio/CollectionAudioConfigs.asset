@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: CollectionAudioConfigs
   m_EditorClassIdentifier: 
   <ItemFallSound>k__BackingField: {fileID: 8300000, guid: 6a5f6a2f95c26d24186ad62f4eff310e, type: 3}
+  <ItemFillingSound>k__BackingField: {fileID: 8300000, guid: a60880309f479d44e98802155a1c4663, type: 3}
+  <NewItemUnlockSound>k__BackingField: {fileID: 8300000, guid: 0b0faf89a2f037d45b85a288d8b6988b, type: 3}

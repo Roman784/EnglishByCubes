@@ -6,5 +6,7 @@ namespace Configs
     public class CollectionAudioConfigs : ScriptableObject
     {
         [field: SerializeField] public AudioClip ItemFallSound { get; private set; }
+        [field: SerializeField] public AudioClip ItemFillingSound { get; private set; }
+        [field: SerializeField] public AudioClip NewItemUnlockSound { get; private set; }
     }
 }

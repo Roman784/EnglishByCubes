@@ -90,8 +90,16 @@ namespace UI
 
         private void CompleteTheory()
         {
+            PlayLevelCompletionSound();
+
             _gameStateProvider.GameStateProxy.CompleteLevel(_enterParams.Number);
             OpenLevelMenu();
+        }
+
+        private void PlayLevelCompletionSound()
+        {
+            var clip = _configsProvider.GameConfigs.AudioConfigs.UIConfigs.LevelCompletionSound;
+            _audioProvider.PlaySound(clip);
         }
     }
 }

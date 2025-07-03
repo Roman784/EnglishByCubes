@@ -37,5 +37,10 @@ namespace Audio
         {
             _audioSource.clip = clip;
         }
+
+        public void Stop()
+        {
+            _audioSource.Stop();
+        }
     }
 }

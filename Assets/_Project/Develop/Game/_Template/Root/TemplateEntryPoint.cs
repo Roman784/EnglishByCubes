@@ -85,6 +85,7 @@ namespace Template
 
                 _gameStateProvider.GameStateProxy.CompleteLevel(enterParams.Number);
 
+                PlayLevelCompletionSound();
                 DOVirtual.DelayedCall(1, _rootPopUpsProvider.OpenLevelCompletionPopUp);
             });
 
@@ -94,6 +95,12 @@ namespace Template
             isLoaded = true;
 
             yield return new WaitUntil(() => isLoaded);
+        }
+
+        private void PlayLevelCompletionSound()
+        {
+            var clip = _configsProvider.GameConfigs.AudioConfigs.UIConfigs.LevelCompletionSound;
+            _audioProvider.PlaySound(clip);
         }
     }
 }

@@ -27,7 +27,8 @@ namespace GameRoot
 
         public void OpenLevelMenu(SceneEnterParams currentSceneParams)
         {
-            _previousSceneParams = currentSceneParams;
+            if (currentSceneParams != null)
+                _previousSceneParams = currentSceneParams;
 
             var enterParams = new LevelMenuEnterParams();
             _sceneLoader.LoadAndRunLevelMenu(enterParams);

@@ -1,9 +1,11 @@
 using Configs;
 using DG.Tweening;
 using GameRoot;
+using System;
 using Theme;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Zenject;
@@ -139,6 +141,9 @@ namespace UI
 
         private void FillItem(float fillRate)
         {
+            UnityEvent stopSoundEvent = new();
+            PlayFillingSound(stopSoundEvent);
+
             var fill = _currentFill + fillRate;
             fill = Mathf.Clamp01(fill);
 
@@ -166,8 +171,12 @@ namespace UI
             .SetEase(_itemFillingEase)
             .OnComplete(() =>
             {
+                stopSoundEvent.Invoke();
+
                 if (_currentFill == 1)
                 {
+                    PlayNewItemUnlocked();
+
                     _itemView.sprite = _itemConfigs.Sprite;
                     _lightView.gameObject.SetActive(true);
                     _newItemUnlockView.SetActive(true);
@@ -186,6 +195,18 @@ namespace UI
                         DOVirtual.DelayedCall(0.25f, () => _itemTarget.raycastTarget = true));
                 }
             });
+        }
+
+        private void PlayFillingSound(UnityEvent stopEvent)
+        {
+            var clip = AudioConfigs.CollectionConfigs.ItemFillingSound;
+            _audioProvider.PlaySound(clip, stopEvent);
+        }
+
+        private void PlayNewItemUnlocked()
+        {
+            var clip = AudioConfigs.CollectionConfigs.NewItemUnlockSound;
+            _audioProvider.PlaySound(clip);
         }
 
         public class Factory : PopUpFactory<LevelCompletionPopUp>

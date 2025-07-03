@@ -4,6 +4,7 @@ using GameState;
 using R3;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using Utils;
 using Zenject;
 
@@ -54,12 +55,15 @@ namespace Audio
             _currentMusicIndex = Random.Range(0, MusicConfigs.Clips.Count);
         }
 
-        public void PlaySound(AudioClip audioClip)
+        public void PlaySound(AudioClip audioClip, UnityEvent stopEvent = null)
         {
             var sourcer = _sourcers.GetInstance();
 
             sourcer.PlayOneShot(audioClip);
             DOVirtual.DelayedCall(audioClip.length, () => _sourcers.ReleaseInstance(sourcer));
+
+            if (stopEvent != null)
+                stopEvent.AddListener(() => sourcer.Stop());
         }
 
         public void PlayMusic()
