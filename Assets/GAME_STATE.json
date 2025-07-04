@@ -1,11 +1,11 @@
 {
     "LastCompletedLevelNumber": 3,
-    "CurrentThemeMode": 0,
+    "CurrentThemeMode": 1,
     "CollectedCollectionItems": [
         0,
         1
     ],
     "CurrentCollectionItemFill": 0.0,
     "SoundVolume": 1.0,
-    "MusicVolume": 1.0
+    "MusicVolume": 0.0
 }
