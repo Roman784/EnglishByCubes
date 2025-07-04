@@ -22,6 +22,8 @@ namespace Gameplay
 
         public void Init(AudioProvider audioProvider, AudioClip clickSound)
         {
+            RescaleToFitScreen();
+
             var cameraAngles = Camera.main.transform.eulerAngles;
             transform.rotation = Quaternion.Euler(cameraAngles.x - 90, 0f, 0f);
 
@@ -61,6 +63,17 @@ namespace Gameplay
             button.transform.DOScale(Vector3.zero, 0.15f)
                 .SetEase(Ease.InOutBounce)
                 .OnComplete(() => button.gameObject.SetActive(false));
+        }
+
+        private void RescaleToFitScreen()
+        {
+            var screenAspect = (float)Screen.width / (float)Screen.height;
+            if (screenAspect >= 1f) return;
+
+            var scale = 1f - (0.5625f - screenAspect) * 1.77f;
+            scale = Mathf.Clamp01(scale);
+
+            transform.localScale = Vector3.one * scale;
         }
     }
 }

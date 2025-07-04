@@ -9,6 +9,6 @@ namespace Gameplay
         [SerializeField] private float _cubeScale;
 
         public Vector3 Position => transform.position + _positionOffset;
-        public float Scale => _cubeScale;
+        public float Scale => _cubeScale * transform.lossyScale.x * 133.33f;
     }
 }
