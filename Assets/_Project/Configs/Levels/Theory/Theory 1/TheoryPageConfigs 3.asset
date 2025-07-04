@@ -25,3 +25,7 @@ MonoBehaviour:
     _text: {fileID: 0}
     _table: {fileID: 0}
     _cubeUnfolding: {fileID: 1326950252999102331, guid: 8ffbf4ab1c75b3b45813c5c2119f4cfc, type: 3}
+  - <Tag>k__BackingField: 1
+    _text: {fileID: 0}
+    _table: {fileID: 5098283251113619888, guid: bc87a9ed6fcafc247b0f4fc1c99582e1, type: 3}
+    _cubeUnfolding: {fileID: 0}
