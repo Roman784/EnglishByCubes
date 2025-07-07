@@ -15,6 +15,7 @@ namespace UI
         [SerializeField] private Image _pictureView;
         [SerializeField] private TMP_Text _titleView;
         [SerializeField] private TMP_Text _mainTextView;
+        [SerializeField] private VerticalLayoutGroup _verticalLayoutGroup;
 
         [Space]
 
@@ -76,6 +77,11 @@ namespace UI
             _pictureView.sprite = configs.Picture;
             _titleView.text = configs.Title;
             _mainTextView.text = configs.MainText;
+
+            _verticalLayoutGroup.CalculateLayoutInputVertical();
+            _verticalLayoutGroup.SetLayoutVertical();
+
+            _verticalLayoutGroup.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
         }
 
         private Tweener SetFadeTransparency(float value, float duration, Ease ease)

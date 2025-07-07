@@ -157,7 +157,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -254429467, guid: 79d696a33daedbc4cbc6b860a250ef85, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc243ea3623d331499e00eb83724c918, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -588,7 +588,6 @@ GameObject:
   - component: {fileID: 3501254757086000549}
   - component: {fileID: 3568103785175396034}
   - component: {fileID: 7651549810523957310}
-  - component: {fileID: 8596295690751094755}
   - component: {fileID: 1905741335444933488}
   m_Layer: 0
   m_Name: Title
@@ -611,10 +610,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5466079312065742266}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 380, y: -35.875}
-  m_SizeDelta: {x: 760, y: 71.75}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3568103785175396034
 CanvasRenderer:
@@ -713,20 +712,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &8596295690751094755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2784627571802220694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
-  m_VerticalFit: 2
 --- !u!114 &1905741335444933488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1145,9 +1130,9 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_Spacing: 32
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 0
+  m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
-  m_ChildControlHeight: 0
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -2127,6 +2112,7 @@ MonoBehaviour:
   _pictureView: {fileID: 8165018621857338256}
   _titleView: {fileID: 7651549810523957310}
   _mainTextView: {fileID: 3262768927514312654}
+  _verticalLayoutGroup: {fileID: 4284908429036995145}
   _fadeView: {fileID: 273823953325166142}
   _fadeValue: 0.65
   _fadeTransparencyEase: 6
@@ -2145,7 +2131,6 @@ GameObject:
   - component: {fileID: 2002002307897892820}
   - component: {fileID: 8228737462906865730}
   - component: {fileID: 3262768927514312654}
-  - component: {fileID: 8082481309801200963}
   - component: {fileID: 2588735185182944620}
   m_Layer: 0
   m_Name: MainText
@@ -2168,10 +2153,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5466079312065742266}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 380, y: -764.905}
-  m_SizeDelta: {x: 760, y: 1322.31}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8228737462906865730
 CanvasRenderer:
@@ -2203,12 +2188,6 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u041A\u0430\u043A\u043E\u0439-\u0442\u043E \u0442\u0435\u043A\u0441\u0442
     \u0438 \u0442\u0430\u043A \u0434\u0430\u043B\u0435\u0435... \u041A\u0430\u043A\u043E\u0439-\u0442\u043E
-    \u0442\u0435\u043A\u0441\u0442 \u0438 \u0442\u0430\u043A \u0434\u0430\u043B\u0435\u0435...
-    \u041A\u0430\u043A\u043E\u0439-\u0442\u043E \u0442\u0435\u043A\u0441\u0442 \u0438
-    \u0442\u0430\u043A \u0434\u0430\u043B\u0435\u0435... \u041A\u0430\u043A\u043E\u0439-\u0442\u043E
-    \u0442\u0435\u043A\u0441\u0442 \u0438 \u0442\u0430\u043A \u0434\u0430\u043B\u0435\u0435...
-    \u041A\u0430\u043A\u043E\u0439-\u0442\u043E \u0442\u0435\u043A\u0441\u0442 \u0438
-    \u0442\u0430\u043A \u0434\u0430\u043B\u0435\u0435... \u041A\u0430\u043A\u043E\u0439-\u0442\u043E
     \u0442\u0435\u043A\u0441\u0442 \u0438 \u0442\u0430\u043A \u0434\u0430\u043B\u0435\u0435...
     \u041A\u0430\u043A\u043E\u0439-\u0442\u043E \u0442\u0435\u043A\u0441\u0442 \u0438
     \u0442\u0430\u043A \u0434\u0430\u043B\u0435\u0435... \u041A\u0430\u043A\u043E\u0439-\u0442\u043E
@@ -2305,20 +2284,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &8082481309801200963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8727797261779900069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
-  m_VerticalFit: 2
 --- !u!114 &2588735185182944620
 MonoBehaviour:
   m_ObjectHideFlags: 0

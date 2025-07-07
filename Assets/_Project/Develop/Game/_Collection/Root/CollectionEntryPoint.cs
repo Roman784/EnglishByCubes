@@ -35,6 +35,7 @@ namespace Collection
             // UI.
             _uiRoot.AttachSceneUI(_ui);
             _ui.Init(enterParams);
+            yield return null;
 
             // Theme customization.
             CustomizeTheme();
