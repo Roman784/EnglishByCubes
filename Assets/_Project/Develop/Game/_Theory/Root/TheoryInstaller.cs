@@ -8,6 +8,10 @@ namespace Theory
     {
         [SerializeField] private TheoryUI _theoryUIPrefab;
 
+        [Space]
+
+        [SerializeField] private TheoryTableOfContentsPopUp _tableOfContentsPopUpPrefab;
+
         public override void InstallBindings()
         {
             BindUI();
@@ -16,6 +20,15 @@ namespace Theory
         private void BindUI()
         {
             Container.Bind<TheoryUI>().FromComponentInNewPrefab(_theoryUIPrefab).AsSingle();
+
+            BindPopUps();
+        }
+
+        private void BindPopUps()
+        {
+            Container.Bind<TheoryPopUpProvider>().AsTransient();
+
+            Container.BindFactory<TheoryTableOfContentsPopUp, TheoryTableOfContentsPopUp.Factory>().FromComponentInNewPrefab(_tableOfContentsPopUpPrefab);
         }
     }
 }

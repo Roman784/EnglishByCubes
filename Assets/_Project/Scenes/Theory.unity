@@ -201,6 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _theoryUIPrefab: {fileID: 3629159269103093945, guid: 82779f33b67af0b4ba48bb08052842cb, type: 3}
+  _tableOfContentsPopUpPrefab: {fileID: 5687110264662206211, guid: 210da14d04e555a4ead126d341ced381, type: 3}
 --- !u!1 &1470135347
 GameObject:
   m_ObjectHideFlags: 0

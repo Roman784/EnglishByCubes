@@ -5,6 +5,7 @@ using Theory;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace UI
 {
@@ -21,6 +22,16 @@ namespace UI
         private List<TheoryPage> _pages = new();
         private int _currentPageIndex;
 
+        private TheoryLevelConfigs _levelConfigs;
+
+        private TheoryPopUpProvider _theoryPopUpProvider;
+
+        [Inject]
+        private void Construct(TheoryPopUpProvider theoryPopUpProvider)
+        {
+            _theoryPopUpProvider = theoryPopUpProvider;
+        }
+
         public void Init(TheoryEnterParams enterParams)
         {
             _enterParams = enterParams;
@@ -33,6 +44,8 @@ namespace UI
 
         public void CreatePages(TheoryLevelConfigs configs)
         {
+            _levelConfigs = configs;
+
             foreach (var pageConfigs in configs.PagesConfigs)
             {
                 var newPage = Instantiate(_pagePrefab);
@@ -54,28 +67,15 @@ namespace UI
             _progressBar.CreateDots(count);
         }
 
+        public void SwitchPageByIndex(int index)
+        {
+            OpenPage(index);
+        }
+
         public void SwitchPage(int step)
         {
             var nextPageIndex = _currentPageIndex + step;
-
-            if (nextPageIndex < 0)
-            {
-                nextPageIndex = 0;
-            }
-            else if (nextPageIndex >= _pages.Count)
-            {
-                CompleteTheory();
-                return;
-            }
-
-            _pages[_currentPageIndex].Hide();
-            _pages[nextPageIndex].Show();
-
-            _pageContainer.anchoredPosition = new Vector2(_pageContainer.anchoredPosition.x, 0);
-
-            _progressBar.HighlightDot(nextPageIndex);
-
-            _currentPageIndex = nextPageIndex;
+            OpenPage(nextPageIndex);
         }
 
         public void OpenPreviousScene()
@@ -86,6 +86,33 @@ namespace UI
         public void OpenLevelMenu()
         {
             _sceneProvider.OpenLevelMenu(_enterParams);
+        }
+
+        public void OpenTableOfContentsPopUp()
+        {
+            _theoryPopUpProvider.OpenTableOfContents(_levelConfigs);
+        }
+
+        private void OpenPage(int pageIndex)
+        {
+            if (pageIndex < 0)
+            {
+                pageIndex = 0;
+            }
+            else if (pageIndex >= _pages.Count)
+            {
+                CompleteTheory();
+                return;
+            }
+
+            _pages[_currentPageIndex].Hide();
+            _pages[pageIndex].Show();
+
+            _pageContainer.anchoredPosition = new Vector2(_pageContainer.anchoredPosition.x, 0);
+
+            _progressBar.HighlightDot(pageIndex);
+
+            _currentPageIndex = pageIndex;
         }
 
         private void CompleteTheory()

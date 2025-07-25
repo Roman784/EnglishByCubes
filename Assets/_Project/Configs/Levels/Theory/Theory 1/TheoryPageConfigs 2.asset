@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79fe8f29382798f4ba3e2babdebca45c, type: 3}
   m_Name: TheoryPageConfigs 2
   m_EditorClassIdentifier: 
+  <Title>k__BackingField: "1.2 \u042D\u0442\u043E \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0430
+    2"
   <Contents>k__BackingField:
   - <Tag>k__BackingField: 0
     _text: {fileID: 4999637552003901801, guid: d9cae84139753fa4faf0dedde05174cc, type: 3}

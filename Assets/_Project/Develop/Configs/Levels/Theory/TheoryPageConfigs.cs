@@ -8,6 +8,7 @@ namespace Configs
     [CreateAssetMenu(fileName = "TheoryPageConfigs", menuName = "Game Configs/Level/New Theory Page Configs")]
     public class TheoryPageConfigs : ScriptableObject
     {
+        [field: SerializeField] public string Title { get; private set; }
         [field: SerializeField] public List<TheoryContent> Contents { get; private set; }
     }
 }
