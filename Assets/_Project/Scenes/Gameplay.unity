@@ -203,7 +203,6 @@ MonoBehaviour:
   _gameplayUIPrefab: {fileID: 8546033508002278438, guid: d84104139fd2b304bb8e8a4846dd1aaf, type: 3}
   _cubePrefab: {fileID: 1228918783809224183, guid: 18a73ce5e870ce1499065050ffb3399d, type: 3}
   _slotBarPrefab: {fileID: 2201043303804829393, guid: 7a0341bfa9c9d764398204d1af5aed63, type: 3}
-  _levelCompletionPopUpPrefab: {fileID: -6053351946452278270, guid: 37374c7540ea5944daf276d420b085ba, type: 3}
 --- !u!1 &879766716
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,13 +514,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470135347}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.60876137, y: 0, z: 0, w: 0.7933534}
-  m_LocalPosition: {x: 0, y: 8, z: -2.85}
+  m_LocalRotation: {x: 0.67448413, y: -0.023042219, z: -0.021378638, w: 0.73762}
+  m_LocalPosition: {x: 0.6, y: 9.5, z: -1.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 75, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 83.742, y: -35.197, z: -35.062}
 --- !u!114 &1470135351
 MonoBehaviour:
   m_ObjectHideFlags: 0
