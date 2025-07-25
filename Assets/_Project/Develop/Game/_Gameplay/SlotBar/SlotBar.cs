@@ -15,6 +15,7 @@ namespace Gameplay
 
         private List<Slot> _slots;
         private List<Cube> _cubes;
+        private List<(int, Cube)> _removedCubesMap;
 
         private int _firstCubeIndex;
 
@@ -30,6 +31,7 @@ namespace Gameplay
 
             _slots = _view.GetSlots();
             _cubes = new();
+            _removedCubesMap = new();
             _firstCubeIndex = 0;
 
             _view.Init(audioProvider, switchSound);
@@ -43,16 +45,50 @@ namespace Gameplay
 
         public void CreateCubes(List<CubeConfigs> cubesConfigs)
         {
+            _cubes = new();
+            _cubes.Capacity = cubesConfigs.Count;
+
             for (int i = 0; i < cubesConfigs.Count(); i++)
             {
                 var newCube = _cubeFactory.Create(cubesConfigs[i]);
-                _cubes.Add(newCube);
-
-                var slot = _slots[Mathf.Clamp(i, 0, _slots.Count - 1)];
-                newCube.AddToSlot(slot);
+                AddCube(newCube, i, i);
             }
 
             PlaceCubes();
+        }
+
+        public void AddCube(Cube newCube, int cubePos, int slotIdx)
+        {
+            _cubes.Insert(cubePos, newCube);
+
+            slotIdx = Mathf.Clamp(slotIdx, 0, _slots.Count - 1);
+            var slot = _slots[slotIdx];
+
+            newCube.AddToSlot(this, slot);
+        }
+
+        public void RemoveCube(Cube cube)
+        {
+            _removedCubesMap.Add((cube.Number, cube));
+
+            _cubes.Remove(cube);
+            cube.DisableInSlots();
+
+            SwitchCubes(-1);
+        }
+
+        public void RestoreCube(int cubeNumber)
+        {
+            foreach (var cubeItem in _removedCubesMap)
+            {
+                if (cubeNumber != cubeItem.Item1) continue;
+
+                AddCube(cubeItem.Item2, _firstCubeIndex, 0);
+                PlaceCubes();
+
+                _removedCubesMap.Remove(cubeItem);
+                return;
+            }
         }
 
         private void PlaceCubes()

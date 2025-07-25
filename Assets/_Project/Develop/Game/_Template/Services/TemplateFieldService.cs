@@ -38,9 +38,9 @@ namespace Template
             _maxCubeCount = value;
         }
 
-        public void CreateCube(CubeConfigs configs)
+        public Cube CreateCube(CubeConfigs configs)
         {
-            if (_cubes.Count >= _maxCubeCount) return;
+            if (_cubes.Count >= _maxCubeCount) return null;
 
             var position = _cubesLayoutService.GetLastCubePosition(_cubes.Count + 1);
 
@@ -55,6 +55,8 @@ namespace Template
             _cubesLayoutService.LayOut(_cubes);
 
             OnCubeCreated.Invoke(newCube);
+
+            return newCube;
         }
 
         public void RemoveCube(Cube cube)

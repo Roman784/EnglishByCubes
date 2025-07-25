@@ -10,7 +10,7 @@ namespace GameRoot
         public IReadOnlyList<Cube> Cubes { get; }
         public UnityEvent<Cube> OnCubeCreated { get; }
 
-        public void CreateCube(CubeConfigs configs);
+        public Cube CreateCube(CubeConfigs configs);
         public void RemoveCube(Cube cube);
         public void SetCubesAccordingPreview();
     }

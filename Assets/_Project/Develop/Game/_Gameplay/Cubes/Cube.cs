@@ -29,6 +29,9 @@ namespace Gameplay
         private Camera _camera;
         private Coroutine _dragRoutine;
 
+        private SlotBar _slotBar;
+
+        public int Number => _configs.Number;
         public string CurrentWord => _words[_curretWordIndex];
         public Vector3 Position => _view.GetPosition();
         public bool IsInRemoveArea { get; private set; }
@@ -83,9 +86,11 @@ namespace Gameplay
                 _behaviorHandler.CurrentBehavior?.OnPointerExit());
         }
 
-        public void AddToSlot(Slot slot)
+        public void AddToSlot(SlotBar slotBar, Slot slot)
         {
             _behaviorHandler.SetInSLotBehavior();
+
+            _slotBar = slotBar;
 
             SetPosition(slot.Position);
             DisableInSlots(true);
@@ -113,7 +118,10 @@ namespace Gameplay
         {
             PlayRotationSound();
 
-            _gameFieldService.CreateCube(_configs);
+            _slotBar.RemoveCube(this);
+            var cube = _gameFieldService.CreateCube(_configs);
+
+            cube.SetSlotBar(_slotBar);
         }
 
         public Observable<bool> PlaceOnField(Vector3 position, float scale)
@@ -142,6 +150,11 @@ namespace Gameplay
         public void SetAccordingPreview()
         {
             _gameFieldService.SetCubesAccordingPreview();
+        }
+
+        public void SetSlotBar(SlotBar slotBar)
+        {
+            _slotBar = slotBar;
         }
 
         public void StartDragging()
@@ -268,6 +281,8 @@ namespace Gameplay
 
         public Observable<bool> Destroy()
         {
+            _slotBar.RestoreCube(Number);
+
             PlayDestructionSound();
 
             _behaviorHandler.SetDestructionBehavior();

@@ -32,7 +32,7 @@ namespace Gameplay
             _levelPassingService = levelPassingService;
         }
 
-        public void CreateCube(CubeConfigs configs)
+        public Cube CreateCube(CubeConfigs configs)
         {
             var position = _cubesLayoutService.GetLastCubePosition(_cubes.Count + 1);
 
@@ -47,6 +47,8 @@ namespace Gameplay
             _cubesLayoutService.LayOut(_cubes);
 
             OnCubeCreated.Invoke(newCube);
+
+            return newCube;
         }
 
         public void RemoveCube(Cube cube)
