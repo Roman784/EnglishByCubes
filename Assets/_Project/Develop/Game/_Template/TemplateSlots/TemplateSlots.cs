@@ -1,3 +1,5 @@
+using Configs;
+using Gameplay;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -10,17 +12,19 @@ namespace Template
         private readonly TemplateSlotsView _view;
         private readonly TemplateSlot _slotPrefab;
         private readonly TemplateCubesLayoutService _cubesLayoutService;
+        private readonly CubeFactory _cubeFactory;
 
         private List<TemplateSlot> _slots = new();
 
         public int Count => _slots.Count;
 
         public TemplateSlots(TemplateSlotsView view, TemplateSlot slotPrefab,
-                             TemplateCubesLayoutService cubesLayoutService)
+                             TemplateCubesLayoutService cubesLayoutService, CubeFactory cubeFactory)
         {
             _view = view;
             _slotPrefab = slotPrefab;
             _cubesLayoutService = cubesLayoutService;
+            _cubeFactory = cubeFactory;
 
             _cubesLayoutService.SetSlots(this);
         }
@@ -43,6 +47,16 @@ namespace Template
             }
 
             _view.SetContainerCellSize(_slots.Count);
+        }
+
+        public void CreateCubes(List<CubeConfigs> cubeConfigs)
+        {
+            foreach (var config in cubeConfigs)
+            {
+                var cube = _cubeFactory.Create(config);
+                cube.CreateOnField();
+                cube.DisableInSlots();
+            }
         }
 
         public List<Vector3> GetSlotPositions()

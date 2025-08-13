@@ -33,15 +33,20 @@ namespace Gameplay
 
             _cube.Select();
             _cube.HideName();
-            _cube.StartDragging();
+
+            if (_cube.CanDrag)
+                _cube.StartDragging();
 
             _wordListOpeningCountdown?.Kill(false);
             _wordListOpeningCountdown = DOVirtual.DelayedCall(0.5f, () => 
             {
                 if (Vector3.Distance(_startMousePosition, GetMousePosition()) > 0.25f || !_isPressed) return;
 
-                _cube.StopDragging();
-                _cube.SetAccordingPreview();
+                if (_cube.CanDrag)
+                {
+                    _cube.StopDragging();
+                    _cube.SetAccordingPreview();
+                }
 
                 _cube.OpenWordList();
             });
@@ -73,12 +78,14 @@ namespace Gameplay
         public override void OnPointerEnter()
         {
             //if (!_isPressed)
-                //_cube.ShowName();
+            //_cube.ShowName();
+            _cube.Select();
         }
 
         public override void OnPointerExit()
         {
             //_cube.HideName();
+            _cube.Deselect();
         }
 
         private Vector3 GetMousePosition()

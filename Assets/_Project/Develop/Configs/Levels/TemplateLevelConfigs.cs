@@ -15,6 +15,5 @@ namespace Configs
 
         [field: SerializeField] public List<TemplateSlotData> Slots { get; private set; }
         [field: SerializeField] public List<TemplateSentence> Sentences { get; private set; }
-        [field: SerializeField] public List<int> CubeNumbersPool { get; private set; }
     }
 }

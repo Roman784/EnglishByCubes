@@ -2,9 +2,10 @@
     "LastCompletedLevelNumber": 4,
     "CurrentThemeMode": 1,
     "CollectedCollectionItems": [
-        0
+        0,
+        1
     ],
-    "CurrentCollectionItemFill": 0.5,
+    "CurrentCollectionItemFill": 0.0,
     "SoundVolume": 0.0,
     "MusicVolume": 0.0
 }

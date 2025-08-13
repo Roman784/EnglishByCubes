@@ -25,7 +25,6 @@ namespace Template
         private void BindPrefabs()
         {
             Container.Bind<CubeView>().FromInstance(_cubePrefab).AsTransient();
-            Container.Bind<SlotBarView>().FromInstance(_slotBarPrefab).AsTransient();
             Container.Bind<TemplateSlotsView>().FromInstance(_templateSlotsViewPrefab).AsTransient();
             Container.Bind<TemplateSlot>().FromInstance(_templateSlotPrefab).AsTransient();
         }
@@ -33,7 +32,6 @@ namespace Template
         private void BindFactories()
         {
             Container.BindFactory<CubeView, Cube, CubeFactory>().AsTransient();
-            Container.BindFactory<SlotBarView, SlotBar, SlotBarFactory>().AsTransient();
             Container.BindFactory<TemplateSlotsView, TemplateSlots, TemplateSlotsFactory>().AsTransient();
         }
 

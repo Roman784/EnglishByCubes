@@ -1,9 +1,9 @@
 using Configs;
 using DG.Tweening;
-using Gameplay;
 using GameRoot;
-using System;
+using R3;
 using System.Collections;
+using System.Linq;
 using UI;
 using UnityEngine;
 using Zenject;
@@ -12,11 +12,9 @@ namespace Template
 {
     public class TemplateEntryPoint : SceneEntryPoint
     {
-        [SerializeField] private Vector3 _slotBarPosition;
         [SerializeField] private Vector3 _templateSlotsPosition;
 
         private TemplateUI _ui;
-        private SlotBarFactory _slotBarFactory;
         private TemplateSlotsFactory _templateSlotsFactory;
         private TemplateFieldService _gameFieldService;
         private TemplateLevelPassingService _levelPassingService;
@@ -25,13 +23,11 @@ namespace Template
 
         [Inject]
         private void Construct(TemplateUI ui,
-                               SlotBarFactory slotBarFactory,
                                TemplateSlotsFactory templateSlotsFactory,
                                IGameFieldService gameFieldService,
                                ILevelPassingService levelPassingService)
         {
             _ui = ui;
-            _slotBarFactory = slotBarFactory;
             _templateSlotsFactory = templateSlotsFactory;
             _gameFieldService = (TemplateFieldService)gameFieldService;
             _levelPassingService = (TemplateLevelPassingService)levelPassingService;
@@ -54,23 +50,16 @@ namespace Template
                 .GetLevel(enterParams.Number)
                 .As<TemplateLevelConfigs>();
 
-            var cubeNumbersPool = levelConfigs.CubeNumbersPool.ToArray();
-
-            // Slot bar.
-            var slotBar = _slotBarFactory.Create(_slotBarPosition);
-            yield return null; // To update slots layout. Forced update does not work.
-
             // Template slots.
             var templateSlots = _templateSlotsFactory.Create(_templateSlotsPosition);
             templateSlots.CreateSlots(levelConfigs.Slots);
             yield return null; // To update slots layout. Forced update does not work.
 
             // Cubes.
-            var cubesConfigsPool = cubesConfigs.GetCubes(cubeNumbersPool);
-            slotBar.CreateCubes(cubesConfigsPool);
+            var cubes = cubesConfigs.GetCubes(levelConfigs.Slots.Select(s => s.CubeNumber).ToArray());
+            templateSlots.CreateCubes(cubes);
 
             // Services.
-            _gameFieldService.SetMaxCubeCount(levelConfigs.Slots.Count);
             _levelPassingService.SetTargetSentences(levelConfigs.Sentences);
 
             // UI.

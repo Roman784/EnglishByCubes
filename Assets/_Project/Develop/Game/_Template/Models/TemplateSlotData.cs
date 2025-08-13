@@ -7,5 +7,6 @@ namespace Template
     public class TemplateSlotData
     {
         [field: SerializeField] public TemplateSlotMode Mode { get; private set; }
+        [field: SerializeField] public int CubeNumber { get; private set; }
     }
 }

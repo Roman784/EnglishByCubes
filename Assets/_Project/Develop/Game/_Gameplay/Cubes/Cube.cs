@@ -31,9 +31,12 @@ namespace Gameplay
 
         private SlotBar _slotBar;
 
+        private bool _canDrag = true;
+
         public int Number => _configs.Number;
         public string CurrentWord => _words[_curretWordIndex];
         public Vector3 Position => _view.GetPosition();
+        public bool CanDrag => _canDrag;
         public bool IsInRemoveArea { get; private set; }
         public UnityEvent OnRotated { get; private set; } = new();
         public UnityEvent<bool> OnDragged { get; private set; } = new();
@@ -118,9 +121,11 @@ namespace Gameplay
         {
             PlayRotationSound();
 
-            _slotBar.RemoveCube(this);
             var cube = _gameFieldService.CreateCube(_configs);
 
+            if (_slotBar == null) return;
+
+            _slotBar.RemoveCube(this);
             cube.SetSlotBar(_slotBar);
         }
 
@@ -159,6 +164,8 @@ namespace Gameplay
 
         public void StartDragging()
         {
+            if (!_canDrag) return;
+
             StopDragging();
             _dragRoutine = Coroutines.Start(DragRoutine());
         }
@@ -233,6 +240,11 @@ namespace Gameplay
             Rotate(_curretWordIndex);
         }
 
+        public void ProhibitDragging()
+        {
+            _canDrag = false;
+        }
+
         private int GetWordIndex(string word)
         {
             return _words.IndexOf(word);
@@ -255,13 +267,15 @@ namespace Gameplay
 
         private IEnumerator DragRoutine()
         {
+            if (!_canDrag) yield break;
+
             _cubesPositionPreviewService.PrepareForPreviewCubePosition(this);
 
             var startPosition = _camera.ScreenToWorldPoint(Input.mousePosition);
             var offset = startPosition - Position;
             var onDraggedTrigged = false;
 
-            while (true)
+            while (_canDrag)
             {
                 yield return null;
 

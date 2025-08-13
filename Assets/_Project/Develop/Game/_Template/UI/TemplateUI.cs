@@ -1,12 +1,10 @@
 using Configs;
 using Gameplay;
 using GameRoot;
-using System.Collections.Generic;
 using Template;
 using TMPro;
 using UnityEngine;
 using Zenject;
-using static Zenject.CheatSheet;
 
 namespace UI
 {
@@ -14,7 +12,6 @@ namespace UI
     {
         [SerializeField] private TMP_Text _levelTitleView;
         [SerializeField] private TemplateSentences _sentences;
-        [SerializeField] private CubeRemoveArea _cubeRemoveArea;
 
         [Space]
 
@@ -47,7 +44,6 @@ namespace UI
             _canvas.worldCamera = Camera.main;
 
             var configs = UIConfigs.CubeRemoveAreaConfigs;
-            _cubeRemoveArea.Init(configs, _gameFieldService);
 
             _levelPassingService.OnNewSentenceFounded.AddListener((sentence, sentencesLeft) =>
             {

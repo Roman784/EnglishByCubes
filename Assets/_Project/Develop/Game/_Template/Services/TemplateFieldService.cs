@@ -11,7 +11,6 @@ namespace Template
     public class TemplateFieldService : IGameFieldService
     {
         private List<Cube> _cubes = new();
-        private int _maxCubeCount = 3;
 
         private CubeFactory _cubeFactory;
         private ICubesLayoutService _cubesLayoutService;
@@ -33,19 +32,13 @@ namespace Template
             _levelPassingService = levelPassingService;
         }
 
-        public void SetMaxCubeCount(int value)
-        {
-            _maxCubeCount = value;
-        }
-
         public Cube CreateCube(CubeConfigs configs)
         {
-            if (_cubes.Count >= _maxCubeCount) return null;
-
             var position = _cubesLayoutService.GetLastCubePosition(_cubes.Count + 1);
 
             var newCube = _cubeFactory.Create(configs, position);
             newCube.DisableOnField();
+            newCube.ProhibitDragging();
 
             _cubes.Add(newCube);
 
