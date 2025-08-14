@@ -2,6 +2,7 @@ using Configs;
 using DG.Tweening;
 using GameRoot;
 using System.Collections;
+using System.Linq;
 using UI;
 using UnityEngine;
 using Zenject;
@@ -45,8 +46,6 @@ namespace Gameplay
                 .GetLevel(enterParams.Number)
                 .As<PracticeLevelConfigs>();
 
-            var taskSentenceRu = taskConfigs.SentenceRu;
-            var taskSentenceEn = taskConfigs.SentenceEn;
             var cubeNumbersPool = taskConfigs.CubeNumbersPool.ToArray();
 
             // Slot bar.
@@ -58,22 +57,25 @@ namespace Gameplay
             slotBar.CreateCubes(cubesConfigsPool);
 
             // Task passing.
-            _levelPassingService.SetCorrectSentence(taskSentenceEn);
+            var correctSentences = taskConfigs.Sentences.Select(s => s.TargetSentence).ToList();
+            _levelPassingService.SetCorrectSentences(correctSentences);
 
             // UI.
             _uiRoot.AttachSceneUI(_ui);
             _ui.Init(enterParams);
-            _ui.SetTaskSentence(taskSentenceRu);
-            _ui.InitProgressBar();
             _ui.InitCubeRemoveArea();
             _ui.SetLevelTitle(taskConfigs);
 
-            _levelPassingService.OnSentenceMatchingCalculated.AddListener(_ui.FillProgressBar);
+            _ui.CreateSentences(taskConfigs.Sentences);
+            _levelPassingService.OnSentenceMatchingCalculated.AddListener((sentenceIdx, completedSentences) =>
+            {
+                _ui.ShowTranslation(sentenceIdx);
+            });
 
             // Game completion.
-            _levelPassingService.OnSentenceMatchingCalculated.AddListener((progress) =>
+            _levelPassingService.OnSentenceMatchingCalculated.AddListener((sentenceIdx, completedSentences) =>
             {
-                if (progress < 1 || _isLevelCompleted) return;
+                if (completedSentences < correctSentences.Count || _isLevelCompleted) return;
                 _isLevelCompleted = true;
 
                 _gameStateProvider.GameStateProxy.CompleteLevel(enterParams.Number);

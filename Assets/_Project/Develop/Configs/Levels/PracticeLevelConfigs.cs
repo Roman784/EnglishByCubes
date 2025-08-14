@@ -1,3 +1,4 @@
+using Gameplay;
 using System.Collections.Generic;
 using UI;
 using UnityEngine;
@@ -9,8 +10,7 @@ namespace Configs
     {
         public override LevelMode Mode => LevelMode.Practice;
 
-        [field: SerializeField] public string SentenceRu { get; private set; }
-        [field: SerializeField] public string SentenceEn { get; private set; }
+        [field: SerializeField] public List<TranslationSentenceData> Sentences { get; private set; }
         [field: SerializeField] public List<int> CubeNumbersPool { get; private set; }
     }
 }

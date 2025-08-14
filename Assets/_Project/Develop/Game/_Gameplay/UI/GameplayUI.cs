@@ -1,6 +1,7 @@
 using Configs;
 using Gameplay;
 using GameRoot;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -9,20 +10,10 @@ namespace UI
 {
     public class GameplayUI : SceneUI
     {
-        [SerializeField] private TaskUI _taskUI;
-        [SerializeField] private ProgressBar _progressBar;
+        [SerializeField] private TranslationSentences _sentences;
         [SerializeField] private CubeRemoveArea _cubeRemoveArea;
-
-        [Space]
-
         [SerializeField] private TMP_Text _levelTitleView;
-
-        [Space]
-
         [SerializeField] private GameObject _infoContentPrefab;
-
-        [Space]
-
         [SerializeField] private Canvas _canvas;
 
         private GameplayEnterParams _enterParams;
@@ -46,26 +37,20 @@ namespace UI
             _canvas.worldCamera = Camera.main;
         }
 
-        public void SetTaskSentence(string sentence)
+        public void CreateSentences(List<TranslationSentenceData> sentencesData)
         {
-            _taskUI.SetSentence(sentence);
+            _sentences.CreateSentences(sentencesData);
         }
 
-        public void InitProgressBar()
+        public void ShowTranslation(int sentenceIdx)
         {
-            var configs = UIConfigs.GameplayProgressBarConfigs;
-            _progressBar.Init(configs);
+            _sentences.ShowTranslation(sentenceIdx);
         }
 
         public void InitCubeRemoveArea()
         {
             var configs = UIConfigs.CubeRemoveAreaConfigs;
             _cubeRemoveArea.Init(configs, _gameFieldService);
-        }
-
-        public void FillProgressBar(float fill)
-        {
-            _progressBar.Fill(fill);
         }
 
         public void OpenLevelMenu()
