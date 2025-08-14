@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-namespace Template
+namespace UI
 {
     public class TemplateSentences : MonoBehaviour
     {
-        [SerializeField] private List<TMP_Text> _sentenceViews;
+        [SerializeField] private TemplateSentence _sentancePrefab;
+        [SerializeField] private Transform _sentencesContainer;
 
         [Space]
 
@@ -15,30 +16,26 @@ namespace Template
         [SerializeField] private float _hopDuration;
         [SerializeField] private Ease _hopEase;
 
+        private List<TemplateSentence> _sentences = new();
         private int _currentSentenceIndex;
 
-        public void ShowNewSentence(TemplateSentence sentence)
+        public void CreateSentences(int count)
         {
-            if (_currentSentenceIndex >= _sentenceViews.Count) return;
+            for (int i = 0; i < count; i++)
+            {
+                var newSentence = Instantiate(_sentancePrefab);
+                newSentence.transform.SetParent(_sentencesContainer, false);
+                _sentences.Add(newSentence);
+            }
+        }
 
-            var view = _sentenceViews[_currentSentenceIndex];
+        public void ShowNewSentence(Template.TemplateSentence sentence)
+        {
+            if (_currentSentenceIndex >= _sentences.Count) return;
 
-            var hopSequence = DOTween.Sequence();
-            var originScale = view.transform.localScale;
-
-            hopSequence.Append(
-                view.transform.DOScale(originScale * _hopScale, _hopDuration)
-                .SetEase(_hopEase).OnComplete(() =>
-                {
-                    var text = $"{sentence.SentenceEn}\n{sentence.SentenceRu}";
-
-                    view.alignment = TextAlignmentOptions.Left;
-                    view.text = text;
-                }));
-            hopSequence.Append(
-                view.transform.DOScale(1, _hopDuration)
-                .SetEase(_hopEase));
-
+            var view = _sentences[_currentSentenceIndex];
+            view.ShowNewSentence(sentence.SentenceEn, sentence.SentenceRu);
+            
             _currentSentenceIndex += 1;
         }
     }

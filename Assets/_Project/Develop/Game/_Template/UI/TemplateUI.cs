@@ -23,13 +23,11 @@ namespace UI
 
         private TemplateEnterParams _enterParams;
         private TemplateLevelPassingService _levelPassingService;
-        private IGameFieldService _gameFieldService;
 
         [Inject]
-        private void Construct(ILevelPassingService levelPassingService, IGameFieldService gameFieldService)
+        private void Construct(ILevelPassingService levelPassingService)
         {
             _levelPassingService = (TemplateLevelPassingService)levelPassingService;
-            _gameFieldService = gameFieldService;
         }
 
         private void Update()
@@ -38,12 +36,12 @@ namespace UI
                 _popUpsProvider.OpenLevelCompletionPopUp(); // <-
         }
 
-        public void Init(TemplateEnterParams enterParams)
+        public void Init(TemplateEnterParams enterParams, int sentencesCount)
         {
             _enterParams = enterParams;
             _canvas.worldCamera = Camera.main;
 
-            var configs = UIConfigs.CubeRemoveAreaConfigs;
+            _sentences.CreateSentences(sentencesCount);
 
             _levelPassingService.OnNewSentenceFounded.AddListener((sentence, sentencesLeft) =>
             {

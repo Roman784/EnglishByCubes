@@ -64,7 +64,7 @@ namespace Template
 
             // UI.
             _uiRoot.AttachSceneUI(_ui);
-            _ui.Init(enterParams);
+            _ui.Init(enterParams, levelConfigs.Sentences.Count);
             _ui.SetLevelTitle(levelConfigs);
 
             _levelPassingService.OnNewSentenceFounded.AddListener((_, sentencesLeft) =>

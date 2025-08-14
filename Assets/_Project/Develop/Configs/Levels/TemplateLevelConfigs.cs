@@ -3,6 +3,7 @@ using Template;
 using Theme;
 using UI;
 using UnityEngine;
+using TemplateSentence = Template.TemplateSentence;
 
 namespace Configs
 {
