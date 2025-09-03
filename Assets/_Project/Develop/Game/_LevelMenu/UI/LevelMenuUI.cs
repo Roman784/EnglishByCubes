@@ -92,6 +92,9 @@ namespace UI
                 case LevelMode.Practice:
                     _sceneProvider.OpenPractice(_enterParams, number);
                     break;
+                case LevelMode.MistakeCorrection:
+                    _sceneProvider.OpenMistakeCorrection(_enterParams, number);
+                    break;
             }
         }
 

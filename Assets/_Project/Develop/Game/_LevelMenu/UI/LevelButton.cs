@@ -32,6 +32,7 @@ namespace UI
                 { LevelMode.Theory, buttonsConfigs.TheoryIcon },
                 { LevelMode.Template, buttonsConfigs.TemplateIcon },
                 { LevelMode.Practice, buttonsConfigs.PracticeIcon },
+                { LevelMode.MistakeCorrection, buttonsConfigs.MistakeCorrectionIcon },
             };
 
             Dictionary<LevelButtonProgress, ThemeTags> _themeTagsMap = new()

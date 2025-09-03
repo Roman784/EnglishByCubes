@@ -27,10 +27,18 @@ namespace MistakeCorrection
         {
             var isLoaded = false;
 
+            var gameConfigs = _configsProvider.GameConfigs;
+            var cubesConfigs = gameConfigs.CubesConfigs;
+            var levelsConfigs = gameConfigs.LevelsConfigs;
+
+            var levelConfigs = levelsConfigs
+                .GetLevel(enterParams.Number)
+                .As<MistakeCorrectionConfigs>();
+
             // UI.
             _uiRoot.AttachSceneUI(_ui);
             _ui.Init(enterParams);
-            //_ui.SetLevelTitle();
+            _ui.SetLevelTitle(levelConfigs);
 
             // Theme customization.
             CustomizeTheme();

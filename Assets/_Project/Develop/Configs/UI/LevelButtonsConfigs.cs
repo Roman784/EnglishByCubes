@@ -25,5 +25,6 @@ namespace Configs
         [field: SerializeField] public Sprite TheoryIcon { get; private set; }
         [field: SerializeField] public Sprite TemplateIcon { get; private set; }
         [field: SerializeField] public Sprite PracticeIcon { get; private set; }
+        [field: SerializeField] public Sprite MistakeCorrectionIcon { get; private set; }
     }
 }
