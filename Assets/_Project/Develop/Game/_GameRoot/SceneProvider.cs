@@ -2,6 +2,7 @@ using Collection;
 using Configs;
 using Gameplay;
 using LevelMenu;
+using MistakeCorrection;
 using Template;
 using Theory;
 using UI;
@@ -84,6 +85,13 @@ namespace GameRoot
             _sceneLoader.LoadAndRunCollection(enterParams);
         }
 
+        public void OpenMistakeCorrection(SceneEnterParams currentSceneParams)
+        {
+            _previousSceneParams = currentSceneParams;
+            var enterParams = new MistakeCorrectionEnterParams();
+            _sceneLoader.LoadAndRunMistakeCorrection(enterParams);
+        }
+
         public void OpenPreviousScene(SceneEnterParams currentSceneParams)
         {
             switch (_previousSceneParams.SceneName)
@@ -102,6 +110,9 @@ namespace GameRoot
                     break;
                 case Scenes.TEMPLATE:
                     OpenTemplate(_previousSceneParams, _previousSceneParams.As<TemplateEnterParams>().Number);
+                    break;
+                case Scenes.MISTAKE_CORRECTION:
+                    OpenMistakeCorrection(_previousSceneParams);
                     break;
             }
 

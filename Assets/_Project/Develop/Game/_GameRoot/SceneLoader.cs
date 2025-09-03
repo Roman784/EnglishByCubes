@@ -1,6 +1,7 @@
 ﻿using Collection;
 using Gameplay;
 using LevelMenu;
+using MistakeCorrection;
 using System.Collections;
 using Template;
 using Theory;
@@ -55,6 +56,13 @@ namespace GameRoot
             StopLoading();
             Coroutines.Start(LoadAndRunScene<TemplateEntryPoint, TemplateEnterParams>
                 (Scenes.TEMPLATE, enterParams));
+        }
+
+        public void LoadAndRunMistakeCorrection(MistakeCorrectionEnterParams enterParams)
+        {
+            StopLoading();
+            Coroutines.Start(LoadAndRunScene<MistakeCorrectionEntryPoint, MistakeCorrectionEnterParams>
+                (Scenes.MISTAKE_CORRECTION, enterParams));
         }
 
         private IEnumerator LoadAndRunScene<TEntryPoint, TEnterParams>(string sceneName, TEnterParams enterParams)

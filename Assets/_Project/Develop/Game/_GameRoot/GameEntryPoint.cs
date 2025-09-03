@@ -83,6 +83,11 @@ namespace GameRoot
                 _sceneProvider.OpenTemplate(defaultBootParams, 2);
                 return;
             }
+            else if (sceneName == Scenes.MISTAKE_CORRECTION)
+            {
+                _sceneProvider.OpenMistakeCorrection(defaultBootParams);
+                return;
+            }
 #endif
             var enterParams = new LevelMenuEnterParams(); // <- From boot
             _sceneProvider.OpenLevelMenu(enterParams);
