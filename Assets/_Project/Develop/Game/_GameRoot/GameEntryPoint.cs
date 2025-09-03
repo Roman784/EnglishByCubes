@@ -60,7 +60,7 @@ namespace GameRoot
 
             if (sceneName == Scenes.GAMEPLAY)
             {
-                _sceneProvider.OpenPractice(defaultBootParams, 3);
+                _sceneProvider.OpenPractice(defaultBootParams, 4);
                 return;
             }
             else if (sceneName == Scenes.LEVEL_MENU)
@@ -85,7 +85,7 @@ namespace GameRoot
             }
             else if (sceneName == Scenes.MISTAKE_CORRECTION)
             {
-                _sceneProvider.OpenMistakeCorrection(defaultBootParams);
+                _sceneProvider.OpenMistakeCorrection(defaultBootParams, 3);
                 return;
             }
 #endif

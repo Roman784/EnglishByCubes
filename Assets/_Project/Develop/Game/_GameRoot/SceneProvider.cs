@@ -85,10 +85,10 @@ namespace GameRoot
             _sceneLoader.LoadAndRunCollection(enterParams);
         }
 
-        public void OpenMistakeCorrection(SceneEnterParams currentSceneParams)
+        public void OpenMistakeCorrection(SceneEnterParams currentSceneParams, int number)
         {
             _previousSceneParams = currentSceneParams;
-            var enterParams = new MistakeCorrectionEnterParams();
+            var enterParams = new MistakeCorrectionEnterParams(number);
             _sceneLoader.LoadAndRunMistakeCorrection(enterParams);
         }
 
@@ -112,7 +112,7 @@ namespace GameRoot
                     OpenTemplate(_previousSceneParams, _previousSceneParams.As<TemplateEnterParams>().Number);
                     break;
                 case Scenes.MISTAKE_CORRECTION:
-                    OpenMistakeCorrection(_previousSceneParams);
+                    OpenMistakeCorrection(_previousSceneParams, _previousSceneParams.As<MistakeCorrectionEnterParams>().Number);
                     break;
             }
 
