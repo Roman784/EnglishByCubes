@@ -33,6 +33,9 @@ namespace MistakeCorrection
         private void BindServices()
         {
             Container.Bind<CubesPositionPreviewService>().AsSingle();
+            Container.Bind<IGameFieldService>().To<MistakeCorrectionFieldService>().AsSingle();
+            Container.Bind<ICubesLayoutService>().To<GameplayCubesLayoutService>().AsSingle();
+            Container.Bind<ILevelPassingService>().To<MistakeCorrectionLevelPassingService>().AsSingle();
         }
 
         private void BindUI()

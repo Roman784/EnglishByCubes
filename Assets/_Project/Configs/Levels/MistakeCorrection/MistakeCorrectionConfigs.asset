@@ -22,3 +22,18 @@ MonoBehaviour:
       <SentenceEn>k__BackingField: 
       <TargetSentence>k__BackingField: 
     <Slots>k__BackingField: []
+  - <Sentence>k__BackingField:
+      <SentenceRu>k__BackingField: 
+      <SentenceEn>k__BackingField: 
+      <TargetSentence>k__BackingField: 
+    <Slots>k__BackingField: []
+  - <Sentence>k__BackingField:
+      <SentenceRu>k__BackingField: 
+      <SentenceEn>k__BackingField: 
+      <TargetSentence>k__BackingField: 
+    <Slots>k__BackingField: []
+  - <Sentence>k__BackingField:
+      <SentenceRu>k__BackingField: 
+      <SentenceEn>k__BackingField: 
+      <TargetSentence>k__BackingField: 
+    <Slots>k__BackingField: []

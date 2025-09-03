@@ -1,9 +1,12 @@
 using Configs;
 using Gameplay;
+using GameRoot;
 using MistakeCorrection;
+using Template;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using Zenject;
 
 namespace UI
 {
@@ -12,13 +15,28 @@ namespace UI
         [SerializeField] private TMP_Text _levelTitleView;
         [SerializeField] private Canvas _canvas;
         [SerializeField] private GameObject _infoContentPrefab;
+        [SerializeField] private TemplateSentences _sentences;
 
         private MistakeCorrectionEnterParams _enterParams;
+        private MistakeCorrectionLevelPassingService _levelPassingService;
 
-        public void Init(MistakeCorrectionEnterParams enterParams)
+        [Inject]
+        private void Construct(ILevelPassingService levelPassingService)
+        {
+            _levelPassingService = (MistakeCorrectionLevelPassingService)levelPassingService;
+        }
+
+        public void Init(MistakeCorrectionEnterParams enterParams, int sentencesCount)
         {
             _enterParams = enterParams;
             _canvas.worldCamera = Camera.main;
+
+            _sentences.CreateSentences(sentencesCount);
+
+            _levelPassingService.OnNewSentenceFounded.AddListener((sentence, sentencesLeft) =>
+            {
+                _sentences.ShowNewSentence(sentence);
+            });
         }
 
         public void OpenLevelMenu()
