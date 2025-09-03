@@ -4,6 +4,7 @@ namespace UI
     {
         Theory,
         Template,
-        Practice
+        Practice,
+        MistakeCorrection
     }
 }
