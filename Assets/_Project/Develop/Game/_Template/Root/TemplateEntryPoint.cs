@@ -70,7 +70,13 @@ namespace Template
 
             _levelPassingService.OnNewSentenceFounded.AddListener((_, sentencesLeft) =>
             {
-                if (sentencesLeft > 0 || _isLevelCompleted) return;
+                if (sentencesLeft > 0)
+                {
+                    PlaySentenceCompletedSound();
+                    return;
+                }
+
+                if (_isLevelCompleted) return;
                 _isLevelCompleted = true;
 
                 _gameStateProvider.GameStateProxy.CompleteLevel(enterParams.Number);
@@ -90,6 +96,12 @@ namespace Template
         private void PlayLevelCompletionSound()
         {
             var clip = _configsProvider.GameConfigs.AudioConfigs.UIConfigs.LevelCompletionSound;
+            _audioProvider.PlaySound(clip);
+        }
+
+        private void PlaySentenceCompletedSound()
+        {
+            var clip = _configsProvider.GameConfigs.AudioConfigs.UIConfigs.SentenceCompletedSound;
             _audioProvider.PlaySound(clip);
         }
     }

@@ -66,6 +66,7 @@ namespace MistakeCorrection
             {
                 if (sentencesLeft > 0)
                 {
+                    PlaySentenceCompletedSound();
                     _currentSentenceIdx += 1;
                     UpdateCubes(levelConfigs, cubesConfigs);
                     return;
@@ -143,6 +144,12 @@ namespace MistakeCorrection
         private void PlayLevelCompletionSound()
         {
             var clip = _configsProvider.GameConfigs.AudioConfigs.UIConfigs.LevelCompletionSound;
+            _audioProvider.PlaySound(clip);
+        }
+
+        private void PlaySentenceCompletedSound()
+        {
+            var clip = _configsProvider.GameConfigs.AudioConfigs.UIConfigs.SentenceCompletedSound;
             _audioProvider.PlaySound(clip);
         }
     }

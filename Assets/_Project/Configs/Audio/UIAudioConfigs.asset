@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ButtonClickSound>k__BackingField: {fileID: 8300000, guid: fb9a03275ac763b48be11989d89f54a0, type: 3}
   <LevelCompletionSound>k__BackingField: {fileID: 8300000, guid: e2563c7714361a14eb678f94f8a24ff7, type: 3}
+  <SentenceCompletedSound>k__BackingField: {fileID: 8300000, guid: c766901ef87a5524b8f3e90a43a0f86e, type: 3}

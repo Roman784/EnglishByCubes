@@ -7,5 +7,6 @@ namespace Configs
     {
         [field: SerializeField] public AudioClip ButtonClickSound { get; private set; }
         [field: SerializeField] public AudioClip LevelCompletionSound { get; private set; }
+        [field: SerializeField] public AudioClip SentenceCompletedSound { get; private set; }
     }
 }

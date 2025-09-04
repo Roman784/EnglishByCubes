@@ -75,7 +75,13 @@ namespace Gameplay
             // Game completion.
             _levelPassingService.OnSentenceMatchingCalculated.AddListener((sentenceIdx, completedSentences) =>
             {
-                if (completedSentences < correctSentences.Count || _isLevelCompleted) return;
+                if (completedSentences < correctSentences.Count)
+                {
+                    PlaySentenceCompletedSound();
+                    return;
+                }
+
+                if (_isLevelCompleted) return;
                 _isLevelCompleted = true;
 
                 _gameStateProvider.GameStateProxy.CompleteLevel(enterParams.Number);
@@ -95,6 +101,12 @@ namespace Gameplay
         private void PlayLevelCompletionSound()
         {
             var clip = _configsProvider.GameConfigs.AudioConfigs.UIConfigs.LevelCompletionSound;
+            _audioProvider.PlaySound(clip);
+        }
+
+        private void PlaySentenceCompletedSound()
+        {
+            var clip = _configsProvider.GameConfigs.AudioConfigs.UIConfigs.SentenceCompletedSound;
             _audioProvider.PlaySound(clip);
         }
     }
