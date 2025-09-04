@@ -112,13 +112,15 @@ namespace MistakeCorrection
 
         private IEnumerator CreateCubesOnField(List<CubeConfigs> cubeConfigs, int[] wordIndexes)
         {
+            yield return new WaitForSeconds(0.1f);
+
             for (int i = 0; i < cubeConfigs.Count; i++)
             {
                 var config = cubeConfigs[i];
                 var cube = _cubeFactory.Create(config);
                 var cubeOnField = cube.CreateOnField();
                 cube.DisableInSlots(true);
-                cube.Destroy();
+                cube.Destroy(false);
 
                 cubeOnField.Rotate(wordIndexes[i]);
                 _cubesOnField.Add(cubeOnField);

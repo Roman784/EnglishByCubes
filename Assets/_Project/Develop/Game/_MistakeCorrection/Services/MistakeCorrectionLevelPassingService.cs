@@ -21,7 +21,6 @@ namespace MistakeCorrection
 
         public void CalculateSentenceMatching(string playerSentence)
         {
-            Debug.Log(playerSentence);
             string player = playerSentence.ToLower().Replace(" ", "").Trim();
 
             foreach (var sentence in _targetSentances)

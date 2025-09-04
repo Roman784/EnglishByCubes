@@ -311,11 +311,12 @@ namespace Gameplay
             }
         }
 
-        public Observable<bool> Destroy()
+        public Observable<bool> Destroy(bool playSound = true)
         {
             _slotBar?.RestoreCube(Number);
 
-            PlayDestructionSound();
+            if (playSound)
+                PlayDestructionSound();
 
             _behaviorHandler.SetDestructionBehavior();
 

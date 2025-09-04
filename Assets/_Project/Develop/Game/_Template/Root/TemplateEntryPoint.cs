@@ -6,6 +6,7 @@ using System.Collections;
 using System.Linq;
 using UI;
 using UnityEngine;
+using Utils;
 using Zenject;
 
 namespace Template
@@ -57,7 +58,7 @@ namespace Template
 
             // Cubes.
             var cubes = cubesConfigs.GetCubes(levelConfigs.Slots.Select(s => s.CubeNumber).ToArray());
-            templateSlots.CreateCubes(cubes);
+            Coroutines.Start(templateSlots.CreateCubes(cubes));
 
             // Services.
             _levelPassingService.SetTargetSentences(levelConfigs.Sentences);

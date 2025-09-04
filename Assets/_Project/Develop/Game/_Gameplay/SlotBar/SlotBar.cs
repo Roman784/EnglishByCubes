@@ -113,6 +113,8 @@ namespace Gameplay
 
         private void SwitchCubes(int step)
         {
+            if (_cubes.Count == 0) return;
+
             _firstCubeIndex = Mathf.Clamp(_firstCubeIndex + step, 0, MaxFirstCubeIndex);
             PlaceCubes();
         }

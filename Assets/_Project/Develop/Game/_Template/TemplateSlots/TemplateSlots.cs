@@ -1,5 +1,6 @@
 using Configs;
 using Gameplay;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -49,13 +50,18 @@ namespace Template
             _view.SetContainerCellSize(_slots.Count);
         }
 
-        public void CreateCubes(List<CubeConfigs> cubeConfigs)
+        public IEnumerator CreateCubes(List<CubeConfigs> cubeConfigs)
         {
+            yield return new WaitForSeconds(0.1f);
+
             foreach (var config in cubeConfigs)
             {
                 var cube = _cubeFactory.Create(config);
                 cube.CreateOnField();
-                cube.DisableInSlots();
+                cube.DisableInSlots(true);
+                cube.Destroy(false);
+
+                yield return new WaitForSeconds(0.05f);
             }
         }
 
