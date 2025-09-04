@@ -137,6 +137,11 @@ namespace UI
                 var ui = FindObjectOfType<TemplateUI>();
                 ui.OpenNextLevel();
             }
+            else if (SceneManager.GetActiveScene().name == Scenes.MISTAKE_CORRECTION)
+            {
+                var ui = FindObjectOfType<MistakeCorrectionUI>();
+                ui.OpenNextLevel();
+            }
         }
 
         private void FillItem(float fillRate)

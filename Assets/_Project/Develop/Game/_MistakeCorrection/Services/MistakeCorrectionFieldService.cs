@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Zenject;
+using R3;
 
 namespace MistakeCorrection
 {
@@ -44,6 +45,7 @@ namespace MistakeCorrection
 
             CalculateSentenceMatching();
             newCube.OnRotated.AddListener(CalculateSentenceMatching);
+            //newCube.OnDragged.AddListener((_) => CalculateSentenceMatching());
 
             _cubesLayoutService.LayOut(_cubes);
 
@@ -54,7 +56,15 @@ namespace MistakeCorrection
 
         public void RemoveCube(Cube cube)
         {
-            
+            if (!_cubes.Contains(cube)) return;
+
+            _cubes.Remove(cube);
+            CalculateSentenceMatching();
+
+            cube.Destroy().Subscribe(_ =>
+            {
+                _cubesLayoutService.LayOut(_cubes);
+            });
         }
 
         public void SetCubesAccordingPreview()

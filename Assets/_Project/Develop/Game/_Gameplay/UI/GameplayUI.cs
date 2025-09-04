@@ -81,10 +81,19 @@ namespace UI
             var levelsConfigs = GameConfigs.LevelsConfigs;
             var levelConfigs = levelsConfigs.GetLevel(nextLevelNumber);
 
-            if (levelConfigs != null && levelConfigs.Mode == LevelMode.Practice)
-                _sceneProvider.OpenPractice(_enterParams, nextLevelNumber);
+            if (levelConfigs != null)
+            {
+                if (levelConfigs.Mode == LevelMode.Practice)
+                    _sceneProvider.OpenPractice(_enterParams, nextLevelNumber);
+                else if (levelConfigs.Mode == LevelMode.Template)
+                    _sceneProvider.OpenTemplate(_enterParams, nextLevelNumber);
+                else if (levelConfigs.Mode == LevelMode.MistakeCorrection)
+                    _sceneProvider.OpenMistakeCorrection(_enterParams, nextLevelNumber);
+            }
             else
+            {
                 _sceneProvider.OpenLevelMenu(_enterParams);
+            }
         }
 
         public void OpenLevelInfo()

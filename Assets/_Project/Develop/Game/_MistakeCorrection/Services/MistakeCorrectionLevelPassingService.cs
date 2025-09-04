@@ -3,6 +3,7 @@ using GameRoot;
 using System;
 using System.Collections.Generic;
 using Template;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace MistakeCorrection
@@ -20,6 +21,7 @@ namespace MistakeCorrection
 
         public void CalculateSentenceMatching(string playerSentence)
         {
+            Debug.Log(playerSentence);
             string player = playerSentence.ToLower().Replace(" ", "").Trim();
 
             foreach (var sentence in _targetSentances)

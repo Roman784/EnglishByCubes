@@ -22,20 +22,20 @@ MonoBehaviour:
       <SentenceEn>k__BackingField: I am Russian.
       <TargetSentence>k__BackingField: I am Russian
     <Slots>k__BackingField:
-    - <CubeNumber>k__BackingField: 1
-      <SideIndex>k__BackingField: 0
     - <CubeNumber>k__BackingField: 2
-      <SideIndex>k__BackingField: 0
+      <SideIndex>k__BackingField: 1
     - <CubeNumber>k__BackingField: 3
+      <SideIndex>k__BackingField: 2
+    - <CubeNumber>k__BackingField: 1
       <SideIndex>k__BackingField: 0
   - <Sentence>k__BackingField:
       <SentenceRu>k__BackingField: "\u041E\u043D\u0438 \u0431\u044B\u043B\u0438 \u0441\u0442\u0443\u0434\u0435\u043D\u0442\u0430\u043C\u0438."
       <SentenceEn>k__BackingField: They were students.
       <TargetSentence>k__BackingField: They were students
     <Slots>k__BackingField:
-    - <CubeNumber>k__BackingField: 1
-      <SideIndex>k__BackingField: 0
-    - <CubeNumber>k__BackingField: 2
-      <SideIndex>k__BackingField: 0
     - <CubeNumber>k__BackingField: 3
-      <SideIndex>k__BackingField: 0
+      <SideIndex>k__BackingField: 4
+    - <CubeNumber>k__BackingField: 1
+      <SideIndex>k__BackingField: 5
+    - <CubeNumber>k__BackingField: 2
+      <SideIndex>k__BackingField: 5

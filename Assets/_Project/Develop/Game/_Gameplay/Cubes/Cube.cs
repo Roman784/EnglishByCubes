@@ -119,16 +119,18 @@ namespace Gameplay
             return Shrink(instantly);
         }
 
-        public void CreateOnField()
+        public Cube CreateOnField()
         {
             PlayRotationSound();
 
             var cube = _gameFieldService.CreateCube(_configs);
 
-            if (_slotBar == null) return;
+            if (_slotBar == null) return cube;
 
             _slotBar.RemoveCube(this);
             cube.SetSlotBar(_slotBar);
+
+            return cube;
         }
 
         public Observable<bool> PlaceOnField(Vector3 position, float scale)
@@ -157,6 +159,9 @@ namespace Gameplay
         public void SetAccordingPreview()
         {
             _gameFieldService.SetCubesAccordingPreview();
+
+            if (!_canRotate)
+                PlayRotationSound();
         }
 
         public void SetSlotBar(SlotBar slotBar)
@@ -263,6 +268,8 @@ namespace Gameplay
 
         public void Rotate(int wordIndex)
         {
+            _curretWordIndex = wordIndex;
+
             var rotationDuration = _configs.DataConfigs.RotationDuration;
             var fadeDuration = _configs.DataConfigs.FadeDuration;
             var rotationEase = _configs.DataConfigs.RotationEase;
@@ -306,7 +313,7 @@ namespace Gameplay
 
         public Observable<bool> Destroy()
         {
-            _slotBar.RestoreCube(Number);
+            _slotBar?.RestoreCube(Number);
 
             PlayDestructionSound();
 

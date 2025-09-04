@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UI;
 using UnityEngine;
+using Utils;
 using Zenject;
 
 namespace MistakeCorrection
@@ -51,7 +52,7 @@ namespace MistakeCorrection
                 .As<MistakeCorrectionConfigs>();
 
             // Cubes.
-            UpdateCubes(levelConfigs, cubesConfigs);
+            CreateCubes(levelConfigs, cubesConfigs);
 
             // Services.
             _levelPassingService.SetTargetSentences(levelConfigs.Sentences);
@@ -89,39 +90,52 @@ namespace MistakeCorrection
 
         private void UpdateCubes(MistakeCorrectionConfigs levelConfigs, CubesConfigs cubesConfigs)
         {
-            DestroyCubes().Subscribe(_ =>
+            DOVirtual.DelayedCall(0.5f, () =>
             {
-                var sentence = levelConfigs.Sentences[_currentSentenceIdx];
-                var cubeNumbers = sentence.Slots.Select(s => s.CubeNumber).ToArray();
-                var cubeConfigs = cubesConfigs.GetCubes(cubeNumbers);
-                CreateCubes(cubeConfigs);
+                DestroyCubes();
+
+                DOVirtual.DelayedCall(1f, () =>
+                {
+                    CreateCubes(levelConfigs, cubesConfigs);
+                });
             });
         }
-
-        private void CreateCubes(List<CubeConfigs> cubeConfigs)
+        private void CreateCubes(MistakeCorrectionConfigs levelConfigs, CubesConfigs cubesConfigs)
         {
-            foreach (var config in cubeConfigs)
-            {
-                var cube = _cubeFactory.Create(config);
-                cube.CreateOnField();
-                cube.DisableInSlots();
+            var sentence = levelConfigs.Sentences[_currentSentenceIdx];
+            var cubeNumbers = sentence.Slots.Select(s => s.CubeNumber).ToArray();
+            var cubeWordIndexes = sentence.Slots.Select(s => s.SideIndex).ToArray();
+            var cubeConfigs = cubesConfigs.GetCubes(cubeNumbers);
 
-                _cubesOnField.Add(cube);
+            Coroutines.Start(CreateCubesOnField(cubeConfigs, cubeWordIndexes));
+        }
+
+        private IEnumerator CreateCubesOnField(List<CubeConfigs> cubeConfigs, int[] wordIndexes)
+        {
+            for (int i = 0; i < cubeConfigs.Count; i++)
+            {
+                var config = cubeConfigs[i];
+                var cube = _cubeFactory.Create(config);
+                var cubeOnField = cube.CreateOnField();
+                cube.DisableInSlots(true);
+                cube.Destroy();
+
+                cubeOnField.Rotate(wordIndexes[i]);
+                _cubesOnField.Add(cubeOnField);
+
+                yield return new WaitForSeconds(0.05f);
             }
         } 
 
-        private Observable<bool> DestroyCubes()
+        private void DestroyCubes()
         {
-            if (_cubesOnField.Count == 0) return Observable.Return(true);
+            if (_cubesOnField.Count == 0) return;
 
-            Observable<bool> destroySubj = new Subject<bool>();
             foreach (var cube in _cubesOnField)
             {
-                destroySubj = cube.Destroy();
+                cube.RemoveFromField();
             }
             _cubesOnField = new List<Cube>();
-
-            return destroySubj;
         }
 
         private void PlayLevelCompletionSound()

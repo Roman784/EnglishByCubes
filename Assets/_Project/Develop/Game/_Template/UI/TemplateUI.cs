@@ -83,6 +83,8 @@ namespace UI
                     _sceneProvider.OpenPractice(_enterParams, nextLevelNumber);
                 else if (levelConfigs.Mode == LevelMode.Template)
                     _sceneProvider.OpenTemplate(_enterParams, nextLevelNumber);
+                else if (levelConfigs.Mode == LevelMode.MistakeCorrection)
+                    _sceneProvider.OpenMistakeCorrection(_enterParams, nextLevelNumber);
             }
             else
             {
