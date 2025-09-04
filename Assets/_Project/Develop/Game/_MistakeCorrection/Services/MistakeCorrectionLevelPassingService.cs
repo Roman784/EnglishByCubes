@@ -20,7 +20,18 @@ namespace MistakeCorrection
 
         public void CalculateSentenceMatching(string playerSentence)
         {
-            throw new System.NotImplementedException();
+            string player = playerSentence.ToLower().Replace(" ", "").Trim();
+
+            foreach (var sentence in _targetSentances)
+            {
+                string correct = sentence.Sentence.TargetSentence.ToLower().Replace(" ", "").Trim();
+                if (!player.Equals(correct)) continue;
+
+                _targetSentances.Remove(sentence);
+                OnNewSentenceFounded.Invoke(sentence.Sentence, _targetSentances.Count);
+
+                break;
+            }
         }
     }
 }

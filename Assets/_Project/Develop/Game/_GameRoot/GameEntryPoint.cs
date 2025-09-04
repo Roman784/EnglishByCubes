@@ -85,7 +85,7 @@ namespace GameRoot
             }
             else if (sceneName == Scenes.MISTAKE_CORRECTION)
             {
-                _sceneProvider.OpenMistakeCorrection(defaultBootParams, 3);
+                _sceneProvider.OpenMistakeCorrection(defaultBootParams, 13);
                 return;
             }
 #endif

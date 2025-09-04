@@ -2,29 +2,87 @@ using Configs;
 using Gameplay;
 using GameRoot;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Events;
+using Zenject;
 
 namespace MistakeCorrection
 {
     public class MistakeCorrectionFieldService : IGameFieldService
     {
-        public IReadOnlyList<Cube> Cubes => throw new System.NotImplementedException();
+        private List<Cube> _cubes = new();
 
-        public UnityEvent<Cube> OnCubeCreated => throw new System.NotImplementedException();
+        private CubeFactory _cubeFactory;
+        private ICubesLayoutService _cubesLayoutService;
+        private CubesPositionPreviewService _cubesPositionPreviewService;
+        private ILevelPassingService _levelPassingService;
+
+        public IReadOnlyList<Cube> Cubes => _cubes;
+        public UnityEvent<Cube> OnCubeCreated { get; private set; } = new();
+
+        [Inject]
+        private void Construct(CubeFactory cubeFactory,
+                               CubesPositionPreviewService cubesPositionPreviewService,
+                               ICubesLayoutService cubesLayoutService,
+                               ILevelPassingService levelPassingService)
+        {
+            _cubeFactory = cubeFactory;
+            _cubesLayoutService = cubesLayoutService;
+            _cubesPositionPreviewService = cubesPositionPreviewService;
+            _levelPassingService = levelPassingService;
+        }
 
         public Cube CreateCube(CubeConfigs configs)
         {
-            throw new System.NotImplementedException();
+            var position = _cubesLayoutService.GetLastCubePosition(_cubes.Count + 1);
+
+            var newCube = _cubeFactory.Create(configs, position);
+            newCube.DisableOnField();
+            newCube.ProhibitRotation();
+
+            _cubes.Add(newCube);
+
+            CalculateSentenceMatching();
+            newCube.OnRotated.AddListener(CalculateSentenceMatching);
+
+            _cubesLayoutService.LayOut(_cubes);
+
+            OnCubeCreated.Invoke(newCube);
+
+            return newCube;
         }
 
         public void RemoveCube(Cube cube)
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public void SetCubesAccordingPreview()
         {
-            throw new System.NotImplementedException();
+            var previewCubes = _cubesPositionPreviewService.Cubes;
+
+            _cubes.Clear();
+            _cubes.AddRange(previewCubes);
+            _cubes.RemoveAll(c => c == null);
+
+            CalculateSentenceMatching();
+            _cubesLayoutService.LayOut(_cubes);
+        }
+
+        private void CalculateSentenceMatching()
+        {
+            _levelPassingService.CalculateSentenceMatching(MakeSentence());
+        }
+
+        private string MakeSentence()
+        {
+            var sentence = "";
+            foreach (var cube in _cubes)
+            {
+                sentence += cube.CurrentWord;
+            }
+
+            return sentence;
         }
     }
 }

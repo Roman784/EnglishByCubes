@@ -32,11 +32,13 @@ namespace Gameplay
         private SlotBar _slotBar;
 
         private bool _canDrag = true;
+        private bool _canRotate = true;
 
         public int Number => _configs.Number;
         public string CurrentWord => _words[_curretWordIndex];
         public Vector3 Position => _view.GetPosition();
         public bool CanDrag => _canDrag;
+        public bool CanRotate => _canRotate;
         public bool IsInRemoveArea { get; private set; }
         public UnityEvent OnRotated { get; private set; } = new();
         public UnityEvent<bool> OnDragged { get; private set; } = new();
@@ -202,6 +204,8 @@ namespace Gameplay
 
         public Observable<bool> OpenWordList()
         {
+            if (!_canRotate) return Observable.Return(false);
+
             _behaviorHandler.SetWordListBehavior();
 
             var duration = _configs.DataConfigs.OpeningWordListDuration;
@@ -236,6 +240,8 @@ namespace Gameplay
 
         public void RotateToNextSide()
         {
+            if (!_canRotate) return;
+
             _curretWordIndex = ++_curretWordIndex % _words.Count();
             Rotate(_curretWordIndex);
         }
@@ -245,12 +251,17 @@ namespace Gameplay
             _canDrag = false;
         }
 
+        public void ProhibitRotation()
+        {
+            _canRotate = false;
+        }
+
         private int GetWordIndex(string word)
         {
             return _words.IndexOf(word);
         }
 
-        private void Rotate(int wordIndex)
+        public void Rotate(int wordIndex)
         {
             var rotationDuration = _configs.DataConfigs.RotationDuration;
             var fadeDuration = _configs.DataConfigs.FadeDuration;

@@ -10,7 +10,6 @@ namespace MistakeCorrection
     {
         [SerializeField] private MistakeCorrectionUI _uiPrefab;
         [SerializeField] private CubeView _cubePrefab;
-        [SerializeField] private SlotBarView _slotBarPrefab;
 
         public override void InstallBindings()
         {

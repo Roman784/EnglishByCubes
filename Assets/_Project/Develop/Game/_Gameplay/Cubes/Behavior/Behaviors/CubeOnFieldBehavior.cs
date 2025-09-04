@@ -37,19 +37,22 @@ namespace Gameplay
             if (_cube.CanDrag)
                 _cube.StartDragging();
 
-            _wordListOpeningCountdown?.Kill(false);
-            _wordListOpeningCountdown = DOVirtual.DelayedCall(0.5f, () => 
+            if (_cube.CanRotate)
             {
-                if (Vector3.Distance(_startMousePosition, GetMousePosition()) > 0.25f || !_isPressed) return;
-
-                if (_cube.CanDrag)
+                _wordListOpeningCountdown?.Kill(false);
+                _wordListOpeningCountdown = DOVirtual.DelayedCall(0.5f, () =>
                 {
-                    _cube.StopDragging();
-                    _cube.SetAccordingPreview();
-                }
+                    if (Vector3.Distance(_startMousePosition, GetMousePosition()) > 0.25f || !_isPressed) return;
 
-                _cube.OpenWordList();
-            });
+                    if (_cube.CanDrag)
+                    {
+                        _cube.StopDragging();
+                        _cube.SetAccordingPreview();
+                    }
+
+                    _cube.OpenWordList();
+                });
+            }
         }
 
         public override void OnPointerUp()
