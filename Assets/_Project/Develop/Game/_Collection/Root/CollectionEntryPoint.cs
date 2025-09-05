@@ -1,3 +1,4 @@
+using DG.Tweening;
 using GameRoot;
 using System.Collections;
 using UI;
@@ -9,6 +10,7 @@ namespace Collection
     public class CollectionEntryPoint : SceneEntryPoint
     {
         [SerializeField] private MapGenerator _mapGenerator;
+        [SerializeField] private AppearanceAnimation _appearanceAnimation;
 
         private CollectionUI _ui;
 
@@ -30,7 +32,10 @@ namespace Collection
             var collectedItemIds = _gameStateProvider.GameStateProxy.State.CollectedCollectionItems;
 
             // Map generation.
-            _mapGenerator.Generate(collectedItemIds);
+            DOVirtual.DelayedCall(0.5f, () => _mapGenerator.Generate(collectedItemIds));
+
+            // Appearance animation.
+            _appearanceAnimation.PlayAnimation();
 
             // UI.
             _uiRoot.AttachSceneUI(_ui);

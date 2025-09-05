@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 2
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -71,8 +71,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
+    textureFormat: 4
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -412,10 +412,10 @@ TextureImporter:
       name: CollectionSprites_13
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2500
-        width: 3633
-        height: 2374
+        x: 74
+        y: 2988
+        width: 8665
+        height: 4756
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,6 +425,48 @@ TextureImporter:
       bones: []
       spriteID: 3e21d424802a780458c36043a0ccd000
       internalID: -408488444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloudLeft
+      rect:
+        serializedVersion: 2
+        x: 4574
+        y: 1577
+        width: 886
+        height: 877
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d4c59728a522940aa3932052b274de
+      internalID: -1321975593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ClousRight
+      rect:
+        serializedVersion: 2
+        x: 4574
+        y: 526
+        width: 886
+        height: 876
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5242fec03c13f4e4a894b0523d2f1bf1
+      internalID: 1988031523
       vertices: []
       indices: 
       edges: []
@@ -440,13 +482,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      CloudLeft: -77341074
+      ClousRight: 1988031523
       CollectionSprites_0: -254429467
       CollectionSprites_1: 1125461281
       CollectionSprites_10: -1430683578
       CollectionSprites_11: 232181240
       CollectionSprites_12: 1188866607
       CollectionSprites_13: -408488444
-      CollectionSprites_14: -77341074
       CollectionSprites_2: -1495346541
       CollectionSprites_3: 155586061
       CollectionSprites_4: -4440457

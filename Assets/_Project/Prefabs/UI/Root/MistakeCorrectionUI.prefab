@@ -892,7 +892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelTitleView: {fileID: 5886845037152671438}
   _canvas: {fileID: 6939263911964139509}
-  _infoContentPrefab: {fileID: 0}
+  _infoContentPrefab: {fileID: 1549857831998318719, guid: c096ede1bac520d449176058a6d1c973, type: 3}
   _sentences: {fileID: 3662412537909603752}
 --- !u!1 &2846563873980419362
 GameObject:

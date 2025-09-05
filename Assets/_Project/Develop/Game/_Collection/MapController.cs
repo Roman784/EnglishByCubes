@@ -32,6 +32,9 @@ namespace Collection
         private PauseProvider _pauseProvider;
         private bool _isPaused;
 
+        public float CameraSize => Screen.width < Screen.height ?
+                _defaultCameraSize.x : _defaultCameraSize.y;
+
         [Inject]
         private void Construct(PauseProvider pauseProvider)
         {
@@ -42,8 +45,7 @@ namespace Collection
         private void Awake()
         {
             _mainCamera = Camera.main;
-            _mainCamera.orthographicSize = Screen.width < Screen.height ? 
-                _defaultCameraSize.x : _defaultCameraSize.y;
+            _mainCamera.orthographicSize = CameraSize;
         }
 
         public void Pause() => _isPaused = true;
