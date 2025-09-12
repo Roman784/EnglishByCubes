@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fe8f29382798f4ba3e2babdebca45c, type: 3}
+  m_Name: GivenSentencePageConfigs 5
+  m_EditorClassIdentifier: 
+  <Title>k__BackingField: "1.5 \u0413\u043B\u0430\u0433\u043E\u043B-\u0441\u0432\u044F\u0437\u043A\u0430
+    \u201CBe\u201D [\u0411\u044B\u0442\u044C]"
+  <Contents>k__BackingField:
+  - <Tag>k__BackingField: 2
+    _text: {fileID: 0}
+    _table: {fileID: 0}
+    _cubeUnfolding: {fileID: 1326950252999102331, guid: 8774ab66c17177f4eb2545cdc7e0ab1b, type: 3}
+  - <Tag>k__BackingField: 0
+    _text: {fileID: 4999637552003901801, guid: b0add3a2b011f8c479cfd743ee7a5093, type: 3}
+    _table: {fileID: 0}
+    _cubeUnfolding: {fileID: 0}
+  - <Tag>k__BackingField: 1
+    _text: {fileID: 0}
+    _table: {fileID: 5098283251113619888, guid: 5cb93e4acd29e4e4697af978c1dcb4fe, type: 3}
+    _cubeUnfolding: {fileID: 0}

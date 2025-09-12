@@ -39,7 +39,7 @@ namespace UI
 
         public void SetLevelTitle(LevelConfigs configs)
         {
-            _levelTitleView.text = $"{configs.Title} {configs.LocalNumber}";
+            _levelTitleView.text = $"{configs.Title}";
         }
 
         public void CreatePages(TheoryLevelConfigs configs)
