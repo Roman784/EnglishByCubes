@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine.Events;
 using Zenject;
 using R3;
+using System.Linq;
 
 namespace Template
 {
@@ -15,7 +16,7 @@ namespace Template
         private CubeFactory _cubeFactory;
         private ICubesLayoutService _cubesLayoutService;
         private CubesPositionPreviewService _cubesPositionPreviewService;
-        private ILevelPassingService _levelPassingService;
+        private TemplateLevelPassingService _levelPassingService;
 
         public IReadOnlyList<Cube> Cubes => _cubes;
         public UnityEvent<Cube> OnCubeCreated { get; private set; } = new();
@@ -29,7 +30,7 @@ namespace Template
             _cubeFactory = cubeFactory;
             _cubesLayoutService = cubesLayoutService;
             _cubesPositionPreviewService = cubesPositionPreviewService;
-            _levelPassingService = levelPassingService;
+            _levelPassingService = (TemplateLevelPassingService)levelPassingService;
         }
 
         public Cube CreateCube(CubeConfigs configs)
@@ -42,8 +43,8 @@ namespace Template
 
             _cubes.Add(newCube);
 
-            CalculateSentenceMatching();
-            newCube.OnRotated.AddListener(CalculateSentenceMatching);
+            CheckLevelPassing();
+            newCube.OnRotated.AddListener(CheckLevelPassing);
 
             _cubesLayoutService.LayOut(_cubes);
 
@@ -57,7 +58,7 @@ namespace Template
             if (!_cubes.Contains(cube)) return;
 
             _cubes.Remove(cube);
-            CalculateSentenceMatching();
+            CheckLevelPassing();
 
             cube.Destroy().Subscribe(_ =>
             {
@@ -73,16 +74,21 @@ namespace Template
             _cubes.AddRange(previewCubes);
             _cubes.RemoveAll(c => c == null);
 
-            CalculateSentenceMatching();
+            CheckLevelPassing();
             _cubesLayoutService.LayOut(_cubes);
         }
 
-        private void CalculateSentenceMatching()
+        private void CheckLevelPassing()
         {
-            _levelPassingService.CalculateSentenceMatching(MakeSentence());
+            _levelPassingService.CalculateSentenceMatching(_cubes.Select(c => c.CurrentWord).ToList());
         }
 
-        private string MakeSentence()
+        /*private void CalculateSentenceMatching()
+        {
+            _levelPassingService.CalculateSentenceMatching(MakeSentence());
+        }*/
+
+        /*private string MakeSentence()
         {
             var sentence = "";
             foreach (var cube in _cubes)
@@ -91,6 +97,6 @@ namespace Template
             }
 
             return sentence;
-        }
+        }*/
     }
 }
