@@ -12,14 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b9f966d62e68848ac71231b7a3c218, type: 3}
   m_Name: TemplateConfigs 3
   m_EditorClassIdentifier: 
-  <GlobalNumber>k__BackingField: 10
+  <GlobalNumber>k__BackingField: 11
   <LocalNumber>k__BackingField: 3
   <SectionTitle>k__BackingField: "\u0420\u0430\u0437\u0434\u0435\u043B 1"
   <Title>k__BackingField: "\u0428\u0430\u0431\u043B\u043E\u043D"
+  <SentencesCount>k__BackingField: 5
   <Slots>k__BackingField:
   - <Mode>k__BackingField: 0
+    <CubeNumber>k__BackingField: 0
   - <Mode>k__BackingField: 1
+    <CubeNumber>k__BackingField: 0
   - <Mode>k__BackingField: 2
+    <CubeNumber>k__BackingField: 0
   <Sentences>k__BackingField:
   - <SentenceRu>k__BackingField: "\u042F \u0420\u0443\u0441\u0441\u043A\u0438\u0439."
     <SentenceEn>k__BackingField: I am Russian.
@@ -33,4 +37,3 @@ MonoBehaviour:
   - <SentenceRu>k__BackingField: "\u0412\u0441\u0451 \u0432 \u043F\u043E\u0440\u044F\u0434\u043A\u0435."
     <SentenceEn>k__BackingField: It is fine.
     <TargetSentence>k__BackingField: It is fine
-  <CubeNumbersPool>k__BackingField: 010000000200000003000000

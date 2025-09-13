@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ccf8de9109e104a90e5f5350573982, type: 3}
   m_Name: TheoryConfigs 3
   m_EditorClassIdentifier: 
-  <GlobalNumber>k__BackingField: 9
+  <GlobalNumber>k__BackingField: 10
   <LocalNumber>k__BackingField: 3
   <SectionTitle>k__BackingField: "\u0420\u0430\u0437\u0434\u0435\u043B 2"
   <Title>k__BackingField: "\u0422\u0435\u043E\u0440\u0438\u044F"

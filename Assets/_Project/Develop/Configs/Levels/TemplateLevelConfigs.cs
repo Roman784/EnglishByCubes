@@ -14,6 +14,7 @@ namespace Configs
 
         [field: Space]
 
+        [field: SerializeField] public int SentencesCount { get; private set; }
         [field: SerializeField] public List<TemplateSlotData> Slots { get; private set; }
         [field: SerializeField] public List<TemplateSentence> Sentences { get; private set; }
     }

@@ -20,6 +20,6 @@ MonoBehaviour:
   <ScrollingDuration>k__BackingField: 0.5
   <ScrollingEase>k__BackingField: 6
   <TheoryIcon>k__BackingField: {fileID: -508713343, guid: cf0d701ae272d154886dd93fbd749f2f, type: 3}
-  <TemplateIcon>k__BackingField: {fileID: -855296329, guid: cf0d701ae272d154886dd93fbd749f2f, type: 3}
+  <TemplateIcon>k__BackingField: {fileID: -1726365483, guid: cf0d701ae272d154886dd93fbd749f2f, type: 3}
   <PracticeIcon>k__BackingField: {fileID: -518938563, guid: cf0d701ae272d154886dd93fbd749f2f, type: 3}
   <MistakeCorrectionIcon>k__BackingField: {fileID: -855296329, guid: cf0d701ae272d154886dd93fbd749f2f, type: 3}

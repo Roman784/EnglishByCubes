@@ -61,11 +61,11 @@ namespace Template
             Coroutines.Start(templateSlots.CreateCubes(cubes));
 
             // Services.
-            _levelPassingService.SetTargetSentences(levelConfigs.Sentences);
+            _levelPassingService.SetTargetSentences(levelConfigs.Sentences, levelConfigs.SentencesCount);
 
             // UI.
             _uiRoot.AttachSceneUI(_ui);
-            _ui.Init(enterParams, levelConfigs.Sentences.Count);
+            _ui.Init(enterParams, levelConfigs.SentencesCount);
             _ui.SetLevelTitle(levelConfigs);
 
             _levelPassingService.OnNewSentenceFounded.AddListener((_, sentencesLeft) =>
