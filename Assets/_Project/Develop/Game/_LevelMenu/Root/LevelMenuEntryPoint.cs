@@ -8,6 +8,8 @@ namespace LevelMenu
 {
     public class LevelMenuEntryPoint : SceneEntryPoint
     {
+        [SerializeField] private LevelButton _levelButtonPrefab;
+
         private LevelMenuUI _ui;
 
         [Inject]
@@ -24,6 +26,8 @@ namespace LevelMenu
         private IEnumerator Run(LevelMenuEnterParams enterParams)
         {
             var isLoaded = false;
+
+
 
             //UI.
             _uiRoot.AttachSceneUI(_ui);

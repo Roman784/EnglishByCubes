@@ -601,6 +601,7 @@ MonoBehaviour:
   _levelButtonsContainer: {fileID: 3378563998461605350}
   _sectionTitleView: {fileID: 580341363867062962}
   _levelTitleView: {fileID: 8203135730740791054}
+  _canvas: {fileID: 6939263911964139509}
 --- !u!1 &2755705721553653282
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,8 +826,8 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1349579147
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &8289128646375974381
 MonoBehaviour:
@@ -1773,7 +1774,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7705999002090366512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

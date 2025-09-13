@@ -14,11 +14,18 @@ namespace UI
         [SerializeField] private TMP_Text _sectionTitleView;
         [SerializeField] private TMP_Text _levelTitleView;
 
+        [Space]
+
+        [SerializeField] private Canvas _canvas;
+
         private LevelMenuEnterParams _enterParams;
         private LevelButtonsLayout _levelButtonsLayout;
 
         public void Init(LevelMenuEnterParams enterParams)
         {
+            _canvas.worldCamera = Camera.main;
+            _canvas.planeDistance = 1;
+
             _enterParams = enterParams;
             _levelButtonsLayout = new(UIConfigs.LevelButtonsConfigs, _levelButtonsContainer);
 
