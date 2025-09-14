@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CollectionItems_0
+      name: CollectionItems_Guard
       rect:
         serializedVersion: 2
         x: 179
@@ -157,7 +157,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CollectionItems_1
+      name: CollectionItems_Bus
       rect:
         serializedVersion: 2
         x: 150
@@ -165,7 +165,7 @@ TextureImporter:
         width: 558
         height: 628
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -178,7 +178,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CollectionItems_2
+      name: CollectionItems_Castle_1
       rect:
         serializedVersion: 2
         x: 934
@@ -186,7 +186,7 @@ TextureImporter:
         width: 817
         height: 647
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,6 +194,1014 @@ TextureImporter:
       bones: []
       spriteID: 1b309ce2484031144a4b461c2bd45994
       internalID: -2079725889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Bus_shadow
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 246
+        width: 687
+        height: 373
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04aa636866652247b3a756fd270d187
+      internalID: 177031701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Bus_fill
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 213
+        width: 558
+        height: 628
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd710dcb1860a941896344101aa1ffe
+      internalID: -124915583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Tree_1
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 822
+        width: 103
+        height: 241
+      alignment: 9
+      pivot: {x: 0.51164174, y: 0.032328624}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3866360949edca64e87b2c711529fb50
+      internalID: 223556500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Tree_2
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 915
+        width: 103
+        height: 114
+      alignment: 9
+      pivot: {x: 0.50776154, y: 0.047733776}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171cdc6fef0a9bc4594c8c0575480d2e
+      internalID: -1087407843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Tree_1_shadow
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 800
+        width: 255
+        height: 63
+      alignment: 9
+      pivot: {x: 0.03825923, y: 0.49999902}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a854cab573b25a45be7e1c32f423d2e
+      internalID: 1433079331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Tree_2_shadow
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 898
+        width: 114
+        height: 57
+      alignment: 9
+      pivot: {x: 0.058017664, y: 0.5372175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cecc8ce1476e4554999e7c50cd9d2929
+      internalID: 655262433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Guard_fill
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 989
+        width: 220
+        height: 754
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf21aa5383a5042488ff7978796384da
+      internalID: -552451552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Guard_shadow
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 992
+        width: 518
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be0677591ea839a4ebc3382e63ff1ffc
+      internalID: 2097369054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Castle_1_fill
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 1255
+        width: 817
+        height: 648
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa078fc3b7268448845f228f65ecb49
+      internalID: 399724701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Castle_1_shadow
+      rect:
+        serializedVersion: 2
+        x: 2775
+        y: 1273
+        width: 510
+        height: 406
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbedbcc7749aff4ebdf3f9c7868247c
+      internalID: 1577728789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Castle_2
+      rect:
+        serializedVersion: 2
+        x: 2697
+        y: 2438
+        width: 588
+        height: 749
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b49f0c80e2647458c383fba4f740d6
+      internalID: -1035883431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Castle_2_fil
+      rect:
+        serializedVersion: 2
+        x: 3396
+        y: 2438
+        width: 588
+        height: 749
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b675d561828a14a8bd7e3c18adcb7b
+      internalID: 533070310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Castle_2_shadow
+      rect:
+        serializedVersion: 2
+        x: 4084
+        y: 2441
+        width: 488
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db3a74264675e14f9fcd2fff2dc827e
+      internalID: 1815541578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Castle_3
+      rect:
+        serializedVersion: 2
+        x: 4738
+        y: 2293
+        width: 558
+        height: 503
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c68490ff885df3944a1374e6a4d2b0e8
+      internalID: -900780150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Castle_3_fill
+      rect:
+        serializedVersion: 2
+        x: 5430
+        y: 2293
+        width: 558
+        height: 503
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2953c5a1997704aaf74b01c7d8f58e
+      internalID: -1453440515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Castle_3_shadow
+      rect:
+        serializedVersion: 2
+        x: 5485
+        y: 1957
+        width: 458
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a40b0df53bbe43648b0ad584b1bbee17
+      internalID: -1541260966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Artur
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 2042
+        width: 344
+        height: 695
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f0a4cb0475b0d47a3b7ced7a59d8b2
+      internalID: 2041347543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Artur_fill
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 2042
+        width: 348
+        height: 676
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274ed450a48d38f43a1b923b182a84fc
+      internalID: 30638022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Dragon
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 2050
+        width: 632
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5811b7601e9f419468351e7f2f68fef9
+      internalID: 1346386076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Dragon_fill
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 2050
+        width: 633
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4014c88deb7d2464396fbc39a7256289
+      internalID: -1366294873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Dragon_shadow
+      rect:
+        serializedVersion: 2
+        x: 2564
+        y: 2053
+        width: 810
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f0358d7c0e18e448a69101131b4916d
+      internalID: 774506567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Stonehenge
+      rect:
+        serializedVersion: 2
+        x: 2342
+        y: 268
+        width: 473
+        height: 399
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c246f942a6772ab41aeed167b69f047e
+      internalID: 2057936920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Stonehenge_fill
+      rect:
+        serializedVersion: 2
+        x: 2901
+        y: 268
+        width: 473
+        height: 399
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88617eb4ac519a4498e92302f5aeca03
+      internalID: -2055146424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Stonehenge_shadow
+      rect:
+        serializedVersion: 2
+        x: 3529
+        y: 264
+        width: 429
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e464abfe0410347be8e6315874c356
+      internalID: -1078217894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Aqueduct
+      rect:
+        serializedVersion: 2
+        x: 5167
+        y: 996
+        width: 484
+        height: 524
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b036c4725ea7044bee19dfbd445513
+      internalID: -1895025192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Aqueduct_fill
+      rect:
+        serializedVersion: 2
+        x: 5751
+        y: 996
+        width: 488
+        height: 524
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc33168a4940ac444b0fd63f06af8e19
+      internalID: -2134712589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Aqueduct_shadow
+      rect:
+        serializedVersion: 2
+        x: 5344
+        y: 1671
+        width: 718
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cd3f895998906b48819db15b1cadf37
+      internalID: -1145680015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Rugby
+      rect:
+        serializedVersion: 2
+        x: 3474
+        y: 1794
+        width: 358
+        height: 333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa76c41019fe304483a19558b866cb0
+      internalID: 782807583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Rugby_fill
+      rect:
+        serializedVersion: 2
+        x: 3991
+        y: 1794
+        width: 359
+        height: 333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d35c56cd30d7ca41aa48bd69591f66e
+      internalID: 1956326186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Rugby_shadow
+      rect:
+        serializedVersion: 2
+        x: 4442
+        y: 1798
+        width: 492
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378707d6b868df94a96969259984ad60
+      internalID: -311272025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Bagpipes
+      rect:
+        serializedVersion: 2
+        x: 3377
+        y: 1149
+        width: 451
+        height: 461
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d0b04229fe996f418a35c25c3c8cd89
+      internalID: -605061728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Bagpipes_fill
+      rect:
+        serializedVersion: 2
+        x: 3888
+        y: 1149
+        width: 454
+        height: 461
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d03055209ba4e42abf1ca104de50da
+      internalID: 1707778719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Bagpipes_shadow
+      rect:
+        serializedVersion: 2
+        x: 4398
+        y: 1151
+        width: 636
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3072ea27479ec2642b1129ff84a48829
+      internalID: 1048344585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Nessie
+      rect:
+        serializedVersion: 2
+        x: 3492
+        y: 556
+        width: 606
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0105dda6587a34b45b2a3ef2a6d7430a
+      internalID: 421614206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Nessie_fill
+      rect:
+        serializedVersion: 2
+        x: 4224
+        y: 556
+        width: 606
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee56faf119197ee46ab99f45a167d784
+      internalID: -244942525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Nessie_shadow
+      rect:
+        serializedVersion: 2
+        x: 4978
+        y: 660
+        width: 625
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6adf4c09f60867044bf57c63e61df4ff
+      internalID: 699131147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Kilt
+      rect:
+        serializedVersion: 2
+        x: 4923
+        y: 264
+        width: 392
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8a282af3d2ace40a01425fd4a46a0d
+      internalID: -804084792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Kilt_fill
+      rect:
+        serializedVersion: 2
+        x: 5415
+        y: 264
+        width: 391
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f241176b729f5a3408f5aab4579e3fe9
+      internalID: 1314852753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Kilt_shadow
+      rect:
+        serializedVersion: 2
+        x: 4213
+        y: 261
+        width: 466
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb85186ab46cdf40be5058eb5fb0d8a
+      internalID: -2107541836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Leprechaun
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 756
+        width: 358
+        height: 358
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b1242859b228b24d951f34061eaabec
+      internalID: -1416786969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Leprechaun_fill
+      rect:
+        serializedVersion: 2
+        x: 2442
+        y: 756
+        width: 359
+        height: 358
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b976b0fe800284188775979d3e4c07
+      internalID: -478379861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Leprechaun_shadow
+      rect:
+        serializedVersion: 2
+        x: 2875
+        y: 748
+        width: 480
+        height: 218
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c945ea0ed94338a4ca58fb9fbce00729
+      internalID: 1329515286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Park
+      rect:
+        serializedVersion: 2
+        x: 4117
+        y: 2903
+        width: 721
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a074cea7cf8b9c242a1417de4afe2413
+      internalID: 386221136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Park_fill
+      rect:
+        serializedVersion: 2
+        x: 4953
+        y: 2903
+        width: 720
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 571a727c33d700c4c8b1026a14b5cde8
+      internalID: -713417057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_Park_shadow
+      rect:
+        serializedVersion: 2
+        x: 4513
+        y: 3447
+        width: 957
+        height: 273
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca35d0caaa0a614988c429745d62c4a
+      internalID: 1388010416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_GiantsCauseway
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 2855
+        width: 669
+        height: 636
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3a89eec242a9144b6f5618c09fe239
+      internalID: 956829431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_GiantsCauseway_fill
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 2855
+        width: 669
+        height: 636
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab30408da70397c47aeb1828809eb93f
+      internalID: -1363755253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CollectionItems_GiantsCauseway_shadow
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 2885
+        width: 862
+        height: 469
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173905036cfff4c47aa432cc01df3ebf
+      internalID: -958638424
       vertices: []
       indices: 
       edges: []
@@ -209,9 +1217,57 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CollectionItems_0: -547559902
-      CollectionItems_1: 1825551671
-      CollectionItems_2: -2079725889
+      CollectionItems_Aqueduct: -1895025192
+      CollectionItems_Aqueduct_fill: -2134712589
+      CollectionItems_Aqueduct_shadow: -1145680015
+      CollectionItems_Artur: 2041347543
+      CollectionItems_Artur_fill: 30638022
+      CollectionItems_Bagpipes: -605061728
+      CollectionItems_Bagpipes_fill: 1707778719
+      CollectionItems_Bagpipes_shadow: 1048344585
+      CollectionItems_Bus: 1825551671
+      CollectionItems_Bus_fill: -124915583
+      CollectionItems_Bus_shadow: 177031701
+      CollectionItems_Castle_1: -2079725889
+      CollectionItems_Castle_1_fill: 399724701
+      CollectionItems_Castle_1_shadow: 1577728789
+      CollectionItems_Castle_2: -1035883431
+      CollectionItems_Castle_2_fil: 533070310
+      CollectionItems_Castle_2_shadow: 1815541578
+      CollectionItems_Castle_3: -900780150
+      CollectionItems_Castle_3_fill: -1453440515
+      CollectionItems_Castle_3_shadow: -1541260966
+      CollectionItems_Dragon: 1346386076
+      CollectionItems_Dragon_fill: -1366294873
+      CollectionItems_Dragon_shadow: 774506567
+      CollectionItems_GiantsCauseway: 956829431
+      CollectionItems_GiantsCauseway_fill: -1363755253
+      CollectionItems_GiantsCauseway_shadow: -958638424
+      CollectionItems_Guard: -547559902
+      CollectionItems_Guard_fill: -552451552
+      CollectionItems_Guard_shadow: 2097369054
+      CollectionItems_Kilt: -804084792
+      CollectionItems_Kilt_fill: 1314852753
+      CollectionItems_Kilt_shadow: -2107541836
+      CollectionItems_Leprechaun: -1416786969
+      CollectionItems_Leprechaun_fill: -478379861
+      CollectionItems_Leprechaun_shadow: 1329515286
+      CollectionItems_Nessie: 421614206
+      CollectionItems_Nessie_fill: -244942525
+      CollectionItems_Nessie_shadow: 699131147
+      CollectionItems_Park: 386221136
+      CollectionItems_Park_fill: -713417057
+      CollectionItems_Park_shadow: 1388010416
+      CollectionItems_Rugby: 782807583
+      CollectionItems_Rugby_fill: 1956326186
+      CollectionItems_Rugby_shadow: -311272025
+      CollectionItems_Stonehenge: 2057936920
+      CollectionItems_Stonehenge_fill: -2055146424
+      CollectionItems_Stonehenge_shadow: -1078217894
+      CollectionItems_Tree_1: 223556500
+      CollectionItems_Tree_1_shadow: 1433079331
+      CollectionItems_Tree_2: -1087407843
+      CollectionItems_Tree_2_shadow: 655262433
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

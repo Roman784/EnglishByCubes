@@ -24,7 +24,10 @@ namespace Collection
         {
             yield return new WaitForSeconds(_initialDelay);
 
-            yield return AppearTrees();
+            Coroutines.Start(AppearTrees());
+
+            yield return new WaitForSeconds(_trees.Count * _treesAppearDelay / 2f);
+
             yield return AppearItems(unclokedItemsIds);
         }
 

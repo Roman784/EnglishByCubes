@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9fdbef0aebb96c438962bd84e75fa25, type: 3}
-  m_Name: CollectionItemConfis_Bus
+  m_Name: CollectionItemConfis_Dragon
   m_EditorClassIdentifier: 
   <Id>k__BackingField: 0
-  <Sprite>k__BackingField: {fileID: 1825551671, guid: a83edfe259e4b9248aede4b8e0f54189, type: 3}
-  <FilledSprite>k__BackingField: {fileID: -124915583, guid: a83edfe259e4b9248aede4b8e0f54189, type: 3}
+  <Sprite>k__BackingField: {fileID: 1346386076, guid: a83edfe259e4b9248aede4b8e0f54189, type: 3}
+  <FilledSprite>k__BackingField: {fileID: -1366294873, guid: a83edfe259e4b9248aede4b8e0f54189, type: 3}
   <FillRate>k__BackingField: 1
   <Picture>k__BackingField: {fileID: 21300000, guid: fc243ea3623d331499e00eb83724c918, type: 3}
   <Title>k__BackingField: "\u0417\u0430\u0433\u043E\u043B\u043E\u0432\u043E\u043A"
