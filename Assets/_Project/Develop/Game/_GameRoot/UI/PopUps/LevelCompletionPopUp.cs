@@ -123,6 +123,11 @@ namespace UI
                 var ui = FindObjectOfType<TemplateUI>();
                 ui.OpenCollection();
             }
+            else if (SceneManager.GetActiveScene().name == Scenes.MISTAKE_CORRECTION)
+            {
+                var ui = FindObjectOfType<MistakeCorrectionUI>();
+                ui.OpenCollection();
+            }
         }
 
         public void OpenNextLevel()

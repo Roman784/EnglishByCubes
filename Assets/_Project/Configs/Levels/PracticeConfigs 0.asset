@@ -23,7 +23,7 @@ MonoBehaviour:
   - <SentenceRu>k__BackingField: "\u042D\u0442\u043E \u0445\u043E\u0440\u043E\u0448\u043E."
     <SentenceEn>k__BackingField: It is fine.
     <TargetSentence>k__BackingField: it is fine
-  - <SentenceRu>k__BackingField: "\u041E\u043D\u0438 \u0431\u044B\u043B\u0438 \u0441\u0442\u0443\u0434\u0435\u043D\u0442\u0430\u043C\u0438."
-    <SentenceEn>k__BackingField: They were students.
-    <TargetSentence>k__BackingField: They were students
-  <CubeNumbersPool>k__BackingField: 00000000010000000200000003000000030000000300000003000000
+  - <SentenceRu>k__BackingField: "\u041E\u043D\u0438 \u0431\u044B\u043B\u0438 \u0434\u0440\u0443\u0437\u044C\u044F\u043C\u0438."
+    <SentenceEn>k__BackingField: They were friends.
+    <TargetSentence>k__BackingField: They were friends
+  <CubeNumbersPool>k__BackingField: 010000000200000003000000

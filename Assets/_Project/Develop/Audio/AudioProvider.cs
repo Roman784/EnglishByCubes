@@ -58,6 +58,7 @@ namespace Audio
         public void PlaySound(AudioClip audioClip, UnityEvent stopEvent = null)
         {
             var sourcer = _sourcers.GetInstance();
+            sourcer.ChangeVolume(SoundVolume.Value);
 
             sourcer.PlayOneShot(audioClip);
             DOVirtual.DelayedCall(audioClip.length, () => _sourcers.ReleaseInstance(sourcer));

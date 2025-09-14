@@ -30,6 +30,7 @@ namespace UI
         {
             _enterParams = enterParams;
             _canvas.worldCamera = Camera.main;
+            _canvas.sortingLayerName = "UI";
 
             _sentences.CreateSentences(sentencesCount);
 

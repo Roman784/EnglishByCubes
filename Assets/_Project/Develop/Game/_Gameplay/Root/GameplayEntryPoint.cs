@@ -87,7 +87,7 @@ namespace Gameplay
                 _gameStateProvider.GameStateProxy.CompleteLevel(enterParams.Number);
 
                 PlayLevelCompletionSound();
-                DOVirtual.DelayedCall(1, _rootPopUpsProvider.OpenLevelCompletionPopUp);
+                _ui.ShowLevelCompleteButton();
             });
 
             // Theme customization.

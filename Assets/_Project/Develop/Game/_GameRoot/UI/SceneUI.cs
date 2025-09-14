@@ -1,5 +1,6 @@
 using Audio;
 using Configs;
+using DG.Tweening;
 using GameRoot;
 using GameState;
 using UnityEngine;
@@ -9,6 +10,8 @@ namespace UI
 {
     public class SceneUI : MonoBehaviour
     {
+        [SerializeField] private GameObject _completeLevelButton;
+
         protected IConfigsProvider _configsProvider;
         protected IGameStateProvider _gameStateProvider;
         protected SceneProvider _sceneProvider;
@@ -30,6 +33,12 @@ namespace UI
             _sceneProvider = sceneProvider;
             _popUpsProvider = popUpsProvider;
             _audioProvider = audioProvider;
+
+            if (_completeLevelButton != null)
+            {
+                _completeLevelButton.transform.localScale = Vector3.zero;
+                _completeLevelButton.SetActive(false);
+            }
         }
 
         public void OpenSettings()
@@ -40,6 +49,12 @@ namespace UI
         public void OpenLevelCompletionPopUp()
         {
             _popUpsProvider.OpenLevelCompletionPopUp();
+        }
+
+        public void ShowLevelCompleteButton()
+        {
+            _completeLevelButton.SetActive(true);
+            _completeLevelButton.transform.DOScale(1, 0.5f).SetEase(Ease.OutBack);
         }
     }
 }

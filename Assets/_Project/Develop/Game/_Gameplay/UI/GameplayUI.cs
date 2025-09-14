@@ -35,6 +35,7 @@ namespace UI
         {
             _enterParams = enterParams;
             _canvas.worldCamera = Camera.main;
+            _canvas.sortingLayerName = "UI";
         }
 
         public void CreateSentences(List<TranslationSentenceData> sentencesData)

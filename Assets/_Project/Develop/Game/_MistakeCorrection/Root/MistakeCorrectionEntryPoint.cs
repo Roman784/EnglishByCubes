@@ -17,7 +17,6 @@ namespace MistakeCorrection
     {
         private MistakeCorrectionUI _ui;
         private CubeFactory _cubeFactory;
-        private MistakeCorrectionFieldService _gameFieldService;
         private MistakeCorrectionLevelPassingService _levelPassingService;
 
         private int _currentSentenceIdx = 0;
@@ -30,7 +29,6 @@ namespace MistakeCorrection
         {
             _ui = ui;
             _cubeFactory = cubeFactory;
-            _gameFieldService = (MistakeCorrectionFieldService)gameFieldService;
             _levelPassingService = (MistakeCorrectionLevelPassingService)levelPassingService;
         }
 
@@ -78,7 +76,7 @@ namespace MistakeCorrection
                 _gameStateProvider.GameStateProxy.CompleteLevel(enterParams.Number);
 
                 PlayLevelCompletionSound();
-                DOVirtual.DelayedCall(1, _rootPopUpsProvider.OpenLevelCompletionPopUp);
+                _ui.ShowLevelCompleteButton();
             });
 
             // Theme customization.
