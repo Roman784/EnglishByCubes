@@ -81,6 +81,9 @@ MonoBehaviour:
   _renderer: {fileID: 7250527538338329036}
   _wordList: {fileID: 6059884770247819401}
   _name: {fileID: 2748731456818468865}
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1019022140081870948
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,8 +277,8 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 1683700733
-  m_SortingOrder: 0
+  m_SortingLayerID: 1349579147
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &1597697981515178728
 MonoBehaviour:

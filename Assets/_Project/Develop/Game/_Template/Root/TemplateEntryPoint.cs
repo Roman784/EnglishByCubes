@@ -68,6 +68,11 @@ namespace Template
             _ui.Init(enterParams, levelConfigs.SentencesCount);
             _ui.SetLevelTitle(levelConfigs);
 
+            _levelPassingService.OnWordsInBanList.AddListener(words =>
+            {
+                _ui.ShowBanWords(words);
+            });
+
             _levelPassingService.OnNewSentenceFounded.AddListener((_, sentencesLeft) =>
             {
                 if (sentencesLeft > 0)

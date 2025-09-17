@@ -2,6 +2,7 @@ using Configs;
 using DG.Tweening;
 using Gameplay;
 using GameRoot;
+using System.Collections.Generic;
 using Template;
 using TMPro;
 using UnityEngine;
@@ -20,6 +21,10 @@ namespace UI
 
         [Space]
 
+        [SerializeField] private TMP_Text _banWordsView;
+
+        [Space]
+
         [SerializeField] private Canvas _canvas;
 
         private TemplateEnterParams _enterParams;
@@ -29,6 +34,8 @@ namespace UI
         private void Construct(ILevelPassingService levelPassingService)
         {
             _levelPassingService = (TemplateLevelPassingService)levelPassingService;
+
+            _banWordsView.gameObject.SetActive(false);
         }
 
         private void Update()
@@ -97,6 +104,35 @@ namespace UI
         public void OpenLevelInfo()
         {
             _popUpsProvider.OpenLevelInfo(_infoContentPrefab);
+        }
+
+        public void ShowBanWords(List<string> words)
+        {
+            var formattedWords = "";
+            foreach (var word in words)
+            {
+                formattedWords += word;
+
+                if (word != words[words.Count - 1])
+                    formattedWords += ", ";
+            }
+
+            _banWordsView.text = $"Эти слова уже использовались:\n<b>{formattedWords}<b>";
+
+            _banWordsView.DOKill(true);
+
+            var color = _banWordsView.color;
+            color.a = 1f;
+
+            _banWordsView.gameObject.SetActive(true);
+            _banWordsView.color = color;
+
+            _banWordsView.transform.DOPunchPosition(Vector2.up * 5f, 0.3f, 1)
+                .SetEase(Ease.OutQuad);
+
+            _banWordsView.DOFade(0, 2f)
+                .SetEase(Ease.InQuad)
+                .OnComplete(() => _banWordsView.gameObject.SetActive(false));
         }
     }
 }

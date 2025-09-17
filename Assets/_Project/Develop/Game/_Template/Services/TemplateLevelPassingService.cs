@@ -1,6 +1,8 @@
 using Gameplay;
 using GameRoot;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace Template
@@ -9,9 +11,11 @@ namespace Template
     {
         private List<TemplateSentence> _targetSentances = new();
         private List<string> _banWords = new();
+        private string _lastMatchingSentence;
         private int _countToPass;
 
         public UnityEvent<TemplateSentence, int> OnNewSentenceFounded { get; private set; } = new();
+        public UnityEvent<List<string>> OnWordsInBanList { get; private set; } = new();
 
         public void SetTargetSentences(List<TemplateSentence> sentences, int countToPass)
         {
@@ -21,9 +25,19 @@ namespace Template
 
         public void CalculateSentenceMatching(List<string> words)
         {
-            if (IsInBanList(words)) return;
-
             string player = MakeSentence(words).ToLower().Replace(" ", "").Trim();
+
+            if (IsInBanList(words))
+            {
+                if (!player.Equals(_lastMatchingSentence))
+                {
+                    OnWordsInBanList.Invoke(words.Intersect(_banWords).ToList());
+                }
+                _lastMatchingSentence = player;
+                return;
+            }
+
+            _lastMatchingSentence = player;
 
             foreach (var sentence in _targetSentances)
             {
