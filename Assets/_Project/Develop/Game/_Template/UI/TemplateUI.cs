@@ -21,7 +21,8 @@ namespace UI
 
         [Space]
 
-        [SerializeField] private TMP_Text _banWordsView;
+        [SerializeField] private CanvasGroup _banWordsView;
+        [SerializeField] private TMP_Text _banWordsTextView;
 
         [Space]
 
@@ -117,17 +118,14 @@ namespace UI
                     formattedWords += ", ";
             }
 
-            _banWordsView.text = $"Эти слова уже использовались:\n<b>{formattedWords}<b>";
+            _banWordsTextView.text = $"Эти слова уже использовались:\n<b>{formattedWords}<b>";
 
             _banWordsView.DOKill(true);
 
-            var color = _banWordsView.color;
-            color.a = 1f;
-
+            _banWordsView.alpha = 1f;
             _banWordsView.gameObject.SetActive(true);
-            _banWordsView.color = color;
 
-            _banWordsView.transform.DOPunchPosition(Vector2.up * 5f, 0.3f, 1)
+            _banWordsView.transform.DOPunchPosition(Vector2.up * 8f, 0.3f, 1)
                 .SetEase(Ease.OutQuad);
 
             _banWordsView.DOFade(0, 2f)
