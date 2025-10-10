@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fdbef0aebb96c438962bd84e75fa25, type: 3}
   m_Name: CollectionItemConfis_Rugby
   m_EditorClassIdentifier: 
-  <Id>k__BackingField: 0
+  <Id>k__BackingField: 11
   <Sprite>k__BackingField: {fileID: 782807583, guid: a83edfe259e4b9248aede4b8e0f54189, type: 3}
   <FilledSprite>k__BackingField: {fileID: 1956326186, guid: a83edfe259e4b9248aede4b8e0f54189, type: 3}
   <FillRate>k__BackingField: 1

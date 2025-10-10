@@ -4,9 +4,22 @@
     "CollectedCollectionItems": [
         0,
         1,
-        2
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
     ],
     "CurrentCollectionItemFill": 0.0,
-    "SoundVolume": 1.0,
-    "MusicVolume": 1.0
+    "SoundVolume": 0.0,
+    "MusicVolume": 0.0
 }

@@ -13,6 +13,19 @@ MonoBehaviour:
   m_Name: CollectionConfigs
   m_EditorClassIdentifier: 
   <Items>k__BackingField:
-  - {fileID: 11400000, guid: 220f57e24f053ab4daa74421045da6a5, type: 2}
-  - {fileID: 11400000, guid: 874c34e7098e2e94f9b14a7df2ab7438, type: 2}
   - {fileID: 11400000, guid: 1a96cbebd4a575b46905129d8e35e72d, type: 2}
+  - {fileID: 11400000, guid: 0f1259cee45fb694e9f452de5601a260, type: 2}
+  - {fileID: 11400000, guid: b3ff53362fc343c40910007ed8c41bbb, type: 2}
+  - {fileID: 11400000, guid: 874c34e7098e2e94f9b14a7df2ab7438, type: 2}
+  - {fileID: 11400000, guid: 727edb76f5e802d41bb24ca8780f8e92, type: 2}
+  - {fileID: 11400000, guid: bf115e90de96b614cbf3b1f03975611b, type: 2}
+  - {fileID: 11400000, guid: 36a08fc5bba15e848a55c1ba8ecbb16b, type: 2}
+  - {fileID: 11400000, guid: d98b892d41b485544a5b5508e18e6bfb, type: 2}
+  - {fileID: 11400000, guid: 220f57e24f053ab4daa74421045da6a5, type: 2}
+  - {fileID: 11400000, guid: 5e8c74ea01b6b0f42befe402c218ca66, type: 2}
+  - {fileID: 11400000, guid: 70b137df1b8fb2742b04477e3e2e8f66, type: 2}
+  - {fileID: 11400000, guid: bf505668fe4b7d04885fae0370cee75a, type: 2}
+  - {fileID: 11400000, guid: 8f84b0ef0572a1c42abdfb0bc9082333, type: 2}
+  - {fileID: 11400000, guid: cec3fdd006083e54589eeda89f5c728b, type: 2}
+  - {fileID: 11400000, guid: c881c59751aec2144aa8105cc7b6e0fc, type: 2}
+  - {fileID: 11400000, guid: 9004a75777ce08c41a6a40ea14b1b7d7, type: 2}
