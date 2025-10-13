@@ -16,18 +16,18 @@ MonoBehaviour:
     \u201CBe\u201D [\u0411\u044B\u0442\u044C]"
   <Contents>k__BackingField:
   - <Tag>k__BackingField: 0
-    _text: {fileID: 4999637552003901801, guid: 076fb2a8411513848932b870e6b2fe33, type: 3}
-    _table: {fileID: 0}
-    _cubeUnfolding: {fileID: 0}
-  - <Tag>k__BackingField: 2
-    _text: {fileID: 0}
-    _table: {fileID: 0}
-    _cubeUnfolding: {fileID: 1326950252999102331, guid: 8774ab66c17177f4eb2545cdc7e0ab1b, type: 3}
-  - <Tag>k__BackingField: 0
     _text: {fileID: 4999637552003901801, guid: b0add3a2b011f8c479cfd743ee7a5093, type: 3}
     _table: {fileID: 0}
     _cubeUnfolding: {fileID: 0}
   - <Tag>k__BackingField: 1
     _text: {fileID: 0}
     _table: {fileID: 5098283251113619888, guid: 5cb93e4acd29e4e4697af978c1dcb4fe, type: 3}
+    _cubeUnfolding: {fileID: 0}
+  - <Tag>k__BackingField: 2
+    _text: {fileID: 0}
+    _table: {fileID: 0}
+    _cubeUnfolding: {fileID: 1326950252999102331, guid: 8774ab66c17177f4eb2545cdc7e0ab1b, type: 3}
+  - <Tag>k__BackingField: 0
+    _text: {fileID: 4999637552003901801, guid: 076fb2a8411513848932b870e6b2fe33, type: 3}
+    _table: {fileID: 0}
     _cubeUnfolding: {fileID: 0}

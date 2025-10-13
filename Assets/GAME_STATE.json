@@ -13,13 +13,10 @@
         8,
         9,
         10,
-        11,
-        12,
         13,
-        14,
-        15
+        12
     ],
     "CurrentCollectionItemFill": 0.0,
-    "SoundVolume": 0.0,
-    "MusicVolume": 0.0
+    "SoundVolume": 1.0,
+    "MusicVolume": 1.0
 }
