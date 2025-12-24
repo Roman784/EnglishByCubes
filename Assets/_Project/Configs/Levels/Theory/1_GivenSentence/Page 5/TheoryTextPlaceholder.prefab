@@ -21,20 +21,8 @@ PrefabInstance:
         \u0412 \u043F\u0438\u0441\u044C\u043C\u0435\u043D\u043D\u043E\u0439 \u0438
         \u0443\u0441\u0442\u043D\u043E\u0439 \u0440\u0435\u0447\u0438 \u043C\u043E\u0436\u043D\u043E
         \u0432\u0441\u0442\u0440\u0435\u0442\u0438\u0442\u044C \u0441\u043E\u043A\u0440\u0430\u0449\u0435\u043D\u043D\u044B\u0435
-        \u0432\u0430\u0440\u0438\u0430\u043D\u0442\u044B:\r<align=center><color=#1EAEE7><b><line-height=0.64em>\r\n\nAM
-        \u2013 \u2018m\r\nIS \u2013 \u2018s\r\nARE \u2013 \u2018re</line-height></b></color></align>\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
-      propertyPath: m_fontSize
-      value: 42
-      objectReference: {fileID: 0}
-    - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 42
-      objectReference: {fileID: 0}
-    - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
-      propertyPath: m_paragraphSpacing
-      value: 64
+        \u0432\u0430\u0440\u0438\u0430\u043D\u0442\u044B:\r\n<align=center><color=#1EAEE7><b>\r\nAM
+        \u2013 \u2018m\r\nIS \u2013 \u2018s\r\nARE \u2013 \u2018re</b></color></align>"
       objectReference: {fileID: 0}
     - target: {fileID: 2066172044648999862, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
       propertyPath: m_AnchorMax.y

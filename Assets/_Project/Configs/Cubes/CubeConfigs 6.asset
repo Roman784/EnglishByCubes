@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: CubeConfigs 6
   m_EditorClassIdentifier: 
   <Number>k__BackingField: 6
-  <Name>k__BackingField: 
+  <Name>k__BackingField: "\u0412\u043E\u043F\u0440\u043E\u0441\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0435
+    \u0441\u043B\u043E\u0432\u0430"
   <Words>k__BackingField:
-  - kind
-  - wise
-  - sad
-  - happy
-  - good
-  - beautiful
+  - what
+  - who
+  - how old
+  - how
+  - where
+  - when
   <Material>k__BackingField: {fileID: 2100000, guid: 450e688f0edc8dc4e89e3d218c7ea467, type: 2}
   <DataConfigs>k__BackingField: {fileID: 11400000, guid: 6e5eb8a8ef84910498f8821719c1cdf3, type: 2}

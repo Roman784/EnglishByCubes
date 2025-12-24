@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: CubeConfigs 5
   m_EditorClassIdentifier: 
   <Number>k__BackingField: 5
-  <Name>k__BackingField: 
+  <Name>k__BackingField: "\u041E\u0442\u0440\u0438\u0446\u0430\u0442\u0435\u043B\u044C\u043D\u0430\u044F
+    \u0447\u0430\u0441\u0442\u0438\u0446\u0430"
   <Words>k__BackingField:
   - not
   <Material>k__BackingField: {fileID: 2100000, guid: 450e688f0edc8dc4e89e3d218c7ea467, type: 2}

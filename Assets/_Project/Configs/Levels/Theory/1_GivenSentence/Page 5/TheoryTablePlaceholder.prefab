@@ -37,6 +37,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2589708971212065112, guid: 26e7c412bb8cf824c913d41c61413bb8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589708971212065112, guid: 26e7c412bb8cf824c913d41c61413bb8, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -66,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3174732139038309168, guid: 26e7c412bb8cf824c913d41c61413bb8, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 10.86
       objectReference: {fileID: 0}
     - target: {fileID: 3174732139038309168, guid: 26e7c412bb8cf824c913d41c61413bb8, type: 3}
       propertyPath: m_SizeDelta.y
@@ -163,4 +167,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 0
-  m_AspectRatio: NaN
+  m_AspectRatio: 2.6

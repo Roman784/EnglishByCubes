@@ -35,33 +35,20 @@ PrefabInstance:
         \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u043E\u0432 \u044D\u0442\u043E\u0439
         \u043C\u0435\u043B\u043E\u0434\u0440\u0430\u043C\u044B \u0432 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0438,
         \u043F\u043E\u043D\u044F\u0442\u043D\u043E, \u043A\u0442\u043E \u043A\u043E\u0433\u043E
-        \u043B\u044E\u0431\u0438\u0442:\r\n<line-height=0.64em><margin=2em>\r\n\u2022
-        \u0412\u0430\u043D\u044F \u043B\u044E\u0431\u0438\u0442 (\u043A\u043E\u0433\u043E?)
-        \u041C\u0430\u0448<size=48><b>\u0443</b></size>.\r\n\u2022 (\u041A\u043E\u0433\u043E?)
-        \u041C\u0430\u0448<size=48><b>\u0443</b></size> \u043B\u044E\u0431\u0438\u0442
-        \u0412\u0430\u043D\u044F.\r\n\u2022 \u041B\u044E\u0431\u0438\u0442 (\u043A\u043E\u0433\u043E?)
-        \u0412\u0430\u043D<size=48><b>\u044E</b></size> \u041C\u0430\u0448\u0430.\r\n\u2022
-        \u041B\u044E\u0431\u0438\u0442 \u041C\u0430\u0448\u0430 (\u043A\u043E\u0433\u043E?)
-        \u0412\u0430\u043D<size=48><b>\u044E</b></size>.\r\n</margin></line-height>\r\n\u0412
+        \u043B\u044E\u0431\u0438\u0442:\r\n<margin=2em>\r\n\u2022 \u0412\u0430\u043D\u044F
+        \u043B\u044E\u0431\u0438\u0442 (\u043A\u043E\u0433\u043E?) \u041C\u0430\u0448<size=48><b>\u0443</b></size>.\r\n\u2022
+        (\u041A\u043E\u0433\u043E?) \u041C\u0430\u0448<size=48><b>\u0443</b></size>
+        \u043B\u044E\u0431\u0438\u0442 \u0412\u0430\u043D\u044F.\r\n\u2022 \u041B\u044E\u0431\u0438\u0442
+        (\u043A\u043E\u0433\u043E?) \u0412\u0430\u043D<size=48><b>\u044E</b></size>
+        \u041C\u0430\u0448\u0430.\r\n\u2022 \u041B\u044E\u0431\u0438\u0442 \u041C\u0430\u0448\u0430
+        (\u043A\u043E\u0433\u043E?) \u0412\u0430\u043D<size=48><b>\u044E</b></size>.\r\n</margin>\r\n\u0412
         \u0430\u043D\u0433\u043B\u0438\u0439\u0441\u043A\u043E\u043C \u044F\u0437\u044B\u043A\u0435
         \u043C\u044B \u043F\u043E\u0440\u044F\u0434\u043E\u043A \u0441\u043B\u043E\u0432
         \u043C\u043E\u0436\u0435\u0442 \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E
-        \u0438\u0437\u043C\u0435\u043D\u0438\u0442\u044C \u0441\u044E\u0436\u0435\u0442:\r\n<margin=2em>\n\u2022
+        \u0438\u0437\u043C\u0435\u043D\u0438\u0442\u044C \u0441\u044E\u0436\u0435\u0442:\r\n<margin=2em>\r\n\u2022
         John loves Mary - \u0414\u0436\u043E\u043D \u043B\u044E\u0431\u0438\u0442
-        \u041C\u044D\u0440\u0438\r<line-height=0.64em>\n</line-height>\u2022 Mary
-        loves John - \u041C\u044D\u0440\u0438 \u043B\u044E\u0431\u0438\u0442 \u0414\u0436\u043E\u043D\u0430\r\n</margin>"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
-      propertyPath: m_fontSize
-      value: 42
-      objectReference: {fileID: 0}
-    - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 42
-      objectReference: {fileID: 0}
-    - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
-      propertyPath: m_paragraphSpacing
-      value: 64
+        \u041C\u044D\u0440\u0438\r\n\u2022 Mary loves John - \u041C\u044D\u0440\u0438
+        \u043B\u044E\u0431\u0438\u0442 \u0414\u0436\u043E\u043D\u0430\r\n</margin>"
       objectReference: {fileID: 0}
     - target: {fileID: 2066172044648999862, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
       propertyPath: m_AnchorMax.y

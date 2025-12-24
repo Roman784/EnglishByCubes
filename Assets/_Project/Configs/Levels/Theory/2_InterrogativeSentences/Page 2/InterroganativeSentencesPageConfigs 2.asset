@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fe8f29382798f4ba3e2babdebca45c, type: 3}
+  m_Name: InterroganativeSentencesPageConfigs 2
+  m_EditorClassIdentifier: 
+  <Title>k__BackingField: "2.2 \u041A\u0440\u0430\u0442\u043A\u0438\u0439 \u043E\u0442\u0432\u0435\u0442"
+  <Contents>k__BackingField:
+  - <Tag>k__BackingField: 0
+    _text: {fileID: 4999637552003901801, guid: e9990d15c4f057b4287cc68d5ac1fe5d, type: 3}
+    _table: {fileID: 0}
+    _cubeUnfolding: {fileID: 0}
+  - <Tag>k__BackingField: 2
+    _text: {fileID: 0}
+    _table: {fileID: 0}
+    _cubeUnfolding: {fileID: 1326950252999102331, guid: 4c0bfbe6446054449b9fca47c96c578d, type: 3}
+  - <Tag>k__BackingField: 0
+    _text: {fileID: 4999637552003901801, guid: a2b032f47f8d55644931e010025396d7, type: 3}
+    _table: {fileID: 0}
+    _cubeUnfolding: {fileID: 0}
+  - <Tag>k__BackingField: 2
+    _text: {fileID: 0}
+    _table: {fileID: 0}
+    _cubeUnfolding: {fileID: 1326950252999102331, guid: 796cf9fb54660c84392af67d68c69ffe, type: 3}
+  - <Tag>k__BackingField: 0
+    _text: {fileID: 4999637552003901801, guid: 7e52425b9adc97c4c9693428e3133fa4, type: 3}
+    _table: {fileID: 0}
+    _cubeUnfolding: {fileID: 0}
+  - <Tag>k__BackingField: 0
+    _text: {fileID: 4999637552003901801, guid: 159d68e522c9a99409f0c82b28c8ea9a, type: 3}
+    _table: {fileID: 0}
+    _cubeUnfolding: {fileID: 0}

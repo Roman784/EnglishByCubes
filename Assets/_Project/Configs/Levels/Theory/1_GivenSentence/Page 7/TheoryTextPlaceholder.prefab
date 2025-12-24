@@ -15,16 +15,16 @@ PrefabInstance:
         \u0441\u043E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u043F\u0435\u0440\u0432\u0443\u044E
         \u0440\u0435\u0447\u0435\u0432\u0443\u044E \u0435\u0434\u0438\u043D\u0438\u0446\u0443
         \u2013\r\n<nobr><b>\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435-\u0434\u0430\u043D\u043D\u043E\u0441\u0442\u044C</b><nobr>
-        \u201C\u042F \u0435\u0441\u0442\u044C \u2026\u201D : \r\n\n<line-height=0.64em><b><align=center>\u0428\u0430\u0431\u043B\u043E\u043D
-        \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F-\u0434\u0430\u043D\u043D\u043E\u0441\u0442\u0438\r\nS
-        \u2013 BE \u2013 N\r</align></b></line-height>\n\n\u0412 \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u0435
+        \u201C\u042F \u0435\u0441\u0442\u044C \u2026\u201D : \r\n\r\n<align=center>\u0428\u0430\u0431\u043B\u043E\u043D
+        \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F-\u0434\u0430\u043D\u043D\u043E\u0441\u0442\u0438\r\n<b>S
+        \u2013 BE \u2013 N</b>\r\n</align>\r\n\r\n\u0412 \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u0435
         \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438 \u0441\u043E\u0441\u0442\u0430\u0432\u044C\u0442\u0435
         \u0433\u0440\u0430\u043C\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438
         \u0432\u0435\u0440\u043D\u044B\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F
-        \u043F\u043E \u0448\u0430\u0431\u043B\u043E\u043D\u0443.\n\n\u041F\u0440\u0438\u043C\u0435\u0440\u044B\r:\n<line-height=0.64em>He
-        is Ivan - \u041E\u043D \u0418\u0432\u0430\u043D\r\nWe are friends - \u041C\u044B
-        \u0434\u0440\u0443\u0437\u044C\u044F\r\nShe was 25 - \u0415\u0439 \u0431\u044B\u043B\u043E
-        25 \u043B\u0435\u0442"
+        \u043F\u043E \u0448\u0430\u0431\u043B\u043E\u043D\u0443.\r\n\r\n\u041F\u0440\u0438\u043C\u0435\u0440\u044B:<margin=2em>\r\n\u2022
+        He is Ivan - \u041E\u043D \u0418\u0432\u0430\u043D\r\n\u2022 We are friends
+        - \u041C\u044B \u0434\u0440\u0443\u0437\u044C\u044F\r\n\u2022 She was 25
+        - \u0415\u0439 \u0431\u044B\u043B\u043E 25 \u043B\u0435\u0442</margin>"
       objectReference: {fileID: 0}
     - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
       propertyPath: m_fontSize
@@ -36,7 +36,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
       propertyPath: m_paragraphSpacing
-      value: 64
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 2066172044648999862, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
       propertyPath: m_AnchorMax.y

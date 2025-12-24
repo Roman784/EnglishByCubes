@@ -10,20 +10,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
       propertyPath: m_text
-      value: "<align=center><color=#1EAEE7><b><line-height=0.64em>I \u2013 YOU \u2013
-        HE/SHE \u2013 IT \u2013 WE \u2013 THEY</b></color>\r\n[\u044F-\u0442\u044B/\u0432\u044B-\u043E\u043D/\u043E\u043D\u0430-\u043E\u043D\u043E-\u043C\u044B-\u043E\u043D\u0438]</align>"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
-      propertyPath: m_fontSize
-      value: 42
-      objectReference: {fileID: 0}
-    - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 42
-      objectReference: {fileID: 0}
-    - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
-      propertyPath: m_paragraphSpacing
-      value: 64
+      value: "<align=center><color=#1EAEE7><b>I \u2013 YOU \u2013 HE/SHE \u2013 IT
+        \u2013 WE \u2013 THEY</b></color>\r\n[\u044F-\u0442\u044B/\u0432\u044B-\u043E\u043D/\u043E\u043D\u0430-\u043E\u043D\u043E-\u043C\u044B-\u043E\u043D\u0438]</align>"
       objectReference: {fileID: 0}
     - target: {fileID: 2066172044648999862, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
       propertyPath: m_AnchorMax.y

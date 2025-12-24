@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fe8f29382798f4ba3e2babdebca45c, type: 3}
+  m_Name: InterroganativeSentencesPageConfigs 1
+  m_EditorClassIdentifier: 
+  <Title>k__BackingField: "2.1 \u0417\u0430\u043A\u0440\u044B\u0442\u044B\u0435 \u0432\u043E\u043F\u0440\u043E\u0441\u044B"
+  <Contents>k__BackingField:
+  - <Tag>k__BackingField: 0
+    _text: {fileID: 4999637552003901801, guid: c0b0f475c30248c4080095db9e9dea99, type: 3}
+    _table: {fileID: 0}
+    _cubeUnfolding: {fileID: 0}

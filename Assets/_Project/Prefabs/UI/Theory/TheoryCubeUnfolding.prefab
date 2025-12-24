@@ -80,9 +80,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cubeConfigs: {fileID: 11400000, guid: ffd9119df8066374e89a3a73216dde94, type: 2}
   _cells:
-  - {fileID: 7317952419487556214}
   - {fileID: 1598673552271040720}
   - {fileID: 4275784504957064161}
+  - {fileID: 7317952419487556214}
   - {fileID: 7405435579833151823}
   - {fileID: 1618465894103996795}
   - {fileID: 5752551326612724499}

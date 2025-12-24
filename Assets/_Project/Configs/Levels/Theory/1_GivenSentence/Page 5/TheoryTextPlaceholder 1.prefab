@@ -10,11 +10,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
       propertyPath: m_text
-      value: "<align=center><color=#1EAEE7><b><line-height=0.64em>AM \u2013 IS \u2013
-        ARE \u2013 WAS \u2013 WERE \u2013 BE</line-height></b></color></align>\r\n\n\u0412
-        \u0440\u0443\u0441\u0441\u043A\u043E\u043C \u044F\u0437\u044B\u043A\u0435
-        \u0432 \u043D\u0430\u0441\u0442\u043E\u044F\u0449\u0435\u043C \u0432\u0440\u0435\u043C\u0435\u043D\u0438
-        \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0441\u044F
+      value: "<align=center><color=#1EAEE7><b>AM \u2013 IS \u2013 ARE \u2013 WAS
+        \u2013 WERE \u2013 BE</b></color></align>\r\n\r\n\u0412 \u0440\u0443\u0441\u0441\u043A\u043E\u043C
+        \u044F\u0437\u044B\u043A\u0435 \u0432 \u043D\u0430\u0441\u0442\u043E\u044F\u0449\u0435\u043C
+        \u0432\u0440\u0435\u043C\u0435\u043D\u0438 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0441\u044F
         <b>\u043D\u0443\u043B\u0435\u0432\u0430\u044F \u0441\u0432\u044F\u0437\u043A\u0430</b>,
         \u0442\u043E \u0435\u0441\u0442\u044C \u0441\u043B\u043E\u0432\u043E \u0441\u043E
         \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435\u043C \u201C\u0431\u044B\u0442\u044C\u201D
@@ -23,19 +22,7 @@ PrefabInstance:
         \u043F\u043E\u044F\u0432\u043B\u044F\u0435\u0442\u0441\u044F \u0432 \u043F\u0440\u043E\u0448\u0435\u0434\u0448\u0435\u043C
         \u0438 \u0431\u0443\u0434\u0443\u0449\u0435\u043C \u0432\u0440\u0435\u043C\u0435\u043D\u0430\u0445,
         \u043D\u0430\u043F\u0440\u0438\u043C\u0435\u0440,  \u201C\u0431\u044B\u043B,
-        \u0431\u0443\u0434\u0443\u201D."
-      objectReference: {fileID: 0}
-    - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
-      propertyPath: m_fontSize
-      value: 42
-      objectReference: {fileID: 0}
-    - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 42
-      objectReference: {fileID: 0}
-    - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
-      propertyPath: m_paragraphSpacing
-      value: 64
+        \u0431\u0443\u0434\u0443\u201D.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 2066172044648999862, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
       propertyPath: m_AnchorMax.y
