@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79fe8f29382798f4ba3e2babdebca45c, type: 3}
-  m_Name: TheoryPageConfigs 1
+  m_Name: ImperativePageConfigs 1
   m_EditorClassIdentifier: 
-  <Title>k__BackingField: "1.1 \u0421\u0442\u0440\u0430\u043D\u0438\u0446\u0430 1"
+  <Title>k__BackingField: "4.1 \u0418\u043C\u043F\u0435\u0440\u0430\u0442\u0438\u0432"
   <Contents>k__BackingField:
   - <Tag>k__BackingField: 0
-    _text: {fileID: 4999637552003901801, guid: d9cae84139753fa4faf0dedde05174cc, type: 3}
+    _text: {fileID: 4999637552003901801, guid: 29127c4ad22940947a160253a5e0d4e0, type: 3}
     _table: {fileID: 0}
     _cubeUnfolding: {fileID: 0}

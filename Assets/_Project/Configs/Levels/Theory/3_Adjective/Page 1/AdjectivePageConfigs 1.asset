@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79fe8f29382798f4ba3e2babdebca45c, type: 3}
   m_Name: AdjectivePageConfigs 1
   m_EditorClassIdentifier: 
-  <Title>k__BackingField: "1.1 \u0418\u043C\u044F \u043F\u0440\u0438\u043B\u0430\u0433\u0430\u0442\u0435\u043B\u044C\u043D\u043E\u0435"
+  <Title>k__BackingField: "3.1 \u0418\u043C\u044F \u043F\u0440\u0438\u043B\u0430\u0433\u0430\u0442\u0435\u043B\u044C\u043D\u043E\u0435"
   <Contents>k__BackingField:
   - <Tag>k__BackingField: 0
     _text: {fileID: 4999637552003901801, guid: 3f6f5b3d85ef7964f8cd4f6d44459c61, type: 3}
