@@ -10,20 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
       propertyPath: m_text
-      value: "<align=center><color=#1EAEE7><b><line-height=0.64em>YES \u2013 NO</b></color>\r\n[\u0434\u0430
-        - \u043D\u0435\u0442]</align>"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
-      propertyPath: m_fontSize
-      value: 42
-      objectReference: {fileID: 0}
-    - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 42
-      objectReference: {fileID: 0}
-    - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
-      propertyPath: m_paragraphSpacing
-      value: 64
+      value: "<align=center><color=#1EAEE7><b>A BOOK \u2013 AN APPLE \u2013 A PHOTO
+        \u2013 BOOKS \u2013 APPLES \u2013 PHOTOS</b></color>\r\n[\u043A\u043D\u0438\u0433\u0430
+        \u2013 \u044F\u0431\u043B\u043E\u043A\u043E \u2013 \u0444\u043E\u0442\u043E\u0433\u0440\u0430\u0444\u0438\u044F
+        \u2013 \u043A\u043D\u0438\u0433\u0438 \u2013 \u044F\u0431\u043B\u043E\u043A\u0438
+        \u2013 \u0444\u043E\u0442\u043E\u0433\u0440\u0430\u0444\u0438\u0438]</align>"
       objectReference: {fileID: 0}
     - target: {fileID: 2066172044648999862, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
       propertyPath: m_AnchorMax.y

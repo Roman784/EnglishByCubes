@@ -11,7 +11,10 @@ PrefabInstance:
     - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
       propertyPath: m_text
       value: "<align=center><color=#1EAEE7><b>KIND \u2013 WISE \u2013 SAD \u2013
-        HAPPY \u2013 GOOD \u2013 USEFUL</b></color>\r\n[\u0434\u043E\u0431\u0440\u044B\u0439\u2013\u043C\u0443\u0434\u0440\u044B\u0439\u2013\u043F\u0435\u0447\u0430\u043B\u044C\u043D\u044B\u0439\u2013\u0441\u0447\u0430\u0441\u0442\u043B\u0438\u0432\u044B\u0439\u2013\u0445\u043E\u0440\u043E\u0448\u0438\u0439\u2013\u043F\u043E\u043B\u0435\u0437\u043D\u044B\u0439]</align>"
+        HAPPY \u2013 GOOD \u2013 USEFUL</b></color>\r\n[\u0434\u043E\u0431\u0440\u044B\u0439
+        \u2013 \u043C\u0443\u0434\u0440\u044B\u0439 \u2013 \u043F\u0435\u0447\u0430\u043B\u044C\u043D\u044B\u0439
+        \u2013 \u0441\u0447\u0430\u0441\u0442\u043B\u0438\u0432\u044B\u0439 \u2013
+        \u0445\u043E\u0440\u043E\u0448\u0438\u0439 \u2013 \u043F\u043E\u043B\u0435\u0437\u043D\u044B\u0439]</align>"
       objectReference: {fileID: 0}
     - target: {fileID: 2066172044648999862, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
       propertyPath: m_AnchorMax.y

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fe8f29382798f4ba3e2babdebca45c, type: 3}
+  m_Name: HereAndTherePageConfigs 4
+  m_EditorClassIdentifier: 
+  <Title>k__BackingField: 5.2 IS THERE/ ARE THERE?
+  <Contents>k__BackingField:
+  - <Tag>k__BackingField: 0
+    _text: {fileID: 4999637552003901801, guid: 9d5bb4c948cbb8c4b9b6350c75caa338, type: 3}
+    _table: {fileID: 0}
+    _cubeUnfolding: {fileID: 0}
