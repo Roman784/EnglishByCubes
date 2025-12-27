@@ -5,6 +5,7 @@ using Utils;
 using R3;
 using LevelMenu;
 using Theory;
+using UnityEngine.SceneManagement;
 
 namespace GameRoot
 {
@@ -86,6 +87,12 @@ namespace GameRoot
             else if (sceneName == Scenes.MISTAKE_CORRECTION)
             {
                 _sceneProvider.OpenMistakeCorrection(defaultBootParams, 13);
+                return;
+            }
+
+            else if (sceneName != Scenes.BOOT)
+            {
+                SceneManager.LoadScene(sceneName);
                 return;
             }
 #endif

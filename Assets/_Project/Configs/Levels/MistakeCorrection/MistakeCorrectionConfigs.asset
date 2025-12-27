@@ -23,7 +23,7 @@ MonoBehaviour:
       <TargetSentence>k__BackingField: I am Russian
     <Slots>k__BackingField:
     - <CubeNumber>k__BackingField: 2
-      <SideIndex>k__BackingField: 1
+      <SideIndex>k__BackingField: 0
     - <CubeNumber>k__BackingField: 3
       <SideIndex>k__BackingField: 2
     - <CubeNumber>k__BackingField: 1
