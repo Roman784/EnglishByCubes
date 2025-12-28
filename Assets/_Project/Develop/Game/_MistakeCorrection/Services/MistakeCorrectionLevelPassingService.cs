@@ -12,7 +12,7 @@ namespace MistakeCorrection
     {
         private List<MistakeCorrectionSentence> _targetSentances = new();
 
-        public UnityEvent<TemplateSentence, int> OnNewSentenceFounded { get; private set; } = new();
+        public UnityEvent<SentenceConfigs, int> OnNewSentenceFounded { get; private set; } = new();
 
         public void SetTargetSentences(List<MistakeCorrectionSentence> sentences)
         {

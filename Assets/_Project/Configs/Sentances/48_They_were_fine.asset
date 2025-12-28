@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1299072d3afce5b42bb074b347ce235e, type: 3}
   m_Name: 48_They_were_fine
   m_EditorClassIdentifier: 
-  SentenceRu: "\u041E\u043D\u0438 \u0431\u044B\u043B\u0438 \u0432 \u043F\u043E\u0440\u044F\u0434\u043A\u0435.\r"
+  SentenceRu: "\u041E\u043D\u0438 \u0431\u044B\u043B\u0438 \u0432 \u043F\u043E\u0440\u044F\u0434\u043A\u0435."
   SentenceEn: They were fine.
-  TargetSentence: the/sheywerefine
+  TargetSentence: theywerefine
+  CubesPool: 010000000200000003000000

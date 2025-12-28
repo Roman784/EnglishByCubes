@@ -17,13 +17,8 @@ MonoBehaviour:
   <SectionTitle>k__BackingField: "\u0420\u0430\u0437\u0434\u0435\u043B 1"
   <Title>k__BackingField: "\u041F\u0435\u0440\u0435\u0432\u043E\u0434"
   <Sentences>k__BackingField:
-  - <SentenceRu>k__BackingField: "\u042F \u0440\u0443\u0441\u0441\u043A\u0438\u0439."
-    <SentenceEn>k__BackingField: I am Russian.
-    <TargetSentence>k__BackingField: i am russian
-  - <SentenceRu>k__BackingField: "\u042D\u0442\u043E \u0445\u043E\u0440\u043E\u0448\u043E."
-    <SentenceEn>k__BackingField: It is fine.
-    <TargetSentence>k__BackingField: it is fine
-  - <SentenceRu>k__BackingField: "\u041E\u043D\u0438 \u0431\u044B\u043B\u0438 \u0434\u0440\u0443\u0437\u044C\u044F\u043C\u0438."
-    <SentenceEn>k__BackingField: They were friends.
-    <TargetSentence>k__BackingField: They were friends
+  - {fileID: 11400000, guid: 4f4cbe1c3c3167f4bb5db65fdeb6a378, type: 2}
+  - {fileID: 11400000, guid: d9f792067009cc743a066662e6baa66e, type: 2}
+  - {fileID: 11400000, guid: c678ea42109ebfb478f6181b922629f6, type: 2}
+  - {fileID: 11400000, guid: 656d5ff970ebcaf41a9c53519e16a22f, type: 2}
   <CubeNumbersPool>k__BackingField: 010000000200000003000000

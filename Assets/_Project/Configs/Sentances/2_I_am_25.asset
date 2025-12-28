@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1299072d3afce5b42bb074b347ce235e, type: 3}
   m_Name: 2_I_am_25
   m_EditorClassIdentifier: 
-  SentenceRu: "\u041C\u043D\u0435 25 \u043B\u0435\u0442.\r"
+  SentenceRu: "\u041C\u043D\u0435 25 \u043B\u0435\u0442."
   SentenceEn: I am 25.
   TargetSentence: iam25
+  CubesPool: 010000000200000003000000

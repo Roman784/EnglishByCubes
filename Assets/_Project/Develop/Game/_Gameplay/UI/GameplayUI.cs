@@ -38,7 +38,7 @@ namespace UI
             _canvas.sortingLayerName = "UI";
         }
 
-        public void CreateSentences(List<TranslationSentenceData> sentencesData)
+        public void CreateSentences(List<SentenceConfigs> sentencesData)
         {
             _sentences.CreateSentences(sentencesData);
         }

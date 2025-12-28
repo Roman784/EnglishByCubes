@@ -29,7 +29,7 @@ namespace UI
             }
         }
 
-        public void ShowNewSentence(Template.TemplateSentence sentence)
+        public void ShowNewSentence(SentenceConfigs sentence)
         {
             if (_currentSentenceIndex >= _sentences.Count) return;
 

@@ -50,16 +50,18 @@ namespace Template
             _view.SetContainerCellSize(_slots.Count);
         }
 
-        public IEnumerator CreateCubes(List<CubeConfigs> cubeConfigs)
+        public IEnumerator CreateCubes(List<CubeConfigs> cubeConfigs, int[] sides)
         {
             yield return new WaitForSeconds(0.1f);
 
+            int i = 0;
             foreach (var config in cubeConfigs)
             {
-                var cube = _cubeFactory.Create(config);
+                var cube = _cubeFactory.Create(config, sides[i]);
                 cube.CreateOnField();
                 cube.DisableInSlots(true);
                 cube.Destroy(false);
+                i++;
 
                 yield return new WaitForSeconds(0.05f);
             }

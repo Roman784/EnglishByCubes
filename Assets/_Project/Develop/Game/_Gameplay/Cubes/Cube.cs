@@ -123,7 +123,7 @@ namespace Gameplay
         {
             PlayRotationSound();
 
-            var cube = _gameFieldService.CreateCube(_configs);
+            var cube = _gameFieldService.CreateCube(_configs, _curretWordIndex);
 
             if (_slotBar == null) return cube;
 

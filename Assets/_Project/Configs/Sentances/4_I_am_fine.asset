@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1299072d3afce5b42bb074b347ce235e, type: 3}
   m_Name: 4_I_am_fine
   m_EditorClassIdentifier: 
-  SentenceRu: "\u042F \u0432 \u043F\u043E\u0440\u044F\u0434\u043A\u0435.\r"
+  SentenceRu: "\u042F \u0432 \u043F\u043E\u0440\u044F\u0434\u043A\u0435."
   SentenceEn: I am fine.
   TargetSentence: iamfine
+  CubesPool: 010000000200000003000000

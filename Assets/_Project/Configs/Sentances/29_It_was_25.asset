@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 29_It_was_25
   m_EditorClassIdentifier: 
   SentenceRu: "\u042D\u0442\u043E \u0431\u044B\u043B\u043E \u0447\u0438\u0441\u043B\u043E
-    25.\r"
+    25."
   SentenceEn: It was 25.
   TargetSentence: itwas25
+  CubesPool: 010000000200000003000000

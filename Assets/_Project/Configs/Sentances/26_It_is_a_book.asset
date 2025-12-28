@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1299072d3afce5b42bb074b347ce235e, type: 3}
   m_Name: 26_It_is_a_book
   m_EditorClassIdentifier: 
-  SentenceRu: "\u042D\u0442\u043E \u043A\u043D\u0438\u0433\u0430.\r"
+  SentenceRu: "\u042D\u0442\u043E \u043A\u043D\u0438\u0433\u0430."
   SentenceEn: It is a book.
   TargetSentence: itisabook
+  CubesPool: 010000000200000003000000

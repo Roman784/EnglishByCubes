@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1299072d3afce5b42bb074b347ce235e, type: 3}
   m_Name: 7_I_was_Russian
   m_EditorClassIdentifier: 
-  SentenceRu: "\u042F \u0431\u044B\u043B \u0440\u0443\u0441\u0441\u043A\u0438\u043C.\r"
+  SentenceRu: "\u042F \u0431\u044B\u043B \u0440\u0443\u0441\u0441\u043A\u0438\u043C."
   SentenceEn: I was Russian.
   TargetSentence: iwasrussian
+  CubesPool: 010000000200000003000000

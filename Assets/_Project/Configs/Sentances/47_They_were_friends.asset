@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1299072d3afce5b42bb074b347ce235e, type: 3}
   m_Name: 47_They_were_friends
   m_EditorClassIdentifier: 
-  SentenceRu: "\u041E\u043D\u0438 \u0431\u044B\u043B\u0438 \u0434\u0440\u0443\u0437\u044C\u044F\u043C\u0438.\r"
+  SentenceRu: "\u041E\u043D\u0438 \u0431\u044B\u043B\u0438 \u0434\u0440\u0443\u0437\u044C\u044F\u043C\u0438."
   SentenceEn: They were friends.
-  TargetSentence: the/sheywerefriends
+  TargetSentence: theywerefriends
+  CubesPool: 010000000200000003000000

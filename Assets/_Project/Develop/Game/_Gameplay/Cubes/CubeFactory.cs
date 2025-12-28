@@ -35,18 +35,19 @@ namespace Gameplay
             _configsProvider = configsProvider;
         }
 
-        public Cube Create(CubeConfigs configs, Vector3 position)
+        public Cube Create(CubeConfigs configs, Vector3 position, int side = 0)
         {
-            var newCube = Create(configs);
+            var newCube = Create(configs, side);
             newCube.SetPosition(position);
 
             return newCube;
         }
 
-        public Cube Create(CubeConfigs configs)
+        public Cube Create(CubeConfigs configs, int side = 0)
         {
             var view = Object.Instantiate(_prefab);
             var newCube = _container.Instantiate<Cube>(new object[] { view, configs, _gameFieldService, _cubesPositionPreviewService, _audioProvider, _configsProvider });
+            newCube.Rotate(side);
 
             _themeProvider.Customize(view.gameObject);
 

@@ -17,10 +17,7 @@ MonoBehaviour:
   <SectionTitle>k__BackingField: "\u0420\u0430\u0437\u0434\u0435\u043B 3"
   <Title>k__BackingField: "\u041F\u0435\u0440\u0435\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0430"
   <Sentences>k__BackingField:
-  - <Sentence>k__BackingField:
-      <SentenceRu>k__BackingField: "\u042F \u0420\u0443\u0441\u0441\u043A\u0438\u0439."
-      <SentenceEn>k__BackingField: I am Russian.
-      <TargetSentence>k__BackingField: I am Russian
+  - <Sentence>k__BackingField: {fileID: 11400000, guid: 4f4cbe1c3c3167f4bb5db65fdeb6a378, type: 2}
     <Slots>k__BackingField:
     - <CubeNumber>k__BackingField: 2
       <SideIndex>k__BackingField: 0
@@ -28,14 +25,11 @@ MonoBehaviour:
       <SideIndex>k__BackingField: 2
     - <CubeNumber>k__BackingField: 1
       <SideIndex>k__BackingField: 0
-  - <Sentence>k__BackingField:
-      <SentenceRu>k__BackingField: "\u041E\u043D\u0438 \u0431\u044B\u043B\u0438 \u0434\u0440\u0443\u0437\u044C\u044F\u043C\u0438."
-      <SentenceEn>k__BackingField: They were friends.
-      <TargetSentence>k__BackingField: They were friends
+  - <Sentence>k__BackingField: {fileID: 11400000, guid: 1414bdc3522273d4b83bd3b11fed8f91, type: 2}
     <Slots>k__BackingField:
     - <CubeNumber>k__BackingField: 3
-      <SideIndex>k__BackingField: 4
+      <SideIndex>k__BackingField: 1
     - <CubeNumber>k__BackingField: 1
-      <SideIndex>k__BackingField: 5
+      <SideIndex>k__BackingField: 2
     - <CubeNumber>k__BackingField: 2
-      <SideIndex>k__BackingField: 5
+      <SideIndex>k__BackingField: 1

@@ -20,66 +20,59 @@ MonoBehaviour:
   <Slots>k__BackingField:
   - <Mode>k__BackingField: 0
     <CubeNumber>k__BackingField: 1
+    <CubeSideIndex>k__BackingField: 0
   - <Mode>k__BackingField: 1
     <CubeNumber>k__BackingField: 2
+    <CubeSideIndex>k__BackingField: 1
   - <Mode>k__BackingField: 2
     <CubeNumber>k__BackingField: 3
+    <CubeSideIndex>k__BackingField: 0
   <Sentences>k__BackingField:
-  - <SentenceRu>k__BackingField: "\u042F \u0420\u0443\u0441\u0441\u043A\u0438\u0439."
-    <SentenceEn>k__BackingField: I am Russian.
-    <TargetSentence>k__BackingField: I am Russian
-  - <SentenceRu>k__BackingField: "\u042F \u0432 \u043F\u043E\u0440\u044F\u0434\u043A\u0435."
-    <SentenceEn>k__BackingField: I am fine.
-    <TargetSentence>k__BackingField: I am fine
-  - <SentenceRu>k__BackingField: "\u0422\u044B \u0420\u0443\u0441\u0441\u043A\u0438\u0439."
-    <SentenceEn>k__BackingField: You are Russian.
-    <TargetSentence>k__BackingField: You are Russian
-  - <SentenceRu>k__BackingField: "\u0422\u044B \u0432 \u043F\u043E\u0440\u044F\u0434\u043A\u0435."
-    <SentenceEn>k__BackingField: You are fine.
-    <TargetSentence>k__BackingField: You are fine
-  - <SentenceRu>k__BackingField: "\u041E\u043D \u0418\u0432\u0430\u043D."
-    <SentenceEn>k__BackingField: He is Ivan.
-    <TargetSentence>k__BackingField: he/she is Ivan
-  - <SentenceRu>k__BackingField: "\u041E\u043D \u0440\u0443\u0441\u0441\u043A\u0438\u0439."
-    <SentenceEn>k__BackingField: He is Russian.
-    <TargetSentence>k__BackingField: he/she is Russian
-  - <SentenceRu>k__BackingField: "\u042D\u0442\u043E \u043A\u043D\u0438\u0433\u0430."
-    <SentenceEn>k__BackingField: It is a book.
-    <TargetSentence>k__BackingField: It is a book
-  - <SentenceRu>k__BackingField: "\u041C\u044B \u0434\u0440\u0443\u0437\u044C\u044F."
-    <SentenceEn>k__BackingField: We are friends.
-    <TargetSentence>k__BackingField: We are friends
-  - <SentenceRu>k__BackingField: "\u041E\u043D\u0438 \u0434\u0440\u0443\u0437\u044C\u044F."
-    <SentenceEn>k__BackingField: They are friends.
-    <TargetSentence>k__BackingField: They are friends
-  - <SentenceRu>k__BackingField: "\u041E\u043D\u0438 \u0432 \u043F\u043E\u0440\u044F\u0434\u043A\u0435."
-    <SentenceEn>k__BackingField: They are fine.
-    <TargetSentence>k__BackingField: They are fine
-  - <SentenceRu>k__BackingField: "\u042F \u0431\u044B\u043B \u0420\u0443\u0441\u0441\u043A\u0438\u043C."
-    <SentenceEn>k__BackingField: I was Russian.
-    <TargetSentence>k__BackingField: I was Russian
-  - <SentenceRu>k__BackingField: "\u042F \u0431\u044B\u043B \u0432 \u043F\u043E\u0440\u044F\u0434\u043A\u0435."
-    <SentenceEn>k__BackingField: I was fine.
-    <TargetSentence>k__BackingField: I was fine
-  - <SentenceRu>k__BackingField: "\u041E\u043D \u0431\u044B\u043B \u0418\u0432\u0430\u043D\u043E\u043C."
-    <SentenceEn>k__BackingField: He was Ivan.
-    <TargetSentence>k__BackingField: he/she was Ivan.
-  - <SentenceRu>k__BackingField: "\u041E\u043D \u0431\u044B\u043B \u0420\u0443\u0441\u0441\u043A\u0438\u043C."
-    <SentenceEn>k__BackingField: He was Russian.
-    <TargetSentence>k__BackingField: He/she was Russian
-  - <SentenceRu>k__BackingField: "\u0415\u0439 \u0431\u044B\u043B\u043E 25."
-    <SentenceEn>k__BackingField: She was 25.
-    <TargetSentence>k__BackingField: He/she was 25
-  - <SentenceRu>k__BackingField: "\u042D\u0442\u043E \u0431\u044B\u043B\u0430 \u043A\u043D\u0438\u0433\u0430."
-    <SentenceEn>k__BackingField: It was a book.
-    <TargetSentence>k__BackingField: It was a book
-  - <SentenceRu>k__BackingField: "\u041C\u044B \u0431\u044B\u043B\u0438 \u0434\u0440\u0443\u0437\u044C\u044F\u043C\u0438."
-    <SentenceEn>k__BackingField: We were friends.
-    <TargetSentence>k__BackingField: We were friends
-  - <SentenceRu>k__BackingField: "\u041E\u043D\u0438 \u0431\u044B\u043B\u0438 \u0434\u0440\u0443\u0437\u044C\u044F\u043C\u0438."
-    <SentenceEn>k__BackingField: They were friends.
-    <TargetSentence>k__BackingField: They were friends.
-  - <SentenceRu>k__BackingField: "\u041E\u043D\u0438 \u0431\u044B\u043B\u0438 \u0432
-      \u043F\u043E\u0440\u044F\u0434\u043A\u0435."
-    <SentenceEn>k__BackingField: They were fine.
-    <TargetSentence>k__BackingField: They were fine
+  - {fileID: 11400000, guid: da15f379b76b53548b284c663ff29d61, type: 2}
+  - {fileID: 11400000, guid: f1a3258d92190874dbb432ecf14c1e29, type: 2}
+  - {fileID: 11400000, guid: 4f4cbe1c3c3167f4bb5db65fdeb6a378, type: 2}
+  - {fileID: 11400000, guid: 5be598fb42d96044f8d2676cef975c7c, type: 2}
+  - {fileID: 11400000, guid: d7ce8de7d0734e641aea5b152e4e6c83, type: 2}
+  - {fileID: 11400000, guid: 9ab612391af96b742a2fb281e02d85e9, type: 2}
+  - {fileID: 11400000, guid: a44b5aed29ff41b48bbf5aa27726360d, type: 2}
+  - {fileID: 11400000, guid: cd0471dae92db6848a0da7da8c460be1, type: 2}
+  - {fileID: 11400000, guid: e6c98aff12566954e9b94ff265657912, type: 2}
+  - {fileID: 11400000, guid: d9f792067009cc743a066662e6baa66e, type: 2}
+  - {fileID: 11400000, guid: 04f7c84a85f02344d8b3c05a8990f2b1, type: 2}
+  - {fileID: 11400000, guid: 121a74c6a88c3da459c0bf6f2593931a, type: 2}
+  - {fileID: 11400000, guid: fd0cc248d20ca1646b116603c92f808a, type: 2}
+  - {fileID: 11400000, guid: 1de47e2628f10014bb14a479c2c40d44, type: 2}
+  - {fileID: 11400000, guid: 8b716e5b571ad2d43be1480f15d050ac, type: 2}
+  - {fileID: 11400000, guid: cd9dcae2622670f48ae7d37c2fcb7d80, type: 2}
+  - {fileID: 11400000, guid: 72499f58d2f056243ade675278b20948, type: 2}
+  - {fileID: 11400000, guid: b986ce9cdec26ec42b97c42e9abdbc3c, type: 2}
+  - {fileID: 11400000, guid: 2b7b5a1a615a6fa429bd69ec462b5e25, type: 2}
+  - {fileID: 11400000, guid: b80690fe0d1c4b940a164096c6000c44, type: 2}
+  - {fileID: 11400000, guid: 1414bdc3522273d4b83bd3b11fed8f91, type: 2}
+  - {fileID: 11400000, guid: 656d5ff970ebcaf41a9c53519e16a22f, type: 2}
+  - {fileID: 11400000, guid: 8e358f4e32b017a4e8123ae655acfa9e, type: 2}
+  - {fileID: 11400000, guid: 63e584f5251c3c64ab89114575b9b17a, type: 2}
+  - {fileID: 11400000, guid: c678ea42109ebfb478f6181b922629f6, type: 2}
+  - {fileID: 11400000, guid: f2986c3058010ca418f65e1af845cedd, type: 2}
+  - {fileID: 11400000, guid: c985a2ebc3f0e4c41a45ff40094438a4, type: 2}
+  - {fileID: 11400000, guid: a9e4acf9299cf0d4c81df45cbf20749b, type: 2}
+  - {fileID: 11400000, guid: 3fb016fd674c74542b665a027f019905, type: 2}
+  - {fileID: 11400000, guid: 8e6a13873a9522945932e0cbc9fb47c0, type: 2}
+  - {fileID: 11400000, guid: 3042885055e053b468f7c083b3dee97f, type: 2}
+  - {fileID: 11400000, guid: 90c08a7491e455d4d879981cda60425c, type: 2}
+  - {fileID: 11400000, guid: adf42cd44c510454f9a96b373e88c7f0, type: 2}
+  - {fileID: 11400000, guid: d342fb490d7de3144b67da5ac0888f61, type: 2}
+  - {fileID: 11400000, guid: bf995a074b09a0d48b09cd4ffaf95518, type: 2}
+  - {fileID: 11400000, guid: dbe4e23038989e646897c6d8d0d0f6c2, type: 2}
+  - {fileID: 11400000, guid: 543178604f8b0bb40a94cdc78d048528, type: 2}
+  - {fileID: 11400000, guid: 8647f1a9b6945bd4e986314d8ae202ad, type: 2}
+  - {fileID: 11400000, guid: 3d641319089426c469598d2079de8e40, type: 2}
+  - {fileID: 11400000, guid: e00f844df380536409583c02002d0b96, type: 2}
+  - {fileID: 11400000, guid: 22d0fdfd669d73340bb75b819991810c, type: 2}
+  - {fileID: 11400000, guid: d7f2ac0f18606d641a64029dd739555f, type: 2}
+  - {fileID: 11400000, guid: 0aec4da3d52b7f144bd63e2cf0a61f60, type: 2}
+  - {fileID: 11400000, guid: 291d4719aa1402747b95fd169019d732, type: 2}
+  - {fileID: 11400000, guid: 96831157429bdb8439208a01d6f828a9, type: 2}
+  - {fileID: 11400000, guid: 73a245234c853d442ba7196c6c7ab28d, type: 2}
+  - {fileID: 11400000, guid: 381c72f18f8f5d445aea1f278501599b, type: 2}
+  - {fileID: 11400000, guid: e0f694dcfa56d544d84a6df0a005e8fd, type: 2}

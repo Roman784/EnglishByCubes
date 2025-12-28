@@ -33,11 +33,11 @@ namespace MistakeCorrection
             _levelPassingService = levelPassingService;
         }
 
-        public Cube CreateCube(CubeConfigs configs)
+        public Cube CreateCube(CubeConfigs configs, int side = 0)
         {
             var position = _cubesLayoutService.GetLastCubePosition(_cubes.Count + 1);
 
-            var newCube = _cubeFactory.Create(configs, position);
+            var newCube = _cubeFactory.Create(configs, position, side);
             newCube.DisableOnField();
             newCube.ProhibitRotation();
 

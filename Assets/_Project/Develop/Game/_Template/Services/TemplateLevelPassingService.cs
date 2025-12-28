@@ -9,15 +9,15 @@ namespace Template
 {
     public class TemplateLevelPassingService : ILevelPassingService
     {
-        private List<TemplateSentence> _targetSentances = new();
+        private List<SentenceConfigs> _targetSentances = new();
         private List<string> _banWords = new();
         private string _lastMatchingSentence;
         private int _countToPass;
 
-        public UnityEvent<TemplateSentence, int> OnNewSentenceFounded { get; private set; } = new();
+        public UnityEvent<SentenceConfigs, int> OnNewSentenceFounded { get; private set; } = new();
         public UnityEvent<List<string>> OnWordsInBanList { get; private set; } = new();
 
-        public void SetTargetSentences(List<TemplateSentence> sentences, int countToPass)
+        public void SetTargetSentences(List<SentenceConfigs> sentences, int countToPass)
         {
             _targetSentances = new(sentences);
             _countToPass = countToPass;

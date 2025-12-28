@@ -26,5 +26,7 @@ namespace Configs
         {
             return (T)this;
         }
+
+        public virtual void Validate() { }
     }
 }

@@ -58,7 +58,8 @@ namespace Template
 
             // Cubes.
             var cubes = cubesConfigs.GetCubes(levelConfigs.Slots.Select(s => s.CubeNumber).ToArray());
-            Coroutines.Start(templateSlots.CreateCubes(cubes));
+            var cubeSides = levelConfigs.Slots.Select(s => s.CubeSideIndex).ToArray();
+            Coroutines.Start(templateSlots.CreateCubes(cubes, cubeSides));
 
             // Services.
             _levelPassingService.SetTargetSentences(levelConfigs.Sentences, levelConfigs.SentencesCount);

@@ -63,6 +63,15 @@ namespace Configs
             }
         }
 
+        [ContextMenu("Validate")]
+        private void ValidateLevels()
+        {
+            foreach(var level in Levels)
+            {
+                level.Validate();
+            }
+        }
+
         private Dictionary<LevelMode, List<LevelConfigs>> GetLevelsMap()
         {
             var map = new Dictionary<LevelMode, List<LevelConfigs>>();

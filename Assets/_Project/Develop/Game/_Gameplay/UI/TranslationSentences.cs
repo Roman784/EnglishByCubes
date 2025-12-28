@@ -11,7 +11,7 @@ namespace UI
 
         private List<TranslationSentence> _enSentences = new();
 
-        public void CreateSentences(List<TranslationSentenceData> data)
+        public void CreateSentences(List<SentenceConfigs> data)
         {
             for (int i = 0; i < data.Count; i++)
             {

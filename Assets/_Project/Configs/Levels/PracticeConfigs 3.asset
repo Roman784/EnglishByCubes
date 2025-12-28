@@ -16,8 +16,5 @@ MonoBehaviour:
   <LocalNumber>k__BackingField: 4
   <SectionTitle>k__BackingField: "\u0420\u0430\u0437\u0434\u0435\u043B 2"
   <Title>k__BackingField: "\u041F\u0435\u0440\u0435\u0432\u043E\u0434"
-  <Sentences>k__BackingField:
-  - <SentenceRu>k__BackingField: 
-    <SentenceEn>k__BackingField: 
-    <TargetSentence>k__BackingField: 
-  <CubeNumbersPool>k__BackingField: 00000000010000000200000003000000
+  <Sentences>k__BackingField: []
+  <CubeNumbersPool>k__BackingField: 
