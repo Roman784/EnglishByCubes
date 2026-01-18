@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ccf8de9109e104a90e5f5350573982, type: 3}
   m_Name: HereAndThereTheoryConfigs
   m_EditorClassIdentifier: 
-  <GlobalNumber>k__BackingField: 9
+  <GlobalNumber>k__BackingField: 12
   <LocalNumber>k__BackingField: 5
   <SectionTitle>k__BackingField: "\u0413\u0440\u0430\u043C\u043C\u0430-\u043A\u0443\u0431\u0438\u043A\u0438.
     \u0421\u0442\u0443\u043F\u0435\u043D\u044C \u043F\u0435\u0440\u0432\u0430\u044F.
     BE"
   <Title>k__BackingField: "\u0417\u0434\u0435\u0441\u044C \u0438 \u0442\u0430\u043C"
+  <SentanceSign>k__BackingField: 
   <PagesConfigs>k__BackingField:
   - {fileID: 11400000, guid: 1a99c3850b7c4c64bbad7e49b3b2ee0e, type: 2}
   - {fileID: 11400000, guid: 4b266feb31946cb48b260167904a1675, type: 2}

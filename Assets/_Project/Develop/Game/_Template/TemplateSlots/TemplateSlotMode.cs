@@ -4,6 +4,8 @@ namespace Template
     {
         Subject,
         Verb,
-        Object
+        Object,
+        Adjective,
+        Be
     }
 }

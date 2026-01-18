@@ -18,6 +18,7 @@ MonoBehaviour:
     \u0421\u0442\u0443\u043F\u0435\u043D\u044C \u043F\u0435\u0440\u0432\u0430\u044F.
     BE"
   <Title>k__BackingField: "\u041F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435-\u0434\u0430\u043D\u043D\u043E\u0441\u0442\u044C"
+  <SentanceSign>k__BackingField: 
   <PagesConfigs>k__BackingField:
   - {fileID: 11400000, guid: 0ecf961df58f2754889fdcffcbfc9f41, type: 2}
   - {fileID: 11400000, guid: ea5a32c46ec8a784397fe29d0b39b702, type: 2}

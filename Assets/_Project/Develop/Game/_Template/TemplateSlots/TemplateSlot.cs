@@ -31,6 +31,8 @@ namespace Template
                 { TemplateSlotMode.Subject, ("S", "subject")},
                 { TemplateSlotMode.Verb, ("V", "verb")},
                 { TemplateSlotMode.Object, ("O", "object")},
+                { TemplateSlotMode.Adjective, ("A", "adjective")},
+                { TemplateSlotMode.Be, ("Be", "be")},
             };
 
             _partView.sprite = isFirstPart ? _leftPart : isLastPart ? _rightPart : _centerPart;
