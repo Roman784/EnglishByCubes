@@ -10,6 +10,7 @@ namespace Configs
         [field: SerializeField] public int LocalNumber { get; private set; }
         [field: SerializeField] public string SectionTitle { get; private set; }
         [field: SerializeField] public string Title { get; private set; }
+        [field: SerializeField] public string SentanceSign { get; private set; } = "";
         public abstract LevelMode Mode { get; }
 
         public void SetGlobalNumber(int number)

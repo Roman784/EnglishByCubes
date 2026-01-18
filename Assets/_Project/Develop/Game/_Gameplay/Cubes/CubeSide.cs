@@ -9,9 +9,17 @@ namespace Gameplay
         [field: SerializeField] public TMP_Text WordView { get; private set; } 
         [field: SerializeField] public Vector3 Rotation { get; private set; }
 
+        private string _word;
+
         public void SetWord(string word)
         {
-            WordView.text = word;
+            _word = word;
+            WordView.text = _word;
+        }
+
+        public void SetSign(string sign)
+        {
+            WordView.text = _word + sign; 
         }
 
         [ContextMenu("Fast Setup")]

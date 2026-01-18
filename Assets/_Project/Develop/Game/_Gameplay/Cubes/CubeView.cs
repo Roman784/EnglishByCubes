@@ -135,7 +135,7 @@ namespace Gameplay
             return onCompleted;
         }
 
-        public void Rotate(string word, 
+        public void Rotate(string word,
                            float rotationDuration, Ease rotationEase, 
                            float fadeDuration, Ease fadeEase)
         {
@@ -150,6 +150,11 @@ namespace Gameplay
             _previousSide.View.DOFade(0, fadeDuration).SetEase(fadeEase);
 
             _previousSide = side;
+        }
+
+        public void SetSign(string sign)
+        {
+            _previousSide.SetSign(sign); 
         }
 
         public Observable<bool> OpenWordList(float duration, Ease ease)

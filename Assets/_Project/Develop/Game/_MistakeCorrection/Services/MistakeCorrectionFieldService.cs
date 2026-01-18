@@ -17,6 +17,7 @@ namespace MistakeCorrection
         private ICubesLayoutService _cubesLayoutService;
         private CubesPositionPreviewService _cubesPositionPreviewService;
         private ILevelPassingService _levelPassingService;
+        private string _sentanceSign;
 
         public IReadOnlyList<Cube> Cubes => _cubes;
         public UnityEvent<Cube> OnCubeCreated { get; private set; } = new();
@@ -31,6 +32,11 @@ namespace MistakeCorrection
             _cubesLayoutService = cubesLayoutService;
             _cubesPositionPreviewService = cubesPositionPreviewService;
             _levelPassingService = levelPassingService;
+        }
+
+        public void SetSentanceSign(string sign)
+        {
+            _sentanceSign = sign;
         }
 
         public Cube CreateCube(CubeConfigs configs, int side = 0)
@@ -48,6 +54,8 @@ namespace MistakeCorrection
             //newCube.OnDragged.AddListener((_) => CalculateSentenceMatching());
 
             _cubesLayoutService.LayOut(_cubes);
+
+            SetCubeSigns();
 
             OnCubeCreated.Invoke(newCube);
 
@@ -77,6 +85,8 @@ namespace MistakeCorrection
 
             CalculateSentenceMatching();
             _cubesLayoutService.LayOut(_cubes);
+
+            SetCubeSigns();
         }
 
         private void CalculateSentenceMatching()
@@ -93,6 +103,17 @@ namespace MistakeCorrection
             }
 
             return sentence;
+        }
+
+        public void SetCubeSigns()
+        {
+            for (int i = 0; i < _cubes.Count; i++)
+            {
+                if (i == _cubes.Count - 1)
+                    _cubes[i].SetSign(_sentanceSign);
+                else
+                    _cubes[i].SetSign("");
+            }
         }
     }
 }

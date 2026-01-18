@@ -34,6 +34,8 @@ namespace Gameplay
         private bool _canDrag = true;
         private bool _canRotate = true;
 
+        private string _sign;
+
         public int Number => _configs.Number;
         public string CurrentWord => _words[_curretWordIndex];
         public Vector3 Position => _view.GetPosition();
@@ -89,6 +91,11 @@ namespace Gameplay
 
             _view.OnPointerExit.AddListener(() =>
                 _behaviorHandler.CurrentBehavior?.OnPointerExit());
+        }
+
+        public void SetSign(string sign)
+        {
+            _view.SetSign(sign);
         }
 
         public void AddToSlot(SlotBar slotBar, Slot slot)

@@ -17,6 +17,7 @@ namespace MistakeCorrection
     {
         private MistakeCorrectionUI _ui;
         private CubeFactory _cubeFactory;
+        private MistakeCorrectionFieldService _gameFieldService;
         private MistakeCorrectionLevelPassingService _levelPassingService;
 
         private int _currentSentenceIdx = 0;
@@ -29,6 +30,7 @@ namespace MistakeCorrection
         {
             _ui = ui;
             _cubeFactory = cubeFactory;
+            _gameFieldService = (MistakeCorrectionFieldService)gameFieldService;
             _levelPassingService = (MistakeCorrectionLevelPassingService)levelPassingService;
         }
 
@@ -53,6 +55,7 @@ namespace MistakeCorrection
             CreateCubes(levelConfigs, cubesConfigs);
 
             // Services.
+            _gameFieldService.SetSentanceSign(levelConfigs.SentanceSign);
             _levelPassingService.SetTargetSentences(levelConfigs.Sentences);
 
             // UI.
@@ -123,6 +126,8 @@ namespace MistakeCorrection
 
                 cubeOnField.Rotate(wordIndexes[i]);
                 _cubesOnField.Add(cubeOnField);
+
+                _gameFieldService.SetCubeSigns();
 
                 yield return new WaitForSeconds(0.05f);
             }
