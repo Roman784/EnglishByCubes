@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55466077060251847b4cce0744b61a09, type: 3}
+  m_Name: MistakeCorrectionConfigs 2
+  m_EditorClassIdentifier: 
+  <GlobalNumber>k__BackingField: 6
+  <LocalNumber>k__BackingField: 2
+  <SectionTitle>k__BackingField: "\u0420\u0430\u0437\u0434\u0435\u043B 2"
+  <Title>k__BackingField: "\u041F\u0435\u0440\u0435\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0430"
+  <Sentences>k__BackingField:
+  - <Sentence>k__BackingField: {fileID: 11400000, guid: 0c9fadc9bba76e749a8fc2038ba29f9a, type: 2}
+    <Slots>k__BackingField:
+    - <CubeNumber>k__BackingField: 1
+      <SideIndex>k__BackingField: 1
+    - <CubeNumber>k__BackingField: 3
+      <SideIndex>k__BackingField: 0
+    - <CubeNumber>k__BackingField: 2
+      <SideIndex>k__BackingField: 2
+  - <Sentence>k__BackingField: {fileID: 11400000, guid: bfe0e8f00d0e3244dbd2d128cdece84e, type: 2}
+    <Slots>k__BackingField:
+    - <CubeNumber>k__BackingField: 3
+      <SideIndex>k__BackingField: 2
+    - <CubeNumber>k__BackingField: 1
+      <SideIndex>k__BackingField: 2
+    - <CubeNumber>k__BackingField: 2
+      <SideIndex>k__BackingField: 1
+  - <Sentence>k__BackingField: {fileID: 11400000, guid: a8624ae75d8e5aa4bafbcd28507fb125, type: 2}
+    <Slots>k__BackingField:
+    - <CubeNumber>k__BackingField: 1
+      <SideIndex>k__BackingField: 5
+    - <CubeNumber>k__BackingField: 2
+      <SideIndex>k__BackingField: 4
+    - <CubeNumber>k__BackingField: 3
+      <SideIndex>k__BackingField: 5
+  - <Sentence>k__BackingField: {fileID: 11400000, guid: 9fddcd2a12adbae4b8259ddc271b12b7, type: 2}
+    <Slots>k__BackingField:
+    - <CubeNumber>k__BackingField: 3
+      <SideIndex>k__BackingField: 3
+    - <CubeNumber>k__BackingField: 2
+      <SideIndex>k__BackingField: 3
+    - <CubeNumber>k__BackingField: 1
+      <SideIndex>k__BackingField: 3
