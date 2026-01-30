@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9515a61c4ec61c4c8e9ba1cf027efbb, type: 3}
+  m_Name: PracticeConfigs_3 1
+  m_EditorClassIdentifier: 
+  <GlobalNumber>k__BackingField: 10
+  <LocalNumber>k__BackingField: 2
+  <SectionTitle>k__BackingField: "\u0420\u0430\u0437\u0434\u0435\u043B 3"
+  <Title>k__BackingField: "\u041F\u0435\u0440\u0435\u0432\u043E\u0434"
+  <SentanceSign>k__BackingField: '?'
+  <Sentences>k__BackingField:
+  - {fileID: 11400000, guid: fabd61ca75c3f0b499e537371da1ac8f, type: 2}
+  - {fileID: 11400000, guid: ba82258957bb875418531681a6bfd4e3, type: 2}
+  - {fileID: 11400000, guid: e6131daa895b9f046b37a284c1ce6203, type: 2}
+  - {fileID: 11400000, guid: b659914fe1c3cb647b9e1d11b7695ba1, type: 2}
+  <CubeNumbersPool>k__BackingField: 010000000200000007000000

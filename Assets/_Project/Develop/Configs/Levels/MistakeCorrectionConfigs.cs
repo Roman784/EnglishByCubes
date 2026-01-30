@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UI;
+using UnityEditor;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 namespace Configs
 {
@@ -35,6 +37,61 @@ namespace Configs
             }
         }
 
+        [ContextMenu("Fill Slots")]
+        private void FillSlots()
+        {
+            var cubesConfigs = new List<CubeConfigs>();
+            var guids = AssetDatabase.FindAssets($"t:{typeof(CubeConfigs).Name}", 
+                new[] { "Assets/_Project/Configs/Cubes" });
+
+            foreach (string guid in guids)
+            {
+                var path = AssetDatabase.GUIDToAssetPath(guid);
+                var config = AssetDatabase.LoadAssetAtPath<CubeConfigs>(path);
+
+                if (config != null)
+                    cubesConfigs.Add(config);
+            }
+
+            foreach (var sentence in Sentences)
+            {
+                if (sentence.Slots.Count != 0) continue;
+
+                foreach (var cubeNumber in sentence.Sentence.CubesPool)
+                {
+                    var targetEn = sentence.Sentence.SentenceEn
+                            .ToLower()
+                            .Replace(".", " ").Replace(",", " ").Replace("?", " ").Replace("!", " ");
+
+                    if (targetEn.Contains("she ")) targetEn = targetEn.Replace("she ", "he/she");
+                    else if (targetEn.Contains("he ")) targetEn = targetEn.Replace("he ", "he/she");
+
+                    var words = targetEn.Split(" ");
+
+                    var sideIdx = -1;
+                    foreach (var cube in cubesConfigs)
+                    {
+                        if (cube.Number != cubeNumber) continue;
+
+                        for (int i = 0; i < cube.Words.Count; i++)
+                        {
+                            if (words.Contains(cube.Words[i]))
+                            {
+                                sideIdx = i;
+                                break;
+                            }
+                        } 
+                    }
+
+                    sentence.Slots.Add(new MistakeCorrectionSlotData()
+                    {
+                        CubeNumber = cubeNumber,
+                        SideIndex = sideIdx,
+                    });
+                }
+            }
+        }
+
         private void OnValidate()
         {
             Validate();
@@ -51,7 +108,7 @@ namespace Configs
     [Serializable]
     public class MistakeCorrectionSlotData
     {
-        [field: SerializeField] public int CubeNumber { get; private set; }
-        [field: SerializeField] public int SideIndex { get; private set; }
+        [field: SerializeField] public int CubeNumber { get; set; }
+        [field: SerializeField] public int SideIndex { get; set; }
     }
 }

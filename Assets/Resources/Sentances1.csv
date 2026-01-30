@@ -169,3 +169,357 @@ They were happy.;Они были счастливыми.;1 2 7
 They were good.;Они были хорошими.;1 2 7
 They were useful.;Они были полезными.;1 2 7
 Ivan was sad.;Иван был грустным.;3 2 7
+Be kind!;Будь добрым!;2 7
+Be wise!;Будь мудрым!;2 7
+Be sad!;Будь грустным!;2 7
+Be happy!;Будь счастлив!;2 7
+Be good!;Будь хорошим!;2 7
+Be useful!;Будь полезным!;2 7
+What am I?;Что я?;6 2 1
+What is he?;Что он?;6 2 1
+What is it?;Что это?;6 2 1
+What are you?;Что ты?;6 2 1
+What are we?;Что мы?;6 2 1
+What are they?;Что они?;6 2 1
+What was I?;Кем я был?;6 2 1
+What was he?;Кем он был?;6 2 1
+What was it?;Что это было?;6 2 1
+What were you?;Кем ты был?;6 2 1
+What were we?;Кем мы были?;6 2 1
+What were they?;Кем они были?;6 2 1
+Who am I?;Кто я?;6 2 1
+Who is she?;Кто она?;6 2 1
+Who is it?;Кто это?;6 2 1
+Who are you?;Кто ты?;6 2 1
+Who are we?;Кто мы?;6 2 1
+Who are they?;Кто они?;6 2 1
+Who was I?;Кем я был?;6 2 1
+Who was he?;Кем он был?;6 2 1
+Who was it?;Кем это было?;6 2 1
+Who were you?;Кем ты был?;6 2 1
+Who were we?;Кем мы были?;6 2 1
+Who were they?;Кем они были?;6 2 1
+How old am I?;Сколько мне лет?;6 2 1
+How old is she?;Сколько ей лет?;6 2 1
+How old is it?;Сколько этому лет?;6 2 1
+How old are you?;Сколько тебе лет?;6 2 1
+How old are we?;Сколько нам лет?;6 2 1
+How old are they?;Сколько им лет?;6 2 1
+How old was I?;Сколько мне было лет?;6 2 1
+How old was she?;Сколько ей было лет?;6 2 1
+How old was it?;Сколько этому было лет?;6 2 1
+How old were you?;Сколько тебе было лет?;6 2 1
+How old were we?;Сколько нам было лет?;6 2 1
+How old were they?;Сколько им было лет?;6 2 1
+How am I?;Как я себя чувствую/выгляжу?;6 2 1
+How is she?;Как она?;6 2 1
+How is it?;Каково это?;6 2 1
+How are you?;Как ты?;6 2 1
+How are we?;Как мы?;6 2 1
+How are they?;Как они?;6 2 1
+How was I?;Каким я был?;6 2 1
+How was he?;Каким он был?;6 2 1
+How was it?;Как прошло?;6 2 1
+How were you?;Каким ты был?;6 2 1
+How were we?;Какими мы были?;6 2 1
+How were they?;Какими они были?;6 2 1
+Where am I?;Где я?;6 2 1
+Where is he?;Где он?;6 2 1
+Where is it?;Где это?;6 2 1
+Where are you?;Где ты?;6 2 1
+Where are we?;Где мы?;6 2 1
+Where are they?;Где они?;6 2 1
+Where was I?;Где я был?;6 2 1
+Where was he?;Где он был?;6 2 1
+Where was it?;Где это было?;6 2 1
+Where were you?;Где ты был?;6 2 1
+Where were we?;Где мы были?;6 2 1
+Where were they?;Где они были?;6 2 1
+When am I?;Когда я?;6 2 1
+When is she?;Когда она?;6 2 1
+When is it?;Когда это?;6 2 1
+When are you?;Когда ты?;6 2 1
+When are we?;Когда мы?;6 2 1
+When are they?;Когда они?;6 2 1
+When was I?;Когда я был?;6 2 1
+When was he?;Когда он был?;6 2 1
+When was it?;Когда это было?;6 2 1
+When were you?;Когда ты был?;6 2 1
+When were we?;Когда мы были?;6 2 1
+When were they?;Когда они были?;6 2 1
+Am I kind?;Я добрый?;2 1 7
+Am I wise?;Я мудрый?;2 1 7
+Am I sad?;Я грустный?;2 1 7
+Am I happy?;Я счастливый?;2 1 7
+Am I good?;Я хороший?;2 1 7
+Am I useful?;Я полезный?;2 1 7
+Is he kind?;Он добрый?;2 1 7
+Is he sad?;Он грустный?;2 1 7
+Is he good?;Он хороший?;2 1 7
+Is she wise?;Она мудрая?;2 1 7
+Is she happy?;Она счастливая?;2 1 7
+Is she useful?;Она полезная?;2 1 7
+Is it kind?;Оно доброе?;2 1 7
+Is it wise?;Оно мудрое?;2 1 7
+Is it sad?;Оно грустное?;2 1 7
+Is it happy?;Оно счастливое?;2 1 7
+Is it good?;Оно хорошее?;2 1 7
+Is it useful?;Оно полезное?;2 1 7
+Are you kind?;Ты добрый?;2 1 7
+Are you wise?;Ты мудрый?;2 1 7
+Are you sad?;Ты грустный?;2 1 7
+Are you happy?;Ты счастливый?;2 1 7
+Are you good?;Ты хороший?;2 1 7
+Are you useful?;Ты полезный?;2 1 7
+Are we kind?;Мы добрые?;2 1 7
+Are we wise?;Мы мудрые?;2 1 7
+Are we sad?;Мы грустные?;2 1 7
+Are we happy?;Мы счастливые?;2 1 7
+Are we good?;Мы хорошие?;2 1 7
+Are we useful?;Мы полезные?;2 1 7
+Are they kind?;Они добрые?;2 1 7
+Are they wise?;Они мудрые?;2 1 7
+Are they sad?;Они грустные?;2 1 7
+Are they happy?;Они счастливые?;2 1 7
+Are they good?;Они хорошие?;2 1 7
+Are they useful?;Они полезные?;2 1 7
+Was I kind?;Я был добрым?;2 1 7
+Was I wise?;Я был мудрым?;2 1 7
+Was I sad?;Я был грустным?;2 1 7
+Was I happy?;Я был счастливым?;2 1 7
+Was I good?;Я был хорошим?;2 1 7
+Was I useful?;Я был полезным?;2 1 7
+Was he kind?;Он был добрым?;2 1 7
+Was he happy?;Он был счастливым?;2 1 7
+Was he useful?;Он был полезным?;2 1 7
+Was she wise?;Она была мудрой?;2 1 7
+Was she sad?;Она была грустной?;2 1 7
+Was she good?;Она была хорошей?;2 1 7
+Was it kind?;Оно было добрым?;2 1 7
+Was it wise?;Оно было мудрым?;2 1 7
+Was it sad?;Оно было грустным?;2 1 7
+Was it happy?;Оно было счастливым?;2 1 7
+Was it good?;Оно было хорошим?;2 1 7
+Was it useful?;Оно было полезным?;2 1 7
+Were you kind?;Ты был добрым?;2 1 7
+Were you wise?;Ты был мудрым?;2 1 7
+Were you sad?;Ты был грустным?;2 1 7
+Were you happy?;Ты был счастливым?;2 1 7
+Were you good?;Ты был хорошим?;2 1 7
+Were you useful?;Ты был полезным?;2 1 7
+Were we kind?;Мы были добрыми?;2 1 7
+Were we wise?;Мы были мудрыми?;2 1 7
+Were we sad?;Мы были грустными?;2 1 7
+Were we happy?;Мы были счастливыми?;2 1 7
+Were we good?;Мы были хорошими?;2 1 7
+Were we useful?;Мы были полезными?;2 1 7
+Were they kind?;Они были добрыми?;2 1 7
+Were they wise?;Они были мудрыми?;2 1 7
+Were they sad?;Они были грустными?;2 1 7
+Were they happy?;Они были счастливыми?;2 1 7
+Were they good?;Они были хорошими?;2 1 7
+Were they useful?;Они были полезными?;2 1 7
+What is kind?;Что такое доброта?;6 2 7
+What is wise?;Что такое мудрость?;6 2 7
+What is sad?;Что такое грусть?;6 2 7
+What is happy?;Что такое счастье?;6 2 7
+What is good?;Что такое добро?;6 2 7
+What is useful?;Что такое польза?;6 2 7
+Who is kind?;Кто добрый?;6 2 7
+Who is wise?;Кто мудрый?;6 2 7
+Who is sad?;Кто грустный?;6 2 7
+Who is happy?;Кто счастливый?;6 2 7
+Who is good?;Кто хороший?;6 2 7
+Who is useful?;Кто полезный?;6 2 7
+How is kind?;Каково быть добрым?;6 2 7
+How is wise?;Каково быть мудрым?;6 2 7
+How is sad?;Каково быть грустным?;6 2 7
+How is happy?;Каково быть счастливым?;6 2 7
+How is good?;Каково быть хорошим?;6 2 7
+How is useful?;Каково быть полезным?;6 2 7
+Where is kind?;Где (проявляется) доброта?;6 2 7
+Where is wise?;Где (проявляется) мудрость?;6 2 7
+Where is sad?;Где (царит) грусть?;6 2 7
+Where is happy?;Где (царит) счастье?;6 2 7
+Where is good?;Где (есть) добро?;6 2 7
+Where is useful?;Где (есть) польза?;6 2 7
+When is kind?;Когда (нужно быть) добрым?;6 2 7
+When is wise?;Когда (нужно быть) мудрым?;6 2 7
+When is sad?;Когда (бывает) грустно?;6 2 7
+When is happy?;Когда (бывает) счастливо?;6 2 7
+When is good?;Когда (всё) хорошо?;6 2 7
+When is useful?;Когда (это) полезно?;6 2 7
+What was kind?;Что было добрым?;6 2 7
+What was wise?;Что было мудрым?;6 2 7
+What was sad?;Что было грустным?;6 2 7
+What was happy?;Что было счастливым?;6 2 7
+What was good?;Что было хорошим?;6 2 7
+What was useful?;Что было полезным?;6 2 7
+Who was kind?;Кто был добрым?;6 2 7
+Who was wise?;Кто был мудрым?;6 2 7
+Who was sad?;Кто был грустным?;6 2 7
+Who was happy?;Кто был счастливым?;6 2 7
+Who was good?;Кто был хорошим?;6 2 7
+Who was useful?;Кто был полезным?;6 2 7
+How was kind?;Каково было быть добрым?;6 2 7
+How was wise?;Каково было быть мудрым?;6 2 7
+How was sad?;Насколько это было грустно?;6 2 7
+How was happy?;Насколько это было счастливо?;6 2 7
+How was good?;Насколько это было хорошо?;6 2 7
+How was useful?;Насколько это было полезно?;6 2 7
+Where was kind?;Где было это доброе дело?;6 2 7
+Where was wise?;Где была эта мудрость?;6 2 7
+Where was sad?;Где была эта грусть?;6 2 7
+Where was happy?;Где было это счастье?;6 2 7
+Where was good?;Где было это хорошее место?;6 2 7
+Where was useful?;Где была эта польза?;6 2 7
+When was kind?;Когда это было добрым?;6 2 7
+When was wise?;Когда это было мудрым?;6 2 7
+When was sad?;Когда это было грустным?;6 2 7
+When was happy?;Когда это было счастливым?;6 2 7
+When was good?;Когда это было хорошим?;6 2 7
+When was useful?;Когда это было полезным?;6 2 7
+What are kind?;Что (мн.ч.) является добрым?;6 2 7
+What are wise?;Что (мн.ч.) является мудрым?;6 2 7
+What are sad?;Что (мн.ч.) является грустным?;6 2 7
+What are happy?;Что (мн.ч.) является счастливым?;6 2 7
+What are good?;Что (мн.ч.) является хорошим?;6 2 7
+What are useful?;Что (мн.ч.) является полезным?;6 2 7
+What were kind?;Что (мн.ч.) было добрым?;6 2 7
+What were wise?;Что (мн.ч.) было мудрым?;6 2 7
+What were sad?;Что (мн.ч.) было грустным?;6 2 7
+What were happy?;Что (мн.ч.) было счастливым?;6 2 7
+What were good?;Что (мн.ч.) было хорошим?;6 2 7
+What were useful?;Что (мн.ч.) было полезным?;6 2 7
+Here is a book.;Здесь книга.;8 2 9
+Here is an apple.;Здесь яблоко.;8 2 9
+Here is the book.;Вот книга.;8 2 9
+Here is the apple.;Вот яблоко.;8 2 9
+Here are books.;Здесь книги.;8 2 9
+Here are apples.;Здесь яблоки.;8 2 9
+Here are the books.;Вот книги.;8 2 9
+Here are the apples.;Вот яблоки.;8 2 9
+Here was a book.;Здесь была книга.;8 2 9
+Here was an apple.;Здесь было яблоко.;8 2 9
+Here was the book.;Здесь была та книга.;8 2 9
+Here was the apple.;Здесь было то яблоко.;8 2 9
+Here were books.;Здесь были книги.;8 2 9
+Here were apples.;Здесь были яблоки.;8 2 9
+Here were the books.;Здесь были те книги.;8 2 9
+Here were the apples.;Здесь были те яблоки.;8 2 9
+Here is not a book.;Здесь нет книги.;8 2 5 9
+Here is not an apple.;Здесь нет яблока.;8 2 5 9
+Here is not the book.;Здесь нет той книги.;8 2 5 9
+Here is not the apple.;Здесь нет того яблока.;8 2 5 9
+Here are not books.;Здесь нет книг.;8 2 5 9
+Here are not apples.;Здесь нет яблок.;8 2 5 9
+Here are not the books.;Здесь нет тех книг.;8 2 5 9
+Here are not the apples.;Здесь нет тех яблок.;8 2 5 9
+Here was not a book.;Здесь не было книги.;8 2 5 9
+Here was not an apple.;Здесь не было яблока.;8 2 5 9
+Here was not the book.;Здесь не было той книги.;8 2 5 9
+Here was not the apple.;Здесь не было того яблока.;8 2 5 9
+Here were not books.;Здесь не было книг.;8 2 5 9
+Here were not apples.;Здесь не было яблок.;8 2 5 9
+Here were not the books.;Здесь не было тех книг.;8 2 5 9
+Here were not the apples.;Здесь не было тех яблок.;8 2 5 9
+Here is no book.;Здесь нет книги.;8 2 5 9
+Here is no apple.;Здесь нет яблока.;8 2 5 9
+Here are no books.;Здесь нет книг.;8 2 5 9
+Here are no apples.;Здесь нет яблок.;8 2 5 9
+Here is not any book.;Здесь нет никакой книги.;8 2 5 9
+Here is not any apple.;Здесь нет никакого яблока.;8 2 5 9
+Here are not any books.;Здесь нет никаких книг.;8 2 5 9
+Here are not any apples.;Здесь нет никаких яблок.;8 2 5 9
+Here is none.;Здесь ничего нет.;8 2 9
+Here are none.;Здесь ничего нет.;8 2 9
+Here is some book.;Здесь какая-то книга.;8 2 5 9
+Here is some apple.;Здесь какое-то яблоко.;8 2 5 9
+Here are some books.;Здесь какие-то книги.;8 2 5 9
+Here are some apples.;Здесь какие-то яблоки.;8 2 5 9
+There is a book.;Там книга.;8 2 9
+There is an apple.;Там яблоко.;8 2 9
+There is the book.;Вон книга.;8 2 9
+There is the apple.;Вон яблоко.;8 2 9
+There are books.;Там книги.;8 2 9
+There are apples.;Там яблоки.;8 2 9
+There are the books.;Вон книги.;8 2 9
+There are the apples.;Вон яблоки.;8 2 9
+There was a book.;Там была книга.;8 2 9
+There was an apple.;Там было яблоко.;8 2 9
+There was the book.;Там была та книга.;8 2 9
+There was the apple.;Там было то яблоко.;8 2 9
+There were books.;Там были книги.;8 2 9
+There were apples.;Там были яблоки.;8 2 9
+There were the books.;Там были те книги.;8 2 9
+There were the apples.;Там были те яблоки.;8 2 9
+There is not a book.;Там нет книги.;8 2 9
+There is not an apple.;Там нет яблока.;8 2 5 9
+There is not the book.;Там нет той книги.;8 2 5 9
+There is not the apple.;Там нет того яблока.;8 2 5 9
+There are not books.;Там нет книг.;8 2 5 9
+There are not apples.;Там нет яблок.;8 2 5 9
+There are not the books.;Там нет тех книг.;8 2 5 9
+There are not the apples.;Там нет тех яблок.;8 2 5 9
+There was not a book.;Там не было книги.;8 2 5 9
+There was not an apple.;Там не было яблока.;8 2 5 9
+There was not the book.;Там не было той книги.;8 2 5 9
+There was not the apple.;Там не было того яблока.;8 2 5 9
+There were not books.;Там не было книг.;8 2 5 9
+There were not apples.;Там не было яблок.;8 2 5 9
+There were not the books.;Там не было тех книг.;8 2 5 9
+There were not the apples.;Там не было тех яблок.;8 2 5 9
+There is no book.;Там нет книги.;8 2 5 9
+There is no apple.;Там нет яблока.;8 2 5 9
+There are no books.;Там нет книг.;8 2 5 9
+There are no apples.;Там нет яблок.;8 2 5 9
+There is not any book.;Там нет никакой книги.;8 2 5 9
+There is not any apple.;Там нет никакого яблока.;8 2 5 9
+There are not any books.;Там нет никаких книг.;8 2 5 9
+There are not any apples.;Там нет никаких яблок.;8 2 5 9
+There is none.;Там ничего нет.;8 2 9
+There are none.;Там ничего нет.;8 2 9
+There is some book.;Там какая-то книга.;8 2 5 9
+There is some apple.;Там какое-то яблоко.;8 2 5 9
+There are some books.;Там какие-то книги.;8 2 5 9
+There are some apples.;Там какие-то яблоки.;8 2 5 9
+Here was no book.;Здесь не было никакой книги.;8 2 5 9
+Here was no apple.;Здесь не было никакого яблока.;8 2 5 9
+Here were no books.;Здесь не было никаких книг.;8 2 5 9
+Here were no apples.;Здесь не было никаких яблок.;8 2 5 9
+Here was not any book.;Здесь не было никакой книги.;8 2 5 9
+Here was not any apple.;Здесь не было никакого яблока.;8 2 5 9
+Here were not any books.;Здесь не было никаких книг.;8 2 5 9
+Here were not any apples.;Здесь не было никаких яблок.;8 2 5 9
+Here was some book.;Здесь была какая-то книга.;8 2 5 9
+Here was some apple.;Здесь было какое-то яблоко.;8 2 5 9
+Here were some books.;Здесь были какие-то книги.;8 2 5 9
+Here were some apples.;Здесь были какие-то яблоки.;8 2 5 9
+Here was none.;Здесь ничего не было.;8 2 9
+Here were none.;Здесь ничего не было.;8 2 9
+There was no book.;Там не было никакой книги.;8 2 5 9
+There was no apple.;Там не было никакого яблока.;8 2 5 9
+There were no books.;Там не было никаких книг.;8 2 5 9
+There were no apples.;Там не было никаких яблок.;8 2 5 9
+There was not any book.;Там не было никакой книги.;8 2 5 9
+There was not any apple.;Там не было никакого яблока.;8 2 5 9
+There were not any books.;Там не было никаких книг.;8 2 5 9
+There were not any apples.;Там не было никаких яблок.;8 2 5 9
+There was some book.;Там была какая-то книга.;8 2 5 9
+There was some apple.;Там было какое-то яблоко.;8 2 5 9
+There were some books.;Там были какие-то книги.;8 2 5 9
+There were some apples.;Там были какие-то яблоки.;8 2 5 9
+There was none.;Там ничего не было.;8 2 9
+There were none.;Там ничего не было.;8 2 9
+Here is some book.;Здесь какая-то книга.;8 2 5 9
+Here is some apple.;Здесь какое-то яблоко.;8 2 5 9
+There is some book.;Там какая-то книга.;8 2 5 9
+There is some apple.;Там какое-то яблоко.;8 2 5 9
+Here is no book.;Здесь нет книги.;8 2 5 9
+Here is no apple.;Здесь нет яблока.;8 2 5 9
+Here is not any book.;Здесь нет никакой книги.;8 2 5 9
+Here is not any apple.;Здесь нет никакого яблока.;8 2 5 9
+There is no book.;Там нет книги.;8 2 5 9
+There is no apple.;Там нет яблока.;8 2 5 9
+There is not any book.;Там нет никакой книги.;8 2 5 9
+There is not any apple.;Там нет никакого яблока.;8 2 5 9
