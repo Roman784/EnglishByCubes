@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9515a61c4ec61c4c8e9ba1cf027efbb, type: 3}
-  m_Name: PracticeConfigs_5
+  m_Name: PracticeConfigs_5 1
   m_EditorClassIdentifier: 
   <GlobalNumber>k__BackingField: 10
   <LocalNumber>k__BackingField: 2
@@ -18,8 +18,8 @@ MonoBehaviour:
   <Title>k__BackingField: "\u041F\u0435\u0440\u0435\u0432\u043E\u0434"
   <SentanceSign>k__BackingField: .
   <Sentences>k__BackingField:
-  - {fileID: 11400000, guid: 3397e635064c0384e8f183fe7db445d0, type: 2}
-  - {fileID: 11400000, guid: 761713993c7102f4cb0d82f57fc4d472, type: 2}
-  - {fileID: 11400000, guid: c3bb32a9220379f409c5df2838f8617a, type: 2}
-  - {fileID: 11400000, guid: b4502af06984e5e4997a85c63819d95c, type: 2}
-  <CubeNumbersPool>k__BackingField: 020000000800000009000000
+  - {fileID: 11400000, guid: 7f66e854f73767a49a4627d4324708f0, type: 2}
+  - {fileID: 11400000, guid: 48dc989de596a87429ddfd4f004f1e00, type: 2}
+  - {fileID: 11400000, guid: 915f1741ceb137242abe84c2445bfebd, type: 2}
+  - {fileID: 11400000, guid: 44bbf01072b49c549ab27457913b0373, type: 2}
+  <CubeNumbersPool>k__BackingField: 02000000050000000800000009000000

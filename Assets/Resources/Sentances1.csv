@@ -423,20 +423,18 @@ Here were not books.;Здесь не было книг.;8 2 5 9
 Here were not apples.;Здесь не было яблок.;8 2 5 9
 Here were not the books.;Здесь не было тех книг.;8 2 5 9
 Here were not the apples.;Здесь не было тех яблок.;8 2 5 9
-Here is no book.;Здесь нет книги.;8 2 5 9
-Here is no apple.;Здесь нет яблока.;8 2 5 9
 Here are no books.;Здесь нет книг.;8 2 5 9
 Here are no apples.;Здесь нет яблок.;8 2 5 9
-Here is not any book.;Здесь нет никакой книги.;8 2 5 9
-Here is not any apple.;Здесь нет никакого яблока.;8 2 5 9
+Here were no books.;Здесь не было никаких книг.;8 2 5 9
+Here were no apples.;Здесь не было никаких яблок.;8 2 5 9
 Here are not any books.;Здесь нет никаких книг.;8 2 5 9
 Here are not any apples.;Здесь нет никаких яблок.;8 2 5 9
-Here is none.;Здесь ничего нет.;8 2 9
-Here are none.;Здесь ничего нет.;8 2 9
-Here is some book.;Здесь какая-то книга.;8 2 5 9
-Here is some apple.;Здесь какое-то яблоко.;8 2 5 9
+Here were not any books.;Здесь не было никаких книг.;8 2 5 9
+Here were not any apples.;Здесь не было никаких яблок.;8 2 5 9
 Here are some books.;Здесь какие-то книги.;8 2 5 9
 Here are some apples.;Здесь какие-то яблоки.;8 2 5 9
+Here were some books.;Здесь были какие-то книги.;8 2 5 9
+Here were some apples.;Здесь были какие-то яблоки.;8 2 5 9
 There is a book.;Там книга.;8 2 9
 There is an apple.;Там яблоко.;8 2 9
 There is the book.;Вон книга.;8 2 9
@@ -454,9 +452,9 @@ There were apples.;Там были яблоки.;8 2 9
 There were the books.;Там были те книги.;8 2 9
 There were the apples.;Там были те яблоки.;8 2 9
 There is not a book.;Там нет книги.;8 2 9
-There is not an apple.;Там нет яблока.;8 2 5 9
-There is not the book.;Там нет той книги.;8 2 5 9
-There is not the apple.;Там нет того яблока.;8 2 5 9
+There is not an apple.;Там нет яблока.;8 2 9
+There is not the book.;Там нет той книги.;8 2 9
+There is not the apple.;Там нет того яблока.;8 2 9
 There are not books.;Там нет книг.;8 2 5 9
 There are not apples.;Там нет яблок.;8 2 5 9
 There are not the books.;Там нет тех книг.;8 2 5 9
@@ -469,57 +467,15 @@ There were not books.;Там не было книг.;8 2 5 9
 There were not apples.;Там не было яблок.;8 2 5 9
 There were not the books.;Там не было тех книг.;8 2 5 9
 There were not the apples.;Там не было тех яблок.;8 2 5 9
-There is no book.;Там нет книги.;8 2 5 9
-There is no apple.;Там нет яблока.;8 2 5 9
 There are no books.;Там нет книг.;8 2 5 9
 There are no apples.;Там нет яблок.;8 2 5 9
-There is not any book.;Там нет никакой книги.;8 2 5 9
-There is not any apple.;Там нет никакого яблока.;8 2 5 9
-There are not any books.;Там нет никаких книг.;8 2 5 9
-There are not any apples.;Там нет никаких яблок.;8 2 5 9
-There is none.;Там ничего нет.;8 2 9
-There are none.;Там ничего нет.;8 2 9
-There is some book.;Там какая-то книга.;8 2 5 9
-There is some apple.;Там какое-то яблоко.;8 2 5 9
-There are some books.;Там какие-то книги.;8 2 5 9
-There are some apples.;Там какие-то яблоки.;8 2 5 9
-Here was no book.;Здесь не было никакой книги.;8 2 5 9
-Here was no apple.;Здесь не было никакого яблока.;8 2 5 9
-Here were no books.;Здесь не было никаких книг.;8 2 5 9
-Here were no apples.;Здесь не было никаких яблок.;8 2 5 9
-Here was not any book.;Здесь не было никакой книги.;8 2 5 9
-Here was not any apple.;Здесь не было никакого яблока.;8 2 5 9
-Here were not any books.;Здесь не было никаких книг.;8 2 5 9
-Here were not any apples.;Здесь не было никаких яблок.;8 2 5 9
-Here was some book.;Здесь была какая-то книга.;8 2 5 9
-Here was some apple.;Здесь было какое-то яблоко.;8 2 5 9
-Here were some books.;Здесь были какие-то книги.;8 2 5 9
-Here were some apples.;Здесь были какие-то яблоки.;8 2 5 9
-Here was none.;Здесь ничего не было.;8 2 9
-Here were none.;Здесь ничего не было.;8 2 9
-There was no book.;Там не было никакой книги.;8 2 5 9
-There was no apple.;Там не было никакого яблока.;8 2 5 9
 There were no books.;Там не было никаких книг.;8 2 5 9
 There were no apples.;Там не было никаких яблок.;8 2 5 9
-There was not any book.;Там не было никакой книги.;8 2 5 9
-There was not any apple.;Там не было никакого яблока.;8 2 5 9
+There are not any books.;Там нет никаких книг.;8 2 5 9
+There are not any apples.;Там нет никаких яблок.;8 2 5 9
 There were not any books.;Там не было никаких книг.;8 2 5 9
 There were not any apples.;Там не было никаких яблок.;8 2 5 9
-There was some book.;Там была какая-то книга.;8 2 5 9
-There was some apple.;Там было какое-то яблоко.;8 2 5 9
+There are some books.;Там какие-то книги.;8 2 5 9
+There are some apples.;Там какие-то яблоки.;8 2 5 9
 There were some books.;Там были какие-то книги.;8 2 5 9
 There were some apples.;Там были какие-то яблоки.;8 2 5 9
-There was none.;Там ничего не было.;8 2 9
-There were none.;Там ничего не было.;8 2 9
-Here is some book.;Здесь какая-то книга.;8 2 5 9
-Here is some apple.;Здесь какое-то яблоко.;8 2 5 9
-There is some book.;Там какая-то книга.;8 2 5 9
-There is some apple.;Там какое-то яблоко.;8 2 5 9
-Here is no book.;Здесь нет книги.;8 2 5 9
-Here is no apple.;Здесь нет яблока.;8 2 5 9
-Here is not any book.;Здесь нет никакой книги.;8 2 5 9
-Here is not any apple.;Здесь нет никакого яблока.;8 2 5 9
-There is no book.;Там нет книги.;8 2 5 9
-There is no apple.;Там нет яблока.;8 2 5 9
-There is not any book.;Там нет никакой книги.;8 2 5 9
-There is not any apple.;Там нет никакого яблока.;8 2 5 9
