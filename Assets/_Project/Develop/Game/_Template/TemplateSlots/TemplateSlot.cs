@@ -33,6 +33,11 @@ namespace Template
                 { TemplateSlotMode.Object, ("O", "object")},
                 { TemplateSlotMode.Adjective, ("A", "adjective")},
                 { TemplateSlotMode.Be, ("Be", "be")},
+                { TemplateSlotMode.Wh, ("Wh", "wh...")},
+                { TemplateSlotMode.WhoWhat, ("Who/What", "who/what")},
+                { TemplateSlotMode.There, ("There", "there")},
+                { TemplateSlotMode.ThereHere, ("There/Here", "there/here")},
+                { TemplateSlotMode.Not, ("Not", "not")},
             };
 
             _partView.sprite = isFirstPart ? _leftPart : isLastPart ? _rightPart : _centerPart;

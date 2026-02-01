@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Template;
 using UI;
+using UnityEditor;
 using UnityEngine;
 
 namespace Configs
@@ -40,6 +41,44 @@ namespace Configs
         private void OnValidate()
         {
             Validate();
+        }
+
+        [ContextMenu("Fill Sentances")]
+        private void FillSentances()
+        {
+            if (Sentences.Count > 0) return;
+
+            var sentanceConfigs = new List<SentenceConfigs>();
+            var guids = AssetDatabase.FindAssets($"t:{typeof(SentenceConfigs).Name}",
+                new[] { "Assets/_Project/Configs/Sentances" });
+
+            foreach (string guid in guids)
+            {
+                var path = AssetDatabase.GUIDToAssetPath(guid);
+                var config = AssetDatabase.LoadAssetAtPath<SentenceConfigs>(path);
+
+                if (config != null)
+                    sentanceConfigs.Add(config);
+            }
+
+            foreach (var sentence in sentanceConfigs)
+            {
+                if (sentence.CubesPool.Length != Slots.Count) continue;
+
+                var f = true;
+                for (int i = 0; i < Slots.Count; i++)
+                {
+                    if (Slots[i].CubeNumber != sentence.CubesPool[i])
+                    {
+                        f = false;
+                        break;
+                    }
+
+                }
+
+                if (f)
+                    Sentences.Add(sentence);
+            }
         }
     }
 }

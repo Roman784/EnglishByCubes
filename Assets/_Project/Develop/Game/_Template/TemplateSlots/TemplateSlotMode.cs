@@ -6,6 +6,11 @@ namespace Template
         Verb,
         Object,
         Adjective,
-        Be
+        Be,
+        Wh,
+        WhoWhat,
+        There,
+        ThereHere,
+        Not
     }
 }
