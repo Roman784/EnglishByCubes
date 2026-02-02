@@ -12,42 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79fe8f29382798f4ba3e2babdebca45c, type: 3}
   m_Name: HereAndTherePageConfigs 2
   m_EditorClassIdentifier: 
-  <Title>k__BackingField: "\u041C\u0435\u0441\u0442\u043E \u043D\u0430\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u044F
-    \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u0430"
+  <Title>k__BackingField: "5.1 \u0423\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0435
+    \u043A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u0438"
   <Contents>k__BackingField:
   - <Tag>k__BackingField: 0
-    _text: {fileID: 4999637552003901801, guid: 25f587ef8c94f2445816fe996548b2fb, type: 3}
+    _text: {fileID: 4999637552003901801, guid: bdb8f1a1b4adf8743bc9c5d72dbdda0c, type: 3}
     _table: {fileID: 0}
     _cubeUnfolding: {fileID: 0}
   - <Tag>k__BackingField: 2
     _text: {fileID: 0}
     _table: {fileID: 0}
-    _cubeUnfolding: {fileID: 1326950252999102331, guid: 4c02cf5c899fc574db1f36fd56d2bfb4, type: 3}
+    _cubeUnfolding: {fileID: 1326950252999102331, guid: d18b87a786f9fd548953d3e0eb794b16, type: 3}
   - <Tag>k__BackingField: 0
-    _text: {fileID: 4999637552003901801, guid: 3f0fe4477389472468000875ee42153f, type: 3}
+    _text: {fileID: 4999637552003901801, guid: 148f4c5f419a00c45bd6fbb4b1279784, type: 3}
     _table: {fileID: 0}
     _cubeUnfolding: {fileID: 0}
   - <Tag>k__BackingField: 2
     _text: {fileID: 0}
     _table: {fileID: 0}
-    _cubeUnfolding: {fileID: 1326950252999102331, guid: 028d2ff0327a46444b178b5809ab2c9a, type: 3}
+    _cubeUnfolding: {fileID: 1326950252999102331, guid: a3b210dbdaa81354093cad1bdf18e267, type: 3}
   - <Tag>k__BackingField: 0
-    _text: {fileID: 4999637552003901801, guid: 7c3f2bbffbc0f784d8a9dfc56cb87c42, type: 3}
+    _text: {fileID: 4999637552003901801, guid: 6f41100c01edfe54e8fdadd07ac13850, type: 3}
     _table: {fileID: 0}
     _cubeUnfolding: {fileID: 0}
-  - <Tag>k__BackingField: 2
-    _text: {fileID: 0}
-    _table: {fileID: 0}
-    _cubeUnfolding: {fileID: 1326950252999102331, guid: c5894b63dbeca90409d9bd15a372c23b, type: 3}
   - <Tag>k__BackingField: 0
-    _text: {fileID: 4999637552003901801, guid: 4ad917f4ed2c05a4493973bffcf9ebaf, type: 3}
-    _table: {fileID: 0}
-    _cubeUnfolding: {fileID: 0}
-  - <Tag>k__BackingField: 2
-    _text: {fileID: 0}
-    _table: {fileID: 0}
-    _cubeUnfolding: {fileID: 1326950252999102331, guid: 465da6e20a9a77c4788cdaf517dc7326, type: 3}
-  - <Tag>k__BackingField: 0
-    _text: {fileID: 4999637552003901801, guid: 8efe7ae921fc8e24381e729d3c997c86, type: 3}
+    _text: {fileID: 4999637552003901801, guid: c054c9c384f7993419d121ffaf29c389, type: 3}
     _table: {fileID: 0}
     _cubeUnfolding: {fileID: 0}

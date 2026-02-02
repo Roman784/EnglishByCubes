@@ -17,10 +17,13 @@ MonoBehaviour:
   <SectionTitle>k__BackingField: "\u0413\u0440\u0430\u043C\u043C\u0430-\u043A\u0443\u0431\u0438\u043A\u0438.
     \u0421\u0442\u0443\u043F\u0435\u043D\u044C \u043F\u0435\u0440\u0432\u0430\u044F.
     BE"
-  <Title>k__BackingField: "\u0417\u0434\u0435\u0441\u044C \u0438 \u0442\u0430\u043C"
+  <Title>k__BackingField: "\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044F
+    \u043C\u0435\u0441\u0442\u0430"
   <SentanceSign>k__BackingField: 
   <PagesConfigs>k__BackingField:
   - {fileID: 11400000, guid: 1a99c3850b7c4c64bbad7e49b3b2ee0e, type: 2}
-  - {fileID: 11400000, guid: 4b266feb31946cb48b260167904a1675, type: 2}
-  - {fileID: 11400000, guid: 3b2776c052acc0a4dbb0c98e3cc48da2, type: 2}
-  - {fileID: 11400000, guid: 263fe20a167d1ef47afba77236e3041d, type: 2}
+  - {fileID: 11400000, guid: 719011bd6aba9b64b822591524aa8ea0, type: 2}
+  - {fileID: 11400000, guid: 59fc06143299ec342a4527e86e84e115, type: 2}
+  - {fileID: 11400000, guid: ec705380558bff74d854c94bf4ea3337, type: 2}
+  - {fileID: 11400000, guid: 31e3dafa93da1334daf3b5e197aef34d, type: 2}
+  - {fileID: 11400000, guid: bbd4535b6bbd13f4380cc74e68b0a373, type: 2}

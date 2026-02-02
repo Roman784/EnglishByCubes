@@ -95,7 +95,7 @@ PrefabInstance:
     - target: {fileID: 1965227431098350063, guid: afad7af56ff87aa4ea4bdf19ca1db7e9, type: 3}
       propertyPath: _cubeConfigs
       value: 
-      objectReference: {fileID: 11400000, guid: 44f0b64e491ee8348bfc689dce2476da, type: 2}
+      objectReference: {fileID: 11400000, guid: 2a9ac78f6193b0a489b5e72e210d262d, type: 2}
     - target: {fileID: 4429984239990831826, guid: afad7af56ff87aa4ea4bdf19ca1db7e9, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

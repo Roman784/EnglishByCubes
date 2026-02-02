@@ -10,7 +10,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
       propertyPath: m_text
-      value: "<align=center><color=#1EAEE7><b><line-height=0.64em>NOT</b></color>\r\n[\u043D\u0435]</align>"
+      value: "<align=center><color=#1EAEE7><b>NOT \u2013 NO \u2013 NOT ANY \u2013
+        NONE \u2013 SOME \u2013 ANY</b></color>\r\n[\u043D\u0435-\u043D\u0435\u0442-\u043D\u0438\u0441\u043A\u043E\u043B\u044C\u043A\u043E-\u043D\u0438\u0447\u0435\u0433\u043E-\u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E-\u0441\u043A\u043E\u043B\u044C\u043A\u043E-\u043D\u0438\u0431\u0443\u0434\u044C]"
       objectReference: {fileID: 0}
     - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
       propertyPath: m_fontSize
@@ -23,6 +24,14 @@ PrefabInstance:
     - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
       propertyPath: m_paragraphSpacing
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 1962036687159115250, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 2066172044648999862, guid: 1fb6dae9d5389c0409ae9fec8bb7632f, type: 3}
       propertyPath: m_AnchorMax.y
