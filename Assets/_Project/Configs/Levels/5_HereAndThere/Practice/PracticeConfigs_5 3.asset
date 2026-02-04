@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9515a61c4ec61c4c8e9ba1cf027efbb, type: 3}
   m_Name: PracticeConfigs_5 3
   m_EditorClassIdentifier: 
-  <GlobalNumber>k__BackingField: 10
-  <LocalNumber>k__BackingField: 2
+  <GlobalNumber>k__BackingField: 38
+  <LocalNumber>k__BackingField: 11
   <SectionTitle>k__BackingField: "\u0420\u0430\u0437\u0434\u0435\u043B 5"
   <Title>k__BackingField: "\u041F\u0435\u0440\u0435\u0432\u043E\u0434"
   <SentanceSign>k__BackingField: '?'
@@ -21,5 +21,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 37519de9bcbf43d49bf9383e9ccd11e6, type: 2}
   - {fileID: 11400000, guid: 4b0fc677a7048754c9ed3fbf40631796, type: 2}
   - {fileID: 11400000, guid: 654c899fa976f7f489afc869e5c5d93b, type: 2}
-  - {fileID: 11400000, guid: 9a114c0453e67b44c9d834d882b9f4b0, type: 2}
-  <CubeNumbersPool>k__BackingField: 02000000060000000800000009000000
+  - {fileID: 11400000, guid: 42ff8a270ddd1eb4a8cd2a8adc76717b, type: 2}
+  <CubeNumbersPool>k__BackingField: 020000000600000008000000

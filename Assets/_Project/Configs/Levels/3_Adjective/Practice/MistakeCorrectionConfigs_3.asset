@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55466077060251847b4cce0744b61a09, type: 3}
   m_Name: MistakeCorrectionConfigs_3
   m_EditorClassIdentifier: 
-  <GlobalNumber>k__BackingField: 9
-  <LocalNumber>k__BackingField: 3
+  <GlobalNumber>k__BackingField: 15
+  <LocalNumber>k__BackingField: 4
   <SectionTitle>k__BackingField: "\u0420\u0430\u0437\u0434\u0435\u043B 3"
   <Title>k__BackingField: "\u041F\u0435\u0440\u0435\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0430"
   <SentanceSign>k__BackingField: .

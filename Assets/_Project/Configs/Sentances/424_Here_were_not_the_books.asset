@@ -15,5 +15,5 @@ MonoBehaviour:
   SentenceRu: "\u0417\u0434\u0435\u0441\u044C \u043D\u0435 \u0431\u044B\u043B\u043E
     \u0442\u0435\u0445 \u043A\u043D\u0438\u0433."
   SentenceEn: Here were not the books.
-  TargetSentence: herewerenotthe/shebooks
+  TargetSentence: herewerenotthebooks
   CubesPool: 08000000020000000500000009000000

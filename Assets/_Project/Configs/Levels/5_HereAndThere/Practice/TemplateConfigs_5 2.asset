@@ -12,23 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b9f966d62e68848ac71231b7a3c218, type: 3}
   m_Name: TemplateConfigs_5 2
   m_EditorClassIdentifier: 
-  <GlobalNumber>k__BackingField: 8
-  <LocalNumber>k__BackingField: 2
+  <GlobalNumber>k__BackingField: 33
+  <LocalNumber>k__BackingField: 10
   <SectionTitle>k__BackingField: "\u0420\u0430\u0437\u0434\u0435\u043B 3"
   <Title>k__BackingField: "\u0428\u0430\u0431\u043B\u043E\u043D"
   <SentanceSign>k__BackingField: '?'
-  <SentencesCount>k__BackingField: 4
+  <SentencesCount>k__BackingField: 2
   <Slots>k__BackingField:
   - <Mode>k__BackingField: 4
     <CubeNumber>k__BackingField: 2
     <CubeSideIndex>k__BackingField: 0
-  - <Mode>k__BackingField: 7
+  - <Mode>k__BackingField: 8
     <CubeNumber>k__BackingField: 8
     <CubeSideIndex>k__BackingField: 0
   - <Mode>k__BackingField: 2
     <CubeNumber>k__BackingField: 9
     <CubeSideIndex>k__BackingField: 0
   <Sentences>k__BackingField:
+  - {fileID: 11400000, guid: 99aeb53f137f8d84e86c6e3c5c826c5b, type: 2}
+  - {fileID: 11400000, guid: d741724988e9ed3488390d2ba10af47f, type: 2}
+  - {fileID: 11400000, guid: ab88a23652c679049a17a5ecdb826dc5, type: 2}
+  - {fileID: 11400000, guid: d6e8b4dc66fc2f4419c071e1fa2a3a5c, type: 2}
+  - {fileID: 11400000, guid: 1c73d78854ce01645b34c7405e62cf2f, type: 2}
+  - {fileID: 11400000, guid: f44bb7a0816ae4c459e9f0f9a2450706, type: 2}
   - {fileID: 11400000, guid: e7bc69785a91e7744a6d67e9e80f6be0, type: 2}
   - {fileID: 11400000, guid: bae83fd6b7b43e441b49822988afe39b, type: 2}
   - {fileID: 11400000, guid: 1d68263352ec4bc4087fa02678241f7d, type: 2}

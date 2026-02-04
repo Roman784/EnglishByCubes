@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SentenceRu: "\u041E\u043D \u0445\u043E\u0440\u043E\u0448\u0438\u0439."
   SentenceEn: He is good.
-  TargetSentence: he/sheisgood
+  TargetSentence: heisgood
   CubesPool: 010000000200000007000000

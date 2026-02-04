@@ -27,10 +27,15 @@ namespace Utils
 
                 var targetEn = columns[0]
                     .ToLower()
-                    .Replace(".", " ").Replace(",", " ").Replace("?", " ").Replace("!", " ");
-                if (targetEn.Contains("she ")) targetEn = targetEn.Replace("she ", "he/she");
-                else if (targetEn.Contains("he ")) targetEn = targetEn.Replace("he ", "he/she");
-                targetEn = targetEn.Replace(" ", "");
+                    .Replace(".", "").Replace(",", "").Replace("?", "").Replace("!", "");
+
+                targetEn = targetEn.Replace(" ", "|");
+                targetEn.Insert(0, "|");
+                targetEn += "|";
+
+                if (targetEn.Contains("|she|")) targetEn = targetEn.Replace("|she|", "|he/she|");
+                else if (targetEn.Contains("|he|")) targetEn = targetEn.Replace("|he|", "|he/she|");
+                targetEn = targetEn.Replace("|", "");
 
                 var cubesPool = columns[2].Split(" ").Select(int.Parse).ToArray();
 

@@ -15,5 +15,5 @@ MonoBehaviour:
   SentenceRu: "\u042D\u0442\u0438 \u044F\u0431\u043B\u043E\u043A\u0438 \u0431\u044B\u043B\u0438
     \u0437\u0434\u0435\u0441\u044C?"
   SentenceEn: Were here the apples?
-  TargetSentence: wereherethe/sheapples
+  TargetSentence: wereheretheapples
   CubesPool: 02000000080000000500000009000000

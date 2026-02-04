@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b9f966d62e68848ac71231b7a3c218, type: 3}
   m_Name: TemplateConfigs_5
   m_EditorClassIdentifier: 
-  <GlobalNumber>k__BackingField: 8
-  <LocalNumber>k__BackingField: 2
+  <GlobalNumber>k__BackingField: 27
+  <LocalNumber>k__BackingField: 8
   <SectionTitle>k__BackingField: "\u0420\u0430\u0437\u0434\u0435\u043B 3"
   <Title>k__BackingField: "\u0428\u0430\u0431\u043B\u043E\u043D"
   <SentanceSign>k__BackingField: .
-  <SentencesCount>k__BackingField: 4
+  <SentencesCount>k__BackingField: 2
   <Slots>k__BackingField:
-  - <Mode>k__BackingField: 7
+  - <Mode>k__BackingField: 8
     <CubeNumber>k__BackingField: 8
     <CubeSideIndex>k__BackingField: 0
   - <Mode>k__BackingField: 4
@@ -29,6 +29,22 @@ MonoBehaviour:
     <CubeNumber>k__BackingField: 9
     <CubeSideIndex>k__BackingField: 0
   <Sentences>k__BackingField:
+  - {fileID: 11400000, guid: c0c430fb0d5dff04c809b45e22662842, type: 2}
+  - {fileID: 11400000, guid: 25df2a6a0fb631d4fbe81ddda99918ad, type: 2}
+  - {fileID: 11400000, guid: 6c76fe5fa3316c040a4b09e776bf9e84, type: 2}
+  - {fileID: 11400000, guid: 080a2f25e0b0a6c439caafd5c511e48e, type: 2}
+  - {fileID: 11400000, guid: 889cb7dbd08360a48928aec63278af59, type: 2}
+  - {fileID: 11400000, guid: 78e6c85c12dcce54b802997d0df9eac8, type: 2}
+  - {fileID: 11400000, guid: 912d1e9ab1e10cf47a17143203af9430, type: 2}
+  - {fileID: 11400000, guid: 771f30dabda348d4c91bfd068550f985, type: 2}
+  - {fileID: 11400000, guid: 94d3a3496a0b5d54ca978251d7a38628, type: 2}
+  - {fileID: 11400000, guid: 19c59f9aa1b7f85489806140e8ae409f, type: 2}
+  - {fileID: 11400000, guid: 5c8203442ae666947bf83e86ac16b2dc, type: 2}
+  - {fileID: 11400000, guid: 0febc3b9e20a68849bee1df330627b8f, type: 2}
+  - {fileID: 11400000, guid: 397db8cf2bcc4344b907c83972caa1a8, type: 2}
+  - {fileID: 11400000, guid: 3c8b4cb8ca921fd409f0823f68d91967, type: 2}
+  - {fileID: 11400000, guid: db6221a6bb9192d4789328753d1aee00, type: 2}
+  - {fileID: 11400000, guid: b1a563bf802356743999eecc1491c82e, type: 2}
   - {fileID: 11400000, guid: a7bda837b602e894ba836521325b683e, type: 2}
   - {fileID: 11400000, guid: 761713993c7102f4cb0d82f57fc4d472, type: 2}
   - {fileID: 11400000, guid: e8aebfc0cc63af24187d2a59f0617040, type: 2}
@@ -44,8 +60,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b4502af06984e5e4997a85c63819d95c, type: 2}
   - {fileID: 11400000, guid: c3bb32a9220379f409c5df2838f8617a, type: 2}
   - {fileID: 11400000, guid: 950ef70e10afa6645899f711922e7d3a, type: 2}
-  - {fileID: 11400000, guid: b6ab5748b84db1845928d88c747139a7, type: 2}
-  - {fileID: 11400000, guid: d8182da19798d724e9f3ecc3018334d5, type: 2}
-  - {fileID: 11400000, guid: 44bbf01072b49c549ab27457913b0373, type: 2}
-  - {fileID: 11400000, guid: 5618e1420ba222b44bd6e089474ead47, type: 2}
-  - {fileID: 11400000, guid: 1df34d2291d48e4479462ad7fb103c50, type: 2}

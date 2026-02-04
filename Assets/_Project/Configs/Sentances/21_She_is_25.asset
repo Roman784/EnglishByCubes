@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SentenceRu: "\u0415\u0439 25 \u043B\u0435\u0442."
   SentenceEn: She is 25.
-  TargetSentence: he/sheis25
+  TargetSentence: sheis25
   CubesPool: 010000000200000003000000

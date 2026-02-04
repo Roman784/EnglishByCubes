@@ -76,6 +76,8 @@ namespace UI
                     _sceneProvider.OpenTemplate(_enterParams, nextLevelNumber);
                 else if (levelConfigs.Mode == LevelMode.MistakeCorrection)
                     _sceneProvider.OpenMistakeCorrection(_enterParams, nextLevelNumber);
+                else if (levelConfigs.Mode == LevelMode.Theory)
+                    _sceneProvider.OpenTheory(_enterParams, nextLevelNumber);
             }
             else
             {

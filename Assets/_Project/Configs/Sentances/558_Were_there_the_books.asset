@@ -15,5 +15,5 @@ MonoBehaviour:
   SentenceRu: "\u042D\u0442\u0438 \u043A\u043D\u0438\u0433\u0438 \u0431\u044B\u043B\u0438
     \u0442\u0430\u043C?"
   SentenceEn: Were there the books?
-  TargetSentence: weretherethe/shebooks
+  TargetSentence: weretherethebooks
   CubesPool: 020000000800000009000000

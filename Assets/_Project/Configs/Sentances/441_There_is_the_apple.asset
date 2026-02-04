@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SentenceRu: "\u0412\u043E\u043D \u044F\u0431\u043B\u043E\u043A\u043E."
   SentenceEn: There is the apple.
-  TargetSentence: thereisthe/sheapple
+  TargetSentence: thereistheapple
   CubesPool: 080000000200000009000000
