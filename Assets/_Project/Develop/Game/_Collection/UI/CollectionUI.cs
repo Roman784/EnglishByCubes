@@ -16,9 +16,9 @@ namespace UI
             _enterParams = enterParams;
         }
 
-        public void OpenItemContent(int id)
+        public void OpenItemContent(CollectionItemName name)
         {
-            var item = GameConfigs.CollectionConfigs.GetItem(id);
+            var item = GameConfigs.CollectionConfigs.GetItem(name);
             _itemContentMenu.Open(item);
         }
 

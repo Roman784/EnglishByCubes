@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CollectionItemConfigs_Castle_2
   m_EditorClassIdentifier: 
   <Id>k__BackingField: 8
+  <Name>k__BackingField: 2
   <Sprite>k__BackingField: {fileID: -1035883431, guid: a83edfe259e4b9248aede4b8e0f54189, type: 3}
   <FilledSprite>k__BackingField: {fileID: 533070310, guid: a83edfe259e4b9248aede4b8e0f54189, type: 3}
   <FillRate>k__BackingField: 0.34

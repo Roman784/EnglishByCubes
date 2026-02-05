@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CollectionItemConfigs_Nessie
   m_EditorClassIdentifier: 
   <Id>k__BackingField: 5
+  <Name>k__BackingField: 5
   <Sprite>k__BackingField: {fileID: 421614206, guid: a83edfe259e4b9248aede4b8e0f54189, type: 3}
   <FilledSprite>k__BackingField: {fileID: -244942525, guid: a83edfe259e4b9248aede4b8e0f54189, type: 3}
   <FillRate>k__BackingField: 1

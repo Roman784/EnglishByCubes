@@ -1,8 +1,11 @@
+using Audio;
+using Configs;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Utils;
+using Zenject;
 
 namespace Collection
 {
@@ -14,6 +17,14 @@ namespace Collection
         [SerializeField] private float _initialDelay;
         [SerializeField] private float _treesAppearDelay;
         [SerializeField] private float _itemsAppearDelay;
+
+        private IConfigsProvider _configsProvider;
+
+        [Inject]
+        private void Construct(AudioProvider audioProvider, IConfigsProvider configsProvider)
+        {
+            _configsProvider = configsProvider;
+        }
 
         public void Generate(IEnumerable<int> unclokedItemsIds)
         {
@@ -44,9 +55,20 @@ namespace Collection
         {
             foreach (var item in _items)
             {
-                item.Appear(unclokedItemsIds.Contains(item.Id));
+                var id = GetItemId(item.Name);
+                item.Appear(unclokedItemsIds.Contains(id));
                 yield return new WaitForSeconds(_itemsAppearDelay);
             }
+        }
+
+        private int GetItemId(CollectionItemName name)
+        {
+            foreach (var item in _configsProvider.GameConfigs.CollectionConfigs.Items)
+            {
+                if (item.Configs.Name == name)
+                    return item.Id;
+            }
+            return -1;
         }
     }
 }

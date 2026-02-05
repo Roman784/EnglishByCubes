@@ -1,3 +1,5 @@
+using Collection;
+using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
@@ -8,9 +10,19 @@ namespace Configs
     [CreateAssetMenu(fileName = "CollectionConfigs", menuName = "Game Configs/Collection/New Collection Configs")]
     public class CollectionConfigs : ScriptableObject
     {
-        [field: SerializeField] public List<CollectionItemConfigs> Items { get; private set; }
+        [Serializable]
+        public class CollectionItem
+        {
+            [field: SerializeField] public int Id { get; private set; }
+            [field: SerializeField] public float FillRate { get; private set; }
+            [field: SerializeField] public CollectionItemConfigs Configs { get; private set; }
 
-        public CollectionItemConfigs GetUncollectedItem(List<int> collectedItemIds)
+            public void SetId(int id) => Id = id;
+        }
+
+        [field: SerializeField] public List<CollectionItem> Items { get; private set; }
+
+        public CollectionItem GetUncollectedItem(List<int> collectedItemIds)
         {
             foreach (var item in Items)
             {
@@ -25,10 +37,22 @@ namespace Configs
             foreach (var item in Items)
             {
                 if (item.Id == id)
-                    return item;
+                    return item.Configs;
             }
 
             Debug.LogError($"Item with id {id} not found!");
+            return null;
+        }
+
+        public CollectionItemConfigs GetItem(CollectionItemName name)
+        {
+            foreach (var item in Items)
+            {
+                if (item.Configs.Name == name)
+                    return item.Configs;
+            }
+
+            Debug.LogError($"Item with name {name} not found!");
             return null;
         }
 
@@ -38,11 +62,8 @@ namespace Configs
             for (int i = 0; i < Items.Count; i++)
             {
                 Items[i].SetId(i);
+                EditorUtility.SetDirty(this);
             }
-
-            //EditorUtility.SetDirty(this);
-            //AssetDatabase.Refresh();
-            //AssetDatabase.SaveAssets();
         }
 
         private void OnValidate()

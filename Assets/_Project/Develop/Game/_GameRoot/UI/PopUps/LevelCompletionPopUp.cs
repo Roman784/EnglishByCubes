@@ -9,6 +9,7 @@ using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Zenject;
+using static Configs.CollectionConfigs;
 
 namespace UI
 {
@@ -46,7 +47,7 @@ namespace UI
 
         [SerializeField] private Button _nextButton;
 
-        private CollectionItemConfigs _itemConfigs;
+        private CollectionItem _itemConfigs;
         private float _currentFill;
 
         private new void Awake()
@@ -80,8 +81,8 @@ namespace UI
             }
             else
             {
-                _itemBg.sprite = _itemConfigs.FilledSprite;
-                _itemView.sprite = _itemConfigs.FilledSprite;
+                _itemBg.sprite = _itemConfigs.Configs.FilledSprite;
+                _itemView.sprite = _itemConfigs.Configs.FilledSprite;
                 _itemBg.SetNativeSize();
                 _itemView.SetNativeSize();
                 _itemView.fillAmount = _currentFill;
@@ -187,7 +188,7 @@ namespace UI
                 {
                     PlayNewItemUnlocked();
 
-                    _itemView.sprite = _itemConfigs.Sprite;
+                    _itemView.sprite = _itemConfigs.Configs.Sprite;
                     _lightView.gameObject.SetActive(true);
                     _newItemUnlockView.SetActive(true);
                     _percentageView.gameObject.SetActive(false);

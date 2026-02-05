@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CollectionItemConfis_Rugby
   m_EditorClassIdentifier: 
   <Id>k__BackingField: 11
+  <Name>k__BackingField: 15
   <Sprite>k__BackingField: {fileID: 782807583, guid: a83edfe259e4b9248aede4b8e0f54189, type: 3}
   <FilledSprite>k__BackingField: {fileID: 1956326186, guid: a83edfe259e4b9248aede4b8e0f54189, type: 3}
   <FillRate>k__BackingField: 1

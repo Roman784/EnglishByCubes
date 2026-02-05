@@ -9,7 +9,7 @@ namespace Collection
 {
     public class CollectionItem : MonoBehaviour
     {
-        [SerializeField] private int _id;
+        [SerializeField] private CollectionItemName _name;
         [SerializeField] private SpriteRenderer _view;
         [SerializeField] private SpriteRenderer _shadow;
         [SerializeField] private float _initialY;
@@ -28,7 +28,7 @@ namespace Collection
         private AudioProvider _audioProvider; 
         private IConfigsProvider _configsProvider;
 
-        public int Id => _id;
+        public CollectionItemName Name => _name;
 
         [Inject]
         private void Construct(AudioProvider audioProvider, IConfigsProvider configsProvider)
@@ -76,13 +76,22 @@ namespace Collection
             if (!_isUnlocked) return;
 
             var ui = FindObjectOfType<CollectionUI>();
-            ui?.OpenItemContent(Id);
+            ui?.OpenItemContent(_name);
         }
 
         private void PlayFallSound()
         {
             var clip = _configsProvider.GameConfigs.AudioConfigs.CollectionConfigs.ItemFallSound;
             _audioProvider.PlaySound(clip);
+        }
+
+        [ContextMenu("Set Name")]
+        private void SetName()
+        {
+            if (System.Enum.TryParse<CollectionItemName>(gameObject.name, out var parsedName))
+                _name = parsedName;
+            else
+                Debug.LogError($"Failed to set collection item name: {gameObject.name}!");
         }
     }
 }

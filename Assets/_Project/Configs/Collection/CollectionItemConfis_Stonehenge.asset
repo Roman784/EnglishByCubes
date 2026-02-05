@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CollectionItemConfis_Stonehenge
   m_EditorClassIdentifier: 
   <Id>k__BackingField: 3
+  <Name>k__BackingField: 16
   <Sprite>k__BackingField: {fileID: 2057936920, guid: a83edfe259e4b9248aede4b8e0f54189, type: 3}
   <FilledSprite>k__BackingField: {fileID: -2055146424, guid: a83edfe259e4b9248aede4b8e0f54189, type: 3}
   <FillRate>k__BackingField: 1
