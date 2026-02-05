@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SentenceRu: "\u041E\u043D \u0431\u044B\u043B \u0440\u0443\u0441\u0441\u043A\u0438\u043C."
   SentenceEn: He was Russian.
-  TargetSentence: hewasrussian
+  TargetSentence: he/shewasrussian
   CubesPool: 010000000200000003000000

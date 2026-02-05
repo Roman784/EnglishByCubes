@@ -30,7 +30,7 @@ namespace Utils
                     .Replace(".", "").Replace(",", "").Replace("?", "").Replace("!", "");
 
                 targetEn = targetEn.Replace(" ", "|");
-                targetEn.Insert(0, "|");
+                targetEn = targetEn.Insert(0, "|");
                 targetEn += "|";
 
                 if (targetEn.Contains("|she|")) targetEn = targetEn.Replace("|she|", "|he/she|");
