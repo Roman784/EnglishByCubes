@@ -37,6 +37,7 @@ namespace Configs
             }
         }
 
+#if UNITY_EDITOR
         [ContextMenu("Fill Slots")]
         private void FillSlots()
         {
@@ -91,6 +92,7 @@ namespace Configs
                 }
             }
         }
+#endif
 
         private void OnValidate()
         {

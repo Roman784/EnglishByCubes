@@ -27,8 +27,9 @@ namespace Configs
             }
 
             CubeNumbersPool.Sort();
-
+#if UNITY_EDITOR
             EditorUtility.SetDirty(this);
+#endif
         }
 
         private void OnValidate()

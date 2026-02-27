@@ -43,6 +43,7 @@ namespace Configs
             Validate();
         }
 
+#if UNITY_EDITOR
         [ContextMenu("Fill Sentances")]
         private void FillSentances()
         {
@@ -80,5 +81,6 @@ namespace Configs
                     Sentences.Add(sentence);
             }
         }
+#endif
     }
 }

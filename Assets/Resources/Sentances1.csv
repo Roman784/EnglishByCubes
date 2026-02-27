@@ -195,7 +195,7 @@ Who are we?;Кто мы?;6 2 1
 Who are they?;Кто они?;6 2 1
 Who was I?;Кем я был?;6 2 1
 Who was he?;Кем он был?;6 2 1
-Who was it?;Кем это было?;6 2 1
+Who was it?;Кто это был?;6 2 1
 Who were you?;Кем ты был?;6 2 1
 Who were we?;Кем мы были?;6 2 1
 Who were they?;Кем они были?;6 2 1
@@ -217,12 +217,12 @@ How is it?;Каково это?;6 2 1
 How are you?;Как ты?;6 2 1
 How are we?;Как мы?;6 2 1
 How are they?;Как они?;6 2 1
-How was I?;Каким я был?;6 2 1
-How was he?;Каким он был?;6 2 1
-How was it?;Как прошло?;6 2 1
-How were you?;Каким ты был?;6 2 1
-How were we?;Какими мы были?;6 2 1
-How were they?;Какими они были?;6 2 1
+How was I?;Каково мне было?;6 2 1
+How was he?;Каково ему было?;6 2 1
+How was it?;Как всё прошло?;6 2 1
+How were you?;Каково тебе было?;6 2 1
+How were we?;Каково нам было?;6 2 1
+How were they?;Каково им было?;6 2 1
 Where am I?;Где я?;6 2 1
 Where is he?;Где он?;6 2 1
 Where is it?;Где это?;6 2 1
@@ -319,66 +319,18 @@ Were they sad?;Они были грустными?;2 1 7
 Were they happy?;Они были счастливыми?;2 1 7
 Were they good?;Они были хорошими?;2 1 7
 Were they useful?;Они были полезными?;2 1 7
-What is kind?;Что такое доброта?;6 2 7
-What is wise?;Что такое мудрость?;6 2 7
-What is sad?;Что такое грусть?;6 2 7
-What is happy?;Что такое счастье?;6 2 7
-What is good?;Что такое добро?;6 2 7
-What is useful?;Что такое польза?;6 2 7
+What is kind?;Что значит добрый?;6 2 7
+What is wise?;Что значит мудрый?;6 2 7
+What is sad?;Что значит печальный?;6 2 7
+What is happy?;Что значит счастливый?;6 2 7
+What is good?;Что значит хороший?;6 2 7
+What is useful?;Что значит полезный?;6 2 7
 Who is kind?;Кто добрый?;6 2 7
 Who is wise?;Кто мудрый?;6 2 7
 Who is sad?;Кто грустный?;6 2 7
 Who is happy?;Кто счастливый?;6 2 7
 Who is good?;Кто хороший?;6 2 7
 Who is useful?;Кто полезный?;6 2 7
-How is kind?;Каково быть добрым?;6 2 7
-How is wise?;Каково быть мудрым?;6 2 7
-How is sad?;Каково быть грустным?;6 2 7
-How is happy?;Каково быть счастливым?;6 2 7
-How is good?;Каково быть хорошим?;6 2 7
-How is useful?;Каково быть полезным?;6 2 7
-Where is kind?;Где (проявляется) доброта?;6 2 7
-Where is wise?;Где (проявляется) мудрость?;6 2 7
-Where is sad?;Где (царит) грусть?;6 2 7
-Where is happy?;Где (царит) счастье?;6 2 7
-Where is good?;Где (есть) добро?;6 2 7
-Where is useful?;Где (есть) польза?;6 2 7
-When is kind?;Когда (нужно быть) добрым?;6 2 7
-When is wise?;Когда (нужно быть) мудрым?;6 2 7
-When is sad?;Когда (бывает) грустно?;6 2 7
-When is happy?;Когда (бывает) счастливо?;6 2 7
-When is good?;Когда (всё) хорошо?;6 2 7
-When is useful?;Когда (это) полезно?;6 2 7
-What was kind?;Что было добрым?;6 2 7
-What was wise?;Что было мудрым?;6 2 7
-What was sad?;Что было грустным?;6 2 7
-What was happy?;Что было счастливым?;6 2 7
-What was good?;Что было хорошим?;6 2 7
-What was useful?;Что было полезным?;6 2 7
-Who was kind?;Кто был добрым?;6 2 7
-Who was wise?;Кто был мудрым?;6 2 7
-Who was sad?;Кто был грустным?;6 2 7
-Who was happy?;Кто был счастливым?;6 2 7
-Who was good?;Кто был хорошим?;6 2 7
-Who was useful?;Кто был полезным?;6 2 7
-How was kind?;Каково было быть добрым?;6 2 7
-How was wise?;Каково было быть мудрым?;6 2 7
-How was sad?;Насколько это было грустно?;6 2 7
-How was happy?;Насколько это было счастливо?;6 2 7
-How was good?;Насколько это было хорошо?;6 2 7
-How was useful?;Насколько это было полезно?;6 2 7
-Where was kind?;Где было это доброе дело?;6 2 7
-Where was wise?;Где была эта мудрость?;6 2 7
-Where was sad?;Где была эта грусть?;6 2 7
-Where was happy?;Где было это счастье?;6 2 7
-Where was good?;Где было это хорошее место?;6 2 7
-Where was useful?;Где была эта польза?;6 2 7
-When was kind?;Когда это было добрым?;6 2 7
-When was wise?;Когда это было мудрым?;6 2 7
-When was sad?;Когда это было грустным?;6 2 7
-When was happy?;Когда это было счастливым?;6 2 7
-When was good?;Когда это было хорошим?;6 2 7
-When was useful?;Когда это было полезным?;6 2 7
 What are kind?;Что (мн.ч.) является добрым?;6 2 7
 What are wise?;Что (мн.ч.) является мудрым?;6 2 7
 What are sad?;Что (мн.ч.) является грустным?;6 2 7
@@ -487,102 +439,24 @@ Are here the books?;Эти книги здесь?;2 8 9
 Are here the apples?;Эти яблоки здесь?;2 8 9
 Is here not a book?;Здесь нет книги?;2 8 5 9
 Is here not an apple?;Здесь нет яблока?;2 8 5 9
-Are here not books?;Здесь нет книг?;2 8 5 9
-Are here not apples?;Здесь нет яблок?;2 8 5 9
-Is here no book?;Здесь нет книги?;2 8 5 9
-Is here no apple?;Здесь нет яблока?;2 8 5 9
-Is here not any book?;Здесь нет никакой книги?;2 8 5 9
-Is here not any apple?;Здесь нет никакого яблока?;2 8 5 9
-Are here not any books?;Здесь нет никаких книг?;2 8 5 9
-Are here not any apples?;Здесь нет никаких яблок?;2 8 5 9
-Is here some book?;Здесь есть какая-то книга?;2 8 5 9
-Is here some apple?;Здесь есть какое-то яблоко?;2 8 5 9
-Are here some books?;Здесь есть какие-то книги?;2 8 5 9
-Are here some apples?;Здесь есть какие-то яблоки?;2 8 5 9
-Is here any book?;Здесь есть какая-нибудь книга?;2 8 5 9
-Is here any apple?;Здесь есть какое-нибудь яблоко?;2 8 5 9
-Are here any books?;Здесь есть какие-нибудь книги?;2 8 5 9
-Are here any apples?;Здесь есть какие-нибудь яблоки?;2 8 5 9
 Is there a book?;Там есть книга?;2 8 9
 Is there an apple?;Там есть яблоко?;2 8 9
-Are there books?;Там есть книги?;2 8 9
-Are there apples?;Там есть яблоки?;2 8 9
-Are there the books?;Эти книги там?;2 8 9
-Are there the apples?;Эти яблоки там?;2 8 9
-Is there not a book?;Там нет книги?;2 8 5 9
-Is there not an apple?;Там нет яблока?;2 8 5 9
-Are there not books?;Там нет книг?;2 8 5 9
-Are there not apples?;Там нет яблок?;2 8 5 9
-Is there no book?;Там нет книги?;2 8 5 9
-Is there no apple?;Там нет яблока?;2 8 5 9
-Is there not any book?;Там нет никакой книги?;2 8 5 9
-Is there not any apple?;Там нет никакого яблока?;2 8 5 9
-Are there not any books?;Там нет никаких книг?;2 8 5 9
-Are there not any apples?;Там нет никаких яблок?;2 8 5 9
 Is there some book?;Там есть какая-то книга?;2 8 5 9
 Is there some apple?;Там есть какое-то яблоко?;2 8 5 9
-Are there some books?;Там есть какие-то книги?;2 8 5 9
-Are there some apples?;Там есть какие-то яблоки?;2 8 5 9
 Is there any book?;Там есть какая-нибудь книга?;2 8 5 9
 Is there any apple?;Там есть какое-нибудь яблоко?;2 8 5 9
 Are there any books?;Там есть какие-нибудь книги?;2 8 5 9
 Are there any apples?;Там есть какие-нибудь яблоки?;2 8 5 9
-Was here a book?;Здесь была книга?;2 8 5 9
-Was here an apple?;Здесь было яблоко?;2 8 5 9
-Were here books?;Здесь были книги?;2 8 5 9
-Were here apples?;Здесь были яблоки?;2 8 5 9
-Were here the books?;Эти книги были здесь?;2 8 5 9
-Were here the apples?;Эти яблоки были здесь?;2 8 5 9
-Was here not a book?;Здесь не было книги?;2 8 5 9
-Was here not an apple?;Здесь не было яблока?;2 8 5 9
-Were here not books?;Здесь не было книг?;2 8 5 9
-Were here not apples?;Здесь не было яблок?;2 8 5 9
-Was here no book?;Здесь не было книги?;2 8 5 9
-Was here no apple?;Здесь не было яблока?;2 8 5 9
-Was here not any book?;Здесь не было никакой книги?;2 8 5 9
-Was here not any apple?;Здесь не было никакого яблока?;2 8 5 9
-Were here not any books?;Здесь не было никаких книг?;2 8 5 9
-Were here not any apples?;Здесь не было никаких яблок?;2 8 5 9
-Was here some book?;Здесь была какая-то книга?;2 8 5 9
-Was here some apple?;Здесь было какое-то яблоко?;2 8 5 9
-Were here some books?;Здесь были какие-то книги?;2 8 5 9
-Were here some apples?;Здесь были какие-то яблоки?;2 8 5 9
-Was here any book?;Здесь была какая-нибудь книга?;2 8 5 9
-Was here any apple?;Здесь было какое-нибудь яблоко?;2 8 5 9
-Were here any books?;Здесь были какие-нибудь книги?;2 8 5 9
-Were here any apples?;Здесь были какие-нибудь яблоки?;2 8 5 9
 Was there a book?;Там была книга?;2 8 9
 Was there an apple?;Там было яблоко?;2 8 9
 Were there books?;Там были книги?;2 8 9
 Were there apples?;Там были яблоки?;2 8 9
 Were there the books?;Эти книги были там?;2 8 9
 Were there the apples?;Эти яблоки были там?;2 8 9
-Was there not a book?;Там не было книги?;2 8 5 9
-Was there not an apple?;Там не было яблока?;2 8 5 9
-Were there not books?;Там не было книг?;2 8 5 9
-Were there not apples?;Там не было яблок?;2 8 5 9
-Was there no book?;Там не было книги?;2 8 5 9
-Was there no apple?;Там не было яблока?;2 8 5 9
-Was there not any book?;Там не было никакой книги?;2 8 5 9
-Was there not any apple?;Там не было никакого яблока?;2 8 5 9
-Were there not any books?;Там не было никаких книг?;2 8 5 9
-Were there not any apples?;Там не было никаких яблок?;2 8 5 9
-Was there some book?;Там была какая-то книга?;2 8 5 9
-Was there some apple?;Там было какое-то яблоко?;2 8 5 9
-Were there some books?;Там были какие-то книги?;2 8 5 9
-Were there some apples?;Там были какие-то яблоки?;2 8 5 9
 Was there any book?;Там была какая-нибудь книга?;2 8 5 9
 Was there any apple?;Там было какое-нибудь яблоко?;2 8 5 9
 Were there any books?;Там были какие-нибудь книги?;2 8 5 9
 Were there any apples?;Там были какие-нибудь яблоки?;2 8 5 9
-Is here none?;Здесь ничего нет?;2 8 5
-Are here none?;Здесь нет ни одного?;2 8 5
-Is there none?;Там ничего нет?;2 8 5
-Are there none?;Там нет ни одного?;2 8 5
-Was here none?;Здесь ничего не было?;2 8 5
-Were here none?;Здесь не было ни одного?;2 8 5
-Was there none?;Там ничего не было?;2 8 5
-Were there none?;Там не было ни одного?;2 8 5
 What is here?;Что здесь?;6 2 8
 What is there?;Что там?;6 2 8
 What are here?;Что здесь? (мн. ч.);6 2 8
@@ -599,26 +473,6 @@ Who was here?;Кто был здесь?;6 2 8
 Who was there?;Кто был там?;6 2 8
 Who were here?;Кто были здесь? (мн. ч.);6 2 8
 Who were there?;Кто были там? (мн. ч.);6 2 8
-How old is here?;Сколько лет здесь?;6 2 8
-How old is there?;Сколько лет там?;6 2 8
-How is here?;Как здесь?;6 2 8
-How is there?;Как там?;6 2 8
-How are here?;Как здесь? (мн. ч.);6 2 8
-How are there?;Как там? (мн. ч.);6 2 8
-How was here?;Как было здесь?;6 2 8
-How was there?;Как было там?;6 2 8
-Where is here?;Где здесь?;6 2 8
-Where is there?;Где там?;6 2 8
-Where are here?;Где здесь? (мн. ч.);6 2 8
-Where are there?;Где там? (мн. ч.);6 2 8
-Where was here?;Где было здесь?;6 2 8
-Where was there?;Где было там?;6 2 8
-When is here?;Когда здесь?;6 2 8
-When is there?;Когда там?;6 2 8
-When was here?;Когда было здесь?;6 2 8
-When was there?;Когда было там?;6 2 8
-When are here?;Когда здесь? (мн. ч.);6 2 8
-When are there?;Когда там? (мн. ч.);6 2 8
 Where is a book?;Где книга?;6 2 9
 Where are the books;Где книги?;6 2 9
 I am not kind.;Я не добрый.;1 2 5 7
@@ -627,285 +481,69 @@ I am not sad.;Я не печальный.;1 2 5 7
 I am not happy.;Я не счастливый.;1 2 5 7
 I am not good.;Я не хороший.;1 2 5 7
 I am not useful.;Я не полезный.;1 2 5 7
-I am no kind.;Я совсем не добрый.;1 2 5 7
-I am no wise.;Я совсем не мудрый.;1 2 5 7
-I am no sad.;Я совсем не печальный.;1 2 5 7
-I am no happy.;Я совсем не счастливый.;1 2 5 7
-I am no good.;Я совсем не хороший.;1 2 5 7
-I am no useful.;Я совсем не полезный.;1 2 5 7
-I am not any kind.;Я вовсе не добрый.;1 2 5 7
-I am not any wise.;Я вовсе не мудрый.;1 2 5 7
-I am not any sad.;Я вовсе не печальный.;1 2 5 7
-I am not any happy.;Я вовсе не счастливый.;1 2 5 7
-I am not any good.;Я вовсе не хороший.;1 2 5 7
-I am not any useful.;Я вовсе не полезный.;1 2 5 7
-I am some kind.;Я довольно добрый.;1 2 5 7
-I am some wise.;Я довольно мудрый.;1 2 5 7
-I am some sad.;Я довольно печальный.;1 2 5 7
-I am some happy.;Я довольно счастливый.;1 2 5 7
-I am some good.;Я довольно хороший.;1 2 5 7
-I am some useful.;Я довольно полезный.;1 2 5 7
 I was not kind.;Я не был добрый.;1 2 5 7
 I was not wise.;Я не был мудрый.;1 2 5 7
 I was not sad.;Я не был печальный.;1 2 5 7
 I was not happy.;Я не был счастливый.;1 2 5 7
 I was not good.;Я не был хороший.;1 2 5 7
 I was not useful.;Я не был полезный.;1 2 5 7
-I was no kind.;Я совсем не был добрый.;1 2 5 7
-I was no wise.;Я совсем не был мудрый.;1 2 5 7
-I was no sad.;Я совсем не был печальный.;1 2 5 7
-I was no happy.;Я совсем не был счастливый.;1 2 5 7
-I was no good.;Я совсем не был хороший.;1 2 5 7
-I was no useful.;Я совсем не был полезный.;1 2 5 7
-I was not any kind.;Я вовсе не был добрый.;1 2 5 7
-I was not any wise.;Я вовсе не был мудрый.;1 2 5 7
-I was not any sad.;Я вовсе не был печальный.;1 2 5 7
-I was not any happy.;Я вовсе не был счастливый.;1 2 5 7
-I was not any good.;Я вовсе не был хороший.;1 2 5 7
-I was not any useful.;Я вовсе не был полезный.;1 2 5 7
-I was some kind.;Я был довольно добрый.;1 2 5 7
-I was some wise.;Я был довольно мудрый.;1 2 5 7
-I was some sad.;Я был довольно печальный.;1 2 5 7
-I was some happy.;Я был довольно счастливый.;1 2 5 7
-I was some good.;Я был довольно хороший.;1 2 5 7
-I was some useful.;Я был довольно полезный.;1 2 5 7
 You are not kind.;Ты не добрый.;1 2 5 7
 You are not wise.;Ты не мудрый.;1 2 5 7
 You are not sad.;Ты не печальный.;1 2 5 7
 You are not happy.;Ты не счастливый.;1 2 5 7
 You are not good.;Ты не хороший.;1 2 5 7
 You are not useful.;Ты не полезный.;1 2 5 7
-You are no kind.;Ты совсем не добрый.;1 2 5 7
-You are no wise.;Ты совсем не мудрый.;1 2 5 7
-You are no sad.;Ты совсем не печальный.;1 2 5 7
-You are no happy.;Ты совсем не счастливый.;1 2 5 7
-You are no good.;Ты совсем не хороший.;1 2 5 7
-You are no useful.;Ты совсем не полезный.;1 2 5 7
-You are not any kind.;Ты вовсе не добрый.;1 2 5 7
-You are not any wise.;Ты вовсе не мудрый.;1 2 5 7
-You are not any sad.;Ты вовсе не печальный.;1 2 5 7
-You are not any happy.;Ты вовсе не счастливый.;1 2 5 7
-You are not any good.;Ты вовсе не хороший.;1 2 5 7
-You are not any useful.;Ты вовсе не полезный.;1 2 5 7
-You are some kind.;Ты довольно добрый.;1 2 5 7
-You are some wise.;Ты довольно мудрый.;1 2 5 7
-You are some sad.;Ты довольно печальный.;1 2 5 7
-You are some happy.;Ты довольно счастливый.;1 2 5 7
-You are some good.;Ты довольно хороший.;1 2 5 7
-You are some useful.;Ты довольно полезный.;1 2 5 7
 You were not kind.;Ты не был добрый.;1 2 5 7
 You were not wise.;Ты не был мудрый.;1 2 5 7
 You were not sad.;Ты не был печальный.;1 2 5 7
 You were not happy.;Ты не был счастливый.;1 2 5 7
 You were not good.;Ты не был хороший.;1 2 5 7
 You were not useful.;Ты не был полезный.;1 2 5 7
-You were no kind.;Ты совсем не был добрый.;1 2 5 7
-You were no wise.;Ты совсем не был мудрый.;1 2 5 7
-You were no sad.;Ты совсем не был печальный.;1 2 5 7
-You were no happy.;Ты совсем не был счастливый.;1 2 5 7
-You were no good.;Ты совсем не был хороший.;1 2 5 7
-You were no useful.;Ты совсем не был полезный.;1 2 5 7
-You were not any kind.;Ты вовсе не был добрый.;1 2 5 7
-You were not any wise.;Ты вовсе не был мудрый.;1 2 5 7
-You were not any sad.;Ты вовсе не был печальный.;1 2 5 7
-You were not any happy.;Ты вовсе не был счастливый.;1 2 5 7
-You were not any good.;Ты вовсе не был хороший.;1 2 5 7
-You were not any useful.;Ты вовсе не был полезный.;1 2 5 7
-You were some kind.;Ты был довольно добрый.;1 2 5 7
-You were some wise.;Ты был довольно мудрый.;1 2 5 7
-You were some sad.;Ты был довольно печальный.;1 2 5 7
-You were some happy.;Ты был довольно счастливый.;1 2 5 7
-You were some good.;Ты был довольно хороший.;1 2 5 7
-You were some useful.;Ты был довольно полезный.;1 2 5 7
 You are not kind.;Ты не добрый.;1 2 5 7
 You are not wise.;Ты не мудрый.;1 2 5 7
 You are not sad.;Ты не печальный.;1 2 5 7
 You are not happy.;Ты не счастливый.;1 2 5 7
 You are not good.;Ты не хороший.;1 2 5 7
 You are not useful.;Ты не полезный.;1 2 5 7
-You are no kind.;Ты совсем не добрый.;1 2 5 7
-You are no wise.;Ты совсем не мудрый.;1 2 5 7
-You are no sad.;Ты совсем не печальный.;1 2 5 7
-You are no happy.;Ты совсем не счастливый.;1 2 5 7
-You are no good.;Ты совсем не хороший.;1 2 5 7
-You are no useful.;Ты совсем не полезный.;1 2 5 7
-You are not any kind.;Ты вовсе не добрый.;1 2 5 7
-You are not any wise.;Ты вовсе не мудрый.;1 2 5 7
-You are not any sad.;Ты вовсе не печальный.;1 2 5 7
-You are not any happy.;Ты вовсе не счастливый.;1 2 5 7
-You are not any good.;Ты вовсе не хороший.;1 2 5 7
-You are not any useful.;Ты вовсе не полезный.;1 2 5 7
-You are some kind.;Ты довольно добрый.;1 2 5 7
-You are some wise.;Ты довольно мудрый.;1 2 5 7
-You are some sad.;Ты довольно печальный.;1 2 5 7
-You are some happy.;Ты довольно счастливый.;1 2 5 7
-You are some good.;Ты довольно хороший.;1 2 5 7
-You are some useful.;Ты довольно полезный.;1 2 5 7
 You were not kind.;Ты не был добрый.;1 2 5 7
 You were not wise.;Ты не был мудрый.;1 2 5 7
 You were not sad.;Ты не был печальный.;1 2 5 7
 You were not happy.;Ты не был счастливый.;1 2 5 7
 You were not good.;Ты не был хороший.;1 2 5 7
 You were not useful.;Ты не был полезный.;1 2 5 7
-You were no kind.;Ты совсем не был добрый.;1 2 5 7
-You were no wise.;Ты совсем не был мудрый.;1 2 5 7
-You were no sad.;Ты совсем не был печальный.;1 2 5 7
-You were no happy.;Ты совсем не был счастливый.;1 2 5 7
-You were no good.;Ты совсем не был хороший.;1 2 5 7
-You were no useful.;Ты совсем не был полезный.;1 2 5 7
-You were not any kind.;Ты вовсе не был добрый.;1 2 5 7
-You were not any wise.;Ты вовсе не был мудрый.;1 2 5 7
-You were not any sad.;Ты вовсе не был печальный.;1 2 5 7
-You were not any happy.;Ты вовсе не был счастливый.;1 2 5 7
-You were not any good.;Ты вовсе не был хороший.;1 2 5 7
-You were not any useful.;Ты вовсе не был полезный.;1 2 5 7
-You were some kind.;Ты был довольно добрый.;1 2 5 7
-You were some wise.;Ты был довольно мудрый.;1 2 5 7
-You were some sad.;Ты был довольно печальный.;1 2 5 7
-You were some happy.;Ты был довольно счастливый.;1 2 5 7
-You were some good.;Ты был довольно хороший.;1 2 5 7
-You were some useful.;Ты был довольно полезный.;1 2 5 7
-It is not kind.;Оно не доброе.;1 2 5 7
-It is not wise.;Оно не мудрое.;1 2 5 7
-It is not sad.;Оно не печальное.;1 2 5 7
-It is not happy.;Оно не счастливое.;1 2 5 7
-It is not good.;Оно не хорошее.;1 2 5 7
-It is not useful.;Оно не полезное.;1 2 5 7
-It is no kind.;Оно совсем не доброе.;1 2 5 7
-It is no wise.;Оно совсем не мудрое.;1 2 5 7
-It is no sad.;Оно совсем не печальное.;1 2 5 7
-It is no happy.;Оно совсем не счастливое.;1 2 5 7
-It is no good.;Оно совсем не хорошее.;1 2 5 7
-It is no useful.;Оно совсем не полезное.;1 2 5 7
-It is not any kind.;Оно вовсе не доброе.;1 2 5 7
-It is not any wise.;Оно вовсе не мудрое.;1 2 5 7
-It is not any sad.;Оно вовсе не печальное.;1 2 5 7
-It is not any happy.;Оно вовсе не счастливое.;1 2 5 7
-It is not any good.;Оно вовсе не хорошее.;1 2 5 7
-It is not any useful.;Оно вовсе не полезное.;1 2 5 7
-It is some kind.;Оно довольно доброе.;1 2 5 7
-It is some wise.;Оно довольно мудрое.;1 2 5 7
-It is some sad.;Оно довольно печальное.;1 2 5 7
-It is some happy.;Оно довольно счастливое.;1 2 5 7
-It is some good.;Оно довольно хорошее.;1 2 5 7
-It is some useful.;Оно довольно полезное.;1 2 5 7
-It was not kind.;Оно не было добрым.;1 2 5 7
-It was not wise.;Оно не было мудрым.;1 2 5 7
-It was not sad.;Оно не было печальным.;1 2 5 7
+It is not kind.;Это не по-доброму.;1 2 5 7
+It is not wise.;Это не мудро.;1 2 5 7
+It is not sad.;Это не печально.;1 2 5 7
+It is not happy.;Оно не счастливо.;1 2 5 7
+It is not good.;Это не хорошо.;1 2 5 7
+It is not useful.;Это не полезно.;1 2 5 7
+It was not kind.;Это не было по-доброму.;1 2 5 7
+It was not wise.;Это не было мудрым.;1 2 5 7
+It was not sad.;Это не было печальным.;1 2 5 7
 It was not happy.;Оно не было счастливым.;1 2 5 7
-It was not good.;Оно не было хорошим.;1 2 5 7
-It was not useful.;Оно не было полезным.;1 2 5 7
-It was no kind.;Оно совсем не было добрым.;1 2 5 7
-It was no wise.;Оно совсем не было мудрым.;1 2 5 7
-It was no sad.;Оно совсем не было печальным.;1 2 5 7
-It was no happy.;Оно совсем не было счастливым.;1 2 5 7
-It was no good.;Оно совсем не было хорошим.;1 2 5 7
-It was no useful.;Оно совсем не было полезным.;1 2 5 7
-It was not any kind.;Оно вовсе не было добрым.;1 2 5 7
-It was not any wise.;Оно вовсе не было мудрым.;1 2 5 7
-It was not any sad.;Оно вовсе не было печальным.;1 2 5 7
-It was not any happy.;Оно вовсе не было счастливым.;1 2 5 7
-It was not any good.;Оно вовсе не было хорошим.;1 2 5 7
-It was not any useful.;Оно вовсе не было полезным.;1 2 5 7
-It was some kind.;Оно было довольно добрым.;1 2 5 7
-It was some wise.;Оно было довольно мудрым.;1 2 5 7
-It was some sad.;Оно было довольно печальным.;1 2 5 7
-It was some happy.;Оно было довольно счастливым.;1 2 5 7
-It was some good.;Оно было довольно хорошим.;1 2 5 7
-It was some useful.;Оно было довольно полезным.;1 2 5 7
+It was not good.;Это не было хорошим.;1 2 5 7
+It was not useful.;Это не было полезным.;1 2 5 7
 We are not kind.;Мы не добрые.;1 2 5 7
 We are not wise.;Мы не мудрые.;1 2 5 7
 We are not sad.;Мы не печальные.;1 2 5 7
 We are not happy.;Мы не счастливые.;1 2 5 7
 We are not good.;Мы не хорошие.;1 2 5 7
 We are not useful.;Мы не полезные.;1 2 5 7
-We are no kind.;Мы совсем не добрые.;1 2 5 7
-We are no wise.;Мы совсем не мудрые.;1 2 5 7
-We are no sad.;Мы совсем не печальные.;1 2 5 7
-We are no happy.;Мы совсем не счастливые.;1 2 5 7
-We are no good.;Мы совсем не хорошие.;1 2 5 7
-We are no useful.;Мы совсем не полезные.;1 2 5 7
-We are not any kind.;Мы вовсе не добрые.;1 2 5 7
-We are not any wise.;Мы вовсе не мудрые.;1 2 5 7
-We are not any sad.;Мы вовсе не печальные.;1 2 5 7
-We are not any happy.;Мы вовсе не счастливые.;1 2 5 7
-We are not any good.;Мы вовсе не хорошие.;1 2 5 7
-We are not any useful.;Мы вовсе не полезные.;1 2 5 7
-We are some kind.;Мы довольно добрые.;1 2 5 7
-We are some wise.;Мы довольно мудрые.;1 2 5 7
-We are some sad.;Мы довольно печальные.;1 2 5 7
-We are some happy.;Мы довольно счастливые.;1 2 5 7
-We are some good.;Мы довольно хорошие.;1 2 5 7
-We are some useful.;Мы довольно полезные.;1 2 5 7
-We were not kind.;Мы не были добрые.;1 2 5 7
-We were not wise.;Мы не были мудрые.;1 2 5 7
-We were not sad.;Мы не были печальные.;1 2 5 7
-We were not happy.;Мы не были счастливые.;1 2 5 7
-We were not good.;Мы не были хорошие.;1 2 5 7
-We were not useful.;Мы не были полезные.;1 2 5 7
-We were no kind.;Мы совсем не были добрые.;1 2 5 7
-We were no wise.;Мы совсем не были мудрые.;1 2 5 7
-We were no sad.;Мы совсем не были печальные.;1 2 5 7
-We were no happy.;Мы совсем не были счастливые.;1 2 5 7
-We were no good.;Мы совсем не были хорошие.;1 2 5 7
-We were no useful.;Мы совсем не были полезные.;1 2 5 7
-We were not any kind.;Мы вовсе не были добрые.;1 2 5 7
-We were not any wise.;Мы вовсе не были мудрые.;1 2 5 7
-We were not any sad.;Мы вовсе не были печальные.;1 2 5 7
-We were not any happy.;Мы вовсе не были счастливые.;1 2 5 7
-We were not any good.;Мы вовсе не были хорошие.;1 2 5 7
-We were not any useful.;Мы вовсе не были полезные.;1 2 5 7
-We were some kind.;Мы были довольно добрые.;1 2 5 7
-We were some wise.;Мы были довольно мудрые.;1 2 5 7
-We were some sad.;Мы были довольно печальные.;1 2 5 7
-We were some happy.;Мы были довольно счастливые.;1 2 5 7
-We were some good.;Мы были довольно хорошие.;1 2 5 7
-We were some useful.;Мы были довольно полезные.;1 2 5 7
+We were not kind.;Мы не были добрыми.;1 2 5 7
+We were not wise.;Мы не были мудрыми.;1 2 5 7
+We were not sad.;Мы не были печальными.;1 2 5 7
+We were not happy.;Мы не были счастливыми.;1 2 5 7
+We were not good.;Мы не были хорошими.;1 2 5 7
+We were not useful.;Мы не были полезными.;1 2 5 7
 They are not kind.;Они не добрые.;1 2 5 7
 They are not wise.;Они не мудрые.;1 2 5 7
 They are not sad.;Они не печальные.;1 2 5 7
 They are not happy.;Они не счастливые.;1 2 5 7
 They are not good.;Они не хорошие.;1 2 5 7
 They are not useful.;Они не полезные.;1 2 5 7
-They are no kind.;Они совсем не добрые.;1 2 5 7
-They are no wise.;Они совсем не мудрые.;1 2 5 7
-They are no sad.;Они совсем не печальные.;1 2 5 7
-They are no happy.;Они совсем не счастливые.;1 2 5 7
-They are no good.;Они совсем не хорошие.;1 2 5 7
-They are no useful.;Они совсем не полезные.;1 2 5 7
-They are not any kind.;Они вовсе не добрые.;1 2 5 7
-They are not any wise.;Они вовсе не мудрые.;1 2 5 7
-They are not any sad.;Они вовсе не печальные.;1 2 5 7
-They are not any happy.;Они вовсе не счастливые.;1 2 5 7
-They are not any good.;Они вовсе не хорошие.;1 2 5 7
-They are not any useful.;Они вовсе не полезные.;1 2 5 7
-They are some kind.;Они довольно добрые.;1 2 5 7
-They are some wise.;Они довольно мудрые.;1 2 5 7
-They are some sad.;Они довольно печальные.;1 2 5 7
-They are some happy.;Они довольно счастливые.;1 2 5 7
-They are some good.;Они довольно хорошие.;1 2 5 7
-They are some useful.;Они довольно полезные.;1 2 5 7
-They were not kind.;Они не были добрые.;1 2 5 7
-They were not wise.;Они не были мудрые.;1 2 5 7
-They were not sad.;Они не были печальные.;1 2 5 7
-They were not happy.;Они не были счастливые.;1 2 5 7
-They were not good.;Они не были хорошие.;1 2 5 7
-They were not useful.;Они не были полезные.;1 2 5 7
-They were no kind.;Они совсем не были добрые.;1 2 5 7
-They were no wise.;Они совсем не были мудрые.;1 2 5 7
-They were no sad.;Они совсем не были печальные.;1 2 5 7
-They were no happy.;Они совсем не были счастливые.;1 2 5 7
-They were no good.;Они совсем не были хорошие.;1 2 5 7
-They were no useful.;Они совсем не были полезные.;1 2 5 7
-They were not any kind.;Они вовсе не были добрые.;1 2 5 7
-They were not any wise.;Они вовсе не были мудрые.;1 2 5 7
-They were not any sad.;Они вовсе не были печальные.;1 2 5 7
-They were not any happy.;Они вовсе не были счастливые.;1 2 5 7
-They were not any good.;Они вовсе не были хорошие.;1 2 5 7
-They were not any useful.;Они вовсе не были полезные.;1 2 5 7
-They were some kind.;Они были довольно добрые.;1 2 5 7
-They were some wise.;Они были довольно мудрые.;1 2 5 7
-They were some sad.;Они были довольно печальные.;1 2 5 7
-They were some happy.;Они были довольно счастливые.;1 2 5 7
-They were some good.;Они были довольно хорошие.;1 2 5 7
-They were some useful.;Они были довольно полезные.;1 2 5 7
+They were not kind.;Они не были добрыми.;1 2 5 7
+They were not wise.;Они не были мудрыми.;1 2 5 7
+They were not sad.;Они не были печальными.;1 2 5 7
+They were not happy.;Они не были счастливыми.;1 2 5 7
+They were not good.;Они не были хорошими.;1 2 5 7
+They were not useful.;Они не были полезными.;1 2 5 7
