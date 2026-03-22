@@ -24,6 +24,9 @@ namespace Configs
 
             foreach (var sentence in Sentences)
             {
+                if (sentence.TargetSentence == "")
+                    Debug.LogError($"Sentence not found! {name}");
+
                 foreach (var cubeNumber in sentence.CubesPool)
                 {
                     if (!targetCubeNumbers.Contains(cubeNumber))
@@ -43,6 +46,7 @@ namespace Configs
             Validate();
         }
 
+#if UNITY_EDITOR
         [ContextMenu("Fill Sentances")]
         private void FillSentances()
         {
@@ -80,5 +84,6 @@ namespace Configs
                     Sentences.Add(sentence);
             }
         }
+#endif
     }
 }

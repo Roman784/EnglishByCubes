@@ -10,17 +10,20 @@ namespace UI
         private LevelCompletionPopUp.Factory _levelCompletionPopUp;
         private LevelInfoPopUp.Factory _levelInfoPopUp;
         private AppInfoPopUp.Factory _appInfoPopUp;
+        private FirstEntrancePopUp.Factory _firstEntrancePopUp;
 
         [Inject]
         private void Construct(SettingsPopUp.Factory settingsPopUpFactory,
                                LevelCompletionPopUp.Factory levelCompletionPopUp,
                                LevelInfoPopUp.Factory levelInfoPopUp,
-                               AppInfoPopUp.Factory appInfoPopUp)
+                               AppInfoPopUp.Factory appInfoPopUp,
+                               FirstEntrancePopUp.Factory firstEntrancePopUp)
         {
             _settingsPopUpFactory = settingsPopUpFactory;
             _levelCompletionPopUp = levelCompletionPopUp;
             _levelInfoPopUp = levelInfoPopUp;
             _appInfoPopUp = appInfoPopUp;
+            _firstEntrancePopUp = firstEntrancePopUp;
         }
 
         public void OpenSettingsPopUp()
@@ -41,6 +44,11 @@ namespace UI
         public void OpenAppInfo()
         {
             _appInfoPopUp.Create().Open();
+        }
+
+        public void OpenFirstEntrance()
+        {
+            _firstEntrancePopUp.Create().Open();
         }
     }
 }

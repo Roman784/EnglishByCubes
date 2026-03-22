@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55466077060251847b4cce0744b61a09, type: 3}
   m_Name: MistakeCorrectionConfigs_4
   m_EditorClassIdentifier: 
-  <GlobalNumber>k__BackingField: 24
+  <GlobalNumber>k__BackingField: 23
   <LocalNumber>k__BackingField: 7
-  <SectionTitle>k__BackingField: "\u0420\u0430\u0437\u0434\u0435\u043B 4"
+  <SectionTitle>k__BackingField: "\u0418\u043C\u043F\u0435\u0440\u0430\u0442\u0438\u0432"
   <Title>k__BackingField: "\u041F\u0435\u0440\u0435\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0430"
   <SentanceSign>k__BackingField: '!'
   <Sentences>k__BackingField:
-  - <Sentence>k__BackingField: {fileID: 11400000, guid: 5281e8f95ba8b504c9da2accb8bc6120, type: 2}
+  - <Sentence>k__BackingField: {fileID: 11400000, guid: a39f67391e0504448b438eb278156af9, type: 2}
     <Slots>k__BackingField:
     - <CubeNumber>k__BackingField: 7
       <SideIndex>k__BackingField: 5
     - <CubeNumber>k__BackingField: 2
       <SideIndex>k__BackingField: 5
-  - <Sentence>k__BackingField: {fileID: 11400000, guid: c04b1d70937cc54418048a63a20539bc, type: 2}
+  - <Sentence>k__BackingField: {fileID: 11400000, guid: 8f1d45674c6158b468647d8c472ea1ab, type: 2}
     <Slots>k__BackingField:
     - <CubeNumber>k__BackingField: 7
       <SideIndex>k__BackingField: 1

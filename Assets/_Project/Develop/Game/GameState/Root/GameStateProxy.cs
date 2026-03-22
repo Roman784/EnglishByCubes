@@ -69,5 +69,11 @@ namespace GameState
             State.SoundVolume = volume;
             _gameStateProvider.SaveGameState();
         }
+
+        public void SetIsFirstEntrance(bool value)
+        {
+            State.IsFirstEntrance = value;
+            _gameStateProvider.SaveGameState();
+        }
     }
 }

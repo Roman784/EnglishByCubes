@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9515a61c4ec61c4c8e9ba1cf027efbb, type: 3}
   m_Name: PracticeConfigs_4
   m_EditorClassIdentifier: 
-  <GlobalNumber>k__BackingField: 25
+  <GlobalNumber>k__BackingField: 24
   <LocalNumber>k__BackingField: 7
-  <SectionTitle>k__BackingField: "\u0420\u0430\u0437\u0434\u0435\u043B 4"
+  <SectionTitle>k__BackingField: "\u0418\u043C\u043F\u0435\u0440\u0430\u0442\u0438\u0432"
   <Title>k__BackingField: "\u041F\u0435\u0440\u0435\u0432\u043E\u0434"
   <SentanceSign>k__BackingField: '!'
   <Sentences>k__BackingField:
-  - {fileID: 11400000, guid: 1d6990cf8b3cea047bd71aad424bea66, type: 2}
-  - {fileID: 11400000, guid: 4043cff351227de4d947bd7818c06ab5, type: 2}
+  - {fileID: 11400000, guid: a4438467fb0b80d43b8cd03550440980, type: 2}
+  - {fileID: 11400000, guid: 7c4cdb3d2ccbfac4ab980e5d2632705d, type: 2}
   <CubeNumbersPool>k__BackingField: 0200000007000000

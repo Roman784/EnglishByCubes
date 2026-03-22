@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55466077060251847b4cce0744b61a09, type: 3}
   m_Name: MistakeCorrectionConfigs_5 3
   m_EditorClassIdentifier: 
-  <GlobalNumber>k__BackingField: 37
+  <GlobalNumber>k__BackingField: 32
   <LocalNumber>k__BackingField: 11
-  <SectionTitle>k__BackingField: "\u0420\u0430\u0437\u0434\u0435\u043B 5"
+  <SectionTitle>k__BackingField: "\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044F
+    \u043C\u0435\u0441\u0442\u0430"
   <Title>k__BackingField: "\u041F\u0435\u0440\u0435\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0430"
   <SentanceSign>k__BackingField: '?'
   <Sentences>k__BackingField:
-  - <Sentence>k__BackingField: {fileID: 11400000, guid: 0e89818043ef3294bbbc58e167eab199, type: 2}
+  - <Sentence>k__BackingField: {fileID: 11400000, guid: c0ce30168ff4af14aa0e19e831229614, type: 2}
     <Slots>k__BackingField:
     - <CubeNumber>k__BackingField: 8
       <SideIndex>k__BackingField: 1
@@ -26,7 +27,7 @@ MonoBehaviour:
       <SideIndex>k__BackingField: 1
     - <CubeNumber>k__BackingField: 6
       <SideIndex>k__BackingField: 0
-  - <Sentence>k__BackingField: {fileID: 11400000, guid: 423f5e119d256194087589389ac5684a, type: 2}
+  - <Sentence>k__BackingField: {fileID: 11400000, guid: e41bff1f7a7f29b4096421b8241351f2, type: 2}
     <Slots>k__BackingField:
     - <CubeNumber>k__BackingField: 8
       <SideIndex>k__BackingField: 1
@@ -34,7 +35,7 @@ MonoBehaviour:
       <SideIndex>k__BackingField: 0
     - <CubeNumber>k__BackingField: 2
       <SideIndex>k__BackingField: 3
-  - <Sentence>k__BackingField: {fileID: 11400000, guid: 895a1786f06433e47bd1e42af48bc02c, type: 2}
+  - <Sentence>k__BackingField: {fileID: 11400000, guid: 409dda6646ed0624286775a279c16d55, type: 2}
     <Slots>k__BackingField:
     - <CubeNumber>k__BackingField: 2
       <SideIndex>k__BackingField: 1
@@ -42,7 +43,7 @@ MonoBehaviour:
       <SideIndex>k__BackingField: 0
     - <CubeNumber>k__BackingField: 6
       <SideIndex>k__BackingField: 1
-  - <Sentence>k__BackingField: {fileID: 11400000, guid: 85336bf57b7f4a44f9e05009107c4153, type: 2}
+  - <Sentence>k__BackingField: {fileID: 11400000, guid: 9f3de47585a92144a95579d3519198a2, type: 2}
     <Slots>k__BackingField:
     - <CubeNumber>k__BackingField: 8
       <SideIndex>k__BackingField: 0
@@ -50,11 +51,3 @@ MonoBehaviour:
       <SideIndex>k__BackingField: 3
     - <CubeNumber>k__BackingField: 6
       <SideIndex>k__BackingField: 1
-  - <Sentence>k__BackingField: {fileID: 11400000, guid: 6a8bd417bd84c5f47b18517c98dbd19e, type: 2}
-    <Slots>k__BackingField:
-    - <CubeNumber>k__BackingField: 9
-      <SideIndex>k__BackingField: 0
-    - <CubeNumber>k__BackingField: 2
-      <SideIndex>k__BackingField: 1
-    - <CubeNumber>k__BackingField: 6
-      <SideIndex>k__BackingField: 4

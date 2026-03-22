@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55466077060251847b4cce0744b61a09, type: 3}
+  m_Name: MistakeCorrectionConfigs_5 0
+  m_EditorClassIdentifier: 
+  <GlobalNumber>k__BackingField: 26
+  <LocalNumber>k__BackingField: 8
+  <SectionTitle>k__BackingField: "\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044F
+    \u043C\u0435\u0441\u0442\u0430"
+  <Title>k__BackingField: "\u041F\u0435\u0440\u0435\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0430"
+  <SentanceSign>k__BackingField: .
+  <Sentences>k__BackingField:
+  - <Sentence>k__BackingField: {fileID: 11400000, guid: e584a658872679745b7012f948aff2e3, type: 2}
+    <Slots>k__BackingField:
+    - <CubeNumber>k__BackingField: 9
+      <SideIndex>k__BackingField: 0
+    - <CubeNumber>k__BackingField: 2
+      <SideIndex>k__BackingField: 1
+    - <CubeNumber>k__BackingField: 8
+      <SideIndex>k__BackingField: 1
+  - <Sentence>k__BackingField: {fileID: 11400000, guid: d5d9cc42a77d2d44e98b0b335b1f7445, type: 2}
+    <Slots>k__BackingField:
+    - <CubeNumber>k__BackingField: 9
+      <SideIndex>k__BackingField: 3
+    - <CubeNumber>k__BackingField: 2
+      <SideIndex>k__BackingField: 2
+    - <CubeNumber>k__BackingField: 5
+      <SideIndex>k__BackingField: 4
+    - <CubeNumber>k__BackingField: 8
+      <SideIndex>k__BackingField: 1
+  - <Sentence>k__BackingField: {fileID: 11400000, guid: bda39a954dbfff148ad7143f9227a606, type: 2}
+    <Slots>k__BackingField:
+    - <CubeNumber>k__BackingField: 2
+      <SideIndex>k__BackingField: 4
+    - <CubeNumber>k__BackingField: 8
+      <SideIndex>k__BackingField: 1
+    - <CubeNumber>k__BackingField: 9
+      <SideIndex>k__BackingField: 2
+    - <CubeNumber>k__BackingField: 5
+      <SideIndex>k__BackingField: 4
+  - <Sentence>k__BackingField: {fileID: 11400000, guid: 634ef2bf7027a2a4691d754b8ec3a561, type: 2}
+    <Slots>k__BackingField:
+    - <CubeNumber>k__BackingField: 2
+      <SideIndex>k__BackingField: 3
+    - <CubeNumber>k__BackingField: 9
+      <SideIndex>k__BackingField: 1
+    - <CubeNumber>k__BackingField: 8
+      <SideIndex>k__BackingField: 1

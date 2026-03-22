@@ -42,6 +42,9 @@ namespace Collection
             _ui.Init(enterParams);
             yield return null;
 
+            if (collectedItemIds.Count == 0)
+                _ui.HideHint();
+
             // Theme customization.
             CustomizeTheme();
 

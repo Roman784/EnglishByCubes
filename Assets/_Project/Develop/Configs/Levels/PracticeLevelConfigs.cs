@@ -19,6 +19,9 @@ namespace Configs
             CubeNumbersPool.Clear();
             foreach (var sentence in Sentences)
             {
+                if (sentence.TargetSentence == "")
+                    Debug.LogError($"Sentence not found! {name}");
+
                 foreach (var cubeNumber in sentence.CubesPool)
                 {
                     if (CubeNumbersPool.Contains(cubeNumber)) continue;
@@ -27,8 +30,9 @@ namespace Configs
             }
 
             CubeNumbersPool.Sort();
-
+#if UNITY_EDITOR
             EditorUtility.SetDirty(this);
+#endif
         }
 
         private void OnValidate()

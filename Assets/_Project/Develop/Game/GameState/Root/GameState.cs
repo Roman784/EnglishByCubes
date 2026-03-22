@@ -12,5 +12,6 @@ namespace GameState
         public float CurrentCollectionItemFill;
         public float SoundVolume;
         public float MusicVolume;
+        public bool IsFirstEntrance;
     }
 }

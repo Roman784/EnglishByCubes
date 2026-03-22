@@ -62,7 +62,9 @@ namespace Configs
             for (int i = 0; i < Items.Count; i++)
             {
                 Items[i].SetId(i);
+#if UNITY_EDITOR
                 EditorUtility.SetDirty(this);
+#endif
             }
         }
 

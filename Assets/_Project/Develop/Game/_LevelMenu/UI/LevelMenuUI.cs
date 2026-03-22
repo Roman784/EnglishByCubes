@@ -62,6 +62,11 @@ namespace UI
             _levelButtonsLayout.ScrollTo(lastCompletedLevelNumber, instantly);
         }
 
+        public void ScrollDown()
+        {
+            _levelButtonsLayout.ScrollTo(1, false);
+        }
+
         public void OpenPreviousScene()
         {
             _sceneProvider.OpenPreviousScene(_enterParams);

@@ -1,0 +1,524 @@
+﻿I am Ivan.;Я Иван.;1 2 3
+I am 25.;Мне 25 лет.;1 2 3
+I am Russian.;Я русский.;1 2 3
+I am fine.;Я в порядке.;1 2 3
+I was Ivan.;Я был Иваном.;1 2 3
+I was 25.;Мне было 25 лет.;1 2 3
+I was Russian.;Я был русским.;1 2 3
+I was fine.;Я был в порядке.;1 2 3
+You are Ivan.;Ты Иван.;1 2 3
+You are 25.;Тебе 25 лет.;1 2 3
+You are Russian.;Ты русский.;1 2 3
+You are fine.;Ты в порядке.;1 2 3
+You were Ivan.;Ты был Иваном.;1 2 3
+You were 25.;Тебе было 25 лет.;1 2 3
+You were Russian.;Ты был русским.;1 2 3
+You were fine.;Ты был в порядке.;1 2 3
+He is Ivan.;Он Иван.;1 2 3
+He is Russian.;Он русский.;1 2 3
+He was Ivan.;Он был Иваном.;1 2 3
+He was Russian.;Он был русским.;1 2 3
+She is 25.;Ей 25 лет.;1 2 3
+She is fine.;Она в порядке.;1 2 3
+She was 25.;Ей было 25 лет.;1 2 3
+She was fine.;Она была в порядке.;1 2 3
+It is a book.;Это книга.;1 2 3
+It is Russian.;Это русское (о предмете).;1 2 3
+It is fine.;Всё в порядке.;1 2 3
+It was a book.;Это была книга.;1 2 3
+It was Russian.;Это было русским (о предмете).;1 2 3
+It was fine.;Всё было в порядке.;1 2 3
+We are 25.;Нам по 25 лет.;1 2 3
+We are Russian.;Мы русские.;1 2 3
+We are friends.;Мы друзья.;1 2 3
+We are fine.;Мы в порядке.;1 2 3
+We were 25.;Нам было по 25 лет.;1 2 3
+We were Russian.;Мы были русскими.;1 2 3
+We were friends.;Мы были друзьями.;1 2 3
+We were fine.;Мы были в порядке.;1 2 3
+They are 25.;Им по 25 лет.;1 2 3
+They are Russian.;Они русские.;1 2 3
+They are friends.;Они друзья.;1 2 3
+They are fine.;Они в порядке.;1 2 3
+They were 25.;Им было по 25 лет.;1 2 3
+They were Russian.;Они были русскими.;1 2 3
+They were friends.;Они были друзьями.;1 2 3
+They were fine.;Они были в порядке.;1 2 3
+Am I Ivan?;Я Иван?;2 1 3
+Am I 25?;Мне 25?;2 1 3
+Am I Russian?;Я русский?;2 1 3
+Am I fine?;Я в порядке?;2 1 3
+Was I Ivan?;Я был Иваном?;2 1 3
+Was I 25?;Мне было 25?;2 1 3
+Was I Russian?;Я был русским?;2 1 3
+Was I fine?;Я был в порядке?;2 1 3
+Are you Ivan?;Ты Иван?;2 1 3
+Are you 25?;Тебе 25?;2 1 3
+Are you Russian?;Ты русский?;2 1 3
+Are you fine?;Ты в порядке?;2 1 3
+Were you Ivan?;Ты был Иваном?;2 1 3
+Were you 25?;Тебе было 25?;2 1 3
+Were you Russian?;Ты был русским?;2 1 3
+Were you fine?;Ты был в порядке?;2 1 3
+Is he Ivan?;Он Иван?;2 1 3
+Is he Russian?;Он русский?;2 1 3
+Was he Ivan?;Он был Иваном?;2 1 3
+Was he Russian?;Он был русским?;2 1 3
+Was he fine?;Он был в порядке?;2 1 3
+Is she 25?;Ей 25?;2 1 3
+Is she fine?;Она в порядке?;2 1 3
+Was she 25?;Ей было 25?;2 1 3
+Is it Ivan?;Это Иван?;2 1 3
+Is it Russian?;Это русское?;2 1 3
+Is it a book?;Это книга?;2 1 3
+Is it fine?;Всё в порядке?;2 1 3
+Was it Ivan?;Это был Иван?;2 1 3
+Was it Russian?;Это было русским?;2 1 3
+Was it a book?;Это была книга?;2 1 3
+Was it fine?;Всё было в порядке?;2 1 3
+Are we 25?;Нам по 25?;2 1 3
+Are we Russian?;Мы русские?;2 1 3
+Are we friends?;Мы друзья?;2 1 3
+Are we fine?;Мы в порядке?;2 1 3
+Were we 25?;Нам было по 25?;2 1 3
+Were we Russian?;Мы были русскими?;2 1 3
+Were we friends?;Мы были друзьями?;2 1 3
+Were we fine?;Мы были в порядке?;2 1 3
+Are they 25?;Им по 25?;2 1 3
+Are they Russian?;Они русские?;2 1 3
+Are they friends?;Они друзья?;2 1 3
+Are they fine?;Они в порядке?;2 1 3
+Were they 25?;Им было по 25?;2 1 3
+Were they Russian?;Они были русскими?;2 1 3
+Were they friends?;Они были друзьями?;2 1 3
+Were they fine?;Они были в порядке?;2 1 3
+I am kind.;Я добрый.;1 2 7
+I am wise.;Я мудрый.;1 2 7
+I am sad.;Я грустный.;1 2 7
+I am happy.;Я счастливый.;1 2 7
+I am good.;Я хороший.;1 2 7
+I am useful.;Я полезный.;1 2 7
+You are kind.;Ты добрый.;1 2 7
+You are wise.;Ты мудрый.;1 2 7
+You are sad.;Ты грустный.;1 2 7
+You are happy.;Ты счастливый.;1 2 7
+You are good.;Ты хороший.;1 2 7
+You are useful.;Ты полезный.;1 2 7
+He is kind.;Он добрый.;1 2 7
+He is sad.;Он грустный.;1 2 7
+He is good.;Он хороший.;1 2 7
+She is wise.;Она мудрая.;1 2 7
+She is happy.;Она счастливая.;1 2 7
+She is useful.;Она полезная.;1 2 7
+It is kind.;Оно доброе.;1 2 7
+It is wise.;Это мудро.;1 2 7
+It is sad.;Это грустно.;1 2 7
+It is good.;Это хорошо.;1 2 7
+It is useful.;Это полезно.;1 2 7
+We are kind.;Мы добрые.;1 2 7
+We are wise.;Мы мудрые.;1 2 7
+We are sad.;Мы грустные.;1 2 7
+We are happy.;Мы счастливые.;1 2 7
+We are good.;Мы хорошие.;1 2 7
+We are useful.;Мы полезные.;1 2 7
+They are kind.;Они добрые.;1 2 7
+They are wise.;Они мудрые.;1 2 7
+They are sad.;Они грустные.;1 2 7
+They are happy.;Они счастливые.;1 2 7
+They are good.;Они хорошие.;1 2 7
+They are useful.;Они полезные.;1 2 7
+I was kind.;Я был добрым.;1 2 7
+I was wise.;Я был мудрым.;1 2 7
+I was sad.;Я был грустным.;1 2 7
+I was happy.;Я был счастливым.;1 2 7
+I was good.;Я был хорошим.;1 2 7
+I was useful.;Я был полезным.;1 2 7
+You were kind.;Ты был добрым.;1 2 7
+You were wise.;Ты был мудрым.;1 2 7
+You were sad.;Ты был грустным.;1 2 7
+You were happy.;Ты был счастливым.;1 2 7
+You were good.;Ты был хорошим.;1 2 7
+You were useful.;Ты был полезным.;1 2 7
+He was kind.;Он был добрым.;1 2 7
+He was sad.;Он был грустным.;1 2 7
+He was good.;Он был хорошим.;1 2 7
+She was wise.;Она была мудрой.;1 2 7
+She was happy.;Она была счастливой.;1 2 7
+She was useful.;Она была полезной.;1 2 7
+It was kind.;Это было добро.;1 2 7
+It was wise.;Это было мудро.;1 2 7
+It was sad.;Это было грустно.;1 2 7
+It was good.;Это было хорошо.;1 2 7
+It was useful.;Это было полезно.;1 2 7
+We were kind.;Мы были добрыми.;1 2 7
+We were wise.;Мы были мудрыми.;1 2 7
+We were sad.;Мы были грустными.;1 2 7
+We were happy.;Мы были счастливыми.;1 2 7
+We were good.;Мы были хорошими.;1 2 7
+We were useful.;Мы были полезными.;1 2 7
+They were kind.;Они были добрыми.;1 2 7
+They were wise.;Они были мудрыми.;1 2 7
+They were sad.;Они были грустными.;1 2 7
+They were happy.;Они были счастливыми.;1 2 7
+They were good.;Они были хорошими.;1 2 7
+They were useful.;Они были полезными.;1 2 7
+Ivan was sad.;Иван был грустным.;3 2 7
+Be kind!;Будь добрым!;2 7
+Be wise!;Будь мудрым!;2 7
+Be happy!;Будь счастливым!;2 7
+Be good!;Будь хорошим!;2 7
+Be useful!;Будь полезным!;2 7
+What am I?;Какой я?;6 2 1
+What is he?;Какой он?;6 2 1
+What is it?;Что это?;6 2 1
+What are you?;Какой ты?;6 2 1
+What are we?;Какие мы?;6 2 1
+What are they?;Какие они?;6 2 1
+What was I?;Кем я был?;6 2 1
+What was he?;Кем он был?;6 2 1
+What was it?;Что это было?;6 2 1
+What were you?;Кем ты был?;6 2 1
+What were we?;Кем мы были?;6 2 1
+What were they?;Кем они были?;6 2 1
+Who am I?;Кто я?;6 2 1
+Who is she?;Кто она?;6 2 1
+Who is it?;Кто это?;6 2 1
+Who are you?;Кто ты?;6 2 1
+Who are we?;Кто мы?;6 2 1
+Who are they?;Кто они?;6 2 1
+Who was I?;Кто был я?;6 2 1
+Who was he?;Кем он был?;6 2 1
+Who was it?;Кто это был?;6 2 1
+Who were you?;Кем ты был?;6 2 1
+Who were we?;Кем мы были?;6 2 1
+Who were they?;Кто они были?;6 2 1
+How old am I?;Сколько мне лет?;6 2 1
+How old is she?;Сколько ей лет?;6 2 1
+How old is it?;Сколько этому лет?;6 2 1
+How old are you?;Сколько тебе лет?;6 2 1
+How old are we?;Сколько нам лет?;6 2 1
+How old are they?;Сколько им лет?;6 2 1
+How old was I?;Сколько мне было лет?;6 2 1
+How old was she?;Сколько ей было лет?;6 2 1
+How old was it?;Сколько этому было лет?;6 2 1
+How old were you?;Сколько тебе было лет?;6 2 1
+How old were we?;Сколько нам было лет?;6 2 1
+How old were they?;Сколько им было лет?;6 2 1
+How am I?;Как я себя чувствую/выгляжу?;6 2 1
+How is she?;Как она?;6 2 1
+How is it?;Каково это?;6 2 1
+How are you?;Как ты?;6 2 1
+How are we?;Как мы?;6 2 1
+How are they?;Как они?;6 2 1
+How was I?;Каково мне было?;6 2 1
+How was he?;Каково ему было?;6 2 1
+How was it?;Как всё прошло?;6 2 1
+How were you?;Каково тебе было?;6 2 1
+How were we?;Каково нам было?;6 2 1
+How were they?;Каково им было?;6 2 1
+Where am I?;Где я?;6 2 1
+Where is he?;Где он?;6 2 1
+Where is it?;Где это?;6 2 1
+Where are you?;Где ты?;6 2 1
+Where are we?;Где мы?;6 2 1
+Where are they?;Где они?;6 2 1
+Where was I?;Где я был?;6 2 1
+Where was he?;Где он был?;6 2 1
+Where was it?;Где это было?;6 2 1
+Where were you?;Где ты был?;6 2 1
+Where were we?;Где мы были?;6 2 1
+When was it?;Когда это было?;6 2 1
+Am I kind?;Я добрый?;2 1 7
+Am I wise?;Я мудрый?;2 1 7
+Am I sad?;Я грустный?;2 1 7
+Am I happy?;Я счастливый?;2 1 7
+Am I good?;Я хороший?;2 1 7
+Am I useful?;Я полезный?;2 1 7
+Is he kind?;Он добрый?;2 1 7
+Is he sad?;Он грустный?;2 1 7
+Is he good?;Он хороший?;2 1 7
+Is she wise?;Она мудрая?;2 1 7
+Is she happy?;Она счастливая?;2 1 7
+Is she useful?;Она полезная?;2 1 7
+Is it kind?;Оно доброе?;2 1 7
+Is it wise?;Оно мудрое?;2 1 7
+Is it sad?;Оно грустное?;2 1 7
+Is it happy?;Оно счастливое?;2 1 7
+Is it good?;Оно хорошее?;2 1 7
+Is it useful?;Оно полезное?;2 1 7
+Are you kind?;Ты добрый?;2 1 7
+Are you wise?;Ты мудрый?;2 1 7
+Are you sad?;Ты грустный?;2 1 7
+Are you happy?;Ты счастливый?;2 1 7
+Are you good?;Ты хороший?;2 1 7
+Are you useful?;Ты полезный?;2 1 7
+Are we kind?;Мы добрые?;2 1 7
+Are we wise?;Мы мудрые?;2 1 7
+Are we sad?;Мы грустные?;2 1 7
+Are we happy?;Мы счастливые?;2 1 7
+Are we good?;Мы хорошие?;2 1 7
+Are we useful?;Мы полезные?;2 1 7
+Are they kind?;Они добрые?;2 1 7
+Are they wise?;Они мудрые?;2 1 7
+Are they sad?;Они грустные?;2 1 7
+Are they happy?;Они счастливые?;2 1 7
+Are they good?;Они хорошие?;2 1 7
+Are they useful?;Они полезные?;2 1 7
+Was I kind?;Я был добрым?;2 1 7
+Was I wise?;Я был мудрым?;2 1 7
+Was I sad?;Я был грустным?;2 1 7
+Was I happy?;Я был счастливым?;2 1 7
+Was I good?;Я был хорошим?;2 1 7
+Was I useful?;Я был полезным?;2 1 7
+Was he kind?;Он был добрым?;2 1 7
+Was he happy?;Он был счастливым?;2 1 7
+Was he useful?;Он был полезным?;2 1 7
+Was she wise?;Она была мудрой?;2 1 7
+Was she sad?;Она была грустной?;2 1 7
+Was she good?;Она была хорошей?;2 1 7
+Was it kind?;Оно было добрым?;2 1 7
+Was it wise?;Оно было мудрым?;2 1 7
+Was it sad?;Оно было грустным?;2 1 7
+Was it happy?;Оно было счастливым?;2 1 7
+Was it good?;Оно было хорошим?;2 1 7
+Was it useful?;Оно было полезным?;2 1 7
+Were you kind?;Ты был добрым?;2 1 7
+Were you wise?;Ты был мудрым?;2 1 7
+Were you sad?;Ты был грустным?;2 1 7
+Were you happy?;Ты был счастливым?;2 1 7
+Were you good?;Ты был хорошим?;2 1 7
+Were you useful?;Ты был полезным?;2 1 7
+Were we kind?;Мы были добрыми?;2 1 7
+Were we wise?;Мы были мудрыми?;2 1 7
+Were we sad?;Мы были грустными?;2 1 7
+Were we happy?;Мы были счастливыми?;2 1 7
+Were we good?;Мы были хорошими?;2 1 7
+Were we useful?;Мы были полезными?;2 1 7
+Were they kind?;Они были добрыми?;2 1 7
+Were they wise?;Они были мудрыми?;2 1 7
+Were they sad?;Они были грустными?;2 1 7
+Were they happy?;Они были счастливыми?;2 1 7
+Were they good?;Они были хорошими?;2 1 7
+Were they useful?;Они были полезными?;2 1 7
+What is kind?;Что значит добрый?;6 2 7
+What is wise?;Что значит мудрый?;6 2 7
+What is sad?;Что значит печальный?;6 2 7
+What is happy?;Что значит счастливый?;6 2 7
+What is good?;Что значит хороший?;6 2 7
+What is useful?;Что значит полезный?;6 2 7
+Who is kind?;Кто добрый?;6 2 7
+Who is wise?;Кто мудрый?;6 2 7
+Who is sad?;Кто грустный?;6 2 7
+Who is happy?;Кто счастливый?;6 2 7
+Who is good?;Кто хороший?;6 2 7
+Who is useful?;Кто полезный?;6 2 7
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+There is a book.;Там книга.;8 2 9
+There is an apple.;Там яблоко.;8 2 9
+;;
+;;
+There are books.;Там книги.;8 2 9
+There are apples.;Там яблоки.;8 2 9
+;;
+;;
+There was a book.;Там была книга.;8 2 9
+There was an apple.;Там было яблоко.;8 2 9
+;;
+;;
+There were books.;Там были книги.;8 2 9
+There were apples.;Там были яблоки.;8 2 9
+;;
+;;
+There is not a book.;Там нет книги.;8 2 5 9
+There is not an apple.;Там нет яблока.;8 2 5 9
+;;
+;;
+There are not books.;Там нет книг.;8 2 5 9
+There are not apples.;Там нет яблок.;8 2 5 9
+;;
+;;
+There was not a book.;Там не было книги.;8 2 5 9
+There was not an apple.;Там не было яблока.;8 2 5 9
+;;
+;;
+There were not books.;Там не было книг.;8 2 5 9
+There were not apples.;Там не было яблок.;8 2 5 9
+;;
+;;
+There are no books.;Там совсем нет книг.;8 2 5 9
+There are no apples.;Там совсем нет яблок.;8 2 5 9
+There were no books.;Там совсем не было книг.;8 2 5 9
+There were no apples.;Там совсем не было яблок.;8 2 5 9
+There are not any books.;Там нет никаких книг.;8 2 5 9
+There are not any apples.;Там нет никаких яблок.;8 2 5 9
+There were not any books.;Там не было никаких книг.;8 2 5 9
+There were not any apples.;Там не было никаких яблок.;8 2 5 9
+There are some books.;Там какие-то книги.;8 2 5 9
+There are some apples.;Там какие-то яблоки.;8 2 5 9
+There were some books.;Там были какие-то книги.;8 2 5 9
+There were some apples.;Там были какие-то яблоки.;8 2 5 9
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+Is there a book?;Там есть книга?;2 8 9
+Is there an apple?;Там есть яблоко?;2 8 9
+Is there some book?;Там есть какая-то книга?;2 8 5 9
+Is there some apple?;Там есть какое-то яблоко?;2 8 5 9
+Is there any book?;Там есть какая-нибудь книга?;2 8 5 9
+Is there any apple?;Там есть какое-нибудь яблоко?;2 8 5 9
+Are there any books?;Там есть какие-нибудь книги?;2 8 5 9
+Are there any apples?;Там есть какие-нибудь яблоки?;2 8 5 9
+Was there a book?;Там была книга?;2 8 9
+Was there an apple?;Там было яблоко?;2 8 9
+Were there books?;Там были книги?;2 8 9
+Were there apples?;Там были яблоки?;2 8 9
+;;
+;;
+Was there any book?;Там была какая-нибудь книга?;2 8 5 9
+Was there any apple?;Там было какое-нибудь яблоко?;2 8 5 9
+Were there any books?;Там были какие-нибудь книги?;2 8 5 9
+Were there any apples?;Там были какие-нибудь яблоки?;2 8 5 9
+What is here?;Что здесь?;6 2 8
+What is there?;Что там?;6 2 8
+What are here?;Что здесь? (мн. ч.);6 2 8
+What are there?;Что там? (мн. ч.);6 2 8
+What was here?;Что было здесь?;6 2 8
+What was there?;Что было там?;6 2 8
+What were here?;Что были здесь? (мн. ч.);6 2 8
+What were there?;Что были там? (мн. ч.);6 2 8
+Who is here?;Кто здесь?;6 2 8
+Who is there?;Кто там?;6 2 8
+Who are here?;Кто здесь? (мн. ч.);6 2 8
+Who are there?;Кто там? (мн. ч.);6 2 8
+Who was here?;Кто был здесь?;6 2 8
+Who was there?;Кто был там?;6 2 8
+Who were here?;Кто были здесь? (мн. ч.);6 2 8
+Who were there?;Кто были там? (мн. ч.);6 2 8
+Where is a book?;Где книга?;6 2 9
+;;
+I am not kind.;Я не добрый.;1 2 5 7
+I am not wise.;Я не мудрый.;1 2 5 7
+I am not sad.;Я не печальный.;1 2 5 7
+I am not happy.;Я не счастливый.;1 2 5 7
+I am not good.;Я не хороший.;1 2 5 7
+I am not useful.;Я не полезный.;1 2 5 7
+I was not kind.;Я не был добрый.;1 2 5 7
+I was not wise.;Я не был мудрый.;1 2 5 7
+I was not sad.;Я не был печальный.;1 2 5 7
+I was not happy.;Я не был счастливый.;1 2 5 7
+I was not good.;Я не был хороший.;1 2 5 7
+I was not useful.;Я не был полезный.;1 2 5 7
+You are not kind.;Ты не добрый.;1 2 5 7
+You are not wise.;Ты не мудрый.;1 2 5 7
+You are not sad.;Ты не печальный.;1 2 5 7
+You are not happy.;Ты не счастливый.;1 2 5 7
+You are not good.;Ты не хороший.;1 2 5 7
+You are not useful.;Ты не полезный.;1 2 5 7
+You were not kind.;Ты не был добрый.;1 2 5 7
+You were not wise.;Ты не был мудрый.;1 2 5 7
+You were not sad.;Ты не был печальный.;1 2 5 7
+You were not happy.;Ты не был счастливый.;1 2 5 7
+You were not good.;Ты не был хороший.;1 2 5 7
+You were not useful.;Ты не был полезный.;1 2 5 7
+You are not kind.;Ты не добрый.;1 2 5 7
+You are not wise.;Ты не мудрый.;1 2 5 7
+You are not sad.;Ты не печальный.;1 2 5 7
+You are not happy.;Ты не счастливый.;1 2 5 7
+You are not good.;Ты не хороший.;1 2 5 7
+You are not useful.;Ты не полезный.;1 2 5 7
+You were not kind.;Ты не был добрый.;1 2 5 7
+You were not wise.;Ты не был мудрый.;1 2 5 7
+You were not sad.;Ты не был печальный.;1 2 5 7
+You were not happy.;Ты не был счастливый.;1 2 5 7
+You were not good.;Ты не был хороший.;1 2 5 7
+You were not useful.;Ты не был полезный.;1 2 5 7
+It is not kind.;Это не по-доброму.;1 2 5 7
+It is not wise.;Это не мудро.;1 2 5 7
+It is not sad.;Это не печально.;1 2 5 7
+It is not happy.;Оно не счастливо.;1 2 5 7
+It is not good.;Это не хорошо.;1 2 5 7
+It is not useful.;Это не полезно.;1 2 5 7
+It was not kind.;Это не было по-доброму.;1 2 5 7
+It was not wise.;Это не было мудрым.;1 2 5 7
+It was not sad.;Это не было печальным.;1 2 5 7
+It was not happy.;Оно не было счастливым.;1 2 5 7
+It was not good.;Это не было хорошим.;1 2 5 7
+It was not useful.;Это не было полезным.;1 2 5 7
+We are not kind.;Мы не добрые.;1 2 5 7
+We are not wise.;Мы не мудрые.;1 2 5 7
+We are not sad.;Мы не печальные.;1 2 5 7
+We are not happy.;Мы не счастливые.;1 2 5 7
+We are not good.;Мы не хорошие.;1 2 5 7
+We are not useful.;Мы не полезные.;1 2 5 7
+We were not kind.;Мы не были добрыми.;1 2 5 7
+We were not wise.;Мы не были мудрыми.;1 2 5 7
+We were not sad.;Мы не были печальными.;1 2 5 7
+We were not happy.;Мы не были счастливыми.;1 2 5 7
+We were not good.;Мы не были хорошими.;1 2 5 7
+We were not useful.;Мы не были полезными.;1 2 5 7
+They are not kind.;Они не добрые.;1 2 5 7
+They are not wise.;Они не мудрые.;1 2 5 7
+They are not sad.;Они не печальные.;1 2 5 7
+They are not happy.;Они не счастливые.;1 2 5 7
+They are not good.;Они не хорошие.;1 2 5 7
+They are not useful.;Они не полезные.;1 2 5 7
+They were not kind.;Они не были добрыми.;1 2 5 7
+They were not wise.;Они не были мудрыми.;1 2 5 7
+They were not sad.;Они не были печальными.;1 2 5 7
+They were not happy.;Они не были счастливыми.;1 2 5 7
+They were not good.;Они не были хорошими.;1 2 5 7
+They were not useful.;Они не были полезными.;1 2 5 7
+Who was kind?;Кто был добрым?;6 2 7
+Who was wise?;Кто был мудрым?;6 2 7
+Who was sad?;Кто был грустным?;6 2 7
+Who was happy?;Кто был счастливым?;6 2 7
+Who was good?;Кто был хорошим?;6 2 7
+Who was useful?;Кто был полезным?;6 2 7

@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9515a61c4ec61c4c8e9ba1cf027efbb, type: 3}
   m_Name: PracticeConfigs_5 2
   m_EditorClassIdentifier: 
-  <GlobalNumber>k__BackingField: 35
+  <GlobalNumber>k__BackingField: 31
   <LocalNumber>k__BackingField: 10
-  <SectionTitle>k__BackingField: "\u0420\u0430\u0437\u0434\u0435\u043B 5"
+  <SectionTitle>k__BackingField: "\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044F
+    \u043C\u0435\u0441\u0442\u0430"
   <Title>k__BackingField: "\u041F\u0435\u0440\u0435\u0432\u043E\u0434"
   <SentanceSign>k__BackingField: '?'
   <Sentences>k__BackingField:
-  - {fileID: 11400000, guid: e7bc69785a91e7744a6d67e9e80f6be0, type: 2}
-  - {fileID: 11400000, guid: 4ec47a7fe1f0c6e4d817278f96961891, type: 2}
-  - {fileID: 11400000, guid: bae83fd6b7b43e441b49822988afe39b, type: 2}
-  - {fileID: 11400000, guid: c3f73c365b15ef940b998a3559111aa9, type: 2}
+  - {fileID: 11400000, guid: fde878d72100eb549bbed88257c1fa47, type: 2}
+  - {fileID: 11400000, guid: 52950df01aca81f4cae7c678b045e064, type: 2}
+  - {fileID: 11400000, guid: a4449eeaeb8f2fd448ef31c1e45f970d, type: 2}
+  - {fileID: 11400000, guid: 7e99b177754a8b941ba05aec38676d34, type: 2}
   <CubeNumbersPool>k__BackingField: 02000000050000000800000009000000

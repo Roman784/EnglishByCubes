@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <GlobalNumber>k__BackingField: 2
   <LocalNumber>k__BackingField: 1
-  <SectionTitle>k__BackingField: "\u0420\u0430\u0437\u0434\u0435\u043B 1"
+  <SectionTitle>k__BackingField: "\u041F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435-\u0434\u0430\u043D\u043D\u043E\u0441\u0442\u044C"
   <Title>k__BackingField: "\u0428\u0430\u0431\u043B\u043E\u043D"
   <SentanceSign>k__BackingField: .
   <SentencesCount>k__BackingField: 4
@@ -53,27 +53,25 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 656d5ff970ebcaf41a9c53519e16a22f, type: 2}
   - {fileID: 11400000, guid: 8e358f4e32b017a4e8123ae655acfa9e, type: 2}
   - {fileID: 11400000, guid: 63e584f5251c3c64ab89114575b9b17a, type: 2}
-  - {fileID: 11400000, guid: c678ea42109ebfb478f6181b922629f6, type: 2}
-  - {fileID: 11400000, guid: f2986c3058010ca418f65e1af845cedd, type: 2}
-  - {fileID: 11400000, guid: c985a2ebc3f0e4c41a45ff40094438a4, type: 2}
-  - {fileID: 11400000, guid: a9e4acf9299cf0d4c81df45cbf20749b, type: 2}
-  - {fileID: 11400000, guid: 3fb016fd674c74542b665a027f019905, type: 2}
-  - {fileID: 11400000, guid: 8e6a13873a9522945932e0cbc9fb47c0, type: 2}
-  - {fileID: 11400000, guid: 3042885055e053b468f7c083b3dee97f, type: 2}
-  - {fileID: 11400000, guid: 90c08a7491e455d4d879981cda60425c, type: 2}
-  - {fileID: 11400000, guid: adf42cd44c510454f9a96b373e88c7f0, type: 2}
-  - {fileID: 11400000, guid: d342fb490d7de3144b67da5ac0888f61, type: 2}
-  - {fileID: 11400000, guid: bf995a074b09a0d48b09cd4ffaf95518, type: 2}
-  - {fileID: 11400000, guid: dbe4e23038989e646897c6d8d0d0f6c2, type: 2}
-  - {fileID: 11400000, guid: 543178604f8b0bb40a94cdc78d048528, type: 2}
-  - {fileID: 11400000, guid: 8647f1a9b6945bd4e986314d8ae202ad, type: 2}
-  - {fileID: 11400000, guid: 3d641319089426c469598d2079de8e40, type: 2}
-  - {fileID: 11400000, guid: e00f844df380536409583c02002d0b96, type: 2}
-  - {fileID: 11400000, guid: 22d0fdfd669d73340bb75b819991810c, type: 2}
-  - {fileID: 11400000, guid: d7f2ac0f18606d641a64029dd739555f, type: 2}
-  - {fileID: 11400000, guid: 0aec4da3d52b7f144bd63e2cf0a61f60, type: 2}
-  - {fileID: 11400000, guid: 291d4719aa1402747b95fd169019d732, type: 2}
-  - {fileID: 11400000, guid: 96831157429bdb8439208a01d6f828a9, type: 2}
-  - {fileID: 11400000, guid: 73a245234c853d442ba7196c6c7ab28d, type: 2}
-  - {fileID: 11400000, guid: 381c72f18f8f5d445aea1f278501599b, type: 2}
-  - {fileID: 11400000, guid: e0f694dcfa56d544d84a6df0a005e8fd, type: 2}
+  - {fileID: 11400000, guid: 3397dc8e0feb5b34f96b1695ad182d25, type: 2}
+  - {fileID: 11400000, guid: 19199dfb658977f48831d8f2c6581fe8, type: 2}
+  - {fileID: 11400000, guid: 05b7f4609b774b64282287636557ac70, type: 2}
+  - {fileID: 11400000, guid: c4804ffbb4d4b994c8292fa9de02eeb7, type: 2}
+  - {fileID: 11400000, guid: e909373251855054fa4d45716837f06a, type: 2}
+  - {fileID: 11400000, guid: 0658b70823545204fafb14e2e0c8aa4f, type: 2}
+  - {fileID: 11400000, guid: 6b825164e178ae54687aab121d6bc584, type: 2}
+  - {fileID: 11400000, guid: b961413472bb65c4f9ea07cc6257877d, type: 2}
+  - {fileID: 11400000, guid: 324309818f69eeb43886c9e2c7d95f48, type: 2}
+  - {fileID: 11400000, guid: d4700b3ab1f1cda4cae281e634591fa5, type: 2}
+  - {fileID: 11400000, guid: 770c24723a9a1294bb065fbf855776f7, type: 2}
+  - {fileID: 11400000, guid: 6adf16ecef019c045bec7a0821c672a5, type: 2}
+  - {fileID: 11400000, guid: e270791fe00874e488289ba503b3077f, type: 2}
+  - {fileID: 11400000, guid: 78df6054e5c2955469b22a9f141f23d1, type: 2}
+  - {fileID: 11400000, guid: c9b8fa26f0608f246bae2a99594a8f59, type: 2}
+  - {fileID: 11400000, guid: 439b062b8e6d7484f9780791cea79a52, type: 2}
+  - {fileID: 11400000, guid: 7080b0cd7d1f09242a7dadc4d21918dd, type: 2}
+  - {fileID: 11400000, guid: f7a6ea8303e90264a9ec38f41d7a11d4, type: 2}
+  - {fileID: 11400000, guid: dbbe781ea49161d4c9b67e25aec701a5, type: 2}
+  - {fileID: 11400000, guid: 6467ead3913eda14e866a7ca08a97f80, type: 2}
+  - {fileID: 11400000, guid: 749a42ea15f624047bde4613ad0d041b, type: 2}
+  - {fileID: 11400000, guid: 73290d4f266b28640afbcfbd4a3a1d9d, type: 2}

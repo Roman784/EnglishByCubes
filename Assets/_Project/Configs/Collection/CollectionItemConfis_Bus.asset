@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9fdbef0aebb96c438962bd84e75fa25, type: 3}
   m_Name: CollectionItemConfis_Bus
   m_EditorClassIdentifier: 
-  <Id>k__BackingField: 0
   <Name>k__BackingField: 9
   <Sprite>k__BackingField: {fileID: 1825551671, guid: a83edfe259e4b9248aede4b8e0f54189, type: 3}
   <FilledSprite>k__BackingField: {fileID: -124915583, guid: a83edfe259e4b9248aede4b8e0f54189, type: 3}
-  <FillRate>k__BackingField: 1
   <Picture>k__BackingField: {fileID: 21300000, guid: fc243ea3623d331499e00eb83724c918, type: 3}
   <Title>k__BackingField: "\u0410\u0432\u0442\u043E\u0431\u0443\u0441"
   <MainText>k__BackingField: "\u041F\u043E\u0437\u043D\u0430\u043A\u043E\u043C\u044C\u0442\u0435\u0441\u044C
@@ -40,8 +38,8 @@ MonoBehaviour:
     \u043F\u0440\u043E\u043C\u043E\u043A\u043D\u0443\u0442\u044C \u043F\u043E\u0434
     \u0434\u043E\u0436\u0434\u0451\u043C, \u043F\u0430\u0441\u0441\u0430\u0436\u0438\u0440\u0430\u043C
     \u043F\u0440\u0438\u0445\u043E\u0434\u0438\u043B\u043E\u0441\u044C \u043F\u043B\u0430\u0442\u0438\u0442\u044C
-    \u0431\u043E\u043B\u044C\u0448\u0435 \u0438 \u0435\u0445\u0430\u0442\u044C \u0432\u043D\u0438\u0437\u0443.
-    \u0413\u043B\u0430\u0432\u043D\u043E\u0439 \u043B\u0435\u0433\u0435\u043D\u0434\u043E\u0439
+    \u0431\u043E\u043B\u044C\u0448\u0435 \u0438\u043B\u0438 \u0435\u0445\u0430\u0442\u044C
+    \u0432\u043D\u0438\u0437\u0443. \u0413\u043B\u0430\u0432\u043D\u043E\u0439 \u043B\u0435\u0433\u0435\u043D\u0434\u043E\u0439
     \u0441\u0440\u0435\u0434\u0438 double-decker \u0441\u0442\u0430\u043B\u0430 \u043C\u043E\u0434\u0435\u043B\u044C
     Routemaster, \u043F\u043E\u044F\u0432\u0438\u0432\u0448\u0430\u044F\u0441\u044F
     \u0432 1856 \u0433\u043E\u0434\u0443. \u041A\u0440\u0430\u0441\u043D\u044B\u043C

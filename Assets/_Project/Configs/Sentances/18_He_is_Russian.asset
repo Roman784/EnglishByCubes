@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1299072d3afce5b42bb074b347ce235e, type: 3}
   m_Name: 18_He_is_Russian
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::SentenceConfigs
   SentenceRu: "\u041E\u043D \u0440\u0443\u0441\u0441\u043A\u0438\u0439."
   SentenceEn: He is Russian.
   TargetSentence: he/sheisrussian

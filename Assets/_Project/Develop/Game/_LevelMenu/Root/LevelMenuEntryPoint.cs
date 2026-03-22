@@ -26,9 +26,6 @@ namespace LevelMenu
         private IEnumerator Run(LevelMenuEnterParams enterParams)
         {
             var isLoaded = false;
-
-
-
             //UI.
             _uiRoot.AttachSceneUI(_ui);
             _ui.Init(enterParams);
@@ -37,6 +34,12 @@ namespace LevelMenu
 
             // Theme customization.
             CustomizeTheme();
+
+            if (!_gameStateProvider.GameStateProxy.State.IsFirstEntrance)
+            {
+                _gameStateProvider.GameStateProxy.SetIsFirstEntrance(true);
+                _rootPopUpsProvider.OpenFirstEntrance();
+            }
 
             isLoaded = true;
 
