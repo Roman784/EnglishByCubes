@@ -28,12 +28,14 @@ MonoBehaviour:
       <SideIndex>k__BackingField: 1
   - <Sentence>k__BackingField: {fileID: 11400000, guid: b6985853e57f97c4a82cd2f6ae7e8ac9, type: 2}
     <Slots>k__BackingField:
-    - <CubeNumber>k__BackingField: 7
-      <SideIndex>k__BackingField: 2
     - <CubeNumber>k__BackingField: 2
       <SideIndex>k__BackingField: 1
     - <CubeNumber>k__BackingField: 1
+      <SideIndex>k__BackingField: 3
+    - <CubeNumber>k__BackingField: 7
       <SideIndex>k__BackingField: 2
+    - <CubeNumber>k__BackingField: 5
+      <SideIndex>k__BackingField: 0
   - <Sentence>k__BackingField: {fileID: 11400000, guid: b3598c2aa1418f743a507783687dfc87, type: 2}
     <Slots>k__BackingField:
     - <CubeNumber>k__BackingField: 7
@@ -46,7 +48,9 @@ MonoBehaviour:
     <Slots>k__BackingField:
     - <CubeNumber>k__BackingField: 2
       <SideIndex>k__BackingField: 4
-    - <CubeNumber>k__BackingField: 7
+    - <CubeNumber>k__BackingField: 5
       <SideIndex>k__BackingField: 0
     - <CubeNumber>k__BackingField: 1
       <SideIndex>k__BackingField: 5
+    - <CubeNumber>k__BackingField: 7
+      <SideIndex>k__BackingField: 0

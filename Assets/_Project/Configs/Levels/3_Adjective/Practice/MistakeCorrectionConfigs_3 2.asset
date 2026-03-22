@@ -41,7 +41,7 @@ MonoBehaviour:
     - <CubeNumber>k__BackingField: 7
       <SideIndex>k__BackingField: 2
     - <CubeNumber>k__BackingField: 2
-      <SideIndex>k__BackingField: 1
+      <SideIndex>k__BackingField: 3
   - <Sentence>k__BackingField: {fileID: 11400000, guid: 6a8f309790df2e743bca878ccdbd9d8c, type: 2}
     <Slots>k__BackingField:
     - <CubeNumber>k__BackingField: 2

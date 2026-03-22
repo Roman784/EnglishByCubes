@@ -18,7 +18,7 @@ MonoBehaviour:
   <Title>k__BackingField: "\u041F\u0435\u0440\u0435\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0430"
   <SentanceSign>k__BackingField: .
   <Sentences>k__BackingField:
-  - <Sentence>k__BackingField: {fileID: 11400000, guid: 5be598fb42d96044f8d2676cef975c7c, type: 2}
+  - <Sentence>k__BackingField: {fileID: 11400000, guid: 4f4cbe1c3c3167f4bb5db65fdeb6a378, type: 2}
     <Slots>k__BackingField:
     - <CubeNumber>k__BackingField: 2
       <SideIndex>k__BackingField: 0
