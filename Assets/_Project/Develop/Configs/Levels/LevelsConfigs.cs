@@ -47,7 +47,30 @@ namespace Configs
         [ContextMenu("Set Level Numbers")]
         private void SetLevelNumbers()
         {
-            var globalI = 0;
+            var globalNum = 1;
+            var localNum = 0;
+            var sectionNum = 0;
+            foreach (var level in Levels)
+            {
+                if (level.Mode == LevelMode.Theory)
+                {
+                    localNum = 0;
+                    sectionNum++;
+                }
+
+                level.SetLocalNumber(localNum);
+                level.SetGlobalNumber(globalNum);
+                level.SetSectionNumber(sectionNum);
+
+#if UNITY_EDITOR
+                EditorUtility.SetDirty(level);
+#endif
+
+                globalNum++;
+                localNum++;
+            }
+
+            /*var globalI = 0;
             foreach (var item in GetLevelsMap())
             {
                 var levels = item.Value;
@@ -62,7 +85,7 @@ namespace Configs
 
                     globalI++;
                 }
-            }
+            }*/
         }
 
         [ContextMenu("Validate")]
@@ -95,20 +118,6 @@ namespace Configs
 
         private void ValidateLevelNumbers()
         {
-            foreach (var item in GetLevelsMap())
-            {
-                var levels = item.Value;
-                for (int i = 0; i < levels.Count; i++)
-                {
-                    var number = levels[i].LocalNumber;
-                    for (int j = i + 1; j < levels.Count; j++)
-                    {
-                        if (number == levels[j].LocalNumber)
-                            Debug.LogError($"Level numbers {number} are repeated at the {item.Key} mode!");
-                    }
-                }
-            }
-
             for (int i = 0; i < Levels.Count; i++)
             {
                 var number = Levels[i].GlobalNumber;

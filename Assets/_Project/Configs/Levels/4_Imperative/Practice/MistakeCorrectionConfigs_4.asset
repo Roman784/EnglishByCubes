@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: MistakeCorrectionConfigs_4
   m_EditorClassIdentifier: 
   <GlobalNumber>k__BackingField: 23
-  <LocalNumber>k__BackingField: 7
+  <LocalNumber>k__BackingField: 1
+  <SectionNumber>k__BackingField: 4
   <SectionTitle>k__BackingField: "\u0418\u043C\u043F\u0435\u0440\u0430\u0442\u0438\u0432"
   <Title>k__BackingField: "\u041F\u0435\u0440\u0435\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0430"
   <SentanceSign>k__BackingField: '!'

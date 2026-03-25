@@ -8,6 +8,7 @@ namespace Configs
     {
         [field: SerializeField] public int GlobalNumber { get; private set; }
         [field: SerializeField] public int LocalNumber { get; private set; }
+        [field: SerializeField] public int SectionNumber { get; private set; }
         [field: SerializeField] public string SectionTitle { get; private set; }
         [field: SerializeField] public string Title { get; private set; }
         [field: SerializeField] public string SentanceSign { get; private set; } = "";
@@ -21,6 +22,11 @@ namespace Configs
         public void SetLocalNumber(int number)
         {
             LocalNumber = number;
+        }
+
+        public void SetSectionNumber(int number)
+        {
+            SectionNumber = number;
         }
 
         public T As<T>() where T : LevelConfigs

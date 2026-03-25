@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: PracticeConfigs_5 3
   m_EditorClassIdentifier: 
   <GlobalNumber>k__BackingField: 33
-  <LocalNumber>k__BackingField: 11
+  <LocalNumber>k__BackingField: 8
+  <SectionNumber>k__BackingField: 5
   <SectionTitle>k__BackingField: "\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044F
     \u043C\u0435\u0441\u0442\u0430"
   <Title>k__BackingField: "\u041F\u0435\u0440\u0435\u0432\u043E\u0434"

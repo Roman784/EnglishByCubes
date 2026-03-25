@@ -35,7 +35,8 @@ namespace UI
         private bool _isLocked;
         private Action<int> _openLevel;
 
-        public void Init(LevelConfigs levelConfigs, int localNum, LevelButtonsConfigs buttonsConfigs, LevelButtonProgress progress, 
+        public void Init(LevelConfigs levelConfigs, int sectionNum, int localNum, 
+                         LevelButtonsConfigs buttonsConfigs, LevelButtonProgress progress, 
                          AudioProvider audioProvider, AudioClip clickSound,
                          Action<int> openLevel)
         {
@@ -62,7 +63,7 @@ namespace UI
             if (levelConfigs.Mode == LevelMode.Theory)
                 _titleView.text = $"{levelConfigs.Title}";
             else
-                _titleView.text = $"{localNum}. {levelConfigs.Title}";
+                _titleView.text = $"{sectionNum}.{localNum} {levelConfigs.Title}";
             _renderer.material = _materialsMap[progress];
 
             if (progress == LevelButtonProgress.Uncompleted)

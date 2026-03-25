@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: AdjectiveTheoryConfigs
   m_EditorClassIdentifier: 
   <GlobalNumber>k__BackingField: 12
-  <LocalNumber>k__BackingField: 3
+  <LocalNumber>k__BackingField: 0
+  <SectionNumber>k__BackingField: 3
   <SectionTitle>k__BackingField: "\u0413\u0440\u0430\u043C\u043C\u0430-\u043A\u0443\u0431\u0438\u043A\u0438.
     \u0421\u0442\u0443\u043F\u0435\u043D\u044C \u043F\u0435\u0440\u0432\u0430\u044F.
     BE"
