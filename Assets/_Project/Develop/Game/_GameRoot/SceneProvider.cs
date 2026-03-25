@@ -19,6 +19,8 @@ namespace GameRoot
 
         private LevelsConfigs LevelsConfigs => _configsProvider.GameConfigs.LevelsConfigs;
 
+        public SceneEnterParams PreviousSceneParams => _previousSceneParams;
+
         [Inject]
         private void Construct(IConfigsProvider configsProvider, UIRoot uiRoot)
         {

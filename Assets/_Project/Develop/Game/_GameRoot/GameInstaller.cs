@@ -20,6 +20,7 @@ namespace GameRoot
         [SerializeField] private LevelInfoPopUp _levelInfoPopUpPrefab;
         [SerializeField] private AppInfoPopUp _appInfoPopUpPrefab;
         [SerializeField] private FirstEntrancePopUp _firstEntrancePopUpPrefab;
+        [SerializeField] private GameCompletedPopUp _gameCompletedPopUpPrefab;
 
         [Space]
 
@@ -63,6 +64,7 @@ namespace GameRoot
             Container.BindFactory<LevelInfoPopUp, LevelInfoPopUp.Factory>().FromComponentInNewPrefab(_levelInfoPopUpPrefab);
             Container.BindFactory<AppInfoPopUp, AppInfoPopUp.Factory>().FromComponentInNewPrefab(_appInfoPopUpPrefab);
             Container.BindFactory<FirstEntrancePopUp, FirstEntrancePopUp.Factory>().FromComponentInNewPrefab(_firstEntrancePopUpPrefab);
+            Container.BindFactory<GameCompletedPopUp, GameCompletedPopUp.Factory>().FromComponentInNewPrefab(_gameCompletedPopUpPrefab);
         }
     }
 }

@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 2708ff395a076b744a4c3f25b1d75104
+guid: 62b5c10e4cc59c240989ce60d27d1730
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8807769058885373796
+    second: trash-can (1)_0
+  - first:
+      213: -5863870609773292639
+    second: trash-can (1)_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
-    sRGBTexture: 0
+    sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -43,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,19 +75,6 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -120,7 +113,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Server
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -136,45 +129,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tables_0
+      name: trash-can (1)_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 30
-        width: 1024
-        height: 384
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88d678a09884b224aa24ebb6a7374b2c
-      internalID: -1705818911
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tables_1
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 459
-        width: 1024
-        height: 384
+        x: 29
+        y: 360
+        width: 454
+        height: 152
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d6c29411320222749835b464baa1e99c
-      internalID: -497091452
+      spriteID: 46f0a822b4b7b3a70800000000000000
+      internalID: 8807769058885373796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash-can (1)_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 0
+        width: 386
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a31c9f9fb85f9ea0800000000000000
+      internalID: -5863870609773292639
       vertices: []
       indices: 
       edges: []
@@ -193,8 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tables_0: -1705818911
-      Tables_1: -497091452
+      trash-can (1)_0: 8807769058885373796
+      trash-can (1)_1: -5863870609773292639
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

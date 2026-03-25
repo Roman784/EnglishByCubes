@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1299072d3afce5b42bb074b347ce235e, type: 3}
   m_Name: 455_I_was_not_sad
   m_EditorClassIdentifier: Assembly-CSharp::SentenceConfigs
-  SentenceRu: "\u042F \u043D\u0435 \u0431\u044B\u043B \u043F\u0435\u0447\u0430\u043B\u044C\u043D\u044B\u043C."
+  SentenceRu: "\u042F \u043D\u0435 \u0431\u044B\u043B \u043F\u0435\u0447\u0430\u043B\u044C\u043D\u044B\u0439."
   SentenceEn: I was not sad.
   TargetSentence: iwasnotsad
   CubesPool: 01000000020000000500000007000000

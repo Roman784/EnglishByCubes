@@ -80,4 +80,5 @@ MonoBehaviour:
   _levelInfoPopUpPrefab: {fileID: 5433627199699706506, guid: 8b36f66167cbf63459a30bc715318df4, type: 3}
   _appInfoPopUpPrefab: {fileID: 4988043960083191817, guid: 68bf424a48ed93e4ba1199f409f01575, type: 3}
   _firstEntrancePopUpPrefab: {fileID: 6668244885742138180, guid: 4f5d3752b9178834f8215c8b63eaad08, type: 3}
+  _gameCompletedPopUpPrefab: {fileID: 6293420572704655381, guid: e240a17349e0c6046b083dcb49d48982, type: 3}
   _audioSourcerPrefab: {fileID: 5817932153205178891, guid: 8ef075b4f811fa74481c3cebe83c5efa, type: 3}

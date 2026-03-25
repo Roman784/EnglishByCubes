@@ -12,6 +12,10 @@ namespace UI
         [SerializeField] private ButtonCustomizer _changeMusicVolumeButton;
         [SerializeField] private ButtonCustomizer _changeSoundVolumeButton;
 
+        [Space]
+
+        [SerializeField] private GameObject _resetDataOffer;
+
         private float _soundVolume;
         private float _musicVolume;
 
@@ -25,6 +29,8 @@ namespace UI
         public override void Open()
         {
             _pauseProvider.StopGame();
+
+            _resetDataOffer.SetActive(false);
 
             _musicVolume = _audioProvider.MusicVolume.Value;
             _soundVolume = _audioProvider.SoundVolume.Value;
@@ -76,6 +82,22 @@ namespace UI
         public void OpenMainMenu()
         {
             _sceneProvider.OpenLevelMenu(null);
+        }
+
+        public void ResetData()
+        {
+            _resetDataOffer.SetActive(true);
+        }
+
+        public void ConfirmDataReset()
+        {
+            _gameState.Reset();
+            _sceneProvider.OpenLevelMenu(null);
+        }
+
+        public void CancelDataReset()
+        {
+            _resetDataOffer.SetActive(false);
         }
 
         private void SetAudioButtonTag(ButtonCustomizer button, float volume)

@@ -16,6 +16,11 @@ namespace GameState
             _gameStateProvider = gameStateProvider;
         }
 
+        public void Reset()
+        {
+            _gameStateProvider.ResetGameState();
+        }
+
         public void CompleteLevel(int number)
         {
             if (State.LastCompletedLevelNumber < number)

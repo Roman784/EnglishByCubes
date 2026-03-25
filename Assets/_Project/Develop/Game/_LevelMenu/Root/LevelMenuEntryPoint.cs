@@ -41,6 +41,17 @@ namespace LevelMenu
                 _rootPopUpsProvider.OpenFirstEntrance();
             }
 
+            if (_sceneProvider.PreviousSceneParams.SceneName == Scenes.GAMEPLAY ||
+                _sceneProvider.PreviousSceneParams.SceneName == Scenes.MISTAKE_CORRECTION ||
+                _sceneProvider.PreviousSceneParams.SceneName == Scenes.TEMPLATE)
+            {
+                if (_configsProvider.GameConfigs.LevelsConfigs.IsLastLevel(
+                    _gameStateProvider.GameStateProxy.State.LastCompletedLevelNumber))
+                {
+                    _rootPopUpsProvider.OpenGameCompletedPopUp();
+                }
+            }
+
             isLoaded = true;
 
             yield return new WaitUntil(() => isLoaded);

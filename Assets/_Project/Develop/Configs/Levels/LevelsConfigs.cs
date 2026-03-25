@@ -10,6 +10,8 @@ namespace Configs
     {
         [field: SerializeField] public List<LevelConfigs> Levels { get; private set; }
 
+        public bool IsLastLevel(int number) => Levels[Levels.Count - 1].GlobalNumber == number;
+
         public bool IsLevelExist(int number, LevelMode levelMode)
         {
             var level = GetLevel(number);
