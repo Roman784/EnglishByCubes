@@ -35,7 +35,7 @@ MonoBehaviour:
     <FillRate>k__BackingField: 1
     <Configs>k__BackingField: {fileID: 11400000, guid: bf505668fe4b7d04885fae0370cee75a, type: 2}
   - <Id>k__BackingField: 7
-    <FillRate>k__BackingField: 1
+    <FillRate>k__BackingField: 0.5
     <Configs>k__BackingField: {fileID: 11400000, guid: b3ff53362fc343c40910007ed8c41bbb, type: 2}
   - <Id>k__BackingField: 8
     <FillRate>k__BackingField: 0.5
@@ -53,11 +53,11 @@ MonoBehaviour:
     <FillRate>k__BackingField: 0.5
     <Configs>k__BackingField: {fileID: 11400000, guid: 0f1259cee45fb694e9f452de5601a260, type: 2}
   - <Id>k__BackingField: 13
-    <FillRate>k__BackingField: 0.5
+    <FillRate>k__BackingField: 0.34
     <Configs>k__BackingField: {fileID: 11400000, guid: 36a08fc5bba15e848a55c1ba8ecbb16b, type: 2}
   - <Id>k__BackingField: 14
-    <FillRate>k__BackingField: 0.5
+    <FillRate>k__BackingField: 0.34
     <Configs>k__BackingField: {fileID: 11400000, guid: 8f84b0ef0572a1c42abdfb0bc9082333, type: 2}
   - <Id>k__BackingField: 15
-    <FillRate>k__BackingField: 0.5
+    <FillRate>k__BackingField: 0.34
     <Configs>k__BackingField: {fileID: 11400000, guid: 70b137df1b8fb2742b04477e3e2e8f66, type: 2}

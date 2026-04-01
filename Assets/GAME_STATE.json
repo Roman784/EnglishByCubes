@@ -1,6 +1,6 @@
 {
     "LastCompletedLevelNumber": 100,
-    "CurrentThemeMode": 1,
+    "CurrentThemeMode": 0,
     "CollectedCollectionItems": [
         0,
         1,
@@ -11,9 +11,12 @@
         6,
         7,
         8,
-        9
+        9,
+        10,
+        11,
+        12
     ],
-    "CurrentCollectionItemFill": 0.5,
+    "CurrentCollectionItemFill": 0.0,
     "SoundVolume": 1.0,
     "MusicVolume": 1.0,
     "IsFirstEntrance": true
