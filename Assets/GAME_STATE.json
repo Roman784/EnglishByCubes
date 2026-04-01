@@ -1,5 +1,5 @@
 {
-    "LastCompletedLevelNumber": 1,
+    "LastCompletedLevelNumber": 100,
     "CurrentThemeMode": 1,
     "CollectedCollectionItems": [
         0,
@@ -13,7 +13,7 @@
         8,
         9
     ],
-    "CurrentCollectionItemFill": 0.0,
+    "CurrentCollectionItemFill": 0.5,
     "SoundVolume": 1.0,
     "MusicVolume": 1.0,
     "IsFirstEntrance": true
