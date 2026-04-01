@@ -18,7 +18,7 @@ namespace UI
 
         private new void Awake()
         {
-            _progressBar.CreateDots(_pages.Count);
+            _progressBar?.CreateDots(_pages.Count);
 
             base.Awake();
         }
@@ -31,7 +31,7 @@ namespace UI
             }
             _pages[0].SetActive(true);
 
-            _progressBar.HighlightDot(0);
+            _progressBar?.HighlightDot(0);
 
             base.Open();
         }
@@ -46,7 +46,7 @@ namespace UI
 
             _pageContainer.anchoredPosition = new Vector2(_pageContainer.anchoredPosition.x, 0);
 
-            _progressBar.HighlightDot(nextPageIndex);
+            _progressBar?.HighlightDot(nextPageIndex);
 
             _currentPageIndex = nextPageIndex;
         }
