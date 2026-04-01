@@ -38,8 +38,6 @@ namespace UI
             var levels = GameConfigs.LevelsConfigs.Levels;
             var lastCompletedLevelNumber = GameState.LastCompletedLevelNumber;
 
-            /*var localNum = 1;
-            var globalNum = 0;*/
             foreach (var level in levels)
             {
                 var progress = GetLevelProgress(level.GlobalNumber, lastCompletedLevelNumber);
@@ -48,13 +46,6 @@ namespace UI
                 newButton.Init(level, level.SectionNumber, level.LocalNumber, buttonsConfigs, progress, _audioProvider, AudioConfigs.ButtonClickSound, OpenLevel);
 
                 _levelButtonsLayout.LayOut(newButton.GetComponent<RectTransform>(), level.GlobalNumber - 1);
-
-                /*if (level.Mode == LevelMode.Theory)
-                {
-                    localNum = 0;
-                    globalNum++;
-                }
-                localNum++;*/
             }
 
             _levelButtonsLayout.ResizeContainer(levels.Count);

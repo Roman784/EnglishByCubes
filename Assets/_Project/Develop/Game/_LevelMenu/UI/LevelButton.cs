@@ -61,7 +61,7 @@ namespace UI
 
             _iconView.sprite = _iconsMap[levelConfigs.Mode];
             if (levelConfigs.Mode == LevelMode.Theory)
-                _titleView.text = $"{levelConfigs.Title}";
+                _titleView.text = $"{sectionNum}. {levelConfigs.Title}";
             else
                 _titleView.text = $"{sectionNum}.{localNum} {levelConfigs.Title}";
             _renderer.material = _materialsMap[progress];
