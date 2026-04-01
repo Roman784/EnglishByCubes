@@ -1059,6 +1059,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Hand
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 2249
+        width: 195
+        height: 254
+      alignment: 9
+      pivot: {x: 0.1383185, y: 0.88273275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab30d259935bb29438f3fad6f63c679a
+      internalID: 162335283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1073,6 +1095,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Hand: 162335283
       Sprites_0: -932284490
       Sprites_1: -168066126
       Sprites_10: -1499439655

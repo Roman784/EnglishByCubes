@@ -47,6 +47,10 @@ namespace UI
 
         [SerializeField] private Button _nextButton;
 
+        [Space]
+
+        [SerializeField] private Transform _hand;
+
         private CollectionItem _itemConfigs;
         private float _currentFill;
 
@@ -56,6 +60,8 @@ namespace UI
 
             SetTransparency(_fade, 0f, 0, 0);
             SetScale(_view.transform, 0f, 0, 0);
+
+            _hand.transform.localScale = Vector3.zero;
         }
 
         private void Update()
@@ -186,6 +192,7 @@ namespace UI
 
                 if (_currentFill == 1)
                 {
+                    _hand.transform.DOScale(1f, 0.25f).SetEase(Ease.OutQuad);
                     PlayNewItemUnlocked();
 
                     _itemView.sprite = _itemConfigs.Configs.Sprite;
